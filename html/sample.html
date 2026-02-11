@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta name="keywords" content="금융감독원 통합홈페이지.">
+	<meta name="description" content="금융감독원 통합홈페이지.">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="shortcut icon" href="../resources/img/favicon.png">
+	<link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
+	<script src="../resources/js/component/ui-script.js" defer></script>
+	<script src="../resources/js/plugin/swiper-bundle.min.js" defer></script>
+	<title>금융감독원 통합홈페이지</title>
+</head>
+<body>
+	<div id="">
+		<!-- go to breadcrumb	-->
+		<div id="krds-skip-link">
+			<a href="#breadcrumb-home">본문 바로가기</a>
+		</div>
+		<!--// go to breadcrumb -->
+
+		<!-- top banner -->
+		<div id="krds-masthead">
+			<div class="toggle-wrap">
+				<div class="toggle-head">
+					<div class="inner">
+						<span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// top banner -->
+
+		<!-- header -->
+		<header id="krds-header">
+			<div class="header-in">
+				<!-- 헤더 상단 기타메뉴 -->
+				<div class="header-container">
+					<div class="inner">
+						<div class="header-utility">
+							<ul class="utility-list">
+								<li>
+
+									<!-- 언어설정: 언어전환 -->
+									<div class="krds-drop-wrap krds-language">
+										<!-- <button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
+											<i class="svg-icon ico-global"></i>
+											Language
+											<i class="svg-icon ico-toggle"></i>
+										</button>
+										<div class="drop-menu" style="display: none;">
+											<div class="drop-in">
+												<ul class="drop-list">
+													<li><a href="#" class="item-link active" lang="ko">한국어<span class="sr-only">선택됨</span></a></li>
+													<li><a href="/html/eng/index.html" class="item-link" lang="en">English (영어)<span class="sr-only"></span></a></li>
+													<li><a href="#" class="item-link" lang="zh">中文 (중국어)<span class="sr-only"></span></a></li>
+													<li><a href="#" class="item-link" lang="ja">日本語 (일본어)<span class="sr-only"></span></a></li>
+													<li><a href="#" class="item-link" lang="fr">français (프랑스어)<span class="sr-only"></span></a></li>
+												</ul>
+											</div>
+										</div> -->
+										<a href="/html/eng/index.html">
+											<button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
+												<i class="svg-icon ico-global"></i>&nbsp;English
+											</button>
+										</a>
+									</div>
+									<!-- 언어설정: 언어전환 -->
+
+								</li>
+								<!-- <li>
+									<div class="krds-drop-wrap">
+										<button type="button" class="krds-btn small text drop-btn">
+											지원 <i class="svg-icon ico-toggle"></i>
+										</button>
+										<div class="drop-menu">
+											<div class="drop-in">
+												<ul class="drop-list">
+													<li><a href="#" class="item-link">인증센터</a></li>
+													<li><a href="#" class="item-link">누리집안내지도</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li> -->
+								<li>
+									<button type="button" class="krds-btn small text open-modal" data-target="modal_adjust_display">
+										<i class="svg-icon ico-view-mode"></i> 글자·화면 설정
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="header-branding">
+							<h2 class="logo">
+								<a href="../index.html">
+									<span class="sr-only">KRDS - Korea Design System</span>
+									<!-- <img src="../../../resources/img/guide/common/ico_logo_krds.svg" alt="KRDS"> -->
+								</a>
+							</h2>
+							<div class="header-actions">
+								<!-- <div class="sch-input">
+								<input type="text" id="searchWrd-total" class="krds-input small w" placeholder="검색어를 입력해 주세요." title="검색어를 입력해 주세요.">
+								<button type="button" class="krds-btn medium icon ico-search btn-exec" id="btn-search-total">
+									<span class="sr-only">검색</span>
+									<i class="svg-icon ico-sch"></i>
+								</button>
+							</div> -->
+								<button type="button" class="btn-navi sch open-modal" title="통합검색 레이어" data-target="popTotalSch" tabindex="0">통합검색</button>
+								<!-- <a href="#" class="btn-navi login">로그인</a>
+							<button type="button" class="btn-navi join">회원가입</button> -->
+								<!-- <div class="krds-drop-wrap my-drop">
+								<button type="button" class="btn-navi my drop-btn" aria-expanded="false">나의 GOV</button>
+								<div class="drop-menu" style="display: none;">
+									<div class="drop-in">
+										<div class="drop-top">
+											<p class="my-name">홍길동님</p>
+											<dl class="my-time">
+												<dt>로그아웃까지 남은 시간</dt>
+												<dd>
+													<span class="time">12:00</span>
+													<button type="button" class="krds-btn small text h-auto">시간 연장</button>
+												</dd>
+											</dl>
+										</div>
+										<ul class="drop-list">
+											<li><a href="#" class="item-link">나의 GOV 홈<span class="sr-only"></span></a></li>
+											<li><a href="#" class="item-link">나의 신청내역<span class="sr-only"></span></a></li>
+											<li><a href="#" class="item-link">나의 생활정보<span class="sr-only"></span></a></li>
+											<li><a href="#" class="item-link">나의 정보관리<span class="sr-only"></span></a></li>
+										</ul>
+										<div class="drop-bottom">
+											<button type="button" class="krds-btn medium text">
+												<i class="svg-icon ico-logout"></i> 로그아웃
+											</button>
+										</div>
+									</div>
+								</div>
+							</div> -->
+								<button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //헤더 상단 기타메뉴 -->
+
+				<!-- 메인메뉴 : 데스크탑 -->
+				<nav class="krds-main-menu">
+					<div class="inner">
+						<ul class="gnb-menu">
+							<li>
+								<button type="button" class="gnb-main-trigger active" data-trigger="gnb">1Depth</button>
+								<!-- gnb-toggle-wrap -->
+								<div class="gnb-toggle-wrap is-open">
+									<!-- gnb-main-list -->
+									<div class="gnb-main-list" data-has-submenu="true">
+										<ul>
+											<li>
+												<button type="button" class="gnb-sub-trigger active" data-trigger="gnb">2Depth</button>
+												<!-- gnb-sub-list -->
+												<div class="gnb-sub-list active">
+													<div class="gnb-sub-content">
+														<h2 class="sub-title">
+															2Depth title
+															<a href="#" class="krds-btn link basic small">
+																<span class="underline">바로가기</span>
+																<i class="svg-icon ico-angle right"></i>
+															</a>
+														</h2>
+														<ul>
+															<li><a href="#">Last depth</a></li>
+															<li><button type="button">Last depth</button></li>
+														</ul>
+													</div>
+													<div class="gnb-sub-banner">
+														<span class="krds-badge bg-secondary">신규 서비스</span>
+														<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+													</div>
+												</div>
+												<!-- //gnb-sub-list -->
+											</li>
+											<li>
+												<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+												<!-- gnb-sub-list -->
+												<div class="gnb-sub-list between">
+													<div class="gnb-sub-content">
+														<h2 class="sub-title">
+															2Depth title
+															<a href="#" class="krds-btn link basic small">
+																<span class="underline">바로가기</span>
+																<i class="svg-icon ico-angle right"></i>
+															</a>
+														</h2>
+														<ul>
+															<li><a href="#">Last depth</a></li>
+															<li><button type="button">Last depth</button></li>
+															<li><button type="button">Last depth</button></li>
+														</ul>
+													</div>
+													<div class="gnb-sub-banner">
+														<span class="krds-badge bg-secondary">신규 서비스</span>
+														<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+													</div>
+												</div>
+												<!-- //gnb-sub-list -->
+											</li>
+											<li>
+												<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+												<!-- gnb-sub-list -->
+												<div class="gnb-sub-list between">
+													<div class="gnb-sub-content">
+														<h2 class="sub-title"><span>2Depth title</span></h2>
+														<ul>
+															<li><a href="#">Last depth</a></li>
+															<li><button type="button">Last depth</button></li>
+															<li><button type="button">Last depth</button></li>
+														</ul>
+													</div>
+													<div class="gnb-sub-banner">
+														<span class="krds-badge bg-secondary">신규 서비스</span>
+														<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+													</div>
+												</div>
+												<!-- //gnb-sub-list -->
+											</li>
+											<li>
+												<a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">2Depth</a>
+											</li>
+											<li>
+												<a href="#" class="gnb-sub-trigger is-link external-link" data-trigger="gnb" target="_blank" title="새 창 열림">2Depth</a>
+											</li>
+										</ul>
+									</div>
+									<!-- //gnb-main-list -->
+								</div>
+								<!-- //gnb-toggle-wrap -->
+							</li>
+							
+							<li>
+								<button type="button" class="gnb-main-trigger" data-trigger="gnb">1Depth</button>
+								<!-- gnb-toggle-wrap -->
+								<div class="gnb-toggle-wrap">
+									<!-- gnb-main-list -->
+									<div class="gnb-main-list" data-has-submenu="true">
+										<ul>
+											<li>
+												<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+												<!-- gnb-sub-list -->
+												<div class="gnb-sub-list">
+													<div class="gnb-sub-content">
+														<h2 class="sub-title"><span>2Depth title</span></h2>
+														<ul class="type-description">
+															<li>
+																<h3 class="tit">
+																	<a href="#" target="_blank" title="새 창 열림">3Depth title <i class="svg-icon ico-go"></i></a>
+																</h3>
+																<p class="txt">메뉴명과 메뉴에 관한 간략한 설명이 표시되는 스타일입니다.</p>
+															</li>
+														</ul>
+													</div>
+													<div class="gnb-sub-banner">
+														<span class="krds-badge bg-secondary">신규 서비스</span>
+														<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+													</div>
+												</div>
+												<!-- //gnb-sub-list -->
+											</li>
+											<li>
+												<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+												<!-- gnb-sub-list -->
+												<div class="gnb-sub-list between">
+													<div class="gnb-sub-content">
+														<h2 class="sub-title"><span>2Depth title</span></h2>
+														<ul class="type-description">
+															<li>
+																<h3 class="tit">
+																	<a href="#" target="_blank" title="새 창 열림">3Depth title <i class="svg-icon ico-go"></i></a>
+																</h3>
+																<p class="txt">메뉴명과 메뉴에 관한 간략한 설명이 표시되는 스타일입니다.</p>
+															</li>
+														</ul>
+													</div>
+													<div class="gnb-sub-banner">
+														<span class="krds-badge bg-secondary">신규 서비스</span>
+														<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+													</div>
+												</div>
+												<!-- //gnb-sub-list -->
+											</li>
+											<li>
+												<a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">2Depth</a>
+											</li>
+											<li>
+												<a href="#" class="gnb-sub-trigger is-link external-link" data-trigger="gnb" target="_blank" title="새 창 열림">2Depth</a>
+											</li>
+										</ul>
+									</div>
+									<!-- //gnb-main-list -->
+								</div>
+								<!-- //gnb-toggle-wrap -->
+							</li>
+							
+							<li>
+								<button type="button" class="gnb-main-trigger" data-trigger="gnb">1Depth</button>
+								<!-- gnb-toggle-wrap -->
+								<div class="gnb-toggle-wrap">
+									<!-- gnb-main-list -->
+									<div class="gnb-main-list">
+										<!-- gnb-sub-list -->
+										<div class="gnb-sub-list single-list between">
+											<div class="gnb-sub-content">
+												<h2 class="sub-title"><span>2Depth title</span></h2>
+												<ul>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+													<li><a href="#">Last depth</a></li>
+												</ul>
+											</div>
+											<div class="gnb-sub-banner">
+												<span class="krds-badge bg-secondary">신규 서비스</span>
+												<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+											</div>
+										</div>
+										<!-- //gnb-sub-list -->
+									</div>
+									<!-- //gnb-main-list -->
+								</div>
+								<!-- //gnb-toggle-wrap -->
+							</li>
+							
+							<li>
+								<a href="#" class="gnb-main-trigger is-link" data-trigger="gnb">링크(anchor)</a>
+							</li>
+							<li>
+								<button type="button" class="gnb-main-trigger is-link" data-trigger="gnb">링크(button)</button>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- //메인메뉴 : 데스크탑 -->
+
+			</div>
+		</header>
+		<!--// header -->
+
+		<!-- container -->
+		<main id="container">
+			<div class="inner in-between">
+				<h2>sample</h2>
+				<!-- button -->
+				<button type="button" class="krds-btn small text">텍스트 버튼</button>
+				<button type="button" class="krds-btn xsmall text">찜하기 <i class="svg-icon ico-like"></i></button>
+				<button type="button" class="krds-btn small text">주민등록표초본 <i class="svg-icon ico-angle right"></i></button>
+				<button type="button" class="krds-btn medium text">검색 <i class="svg-icon ico-sch"></i></button>
+				<button type="button" class="krds-btn xlarge text">자세히 보기 <i class="svg-icon ico-more"></i></button>
+				<button type="button" class="krds-btn text">파일다운로드 <i class="svg-icon ico-down"></i></button>
+				<button type="button" class="krds-btn text" disabled>필터 <i class="svg-icon ico-filter"></i></button>
+				<!-- //button -->
+
+				<button type="button" class="krds-btn large open-modal" data-target="modal_sample_03">class 및 data-target 호출</button>
+
+				<!-- modal -->
+				<section id="modal_sample_03" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_03">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- modal title -->
+							<div class="modal-header">
+								<h2 id="tit_modal_sample_03" class="modal-title">
+									모달 제목
+								</h2>
+							</div>
+							<!-- //modal title -->
+							<!-- modal contents -->
+							<div class="modal-conts">
+								<div class="conts-area">
+									시작 <br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+									<br>
+									끝
+								</div>
+							</div>
+							<!-- //modal contents -->
+							<!-- modal btn -->
+							<div class="modal-btn btn-wrap">
+								<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+								<button type="button" class="krds-btn medium primary close-modal">예</button>
+							</div>
+							<!-- //modal btn -->
+							<!-- close button -->
+							<button type="button" class="krds-btn medium icon btn-close close-modal">
+								<span class="sr-only">닫기</span>
+								<i class="svg-icon ico-popup-close"></i>
+							</button>
+							<!-- //close button -->
+						</div>
+					</div>
+					<div class="modal-back"></div>
+				</section>
+				<!-- //modal -->
+			</div>
+		</main>
+		<!--// container -->
+
+		<!-- footer -->
+		<footer id="krds-footer">
+			<div class="inner">
+				<div class="f-logo">
+					<span class="sr-only">KRDS - Korea Design System</span>
+				</div>
+				<div class="f-cnt">
+					<div class="f-info">
+						<ul class="info-cs">
+							<!-- <li><strong class="key-info">대표전화 <span>070-7830-4919</span> </strong></li> -->
+							<li><strong class="key-info">대표전화 <span>053-230-1923</span> </strong></li>
+							<li><strong class="key-info">대표이메일 <span><a href="mailto:krds@nia.or.kr">krds@nia.or.kr</a></span></strong></li>
+						</ul>
+					</div>
+
+					<div class="f-link">
+						<div class="link-go">
+							<a href="../community/community_06.html" class="krds-btn medium text">문의 및 건의 <i class="svg-icon ico-page-next"></i></a>
+							<a href="https://github.com/KRDS-uiux/krds-uiux" class="krds-btn medium text" target="_blank" title="새 창 열림">Git <i class="svg-icon ico-go"></i></a>
+							<a href="https://www.figma.com/@krds" class="krds-btn medium text" target="_blank" title="새 창 열림">Figma <i class="svg-icon ico-go"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="f-btm">
+					<div class="f-btm-text">
+						<div class="f-menu">
+							<a href="../utility/utility_01.html" class="krds-btn small text">KRDS 소개</a>
+							<a href="../utility/utility_05.html" class="krds-btn small text">이용 안내</a>
+							<a href="../utility/utility_06.html" class="krds-btn small text">저작권정책</a>
+						</div>
+						<p class="f-copy">© 2023 Ministry of the Interior and Safety. All rights reserved.</p>
+						<a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" title="새 창 열림" target="_blank" class="f-mark"><img src="../../../resources/img/guide/common/web_accessibility_mark.png" alt="(사)한국장애인단체총연합회한국웹접근성인증평가원웹접근성 우수사이트인증마크(WA인증마크)" width="68" height="48"></a>
+					</div>
+
+					<!-- identifier -->
+					<div class="krds-identifier">
+						<span class="logo">
+							<span class="sr-only">행정안전부</span>
+						</span>
+						<span class="ban-txt">이 누리집은 행정안전부 산하기관 누리집입니다.</span>
+					</div>
+					<!-- //identifier -->
+				</div>
+			</div>
+		</footer>
+		<!--// footer -->
+	</div>
+</body>
+</html>

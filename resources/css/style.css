@@ -1,0 +1,7 @@
+/* @import "common/common.css";
+@import "component/component.css";
+@import "component/output.css"; */
+@import "../../ia_guide/css/ia_guide.css"; /* fss guide */
+@import "krds.min.css"; /* 위 3개 파일 통합 css, 이미지 경로는 상대경로로 수정함 */
+@import "custom.css"; /* fss custom */
+@import "plugin/swiper-bundle.min.css";

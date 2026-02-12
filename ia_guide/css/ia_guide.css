@@ -1,8 +1,10 @@
 @charset "UTF-8";
 /* kameo */
 .g-wrap .page-title-wrap {
+	display: flex;
+	flex-direction: column;
 	gap: 2.4rem;
-	margin-bottom: 4.8rem;
+	margin: 4rem 0 4.8rem;
 }
 .g-wrap .g-info-box {
 	position: relative;
@@ -29,7 +31,10 @@
 	height: var(--krds-size-height-4);
 	background-color: var(--krds-light-color-divider-gray-light);
 }
-
+.g-wrap .g-conts .g-scroll-x {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
 .g-wrap .g-conts + .g-conts {
 	margin-top: 6rem;
 }

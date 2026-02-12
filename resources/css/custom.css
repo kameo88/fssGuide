@@ -23,7 +23,7 @@
 	padding-bottom: 0;
 }
 #container .in-between > .contents {
-		padding: 2rem;
+		/* padding: 2rem; */
 }
 .page-title-wrap .h-tit {
 	display: flex;

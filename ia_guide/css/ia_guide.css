@@ -32,6 +32,7 @@
 	background-color: var(--krds-light-color-divider-gray-light);
 }
 .g-wrap .g-conts .g-scroll-x {
+	padding: .5rem;
 	overflow-y: hidden;
 	overflow-x: auto;
 }

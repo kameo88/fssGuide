@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #krds-header .header-container .logo a {
-	background-image: url(../img/common/logo.png);
+	background-image: url(../../img/common/logo.png);
 }
 #container .in-between {
 	display: flex;

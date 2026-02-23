@@ -31,6 +31,9 @@
 	height: var(--krds-size-height-4);
 	background-color: var(--krds-light-color-divider-gray-light);
 }
+.g-wrap .g-conts {
+	scroll-margin-top: 20rem;
+}
 .g-wrap .g-conts .g-scroll-x {
 	padding: .5rem;
 	overflow-y: hidden;

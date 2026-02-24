@@ -31,10 +31,15 @@
 	height: var(--krds-size-height-4);
 	background-color: var(--krds-light-color-divider-gray-light);
 }
+.g-wrap .sec-tit > .desc {
+	font-size: 1.7rem;
+	font-weight: 400;
+}
 .g-wrap .g-conts {
 	scroll-margin-top: 20rem;
 }
 .g-wrap .g-conts .g-scroll-x {
+	width: 100%;
 	padding: .5rem;
 	overflow-y: hidden;
 	overflow-x: auto;
@@ -57,6 +62,17 @@
 	border: var(--krds-light-border-width-variable-regular) solid var(--krds-light-color-border-gray) ;
 	border-radius: var(--krds-radius-xlarge2);
 	padding: 5.6rem 4.6rem 5.5rem;
+}
+.g-wrap .g-conts .flex-row {
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+.g-wrap .g-conts .flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 }
 .g-wrap .g-conts .g-sample-view {
 	/* display: flex;

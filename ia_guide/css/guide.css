@@ -58,11 +58,11 @@
 	overflow-x: auto;
 }
 .g-wrap .g-conts .g-sample-view {
-	display: flex;
+	/* display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
 	flex-direction: column;
-	gap: 1.6rem;
+	gap: 1.6rem; */
 }
 @media (max-width: 767px) {
 	.g-wrap .g-conts .g-example-box {

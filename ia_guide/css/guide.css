@@ -39,6 +39,9 @@
 	overflow-y: hidden;
 	overflow-x: auto;
 }
+.g-wrap .g-conts .overflow-visible .g-scroll-x {
+	overflow: visible;
+}
 .g-wrap .g-conts + .g-conts {
 	margin-top: 6rem;
 }
@@ -54,8 +57,6 @@
 	border: var(--krds-light-border-width-variable-regular) solid var(--krds-light-color-border-gray) ;
 	border-radius: var(--krds-radius-xlarge2);
 	padding: 5.6rem 4.6rem 5.5rem;
-	overflow-y: hidden;
-	overflow-x: auto;
 }
 .g-wrap .g-conts .g-sample-view {
 	/* display: flex;

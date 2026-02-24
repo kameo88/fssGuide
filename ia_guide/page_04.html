@@ -278,10 +278,10 @@
 												<div class="gnb-sub-content">
 													<h2 class="sub-title"><span>입력</span></h2>
 													<ul>
-														<li><a href="javascript:void(0);">날짜 입력 필드</a></li>
-														<li><a href="javascript:void(0);">텍스트 영역</a></li>
-														<li><a href="javascript:void(0);">텍스트 입력 필드</a></li>
-														<li><a href="javascript:void(0);">파일 업로드</a></li>
+														<li><a href="page_04.html#g_dateinput">날짜 입력 필드</a></li>
+														<li><a href="page_04.html#g_textarea">텍스트 영역</a></li>
+														<li><a href="page_04.html#g_textinput">텍스트 입력 필드</a></li>
+														<li><a href="page_04.html#g_fileupload">파일 업로드</a></li>
 													</ul>
 												</div>
 											</div>
@@ -362,12 +362,14 @@
 						<h1 class="h-tit">입력</h1>
 						
 						<div class="g-info-box">
-							<p class="desc">날짜 입력 필드, 텍스트 영역, 텍스트 입력 필드, 파일 업로드로 구성되어 있음</p>
+							<p class="desc">날짜 입력 필드, 텍스트 영역, 텍스트 입력 필드, 파일 업로드<br />
+								[접근성 주의사항] 입력 필드는 label로 연결이 불가능한 경우 title 속성 등을 제공하여 어떤 값을 입력하는지 알 수 있도록 함
+							</p>
 						</div>
 					</div>
 
 					<!-- Date input -->
-					<section class="g-conts">
+					<section id="g_dateinput" class="g-conts">
 						<h3 class="sec-tit">
 							날짜 입력 필드
 							<span class="badge-text">Date input</span>
@@ -377,7 +379,7 @@
 							<h4 class="con-tit">기본</h4>
 
 							<!-- g-example-box -->
-							<div class="g-example-box">
+							<div class="g-example-box overflow-visible">
 								<div class="g-scroll-x">
 
 									<div class="g-sample-view">
@@ -756,7 +758,7 @@
 					<!-- //Textarea -->
 
 					<!-- Text input -->
-					<section class="g-conts">
+					<section id="g_textinput" class="g-conts">
 						<h3 class="sec-tit">
 							텍스트 입력 필드
 							<span class="badge-text">Text input</span>
@@ -775,10 +777,10 @@
 											<!-- 폼그룹 -->
 											<div class="form-group">
 												<div class="form-tit">
-													<label for="consult_name">레이블</label>
+													<label for="consult_name1">레이블</label>
 												</div>
 												<div class="form-conts">
-													<input type="text" id="consult_name" class="krds-input" placeholder="플레이스홀더">
+													<input type="text" id="consult_name1" class="krds-input" placeholder="플레이스홀더">
 												</div>
 												<p class="form-hint">도움말</p>
 											</div>
@@ -823,6 +825,41 @@
 
 									<div class="g-sample-view">
 										<!-- text input state -->
+										<div class="fieldset">
+											<!-- 폼그룹 -->
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="consult_name21">레이블</label>
+												</div>
+												<div class="form-conts is-error">
+													<input type="text" id="consult_name21" class="krds-input" placeholder="플레이스홀더" value="에러">
+												</div>
+												<p class="form-hint-invalid">에러 메시지</p>
+											</div>
+											<!-- //폼그룹 -->
+											<!-- 폼그룹 -->
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="consult_name22">레이블</label>
+												</div>
+												<div class="form-conts is-success">
+													<input type="text" id="consult_name22" class="krds-input" placeholder="플레이스홀더" value="성공">
+												</div>
+												<p class="form-hint-success">성공 메시지</p>
+											</div>
+											<!-- //폼그룹 -->
+											<!-- 폼그룹 -->
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="consult_name23">레이블</label>
+												</div>
+												<div class="form-conts is-information">
+													<input type="text" id="consult_name23" class="krds-input" placeholder="플레이스홀더" value="정보">
+												</div>
+												<p class="form-hint-information">정보 메시지</p>
+											</div>
+											<!-- //폼그룹 -->
+										</div>
 										<!-- //text input state -->
 									</div>
 
@@ -840,6 +877,41 @@
 
 									<div class="g-sample-view">
 										<!-- text input size -->
+										<div class="fieldset">
+											<!-- 폼그룹 -->
+											<div class="form-group">
+													<div class="form-tit">
+															<label for="consult_name31">레이블 - small</label>
+													</div>
+													<div class="form-conts">
+															<input type="text" id="consult_name31" class="krds-input small" placeholder="플레이스홀더">
+													</div>
+													<p class="form-hint">도움말</p>
+											</div>
+											<!-- //폼그룹 -->
+											<!-- 폼그룹 -->
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="consult_name32">레이블 - medium</label>
+												</div>
+												<div class="form-conts">
+													<input type="text" id="consult_name32" class="krds-input medium" placeholder="플레이스홀더">
+												</div>
+												<p class="form-hint">도움말</p>
+											</div>
+											<!-- //폼그룹 -->
+											<!-- 폼그룹 -->
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="consult_name33">레이블 - large</label>
+												</div>
+												<div class="form-conts">
+													<input type="text" id="consult_name33" class="krds-input large" placeholder="플레이스홀더">
+												</div>
+												<p class="form-hint">도움말</p>
+											</div>
+											<!-- //폼그룹 -->
+										</div>
 										<!-- //text input size -->
 									</div>
 
@@ -861,7 +933,7 @@
 											<!-- 폼그룹 -->
 											<div class="form-group">
 												<div class="form-tit">
-													<label for="login_pw">레이블</label>
+													<label for="login_pw">레이블 - 비번보기 button</label>
 												</div>
 												<div class="form-conts btn-ico-wrap">
 													<input type="password" id="login_pw" class="krds-input" placeholder="8-12자의 영문자, 숫자, 특수문자 조합" value="1234567890">
@@ -875,7 +947,7 @@
 											<!-- 폼그룹 -->
 											<div class="form-group">
 												<div class="form-tit">
-													<label for="login_pw2">레이블</label>
+													<label for="login_pw2">레이블 - 비번가리기 button</label>
 												</div>
 												<div class="form-conts btn-ico-wrap">
 													<input type="text" id="login_pw2" class="krds-input" placeholder="8-12자의 영문자, 숫자, 특수문자 조합" value="1234567890">
@@ -889,7 +961,7 @@
 											<!-- 폼그룹 -->
 											<div class="form-group">
 												<div class="form-tit">
-													<label for="form_delete">레이블</label>
+													<label for="form_delete">레이블 - 입력시 삭제 button show</label>
 												</div>
 												<div class="form-conts btn-ico-wrap" data-delete="true">
 													<input type="text" id="form_delete" class="krds-input" placeholder="내용을 입력하세요">
@@ -903,7 +975,7 @@
 											<!-- 폼그룹 -->
 											<div class="form-group">
 												<div class="form-tit">
-													<label for="form_btn_multiple">레이블</label>
+													<label for="form_btn_multiple">레이블 - 삭제 button & 비번보기 button </label>
 												</div>
 												<div class="form-conts btn-ico-wrap" data-delete="true">
 													<input type="password" id="form_btn_multiple" class="krds-input" placeholder="8-12자의 영문자, 숫자, 특수문자 조합" value="1234567890">
@@ -932,7 +1004,7 @@
 					<!-- //Text input -->
 
 					<!-- File upload -->
-					<section class="g-conts">
+					<section id="g_fileupload" class="g-conts">
 						<h3 class="sec-tit">
 							파일 업로드
 							<span class="badge-text">File upload</span>

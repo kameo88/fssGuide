@@ -74,6 +74,9 @@
 	justify-content: space-between;
 	width: 100%;
 }
+.g-wrap .g-conts .g-sample-view .krds-contextual-help {
+	justify-content: center;
+}
 .g-wrap .g-conts .g-sample-view {
 	/* display: flex;
 	align-items: flex-start;

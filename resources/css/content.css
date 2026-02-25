@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* search list */
+.search-list-top {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: var(--krds-gap-9);
+	margin: var(--krds-pc-gap-layout-h2-h3) 0 var(--krds-gap-7);
+}
+.search-list-top .sch-left {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: var(--krds-gap-7);
+}
+.search-list-top .side-line-ul {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: var(--krds-gap-5) var(--krds-gap-3);
+}
+.search-list-top .sch-sort {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-shrink: 0;
+}
+/* .search-list-top .sch-info li,  */
+.search-list-top .side-line-ul li, 
+.search-list-top .sch-sort li {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;	
+	position: relative;
+}
+/* .search-list-top .sch-info li:not(:last-child),  */
+.search-list-top .side-line-ul li:not(:last-child), 
+.search-list-top .sch-sort li:not(:last-child) {
+	padding-right: 1.7rem;
+}
+/* .search-list-top .sch-info li:not(:last-child)::after,  */
+.search-list-top .side-line-ul li:not(:last-child)::after, 
+.search-list-top .sch-sort li:not(:last-child)::after {
+	content: "";
+	display: inline-flex;
+	position: absolute;
+	bottom: .3rem;
+	right: .5rem;
+	width: .1rem;
+	height: 1.6rem;
+	background-color: #8a949e;
+}
+.search-list-top .sch-sort .sort-label {
+	margin-right: 1.2rem;
+	white-space: nowrap;
+}
+.search-list-top .sch-sort .w-sort-btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: .8rem;
+}
+.search-list-top .sch-sort .w-sort-btn button {
+	color: #1e2124;
+	border-radius: .6rem;
+	transition: .4s ease-in-out;
+}
+.search-list-top .sch-sort .w-sort-btn button:hover {
+	background-color: #eef2f7;
+}
+.search-list-top .sch-sort .w-sort-btn button.active {
+	text-decoration: underline;
+	text-underline-offset: .3rem;
+}
+.search-list-top .sch-sort .m-sort-btn {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.search-list-top .sch-sort .w-sort-btn {
+		display: none;
+	}
+	.search-list-top .sch-sort .m-sort-btn {
+		display: flex;
+		align-items: center;
+	}
+}

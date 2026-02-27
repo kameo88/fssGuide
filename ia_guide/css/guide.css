@@ -14,7 +14,7 @@
 	font-size: 1.9rem;
 }
 .g-wrap .sec-tit {
-	margin-bottom: 2.4rem;
+	/* margin-bottom: 2.4rem; */
 	font-size: 3.2rem;
 }
 .g-wrap .sec-tit .badge-text {
@@ -50,7 +50,10 @@
 .g-wrap .g-conts + .g-conts {
 	margin-top: 6rem;
 }
-.g-wrap .g-conts-area + .g-conts-area {
+.g-wrap .g-conts h3 + .krds-disclosure {
+	margin-top: 1.4rem;
+}
+.g-wrap .g-conts-area /* + .g-conts-area */ {
 	margin-top: 4rem;
 }
 .g-wrap .g-conts-area .con-tit {

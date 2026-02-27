@@ -125,6 +125,17 @@ body {
 	letter-spacing: var(--krds-typo-letter-spacing-1);
 	font-weight: var(--krds-font-weight-bold);
 }
+.conts-area {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	/* gap: 4rem; */
+	width: 100%;
+}
+.conts-area .conts-wrap {
+	width: 100%;
+}
 
 /* 
 ###########

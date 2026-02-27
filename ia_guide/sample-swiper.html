@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>swiper</title>
+  <style>
+
+  </style>
+</head>
+<body>
+    <div class="swiper mySwiper" aria-label="이미지 슬라이드" role="region">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img1.jpg" alt="첫 번째 이미지">
+            </div>
+            <div class="swiper-slide">
+                <img src="img2.jpg" alt="두 번째 이미지">
+            </div>
+            <div class="swiper-slide">
+                <img src="img3.jpg" alt="세 번째 이미지">
+            </div>
+        </div>
+
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper_btn">
+            <button type="button" class="btn_prev"><span class="offscreen">이전 슬라이드</span></button>
+            <button type="button" class="btn_next"><span class="offscreen">다음 슬라이드</span></button>
+        </div>
+    </div>
+
+<!-- Swiper 및 공통 JS 로드 -->
+
+<script>
+    $(function(){
+        
+        const swiper = new Swiper('.swiper', {
+            loop: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    // Swiper는 렌더링 시점에 active 클래스가 붙은 bullet이 없으므로
+                    // 첫 번째 bullet(=index 0)에 '현재 슬라이드'를 기본으로 부여
+                    const isActive = index === 0 ? ' title="현재 슬라이드"' : '';
+                    return `<button type="button" class="${className}" aria-label="${index + 1}번 슬라이드로 이동"${isActive}></button>`;
+                },
+            },
+            speed: 300,
+            navigator: {
+                nextEl: '.btn_next',
+                prevEl: '.btn_prev'
+            },
+            a11y: {
+                enalbed: true,
+                prevSlideMessage: "이전 슬라이드",
+                nextSlideMessage: "이전 슬라이드",
+                paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
+            },
+            on: {
+                // 이벤트는 kb 참조하기
+                slideChange: function () {
+                    // 활성화된 pagination만 title 유지
+                    const bullets = this.pagination.bullets;
+                    bullets.forEach((bullet, idx) => {
+                    if (idx === this.activeIndex) {
+                        bullet.setAttribute('title', '현재 슬라이드');
+                    } else {
+                        bullet.removeAttribute('title');
+                    }
+                    });
+                },
+            },
+        });
+    })
+
+  
+  // HTML에서 클래스명만 지정해 호출
+//   initAccessibleSwiper('.mySwiper');
+</script>  
+
+<!-- <script src="js/common-swiper.js"></script> -->
+
+
+</body>
+</html>

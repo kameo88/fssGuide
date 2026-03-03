@@ -77,7 +77,14 @@
 	justify-content: space-between;
 	width: 100%;
 }
+.g-wrap .g-conts .g-sample-view .krds-in-page-navigation-area {
+	position: static;
+	margin: 0 auto;
+}
+.g-wrap .g-conts .g-sample-view .krds-language,
+.g-wrap .g-conts .g-sample-view .krds-resize, 
 .g-wrap .g-conts .g-sample-view .krds-contextual-help {
+	display: flex;
 	justify-content: center;
 }
 

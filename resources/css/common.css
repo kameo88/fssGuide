@@ -48,6 +48,12 @@ body {
 	background: no-repeat url(../img/common/icon/ico_time_16.svg) center / contain;
 }
 
+/* form */
+.krds-form-check input[type=checkbox]~label, 
+.krds-form-check input[type=radio]~label {
+	color: var(--krds-light-color-text-bolder);
+}
+
 /* subpage layout */
 #container .in-between {
 	display: flex;

@@ -27,11 +27,6 @@
 	
 	/* text */
 	--krds-light-color-text-primary: var(--krds-color-light-primary-80);
-	/* 아래 항목 70으로 수정 예정 */
-	/* --krds-light-color-border-primary: var(--krds-color-light-primary-50);
-	--krds-light-color-divider-primary: var(--krds-color-light-primary-50);
-	--krds-light-color-icon-primary: var(--krds-color-light-primary-50);
-	--krds-light-color-icon-primary-static: var(--krds-color-light-primary-50); */
 	
 	--krds-light-color-link-default: var(--krds-color-light-primary-70);
 	--krds-light-color-link-hover: var(--krds-color-light-primary-80);
@@ -45,6 +40,17 @@
 	--krds-light-color-button-primary-fill-pressed: var(--krds-color-light-primary-90);
 	--krds-light-color-button-secondary-border: var(--krds-color-light-primary-70);
 	--krds-light-color-button-text-fill-pressed: var(--krds-color-light-primary-10);
+
+	--krds-light-color-element-primary: var(--krds-color-light-primary-70);
+
+	/* 아래 항목 70으로 수정 예정 */
+	/* --krds-light-color-border-primary: var(--krds-color-light-primary-50);
+	--krds-light-color-divider-primary: var(--krds-color-light-primary-50);
+	--krds-light-color-icon-primary: var(--krds-color-light-primary-50);
+	--krds-light-color-icon-primary-static: var(--krds-color-light-primary-50);
+	--krds-light-color-action-primary-active: var(--krds-color-light-primary-50);
+	--krds-light-color-input-border-active: var(--krds-color-light-primary-50);
+	--krds-light-color-graphic-brand: var(--krds-color-light-primary-50); */
 
 
 }

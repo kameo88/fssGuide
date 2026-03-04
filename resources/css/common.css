@@ -1,45 +1,4 @@
 @charset "UTF-8";
-/* krds color 변경 */
-:root {
-	--krds-color-light-primary-5: #eef2f7;
-	--krds-color-light-primary-10: #d6e0eb;
-	--krds-color-light-primary-20: #bacbde;
-	--krds-color-light-primary-30: #90b0d5;
-	--krds-color-light-primary-40: #6b96c7;
-	--krds-color-light-primary-50: #346fb2;
-	--krds-color-light-primary-60: #1c589c;
-	--krds-color-light-primary-70: #063a74;
-	--krds-color-light-primary-80: #052b57;
-	--krds-color-light-primary-90: #031f3f;
-	--krds-color-light-primary-95: #02162c;
-
-	--krds-color-light-secondary-5: #ecf2fe;
-	--krds-color-light-secondary-10: #d8e5fd;
-	--krds-color-light-secondary-20: #b1cefb;
-	--krds-color-light-secondary-30: #86aff9;
-	--krds-color-light-secondary-40: #4c87f6;
-	--krds-color-light-secondary-50: #256ef4;
-	--krds-color-light-secondary-60: #0b50d0;
-	--krds-color-light-secondary-70: #083891;
-	--krds-color-light-secondary-80: #052561;
-	--krds-color-light-secondary-90: #03163a;
-	--krds-color-light-secondary-95: #020f27;
-	/* button */
-	--krds-light-color-button-primary-fill: var(--krds-color-light-primary-70);
-	--krds-light-color-button-primary-fill-hover: var(--krds-color-light-primary-80);
-	--krds-light-color-button-primary-fill-pressed: var(--krds-color-light-primary-90);
-	
-	--krds-light-color-button-secondary-fill: var(--krds-color-light-primary-5);
-	--krds-light-color-button-secondary-fill-hover: var(--krds-color-light-primary-10);
-	--krds-light-color-button-secondary-fill-pressed: var(--krds-color-light-primary-20);
-	--krds-light-color-button-secondary-border: var(--krds-color-light-primary-70);
-	
-	--krds-light-color-button-disabled-border: none;
-}
-
-.krds-btn {
-	/* --krds-light-color-button-primary-fill */
-}
 
 body {
 	font-family: "Pretendard GOV", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;

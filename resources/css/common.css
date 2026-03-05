@@ -53,6 +53,32 @@ body {
 .krds-form-check input[type=radio]~label {
 	color: var(--krds-light-color-text-bolder);
 }
+.krds-form-check input[type=checkbox]:disabled~.krds-form-check-cnt > .krds-form-check-p, 
+.krds-form-check input[type=radio]:disabled~.krds-form-check-cnt > .krds-form-check-p {
+	color: var(--krds-form-check--color-text-sub-disabled);
+}
+.form-group .form-label, .form-group .form-tit {
+	font-size: var(--krds-pc-font-size-label-small);
+}
+.krds-form-select:focus {
+	border-color: var(--krds-form-select--color-border-active);
+}
+.krds-form-select.is-error {
+	color: #464C53;
+	border-color: var(--krds-color-light-danger-50);
+}
+.krds-form-select[disabled] {
+	background-image: url(../img/component/icon/ico_angle.svg);
+}
+.krds-tag-wrap .krds-btn-tag:hover {
+	border-color: var(--krds-btn-tag--color-action-hover);
+}
+.krds-tag-wrap .krds-btn-tag:active {
+	border-color: var(--krds-btn-tag--color-action-pressed);
+}
+.krds-form-toggle-switch [type=checkbox]:disabled~label {
+	color: var(--krds-light-color-text-disabled);
+}
 
 /* subpage layout */
 #container .in-between {
@@ -170,6 +196,12 @@ body {
 	}
 }
 @media (max-width: 1023px) {
+	/* 임시 kameo */
+	.krds-in-page-navigation-type .krds-in-page-navigation-area {
+		display: none;
+	}
+	/* 임시 kameo */
+
 	#container .in-between .krds-side-navigation {
 		display: none;
 	}

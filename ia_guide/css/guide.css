@@ -87,6 +87,9 @@
 	display: flex;
 	justify-content: center;
 }
+.g-wrap .g-conts .g-sample-view .krds-check-area {
+	align-items: center;
+}
 
 .g-box-txt-img {
 	display: flex;

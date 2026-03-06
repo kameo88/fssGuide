@@ -53,7 +53,7 @@
 	--krds-light-color-graphic-brand: var(--krds-color-light-primary-50); 
 	*/
 	
-	--krds-light-color-text-subtle: var(--krds-color-light-gray-90);
+	/* --krds-light-color-text-subtle: var(--krds-color-light-gray-90); */
 	--krds-light-color-input-border-active: var(--krds-color-light-primary-70);
 
 	/* 아래 항목 90으로 수정 예정 */

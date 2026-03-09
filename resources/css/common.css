@@ -182,7 +182,6 @@ body {
 	background-color: #fff;
 }
 
-
 /* 
 ###########
 	modal
@@ -233,6 +232,13 @@ body {
 
 
 
+/* 임시 kameo */
+.krds-in-page-navigation-type .krds-in-page-navigation-area {
+	display: none;
+}
+/* 임시 kameo */
+
+
 /*
 ###########
 	반응형
@@ -244,12 +250,6 @@ body {
 	}
 }
 @media (max-width: 1023px) {
-	/* 임시 kameo */
-	.krds-in-page-navigation-type .krds-in-page-navigation-area {
-		display: none;
-	}
-	/* 임시 kameo */
-
 	#container .in-between .krds-side-navigation {
 		display: none;
 	}

@@ -27,6 +27,7 @@
 	
 	/* text */
 	--krds-light-color-text-primary: var(--krds-color-light-primary-80);
+	/* --krds-light-color-text-secondary: var(--krds-color-light-primary-80); */
 	
 	--krds-light-color-link-default: var(--krds-color-light-primary-70);
 	--krds-light-color-link-hover: var(--krds-color-light-primary-80);
@@ -45,6 +46,7 @@
 	--krds-light-color-border-primary: var(--krds-color-light-primary-70);
 	--krds-light-color-icon-primary: var(--krds-color-light-primary-70);
 
+
 	/* 아래 항목 70으로 수정 예정 */
 	/* 
 	--krds-light-color-divider-primary: var(--krds-color-light-primary-50);
@@ -62,5 +64,63 @@
 	*/
 }
 
-.krds-btn {
+.krds-badge {
+	--krds-badge--color-secondary-text: var(--krds-color-light-secondary-60);
+}
+.krds-badge.outline-secondary {
+	border-color: var(--krds-color-light-secondary-50);
+}
+.krds-badge.outline-gray {
+	border-color: var(--krds-color-light-gray-60);
+}
+.krds-badge.outline-point {
+	border-color: var(--krds-badge--color-point-element);
+}
+.krds-badge.outline-danger {
+	border-color: var(--krds-badge--color-danger-element);
+}
+.krds-badge.outline-warning {
+	border-color: var(--krds-color-light-warning-50);
+}
+.krds-badge.outline-success {
+	border-color: var(--krds-badge--color-success-element);
+}
+.krds-badge.outline-information {
+	border-color: var(--krds-badge--color-information-element);
+}
+.krds-badge.outline-disabled {
+	border-color: var(--krds-badge--color-disabled-element);
+}
+.krds-badge.bg-secondary {
+	background-color: var(--krds-color-light-secondary-50);
+}
+.krds-badge.bg-disabled {
+	color: var(--krds-badge--color-disabled-text);
+	background-color : var(--krds-badge--color-disabled-element-lighter);
+}
+/* accordion */
+.krds-accordion {
+	--krds-accordion--button-color-text-open: var(--krds-light-color-text-primary);
+	border: none;
+}
+.krds-accordion .accordion-item .btn-accordion {
+	padding: 2rem 5.6rem 2rem 1.6rem;
+}
+.krds-accordion.large .accordion-item .btn-accordion {
+	padding: 2.4rem 6.4rem 2.4rem 2.4rem;
+	--krds-accordion--button-pc-font-size: var(--krds-pc-font-size-heading-small);
+	--krds-accordion--button-mobile-font-size: var(--krds-mobile-font-size-heading-small);
+}
+.krds-accordion.type-line .accordion-item .btn-accordion {
+	padding: 1.2rem 4rem 1.2rem 0;
+}
+.krds-accordion.type-line.large .accordion-item .btn-accordion {
+	padding: 2rem 4rem 2rem 0;
+}
+.krds-accordion .acc-conts-area {
+	padding: 2rem 1rem;
+	background-color: #fff;
+}
+.krds-accordion.type-line .acc-conts-area {
+	background-color: #E6E8EA;
 }

@@ -1,5 +1,71 @@
 @charset "UTF-8";
 
+/* krds color 변경 */
+:root {
+	--krds-color-light-primary-5: #eef2f7;
+	--krds-color-light-primary-10: #d6e0eb;
+	--krds-color-light-primary-20: #bacbde;
+	--krds-color-light-primary-30: #90b0d5;
+	--krds-color-light-primary-40: #6b96c7;
+	--krds-color-light-primary-50: #346fb2;
+	--krds-color-light-primary-60: #1c589c;
+	--krds-color-light-primary-70: #063a74;
+	--krds-color-light-primary-80: #052b57;
+	--krds-color-light-primary-90: #031f3f;
+	--krds-color-light-primary-95: #02162c;
+
+	--krds-color-light-secondary-5: #ecf2fe;
+	--krds-color-light-secondary-10: #d8e5fd;
+	--krds-color-light-secondary-20: #b1cefb;
+	--krds-color-light-secondary-30: #86aff9;
+	--krds-color-light-secondary-40: #4c87f6;
+	--krds-color-light-secondary-50: #256ef4;
+	--krds-color-light-secondary-60: #0b50d0;
+	--krds-color-light-secondary-70: #083891;
+	--krds-color-light-secondary-80: #052561;
+	--krds-color-light-secondary-90: #03163a;
+	--krds-color-light-secondary-95: #020f27;
+
+	/* text */
+	--krds-light-color-text-primary: var(--krds-color-light-primary-80);
+	/* --krds-light-color-text-secondary: var(--krds-color-light-secondary-60); */ /* #0B50D0 임시 */
+
+	--krds-light-color-link-default: var(--krds-color-light-primary-70);
+	--krds-light-color-link-hover: var(--krds-color-light-primary-80);
+	--krds-light-color-link-pressed: var(--krds-color-light-primary-90);
+	--krds-light-color-link-visited: #5917b8;
+
+	/* button */
+	--krds-light-color-button-disabled-border: var(--krds-color-light-gray-20);
+	--krds-light-color-button-primary-fill: var(--krds-color-light-primary-70);
+	--krds-light-color-button-primary-fill-hover: var(--krds-color-light-primary-80);
+	--krds-light-color-button-primary-fill-pressed: var(--krds-color-light-primary-90);
+	--krds-light-color-button-secondary-border: var(--krds-color-light-primary-70);
+	--krds-light-color-button-text-fill-pressed: var(--krds-color-light-primary-10);
+
+	--krds-light-color-element-primary: var(--krds-color-light-primary-70);
+	--krds-light-color-border-primary: var(--krds-color-light-primary-70);
+	--krds-light-color-icon-primary: var(--krds-color-light-primary-70);
+
+	--krds-light-color-action-secondary-active: var(--krds-color-light-primary-70);
+
+	/* 아래 항목 70으로 수정 예정 */
+	/* 
+	--krds-light-color-divider-primary: var(--krds-color-light-primary-50);
+	--krds-light-color-icon-primary-static: var(--krds-color-light-primary-50);
+	--krds-light-color-action-primary-active: var(--krds-color-light-primary-50);
+	--krds-light-color-graphic-brand: var(--krds-color-light-primary-50); 
+	*/
+	
+	/* --krds-light-color-text-subtle: var(--krds-color-light-gray-90); */
+	--krds-light-color-input-border-active: var(--krds-color-light-primary-70);
+
+	/* 아래 항목 90으로 수정 예정 */
+	/*
+
+	*/
+}
+
 body {
 	font-family: "Pretendard GOV", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -127,6 +193,99 @@ body {
 	padding: initial;
 }
 
+/* badge */
+.krds-badge {
+	--krds-badge--color-secondary-text: var(--krds-color-light-secondary-60);
+}
+.krds-badge.outline-secondary {
+	border-color: var(--krds-color-light-secondary-50);
+}
+.krds-badge.outline-gray {
+	border-color: var(--krds-color-light-gray-60);
+}
+.krds-badge.outline-point {
+	border-color: var(--krds-badge--color-point-element);
+}
+.krds-badge.outline-danger {
+	border-color: var(--krds-badge--color-danger-element);
+}
+.krds-badge.outline-warning {
+	border-color: var(--krds-color-light-warning-50);
+}
+.krds-badge.outline-success {
+	border-color: var(--krds-badge--color-success-element);
+}
+.krds-badge.outline-information {
+	border-color: var(--krds-badge--color-information-element);
+}
+.krds-badge.outline-disabled {
+	border-color: var(--krds-badge--color-disabled-element);
+}
+.krds-badge.bg-secondary {
+	background-color: var(--krds-color-light-secondary-50);
+}
+.krds-badge.bg-disabled {
+	color: var(--krds-badge--color-disabled-text);
+	background-color : var(--krds-badge--color-disabled-element-lighter);
+}
+
+/* accordion */
+.krds-accordion {
+	--krds-accordion--button-color-text-open: var(--krds-light-color-text-primary);
+	border: none;
+}
+.krds-accordion .accordion-item .btn-accordion {
+	--krds-accordion--button-pc-font-size: var(--krds-pc-font-size-heading-small);
+	--krds-accordion--button-mobile-font-size: var(--krds-mobile-font-size-heading-small);
+}
+.krds-accordion.medium .accordion-item .btn-accordion {
+	padding: 2rem 5.6rem 2rem 1.6rem;
+	--krds-accordion--button-pc-font-size: var(--krds-pc-font-size-heading-xsmall);
+	--krds-accordion--button-mobile-font-size: var(--krds-mobile-font-size-heading-xsmall);
+}
+.krds-accordion.type-line .accordion-item .btn-accordion {
+	padding: 2rem 4rem 2rem 0;
+}
+.krds-accordion.type-line.medium .accordion-item .btn-accordion {
+	padding: 1.2rem 4rem 1.2rem 0;
+}
+.krds-accordion .accordion-item .btn-accordion::after {
+	top: 0 !important;
+	bottom: 0;
+	margin: auto;
+}
+.krds-accordion .acc-conts-area {
+	padding: 2rem 1rem;
+	background-color: #fff;
+}
+.krds-accordion.type-line .acc-conts-area {
+	background-color: #E6E8EA;
+}
+/* swiper */
+[class^=swiper-button-]::after {
+	background-color: var(--krds-light-color-icon-gray);
+}
+/* 확인 필요 */
+.swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
+	color: var(--krds-color-light-secondary-60);
+}
+/* Calendar */
+.krds-calendar-area {
+	--krds-calendar--head-pc-font-size: var(--krds-pc-font-size-heading-small);
+	--krds-calendar--head-btn-cal-switch-color-action-hover: var(--krds-light-color-action-primary-hover);
+	--krds-calendar--head-btn-cal-switch-color-action-active: var(--krds-light-color-action-primary-pressed);
+}
+.krds-calendar-area .calendar-wrap .calendar-head .btn-cal-move {
+	background-color: initial;	
+}
+.krds-calendar-area .calendar-wrap .calendar-head .btn-cal-move::before {
+	background-color: var(--krds-light-color-icon-gray);
+}
+
+/* .krds-calendar-area .calendar-wrap .calendar-body .calendar-table-wrap .calendar-tbl td.period.end>.btn-set-date, 
+.krds-calendar-area .calendar-wrap .calendar-body .calendar-table-wrap .calendar-tbl td.period.start>.btn-set-date {
+
+} */
 
 /* subpage layout */
 #container .in-between {
@@ -232,9 +391,10 @@ body {
 
 
 
+
 /* 임시 kameo */
 .krds-in-page-navigation-type .krds-in-page-navigation-area {
-	display: none;
+	/* display: none; */
 }
 /* 임시 kameo */
 
@@ -320,6 +480,10 @@ body {
 	}
 	.krds-step-wrap.fixed li {
 		max-width: initial;
+	}
+	/* accordion */
+	.krds-accordion.medium .accordion-item .btn-accordion {
+		padding: 1.2rem 5.6rem 1.2rem 1.6rem;
 	}
 }
 /* hide for mobile */

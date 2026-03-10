@@ -379,7 +379,7 @@
 						<h1 class="h-tit">레이아웃 및 표현 2</h1>
 						
 						<div class="g-info-box">
-							<p class="desc">긴급공지, 디스클로저, 모달, 아코디언, 탭, 캐러셀 </p>
+							<p class="desc">긴급공지, 달력, 디스클로저, 모달, 아코디언, 탭, 캐러셀 </p>
 						</div>
 					</div>
 
@@ -397,6 +397,7 @@
 								<nav class="in-page-navigation-list">
 									<ul>
 										<li><a href="#g_alerts" class="active">긴급공지</a></li>
+										<li><a href="#g_calendar">달력</a></li>
 										<li><a href="#g_disclosure">디스클로저</a></li>
 										<li><a href="#g_modal">모달</a></li>
 										<li><a href="#g_accordion">아코디언</a></li>
@@ -470,6 +471,837 @@
 								</div>
 							</section>
 							<!-- //Critical alerts code -->
+
+							<!-- Date input code -->
+							<section id="g_calendar" class="g-conts section-link">
+								<h3 class="sec-tit">
+									달력
+									<span class="badge-text">Calendar</span>
+								</h3>
+
+								<div class="g-conts-area">
+									<h4 class="con-tit">기본</h4>
+
+									<!-- g-example-box -->
+									<div class="g-example-box overflow-visible">
+										<div class="g-scroll-x">
+
+											<div class="g-sample-view">
+												<!-- Calendar basic -->
+												<div class="fieldset">
+													<!-- form-group -->
+													<div class="form-group">
+														<div class="form-tit">
+															<label for="cal_11">날짜선택</label>
+														</div>
+														<div class="form-conts calendar-conts">
+															<div class="calendar-input">
+																<input type="number" class="krds-input datepicker cal" placeholder="YYYY.MM.DD" id="cal_11">
+																<button type="button" class="krds-btn medium icon form-btn-datepicker">
+																	<span class="sr-only">달력 열기</span>
+																	<i class="svg-icon ico-calendar"></i>
+																</button>
+															</div>
+															<div class="krds-calendar-area">
+																<div class="calendar-wrap bottom single" aria-label="달력">
+																	<div class="calendar-head">
+																		<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
+																		<div class="calendar-switch-wrap">
+																			<div class="calendar-drop-down">
+																				<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+																				<div class="calendar-select calendar-year-wrap">
+																					<ul class="sel year">
+																						<li>
+																							<button type="button">2001년</button>
+																						</li>
+																						<li>
+																							<button type="button" class="active">2002년</button>
+																						</li>
+																						<li>
+																							<button type="button" disabled>2003년</button>
+																						</li>
+																						<li>
+																							<button type="button">2004년</button>
+																						</li>
+																						<li>
+																							<button type="button">2005년</button>
+																						</li>
+																						<li>
+																							<button type="button">2006년</button>
+																						</li>
+																						<li>
+																							<button type="button">2007년</button>
+																						</li>
+																						<li>
+																							<button type="button">2008년</button>
+																						</li>
+																						<li>
+																							<button type="button">2009년</button>
+																						</li>
+																						<li>
+																							<button type="button">2010년</button>
+																						</li>
+																						<li>
+																							<button type="button">2011년</button>
+																						</li>
+																						<li>
+																							<button type="button">2012년</button>
+																						</li>
+																						<li>
+																							<button type="button">2013년</button>
+																						</li>
+																						<li>
+																							<button type="button">2014년</button>
+																						</li>
+																						<li>
+																							<button type="button">2015년</button>
+																						</li>
+																						<li>
+																							<button type="button">2016년</button>
+																						</li>
+																						<li>
+																							<button type="button">2017년</button>
+																						</li>
+																						<li>
+																							<button type="button">2018년</button>
+																						</li>
+																						<li>
+																							<button type="button">2019년</button>
+																						</li>
+																						<li>
+																							<button type="button">2020년</button>
+																						</li>
+																						<li>
+																							<button type="button">2021년</button>
+																						</li>
+																						<li>
+																							<button type="button">2022년</button>
+																						</li>
+																						<li>
+																							<button type="button">2023년</button>
+																						</li>
+																						<li>
+																							<button type="button">2024년</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="calendar-drop-down">
+																				<button type="button" class="btn-cal-switch month" aria-label="월 선택">12월</button>
+																				<div class="calendar-select calendar-mon-wrap">
+																					<ul class="sel month">
+																						<li>
+																							<button type="button">01월</button>
+																						</li>
+																						<li>
+																							<button type="button" disabled>02월</button>
+																						</li>
+																						<li>
+																							<button type="button">03월</button>
+																						</li>
+																						<li>
+																							<button type="button">04월</button>
+																						</li>
+																						<li>
+																							<button type="button">05월</button>
+																						</li>
+																						<li>
+																							<button type="button">06월</button>
+																						</li>
+																						<li>
+																							<button type="button">07월</button>
+																						</li>
+																						<li>
+																							<button type="button">08월</button>
+																						</li>
+																						<li>
+																							<button type="button">09월</button>
+																						</li>
+																						<li>
+																							<button type="button">10월</button>
+																						</li>
+																						<li>
+																							<button type="button">11월</button>
+																						</li>
+																						<li>
+																							<button type="button" class="active">12월</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																		<button type="button" class="btn-cal-move next"><span class="sr-only">다음 달</span></button>
+																	</div>
+																	<div class="calendar-body">
+																		<div class="calendar-table-wrap">
+																			<table class="calendar-tbl">
+																				<caption>
+																					2024년 12월
+																				</caption>
+																				<thead>
+																				<tr>
+																					<th>일</th>
+																					<th>월</th>
+																					<th>화</th>
+																					<th>수</th>
+																					<th>목</th>
+																					<th>금</th>
+																					<th>토</th>
+																				</tr>
+																				</thead>
+																				<tbody>
+																				<tr>
+																					<td class="old day-off"><button type="button" class="btn-set-date"><span>26</span></button></td>
+																					<td class="old"><button type="button" class="btn-set-date"><span>27</span></button></td>
+																					<td class="old"><button type="button" class="btn-set-date"><span>28</span></button></td>
+																					<td class="old"><button type="button" class="btn-set-date"><span>29</span></button></td>
+																					<td class="old"><button type="button" class="btn-set-date"><span>30</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>1</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>2</span></button></td>
+																				</tr>
+																				<tr>
+																					<td class="day-off"><button type="button" class="btn-set-date"><span>3</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>4</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>5</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>6</span></button></td>
+																					<td class="period start end"><button type="button" class="btn-set-date"><span>7</span></button></td>
+																					<td class="day-event"><button type="button" class="btn-set-date"><span>8</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>9</span></button></td>
+																				</tr>
+																				<tr>
+																					<td class="day-off"><button type="button" class="btn-set-date"><span>10</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>11</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>12</span></button></td>
+																					<td class="disabled"><button type="button" class="btn-set-date" disabled><span>13</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>14</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>15</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>16</span></button></td>
+																				</tr>
+																				<tr>
+																					<td class="day-off"><button type="button" class="btn-set-date"><span>17</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>18</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>19</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>20</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>21</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>22</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>23</span></button></td>
+																				</tr>
+																				<tr>
+																					<td class="day-off"><button type="button" class="btn-set-date"><span>24</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>25</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>26</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>27</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>28</span></button></td>
+																					<td><button type="button" class="btn-set-date"><span>29</span></button></td>
+																					<td class="today"><button type="button" class="btn-set-date"><span>30</span></button></td>
+																				</tr>
+																				<tr>
+																					<td class="day-off"><button type="button" class="btn-set-date"><span>31</span></button></td>
+																					<td class="new"><button type="button" class="btn-set-date"><span>1</span></button></td>
+																					<td class="new"><button type="button" class="btn-set-date"><span>2</span></button></td>
+																					<td class="new"><button type="button" class="btn-set-date"><span>3</span></button></td>
+																					<td class="new"><button type="button" class="btn-set-date"><span>4</span></button></td>
+																					<td class="new"><button type="button" class="btn-set-date"><span>5</span></button></td>
+																					<td class="new"><button type="button" class="btn-set-date"><span>6</span></button></td>
+																				</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																	<div class="calendar-footer">
+																		<div class="calendar-btn-wrap">
+																			<button type="button" class="krds-btn small text" id="get-today">오늘</button>
+																			<button type="button" class="krds-btn small tertiary">취소</button>
+																			<button type="button" class="krds-btn small primary">확인</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- //form-group -->
+												</div>
+												<!-- //Calendar basic -->
+											</div>
+
+										</div>
+									</div>
+									<!-- //g-example-box -->
+								</div>
+
+								<div class="g-conts-area">
+									<h4 class="con-tit">Date Range</h4>
+
+									<!-- g-example-box -->
+									<div class="g-example-box overflow-visible">
+										<div class="g-scroll-x">
+
+											<div class="g-sample-view">
+												<!-- Calendar Date Range -->
+												<div class="fieldset">
+													<!-- form group -->
+													<div class="form-group">
+														<div class="form-tit">
+															<label for="cal_21">레이블</label>
+														</div>
+														<div class="form-conts calendar-conts">
+															<div class="calendar-input">
+																<input type="number" class="krds-input datepicker cal" placeholder="YYYY.MM.DD" id="cal_21" />
+																<button type="button" class="krds-btn medium icon form-btn-datepicker">
+																	<span class="sr-only">달력 열기</span>
+																	<i class="svg-icon ico-calendar"></i>
+																</button>
+															</div>
+															<div class="krds-calendar-area">
+																<div class="calendar-wrap bottom" aria-label="달력">
+																	<div class="calendar-head">
+																		<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
+																		<div class="calendar-switch-wrap">
+																			<div class="calendar-drop-down">
+																				<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+																				<div class="calendar-select calendar-year-wrap">
+																					<ul class="sel year">
+																						<li>
+																							<button type="button">2001년</button>
+																						</li>
+																						<li>
+																							<button type="button" class="active">2002년</button>
+																						</li>
+																						<li>
+																							<button type="button" disabled>2003년</button>
+																						</li>
+																						<li>
+																							<button type="button">2004년</button>
+																						</li>
+																						<li>
+																							<button type="button">2005년</button>
+																						</li>
+																						<li>
+																							<button type="button">2006년</button>
+																						</li>
+																						<li>
+																							<button type="button">2007년</button>
+																						</li>
+																						<li>
+																							<button type="button">2008년</button>
+																						</li>
+																						<li>
+																							<button type="button">2009년</button>
+																						</li>
+																						<li>
+																							<button type="button">2010년</button>
+																						</li>
+																						<li>
+																							<button type="button">2011년</button>
+																						</li>
+																						<li>
+																							<button type="button">2012년</button>
+																						</li>
+																						<li>
+																							<button type="button">2013년</button>
+																						</li>
+																						<li>
+																							<button type="button">2014년</button>
+																						</li>
+																						<li>
+																							<button type="button">2015년</button>
+																						</li>
+																						<li>
+																							<button type="button">2016년</button>
+																						</li>
+																						<li>
+																							<button type="button">2017년</button>
+																						</li>
+																						<li>
+																							<button type="button">2018년</button>
+																						</li>
+																						<li>
+																							<button type="button">2019년</button>
+																						</li>
+																						<li>
+																							<button type="button">2020년</button>
+																						</li>
+																						<li>
+																							<button type="button">2021년</button>
+																						</li>
+																						<li>
+																							<button type="button">2022년</button>
+																						</li>
+																						<li>
+																							<button type="button">2023년</button>
+																						</li>
+																						<li>
+																							<button type="button">2024년</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="calendar-drop-down">
+																				<button type="button" class="btn-cal-switch month" aria-label="월 선택">12월</button>
+																				<div class="calendar-select calendar-mon-wrap">
+																					<ul class="sel month">
+																						<li>
+																							<button type="button" disabled>01월</button>
+																						</li>
+																						<li>
+																							<button type="button">02월</button>
+																						</li>
+																						<li>
+																							<button type="button">03월</button>
+																						</li>
+																						<li>
+																							<button type="button">04월</button>
+																						</li>
+																						<li>
+																							<button type="button">05월</button>
+																						</li>
+																						<li>
+																							<button type="button">06월</button>
+																						</li>
+																						<li>
+																							<button type="button">07월</button>
+																						</li>
+																						<li>
+																							<button type="button">08월</button>
+																						</li>
+																						<li>
+																							<button type="button">09월</button>
+																						</li>
+																						<li>
+																							<button type="button">10월</button>
+																						</li>
+																						<li>
+																							<button type="button">11월</button>
+																						</li>
+																						<li>
+																							<button type="button" class="active">12월</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																		<button type="button" class="btn-cal-move next"><span class="sr-only">다음 달</span></button>
+																	</div>
+																	<div class="calendar-body">
+																		<div class="calendar-table-wrap">
+																			<table class="calendar-tbl">
+																				<caption>
+																					2024년 12월
+																				</caption>
+																				<thead>
+																					<tr>
+																						<th>일</th>
+																						<th>월</th>
+																						<th>화</th>
+																						<th>수</th>
+																						<th>목</th>
+																						<th>금</th>
+																						<th>토</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td class="old day-off">
+																							<button type="button" class="btn-set-date"><span>26</span></button>
+																						</td>
+																						<td class="old">
+																							<button type="button" class="btn-set-date"><span>27</span></button>
+																						</td>
+																						<td class="old">
+																							<button type="button" class="btn-set-date"><span>28</span></button>
+																						</td>
+																						<td class="old">
+																							<button type="button" class="btn-set-date"><span>29</span></button>
+																						</td>
+																						<td class="old">
+																							<button type="button" class="btn-set-date"><span>30</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>1</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>2</span></button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td class="day-off">
+																							<button type="button" class="btn-set-date"><span>3</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>4</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>5</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>6</span></button>
+																						</td>
+																						<td class="period start">
+																							<button type="button" class="btn-set-date"><span>7</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>8</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>9</span></button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td class="period day-off">
+																							<button type="button" class="btn-set-date"><span>10</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>11</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>12</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>13</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>14</span></button>
+																						</td>
+																						<td class="period">
+																							<button type="button" class="btn-set-date"><span>15</span></button>
+																						</td>
+																						<td class="period end">
+																							<button type="button" class="btn-set-date"><span>16</span></button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td class="day-off">
+																							<button type="button" class="btn-set-date"><span>17</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>18</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>19</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>20</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>21</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>22</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>23</span></button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td class="day-off">
+																							<button type="button" class="btn-set-date"><span>24</span></button>
+																						</td>
+																						<td class="today">
+																							<button type="button" class="btn-set-date"><span>25</span></button>
+																						</td>
+																						<td class="day-event">
+																							<button type="button" class="btn-set-date"><span>26</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>27</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>28</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>29</span></button>
+																						</td>
+																						<td>
+																							<button type="button" class="btn-set-date"><span>30</span></button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td class="day-off">
+																							<button type="button" class="btn-set-date"><span>31</span></button>
+																						</td>
+																						<td class="new">
+																							<button type="button" class="btn-set-date"><span>1</span></button>
+																						</td>
+																						<td class="new">
+																							<button type="button" class="btn-set-date"><span>2</span></button>
+																						</td>
+																						<td class="new">
+																							<button type="button" class="btn-set-date"><span>3</span></button>
+																						</td>
+																						<td class="new">
+																							<button type="button" class="btn-set-date"><span>4</span></button>
+																						</td>
+																						<td class="new">
+																							<button type="button" class="btn-set-date"><span>5</span></button>
+																						</td>
+																						<td class="new">
+																							<button type="button" class="btn-set-date"><span>6</span></button>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																	<div class="calendar-footer">
+																		<div class="calendar-btn-wrap">
+																			<button type="button" class="krds-btn small text" id="get-today">오늘</button>
+																			<button type="button" class="krds-btn small tertiary">취소</button>
+																			<button type="button" class="krds-btn small primary">확인</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<p class="form-hint">도움말</p>
+													</div>
+													<div class="form-group">
+														<div class="form-tit">
+															기간선택
+														</div>
+														<div class="form-conts calendar-conts">
+															<div class="calendar-input">
+																<ul class="input-group range set">
+																	<li>
+																		<input type="number" class="krds-input datepicker" placeholder="시작날짜" title="시작날짜 입력">
+																	</li>
+																	<li class="mark">-</li>
+																	<li>
+																		<input type="number" class="krds-input datepicker" placeholder="종료날짜" title="종료날짜 입력">
+																	</li>
+																</ul>
+																<button type="button" class="krds-btn medium icon form-btn-datepicker">
+																	<span class="sr-only">달력 열기</span>
+																	<i class="svg-icon ico-calendar"></i>
+																</button>
+															</div>
+															<div class="krds-calendar-area">
+																<div class="calendar-wrap bottom" aria-label="달력">
+																	<div class="calendar-head">
+																		<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
+																		<div class="calendar-switch-wrap">
+																			<div class="calendar-drop-down">
+																				<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+																				<div class="calendar-select calendar-year-wrap">
+																					<ul class="sel year">
+																						<li>
+																							<button type="button">2001년</button>
+																						</li>
+																						<li>
+																							<button type="button">2002년</button>
+																						</li>
+																						<li>
+																							<button type="button" disabled>2003년</button>
+																						</li>
+																						<li>
+																							<button type="button">2004년</button>
+																						</li>
+																						<li>
+																							<button type="button">2005년</button>
+																						</li>
+																						<li>
+																							<button type="button">2006년</button>
+																						</li>
+																						<li>
+																							<button type="button">2007년</button>
+																						</li>
+																						<li>
+																							<button type="button">2008년</button>
+																						</li>
+																						<li>
+																							<button type="button">2009년</button>
+																						</li>
+																						<li>
+																							<button type="button">2010년</button>
+																						</li>
+																						<li>
+																							<button type="button" class="active">2011년</button>
+																						</li>
+																						<li>
+																							<button type="button">2012년</button>
+																						</li>
+																						<li>
+																							<button type="button">2013년</button>
+																						</li>
+																						<li>
+																							<button type="button">2014년</button>
+																						</li>
+																						<li>
+																							<button type="button">2015년</button>
+																						</li>
+																						<li>
+																							<button type="button">2016년</button>
+																						</li>
+																						<li>
+																							<button type="button">2017년</button>
+																						</li>
+																						<li>
+																							<button type="button">2018년</button>
+																						</li>
+																						<li>
+																							<button type="button">2019년</button>
+																						</li>
+																						<li>
+																							<button type="button">2020년</button>
+																						</li>
+																						<li>
+																							<button type="button">2021년</button>
+																						</li>
+																						<li>
+																							<button type="button">2022년</button>
+																						</li>
+																						<li>
+																							<button type="button">2023년</button>
+																						</li>
+																						<li>
+																							<button type="button">2024년</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="calendar-drop-down">
+																				<button type="button" class="btn-cal-switch month" aria-label="월 선택">12월</button>
+																				<div class="calendar-select calendar-mon-wrap">
+																					<ul class="sel month">
+																						<li>
+																							<button type="button" disabled>01월</button>
+																						</li>
+																						<li>
+																							<button type="button" class="active">02월</button>
+																						</li>
+																						<li>
+																							<button type="button">03월</button>
+																						</li>
+																						<li>
+																							<button type="button">04월</button>
+																						</li>
+																						<li>
+																							<button type="button">05월</button>
+																						</li>
+																						<li>
+																							<button type="button">06월</button>
+																						</li>
+																						<li>
+																							<button type="button">07월</button>
+																						</li>
+																						<li>
+																							<button type="button">08월</button>
+																						</li>
+																						<li>
+																							<button type="button">09월</button>
+																						</li>
+																						<li>
+																							<button type="button">10월</button>
+																						</li>
+																						<li>
+																							<button type="button">11월</button>
+																						</li>
+																						<li>
+																							<button type="button">12월</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																		<button type="button" class="btn-cal-move next"><span class="sr-only">다음 달</span></button>
+																	</div>
+																	<div class="calendar-body">
+																		<div class="calendar-table-wrap">
+																			<table class="calendar-tbl">
+																				<caption>
+																					2024년 12월
+																				</caption>
+																				<thead>
+																					<tr>
+																						<th>일</th>
+																						<th>월</th>
+																						<th>화</th>
+																						<th>수</th>
+																						<th>목</th>
+																						<th>금</th>
+																						<th>토</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td class="old day-off"><button type="button" class="btn-set-date"><span>26</span></button></td>
+																						<td class="old"><button type="button" class="btn-set-date"><span>27</span></button></td>
+																						<td class="old"><button type="button" class="btn-set-date"><span>28</span></button></td>
+																						<td class="old"><button type="button" class="btn-set-date"><span>29</span></button></td>
+																						<td class="old"><button type="button" class="btn-set-date"><span>30</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>1</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>2</span></button></td>
+																					</tr>
+																					<tr>
+																						<td class="day-off"><button type="button" class="btn-set-date"><span>3</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>4</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>5</span></button></td>
+																						<td class="day-event"><button type="button" class="btn-set-date"><span>6</span></button></td>
+																						<td class="period start"><button type="button" class="btn-set-date"><span>7</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>8</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>9</span></button></td>
+																					</tr>
+																					<tr>
+																						<td class="period day-off"><button type="button" class="btn-set-date"><span>10</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>11</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>12</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>13</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>14</span></button></td>
+																						<td class="period"><button type="button" class="btn-set-date"><span>15</span></button></td>
+																						<td class="period end"><button type="button" class="btn-set-date"><span>16</span></button></td>
+																					</tr>
+																					<tr>
+																						<td class="day-off"><button type="button" class="btn-set-date"><span>17</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>18</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>19</span></button></td>
+																						<td class="today"><button type="button" class="btn-set-date"><span>20</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>21</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>22</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>23</span></button></td>
+																					</tr>
+																					<tr>
+																						<td class="day-off"><button type="button" class="btn-set-date"><span>24</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>25</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>26</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>27</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>28</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>29</span></button></td>
+																						<td><button type="button" class="btn-set-date"><span>30</span></button></td>
+																					</tr>
+																					<tr>
+																						<td class="day-off"><button type="button" class="btn-set-date"><span>31</span></button></td>
+																						<td class="new"><button type="button" class="btn-set-date"><span>1</span></button></td>
+																						<td class="new"><button type="button" class="btn-set-date"><span>2</span></button></td>
+																						<td class="new"><button type="button" class="btn-set-date"><span>3</span></button></td>
+																						<td class="new"><button type="button" class="btn-set-date"><span>4</span></button></td>
+																						<td class="new"><button type="button" class="btn-set-date"><span>5</span></button></td>
+																						<td class="new"><button type="button" class="btn-set-date"><span>6</span></button></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																	<div class="calendar-footer">
+																		<div class="calendar-btn-wrap">
+																			<button type="button" class="krds-btn small text" id="get-today">오늘</button>
+																			<button type="button" class="krds-btn small tertiary">취소</button>
+																			<button type="button" class="krds-btn small primary">확인</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- //form group -->
+												</div>
+												<!-- //Calendar Date Range -->
+											</div>
+
+										</div>
+									</div>
+									<!-- //g-example-box -->
+								</div>
+							</section>
+							<!-- //Date input code -->
 
 							<!-- Disclosure code -->
 							<section id="g_disclosure" class="g-conts section-link">
@@ -690,10 +1522,10 @@
 										<div class="g-scroll-x">
 
 											<div class="g-sample-view">
-												<!-- Accordion large size -->
-												<div class="krds-accordion large">
+												<!-- Accordion medium size -->
+												<div class="krds-accordion medium">
 													<div class="accordion-item">
-														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample01-lg" class="btn-accordion" aria-controls="accordionCollapseSample01-lg">large 아코디언 타이틀 영역</button></h5>
+														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample01-lg" class="btn-accordion" aria-controls="accordionCollapseSample01-lg">medium 아코디언 타이틀 영역</button></h5>
 														<div id="accordionCollapseSample01-lg" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample01-lg">
 															<div class="accordion-body">
 																<!-- accordion contents -->
@@ -703,7 +1535,7 @@
 														</div>
 													</div>
 													<div class="accordion-item">
-														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample02-lg" class="btn-accordion" aria-controls="accordionCollapseSample02-lg">large 아코디언 타이틀 영역</button></h5>
+														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample02-lg" class="btn-accordion" aria-controls="accordionCollapseSample02-lg">medium 아코디언 타이틀 영역</button></h5>
 														<div id="accordionCollapseSample02-lg" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample02-lg">
 															<div class="accordion-body">
 																<!-- accordion contents -->
@@ -713,7 +1545,7 @@
 														</div>
 													</div>
 													<div class="accordion-item">
-														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample03-lg" class="btn-accordion" aria-controls="accordionCollapseSample03-lg">large 아코디언 타이틀 영역</button></h5>
+														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample03-lg" class="btn-accordion" aria-controls="accordionCollapseSample03-lg">medium 아코디언 타이틀 영역</button></h5>
 														<div id="accordionCollapseSample03-lg" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample03-lg">
 															<div class="accordion-body">
 																<!-- accordion contents -->
@@ -723,14 +1555,14 @@
 														</div>
 													</div>
 												</div>
-												<!-- //Accordion large size -->
+												<!-- //Accordion medium size -->
 
 												<br />
 
-												<!-- Accordion line large size -->
-												<div class="krds-accordion type-line large">
+												<!-- Accordion line medium size -->
+												<div class="krds-accordion type-line medium">
 													<div class="accordion-item">
-														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample01-lg" class="btn-accordion" aria-controls="accordionCollapseSample01-lg">large line형 아코디언 타이틀 영역</button></h5>
+														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample01-lg" class="btn-accordion" aria-controls="accordionCollapseSample01-lg">medium line형 아코디언 타이틀 영역</button></h5>
 														<div id="accordionCollapseSample01-lg" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample01-lg">
 															<div class="accordion-body">
 																<!-- accordion contents -->
@@ -740,7 +1572,7 @@
 														</div>
 													</div>
 													<div class="accordion-item">
-														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample02-lg" class="btn-accordion" aria-controls="accordionCollapseSample02-lg">large line형 아코디언 타이틀 영역</button></h5>
+														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample02-lg" class="btn-accordion" aria-controls="accordionCollapseSample02-lg">medium line형 아코디언 타이틀 영역</button></h5>
 														<div id="accordionCollapseSample02-lg" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample02-lg">
 															<div class="accordion-body">
 																<!-- accordion contents -->
@@ -750,7 +1582,7 @@
 														</div>
 													</div>
 													<div class="accordion-item">
-														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample03-lg" class="btn-accordion" aria-controls="accordionCollapseSample03-lg">large line형 아코디언 타이틀 영역</button></h5>
+														<h5 class="accordion-header"><button type="button" id="accordionHeaderSample03-lg" class="btn-accordion" aria-controls="accordionCollapseSample03-lg">medium line형 아코디언 타이틀 영역</button></h5>
 														<div id="accordionCollapseSample03-lg" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample03-lg">
 															<div class="accordion-body">
 																<!-- accordion contents -->
@@ -760,7 +1592,7 @@
 														</div>
 													</div>
 												</div>
-												<!-- //Accordion line large size -->
+												<!-- //Accordion line medium size -->
 
 											</div>
 

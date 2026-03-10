@@ -100,6 +100,10 @@
 	background-color: #eae3db;
 }
 
+.g-wrap .g-conts .g-sample-view .page-top-button {
+	position: initial;
+}
+
 @media (max-width: 767px) {
 	.g-wrap .g-conts .g-example-box {
 			padding: 2.4rem;

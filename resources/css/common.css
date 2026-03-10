@@ -281,11 +281,45 @@ body {
 .krds-calendar-area .calendar-wrap .calendar-head .btn-cal-move::before {
 	background-color: var(--krds-light-color-icon-gray);
 }
-
 /* .krds-calendar-area .calendar-wrap .calendar-body .calendar-table-wrap .calendar-tbl td.period.end>.btn-set-date, 
 .krds-calendar-area .calendar-wrap .calendar-body .calendar-table-wrap .calendar-tbl td.period.start>.btn-set-date {
 
 } */
+/* page top button */
+.page-top-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	right: 4rem;
+	bottom: 6.4rem;
+	width: var(--krds-size-height-8);
+	height: var(--krds-size-height-8);
+	border: 0.1rem solid var(--krds-light-color-border-gray-light);
+	border-radius: var(--krds-radius-medium3);
+	background-color: var(--krds-light-color-action-white);
+	box-shadow: 0px 0px 2px 0px var(--krds-light-color-alpha-shadow1), 0px 4px 8px 0px var(--krds-light-color-alpha-shadow2);
+	visibility: hidden;
+	opacity: 0;
+	z-index: -1;
+}
+.page-top-button:hover {
+	background-color: var(--krds-light-color-action-secondary-hover);
+}
+.page-top-button:focus {
+	background-color: var(--krds-light-color-action-secondary-pressed);
+}
+.page-top-button.active {
+	visibility: visible;
+	opacity: 1;
+	z-index: 60;
+}
+.page-top-button.type-txt {
+	width: var(--krds-size-height-9);
+	height: var(--krds-size-height-9);
+	font-size: 1.5rem;
+}
 
 /* subpage layout */
 #container .in-between {

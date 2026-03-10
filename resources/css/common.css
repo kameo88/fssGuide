@@ -285,6 +285,11 @@ body {
 .krds-calendar-area .calendar-wrap .calendar-body .calendar-table-wrap .calendar-tbl td.period.start>.btn-set-date {
 
 } */
+ /* modal */
+ .krds-modal .modal-dialog.modal-sm .modal-btn {
+	 padding-bottom: 2.4rem;
+ }
+
 /* page top button */
 .page-top-button {
 	display: flex;
@@ -519,6 +524,12 @@ body {
 	.krds-accordion.medium .accordion-item .btn-accordion {
 		padding: 1.2rem 5.6rem 1.2rem 1.6rem;
 	}
+	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-btn {
+		padding-bottom: 3.6rem;
+ }
+	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog.modal-sm .modal-btn {
+		padding-bottom: 2rem;
+ }
 }
 /* hide for mobile */
 @media (max-width: 420px) {

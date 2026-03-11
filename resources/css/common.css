@@ -309,6 +309,9 @@ body {
 .krds-modal[data-type=bottom-sheet] .modal-header .modal-title {
 	padding-right: var(--krds-padding-10);
 }
+.krds-modal[data-type=bottom-sheet] .modal-content {
+	border-bottom: none;
+}
 .krds-modal[data-type=bottom-sheet] .modal-conts {
 	padding: var(--krds-modal--bottom-sheet-padding);
 }

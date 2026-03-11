@@ -77,6 +77,11 @@ body {
 #krds-header .header-container .logo a {
 	background-image: url(../img/common/logo.png);
 }
+
+.krds-btn.icon .svg-icon {
+	background-color: var(--krds-light-color-icon-gray);
+}
+
 /* my drop menu */
 .krds-drop-wrap.my-drop .drop-menu {
 	width: 21rem;
@@ -286,9 +291,25 @@ body {
 
 } */
  /* modal */
- .krds-modal .modal-dialog.modal-sm .modal-btn {
-	 padding-bottom: 2.4rem;
- }
+.krds-modal .modal-dialog.modal-sm .modal-btn {
+	padding-bottom: 2.4rem;
+}
+.krds-modal[data-type=bottom-sheet] {
+	--krds-modal--bottom-sheet-btn-padding-top: var(--krds-padding-8);
+	--krds-modal--bottom-sheet-btn-padding-bottom: var(--krds-padding-10);
+}
+.krds-modal[data-type=bottom-sheet] .modal-header {
+	padding-top: 2.4rem;
+}
+.krds-modal[data-type=bottom-sheet] .modal-header .modal-title {
+	padding-right: var(--krds-padding-10);
+}
+.krds-modal[data-type=bottom-sheet] .modal-conts {
+	padding: var(--krds-modal--bottom-sheet-padding);
+}
+.krds-modal[data-type=bottom-sheet] .modal-btn.btn-wrap {
+	padding: var(--krds-modal--bottom-sheet-btn-padding-top) var(--krds-modal--bottom-sheet-padding) var(--krds-modal--bottom-sheet-btn-padding-bottom);
+}
 
 /* page top button */
 .page-top-button {

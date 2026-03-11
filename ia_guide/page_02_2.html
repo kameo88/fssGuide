@@ -1377,7 +1377,7 @@
 
 											<div class="g-sample-view">
 												<!-- Modal basic -->
-												<button type="button" class="krds-btn large open-modal" data-target="modal_sample_01">class 및 data-target 호출</button>
+												<button type="button" class="krds-btn large open-modal" data-target="modal_sample_01">Modal basic 호출</button>
 												<!-- //Modal basic -->
 											</div>
 
@@ -1413,14 +1413,32 @@
 
 											<div class="g-sample-view">
 												<!-- Modal size large -->
-												<button type="button" class="krds-btn large open-modal" data-target="modal_sample_01">size large(기본 사이즈)</button>
+												<button type="button" class="krds-btn open-modal" data-target="modal_sample_01">size large(기본 사이즈)</button>
 												<!-- //Modal size large -->
 												<!-- Modal size medium -->
-												<button type="button" class="krds-btn large open-modal" data-target="modal_sample_medium">size medium</button>
+												<button type="button" class="krds-btn open-modal" data-target="modal_sample_medium">size medium</button>
 												<!-- //Modal size medium -->
 												<!-- Modal size small -->
-												<button type="button" class="krds-btn large open-modal" data-target="modal_sample_small">size small</button>
+												<button type="button" class="krds-btn open-modal" data-target="modal_sample_small">size small</button>
 												<!-- //Modal size small -->
+											</div>
+
+										</div>
+									</div>
+									<!-- //g-example-box -->
+								</div>
+
+								<div class="g-conts-area">
+									<h4 class="con-tit">bottom sheet</h4>
+
+									<!-- g-example-box -->
+									<div class="g-example-box">
+										<div class="g-scroll-x">
+
+											<div class="g-sample-view">
+												<!-- Modal bottom sheet -->
+												<button type="button" class="krds-btn open-modal" data-target="modal_sample_bottom">Modal bottom sheet 호출</button>
+												<!-- //Modal bottom sheet -->
 											</div>
 
 										</div>
@@ -1935,7 +1953,7 @@
 	</div>
 
 	<!-- modal basic -->
-	<div id="modal_sample_01" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_01">
+	<div id="modal_sample_01" class="krds-modal" role="dialog" aria-labelledby="tit_modal_sample_01">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- modal title -->
@@ -1972,7 +1990,7 @@
 	<!-- //modal basic -->
 
 	<!-- modal sample 2 -->
-	<div id="modal_sample_02" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_02">
+	<div id="modal_sample_02" class="krds-modal" role="dialog" aria-labelledby="tit_modal_sample_02">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- modal title -->
@@ -2051,7 +2069,7 @@
 	<!-- //modal sample 2 -->
 
 	<!-- modal size medium -->
-	<div id="modal_sample_medium" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_medium">
+	<div id="modal_sample_medium" class="krds-modal" role="dialog" aria-labelledby="tit_modal_sample_medium">
 		<div class="modal-dialog modal-md">
 			<div class="modal-content">
 				<!-- modal title -->
@@ -2088,7 +2106,7 @@
 	<!-- //modal size medium -->
 
 	<!-- modal size small -->
-	<div id="modal_sample_small" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_small">
+	<div id="modal_sample_small" class="krds-modal" role="dialog" aria-labelledby="tit_modal_sample_small">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<!-- modal title -->
@@ -2123,6 +2141,49 @@
 		<div class="modal-back in"></div>
 	</div>
 	<!-- //modal size small -->
+
+	<!-- modal bottom sheet -->
+	<div id="modal_sample_bottom" class="krds-modal" data-type="bottom-sheet" role="dialog" aria-labelledby="tit_modal_sample_bottom">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_modal_sample_bottom" class="modal-title">
+						모달 제목
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts">
+					<div class="conts-area">
+						modal-content height 90% <br />
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. <br />
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+					</div>
+				</div>
+				<!-- //modal contents -->
+				<!-- modal btn -->
+				<div class="modal-btn btn-wrap">
+					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+					<button type="button" class="krds-btn medium primary close-modal">예</button>
+				</div>
+				<!-- //modal btn -->
+				<!-- close button -->
+				<button type="button" class="krds-btn medium icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<div class="modal-back in"></div>
+	</div>
+	<!-- //modal bottom sheet -->
 
 
 	<script>

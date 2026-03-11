@@ -73,6 +73,11 @@ body {
 .text-center {
 	text-align: center !important;
 }
+.f-between {
+	display: flex;
+	justify-content: space-between !important;
+	gap: 1rem;
+}
 
 #krds-header .header-container .logo a {
 	background-image: url(../img/common/logo.png);

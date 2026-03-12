@@ -109,6 +109,12 @@
 .g-wrap .g-conts .g-sample-view .page-top-button {
 	position: initial;
 }
+.g-wrap .krds-main-menu-mobile .menu-wrap {
+	width: 17rem !important;
+}
+.g-wrap .krds-main-menu-mobile .gnb-main-trigger {
+	padding: 0 1.6rem !important;
+}
 
 @media (max-width: 767px) {
 	.g-wrap .krds-in-page-navigation-type {

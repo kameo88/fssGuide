@@ -12,8 +12,9 @@
 	<link rel="shortcut icon" href="../resources/img/favicon.png">
 	<link type="text/css" rel="stylesheet" href="css/ia_style.css" />
 	<!-- <script type="module" src="js/ia_front_bak.js"></script> -->
-	<script src="../resources/js/component/ui-script.js" defer></script>
-	<script src="../resources/js/plugin/swiper-bundle.min.js" defer></script>
+	<script src="../resources/js/component/ui-script.js"></script>
+	<!-- <script src="../ia_guide/js/ui_guide.js"></script> -->
+	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
 
 	<title>UI/UX Guide | 금융감독원 통합홈페이지</title>
 </head>
@@ -158,12 +159,18 @@
 							</ul>
 						</div>
 						<div class="header-branding">
+							<!-- logo -->
 							<h2 class="logo">
 								<a href="../index.html">
 									<span class="sr-only">금융감독원</span>
-									<!-- <img src="../../../resources/img/guide/common/ico_logo_krds.svg" alt="KRDS"> -->
 								</a>
 							</h2>
+							<!-- //logo -->
+							<div class="header-actions">
+								<!-- 모바일 전체 메뉴 -->
+								<button type="button" class="btn-navi navi-row all" aria-controls="mobile-nav">전체메뉴</button>
+								<!-- //모바일 전체 메뉴 -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -365,6 +372,151 @@
 				<!-- //메인메뉴 : 데스크탑 -->
 
 			</div>
+
+
+			<!-- 메인메뉴 : 모바일 -->
+			<nav id="mobile-nav" class="krds-main-menu-mobile">
+				<div class="gnb-wrap">
+					<!-- gnb-header -->
+					<div class="gnb-header">
+						<!-- gnb-utils -->
+						<div class="gnb-utils">
+							<ul class="utility-list">
+								<li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
+								<li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
+							</ul>
+						</div>
+						<!-- //gnb-utils -->
+					</div>
+					<!-- //gnb-header -->
+					
+					<!-- gnb-body -->
+					<div class="gnb-body">
+						<!-- gnb-menu -->
+						<div class="gnb-menu">
+							<div class="menu-wrap">
+								<ul>
+									<li>
+										<a href="#mGnb-anchor1" class="gnb-main-trigger">탐색 & 설정</a>
+									</li>
+									<li>
+										<a href="#mGnb-anchor2" class="gnb-main-trigger">레이아웃 & 표현 1</a>
+									</li>
+									<li>
+										<a href="#mGnb-anchor3" class="gnb-main-trigger">레이아웃 & 표현 2</a>
+									</li>
+									<li>
+										<a href="#mGnb-anchor4" class="gnb-main-trigger">액션 & 선택</a>
+									</li>
+									<li>
+										<a href="#mGnb-anchor5" class="gnb-main-trigger">입력</a>
+									</li>
+									<li>
+										<a href="#mGnb-anchor6" class="gnb-main-trigger">피드백 & 도움말</a>
+									</li>
+									<li>
+										<a href="#mGnb-anchor7" class="gnb-main-trigger">페이지</a>
+									</li>
+								</ul>
+							</div>
+							<div class="submenu-wrap">
+								<div class="gnb-sub-list" id="mGnb-anchor1">
+									<h2 class="sub-title">탐색 & 설정</h2>
+									<ul>
+										<li><a href="page_01.html" class="gnb-sub-trigger">공식 배너(Masthead)</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">운영기관 식별자(Identifier)</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">헤더</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">푸터</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">건너뛰기 링크</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">메인 메뉴</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">브레드크럼</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">사이드 메뉴</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">콘텐츠 내 탐색</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">페이지네이션</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">언어 변경</a></li>
+										<li><a href="page_01.html" class="gnb-sub-trigger">화면 크기 조정</a></li>
+									</ul>
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor2">
+									<h2 class="sub-title">레이아웃 & 표현 1</h2>
+									<ul>
+										<li><a href="page_02_1.html" class="gnb-sub-trigger">구조화 목록</a></li>
+										<li><a href="page_02_1.html" class="gnb-sub-trigger">배지</a></li>
+										<li><a href="page_02_1.html" class="gnb-sub-trigger">이미지</a></li>
+										<li><a href="page_02_1.html" class="gnb-sub-trigger">표</a></li>
+										<li><a href="page_02_1.html" class="gnb-sub-trigger">텍스트 목록</a></li>
+									</ul>
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor3">
+									<h2 class="sub-title">레이아웃 & 표현 2</h2>
+									<ul>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">긴급공지</a></li>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">달력</a></li>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">디스클로저</a></li>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">모달</a></li>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">아코디언</a></li>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">탭</a></li>
+										<li><a href="page_02_2.html" class="gnb-sub-trigger">캐러셀</a></li>
+									</ul>
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor4">
+									<h2 class="sub-title">액션 & 선택</h2>
+									<ul>
+										<li><a href="page_03.html" class="gnb-sub-trigger">링크</a></li>
+										<li><a href="page_03.html" class="gnb-sub-trigger">버튼</a></li>
+										<li><a href="page_03.html" class="gnb-sub-trigger">라디오 버튼</a></li>
+										<li><a href="page_03.html" class="gnb-sub-trigger">체크박스</a></li>
+										<li><a href="page_03.html" class="gnb-sub-trigger">셀렉트</a></li>
+										<li><a href="page_03.html" class="gnb-sub-trigger">태그</a></li>
+										<li><a href="page_03.html" class="gnb-sub-trigger">토글 스위치</a></li>
+									</ul>
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor5">
+									<h2 class="sub-title">입력</h2>
+									<ul>
+										<li><a href="page_04.html" class="gnb-sub-trigger">날짜 입력 필드</a></li>
+										<li><a href="page_04.html" class="gnb-sub-trigger">텍스트 영역</a></li>
+										<li><a href="page_04.html" class="gnb-sub-trigger">텍스트 입력 필드</a></li>
+										<li><a href="page_04.html" class="gnb-sub-trigger">파일 업로드</a></li>
+									</ul>
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor6">
+									<h2 class="sub-title">피드백 & 도움말</h2>
+									<ul>
+										<li><a href="page_05.html" class="gnb-sub-trigger">단계 표시기</a></li>
+										<li><a href="page_05.html" class="gnb-sub-trigger">스피너</a></li>
+										<li><a href="page_05.html" class="gnb-sub-trigger">도움패널</a></li>
+										<li><a href="page_05.html" class="gnb-sub-trigger">맥락적 도움말</a></li>
+										<li><a href="page_05.html" class="gnb-sub-trigger">코치마크</a></li>
+										<li><a href="page_05.html" class="gnb-sub-trigger">툴팁</a></li>
+									</ul>
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor7">
+									<h2 class="sub-title">페이지</h2>
+									<ul>
+										<li><a href="../html/main.html" class="gnb-sub-trigger" target="_blank">국문 메인</a></li>
+										<li><a href="../html/subpage.html" class="gnb-sub-trigger" target="_blank">국문 서브</a></li>
+										<li><a href="javascript:void(0);" class="gnb-sub-trigger">국문 서브 메인</a></li>
+										<li><a href="javascript:void(0);" class="gnb-sub-trigger">영문 메인</a></li>
+										<li><a href="javascript:void(0);" class="gnb-sub-trigger">영문 서브</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //gnb-menu -->
+					</div>
+					<!-- //gnb-body -->
+					
+					<!-- gnb-close -->
+					<button type="button" class="krds-btn medium icon" id="close-nav">
+						<span class="sr-only">전체메뉴 닫기</span>
+						<i class="svg-icon ico-popup-close"></i>
+					</button>
+					<!-- //gnb-close -->
+				</div>
+			</nav>
+			<!-- //메인메뉴 : 모바일 -->
+
 		</header>
 		<!-- //header -->
 
@@ -673,7 +825,7 @@
 							<section id="g_inpage" class="g-conts section-link">
 								<h3 class="sec-tit">
 									탑 버튼
-									<span class="badge-text">page-top-buttonn</span>
+									<span class="badge-text">page-top-button</span>
 									<p class="desc">페이지 상단으로 가는 버튼</p>
 								</h3>
 
@@ -707,8 +859,28 @@
 				<!-- //contents -->
 
 			</div>
+			<!-- <a href="#top" class="btn-top page-top-button type-txt"><i class="svg-icon ico-go-top"></i>위로</a> -->
+			<button type="button" class="btn-top page-top-button type-txt"><i class="svg-icon ico-go-top"></i>위로</button>
 		</main>
 		<!-- //container -->
+
+<script>
+	const btnTop = document.querySelector(".btn-top");
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 100) {
+				btnTop.classList.add('active');
+		} else {
+				btnTop.classList.remove('active');
+		}
+	});
+	btnTop.addEventListener('click', () => {
+		window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+		});
+	});
+</script>
 
 		<!-- footer -->
 		<footer id="krds-footer">
@@ -742,7 +914,7 @@
 							<a href="../utility/utility_06.html" class="krds-btn small text">저작권정책</a>
 						</div>
 						<p class="f-copy">© 2023 Ministry of the Interior and Safety. All rights reserved.</p>
-						<a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" title="새 창 열림" target="_blank" class="f-mark"><img src="../../../resources/img/guide/common/web_accessibility_mark.png" alt="(사)한국장애인단체총연합회한국웹접근성인증평가원웹접근성 우수사이트인증마크(WA인증마크)" width="68" height="48"></a>
+						<a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" title="새 창 열림" target="_blank" class="f-mark"><img src="../../../resources/img/common/web_accessibility_mark.png" alt="(사)한국장애인단체총연합회한국웹접근성인증평가원웹접근성 우수사이트인증마크(WA인증마크)" width="68" height="48"></a>
 					</div>
 
 					<!-- identifier -->

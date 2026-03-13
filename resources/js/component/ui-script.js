@@ -2662,3 +2662,8 @@ window.addEventListener("resize", () => {
   windowSize.setWinSize();
   krds_helpPanel.init();
 });
+document.addEventListener("all:includes:loaded", function() {
+  // 헤더 이벤트 재초기화
+	krds_mainMenuPC.init();
+  //krds_mainMenuMobile.init();
+});

@@ -63,10 +63,6 @@
 	/* --krds-light-color-text-subtle: var(--krds-color-light-gray-90); */
 	--krds-light-color-input-border-active: var(--krds-color-light-primary-70);
 
-	/* 아래 항목 90으로 수정 예정 */
-	/*
-
-	*/
 }
 
 body {
@@ -128,6 +124,9 @@ body {
 }
 
 /* form */
+.krds-input {
+	--krds-input--color-text: var(--krds-light-color-text-basic);
+}
 .krds-form-check input[type=checkbox]~label, 
 .krds-form-check input[type=radio]~label {
 	color: var(--krds-light-color-text-bolder);
@@ -138,6 +137,10 @@ body {
 }
 .form-group .form-label, .form-group .form-tit {
 	font-size: var(--krds-pc-font-size-label-small);
+}
+.form-group .form-tit .form-label-txt {
+	font-size: var(--krds-pc-font-size-label-xsmall);
+	margin-top: .8rem;
 }
 .krds-form-select:focus {
 	border-color: var(--krds-form-select--color-border-active);
@@ -459,7 +462,7 @@ body {
 
 /* 임시 kameo */
 .krds-in-page-navigation-type .krds-in-page-navigation-area {
-	/* display: none; */
+	display: none;
 }
 /* 임시 kameo */
 

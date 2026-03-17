@@ -2662,8 +2662,12 @@ window.addEventListener("resize", () => {
   windowSize.setWinSize();
   krds_helpPanel.init();
 });
+
+//20260313 추가
 document.addEventListener("all:includes:loaded", function() {
   // 헤더 이벤트 재초기화
 	krds_mainMenuPC.init();
-  //krds_mainMenuMobile.init();
+  krds_mainMenuMobile.init();
+  krds_modal.init();
+  krds_dropEvent.init();
 });

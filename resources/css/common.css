@@ -381,9 +381,6 @@ body {
 	width: 100%;
 	padding-bottom: 0;
 }
-#container .in-between > .contents {
-		/* padding: 2rem; */
-}
 .page-title-wrap {
 	display: flex;
 	align-items: normal;

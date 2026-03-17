@@ -4,6 +4,7 @@
   // 0. include 대상과 파일 매핑
   const includeMap = [
     { selector: '#krds-header', file: 'inc/g_header.html' },
+    { selector: '#krds-header', file: 'inc/header.html' },
     { selector: '#krds-footer', file: 'inc/g_footer.html' },
     // 필요하면 여기 계속 추가
     // { selector: '#sub-nav', file: 'inc/sub_nav.html' },

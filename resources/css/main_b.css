@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.section:not(#section1) .sec-inner {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	max-width: 162rem;
+	margin: 12rem auto 0;
+	/* background-color: #f2f2f2; */
+}
+#section2 .sec-inner {
+	padding: 2rem 0;
+	background-color: #FBEFF0;
+}
+.section.full .sec-inner {
+	width: 100%;
+}
+.sec-inner .main-tit-wrap {
+	margin-bottom: 4rem;
+}
+.service-wrap {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 3rem;
+	margin-top: 4rem;
+}
+.sch-form-wrap {
+	width: 109.4rem;
+}
+img {
+	cursor: pointer;
+}
+
+/* 업무자료 */
+.job-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	/* width: ; */
+}
+.job-list li {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: calc((100% - 6rem)/4);
+	min-height: 28rem;
+	padding: 4rem 4rem 1.4rem 4rem;
+	border: 1px solid #CCCCCC;
+	border-radius: 1rem 0 1rem 0;
+	overflow: hidden;
+}
+.job-list li .tit {
+	color: #111111;
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+.job-list li .desc {
+	margin-top: 3rem;
+	color: #444444;
+	font-size: 1.7rem;
+}
+.job-list li a {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	right: 0;
+	width: 4.4rem;
+	height: 4.4rem;
+	background: #063A74 url(../img/component/icon/ico_flow_arrow.svg) no-repeat center / contain;
+	background-size: 2rem;
+
+}
+/* 홍보관 */
+.promotion-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+}
+.promotion-list {
+	display: flex;
+	gap: 2rem;
+}
+.promotion-list > * {
+	width: calc((100% - 4rem)/2);
+}
+.promotion-list .rt {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.promotion-list .card-wrap {
+	display: flex;
+	position: relative;
+	border: 1px solid #CCCCCC;
+	border-radius: 1rem 0 1rem 0;
+	overflow: hidden;
+}
+.promotion-list .lt .card-wrap {
+	height: 58rem;
+}
+.promotion-list .card-wrap img {
+	height: 100%;
+}
+.promotion-list .lt .card-wrap .txt-area {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 4rem;
+	background-color: rgba(0, 0, 0, .8);
+	color: #fff;
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.promotion-list .rt .card-wrap {
+	display: flex;
+	height: 18rem;
+}
+.promotion-list .rt .card-wrap .img-area {
+ min-width: 50%;
+}
+.promotion-list .rt .card-wrap .txt-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 4rem;
+}
+
+
+
+/* 우측 바로가기 아이콘 */
+.quick-menu {
+	position: fixed;
+	top: 0;
+	/* bottom: 0; */
+	right: 0;
+	width: 7.2rem;
+	background-color: #063A74;
+	z-index: 999;
+}

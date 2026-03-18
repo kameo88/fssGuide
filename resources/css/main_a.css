@@ -106,10 +106,8 @@
 #container .main .main-d-ban-swiper .swiper-controller {
 	z-index: 1;
 }
-
 #container .main .sec_inner {
 	display: flex;
-	gap: 8rem;
 	padding-top: 11.4rem;
 	padding-bottom: 12rem;
 }
@@ -135,6 +133,45 @@
 	color: #464C53;
 	font-size: 2.4rem;
 }
+#container .main .conts-wrap > * {
+	flex: 1;
+}
+#container .main .conts-wrap {
+	display: flex;
+	gap: 8rem;
+}
+#container .main .service-list {
+	display: flex;
+	gap: 4.8rem;
+}
+#container .main .service-list .item {
+	max-width: 36rem;
+	min-width: 36rem;
+	height: 26rem;
+	padding: 2rem;
+	border-radius: 2.4rem;
+	background-color: #f2f2f2;
+	color: #fff;
+	font-size: 3.2rem;
+	font-weight: 700;
+}
+#container .main .service-list .item + .item {
+	margin-top: 4.8rem;
+}
+#container .main .service-list .item.ty1 {
+	background: linear-gradient(90deg, #256EF4, #0B50D0);
+}
+#container .main .service-list .item.ty2 {
+	background: linear-gradient(90deg, #7C3AED, #6D28D9);
+}
+#container .main .service-list .item.ty3 {
+	background: linear-gradient(90deg, #038C8E, #027678);
+}
+#container .main .service-list .item.ty4 {
+	background: linear-gradient(90deg, #1C589C, #063A74);
+}
+
+
 
 /* 우측 바로가기 아이콘 */
 .quick-menu {

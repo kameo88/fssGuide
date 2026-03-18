@@ -361,6 +361,11 @@ body {
 	font-size: 1.5rem;
 }
 
+#krds-footer .f-logo {
+	width: 20rem;
+	background-image: url(../img/common/ico_logo.svg);
+}
+
 /* subpage layout */
 #container .in-between {
 	display: flex;

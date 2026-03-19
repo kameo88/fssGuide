@@ -1,24 +1,136 @@
 @charset "UTF-8";
 
-.section:not(#section1) .sec-inner {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-direction: column;
+img {
+	cursor: pointer;
+}
+.section:not(#section1) {
+	margin-top: 12rem;
+}
+.section:not(.full) .sec-inner {
 	max-width: 162rem;
-	margin: 12rem auto 0;
-	/* background-color: #f2f2f2; */
+	margin: 0 auto;
 }
 #section2 .sec-inner {
 	padding: 2rem 0;
 	background-color: #FBEFF0;
 }
+#section5 .sec-inner,
+#section8 .sec-inner {
+	background-color: #E8EAF2;
+}
+#section5 .sec-inner {
+	background-image: url(../img/imsy/bg_search.png);
+	background-repeat: no-repeat;
+	background-position: top 18rem right;
+	background-size: 103.4rem auto;
+	
+}
 .section.full .sec-inner {
 	width: 100%;
+	padding: 4rem 0 ;
 }
 .sec-inner .main-tit-wrap {
+	flex-direction: column;
 	margin-bottom: 4rem;
 }
+.sec-inner .main-tit-wrap .tit {
+	font-size: 4rem;
+}
+
+/* visual swiper */
+
+/* full banner */
+.main-d-ban-swiper {
+	position: relative;
+	width: 160rem;
+	margin: 3rem auto;
+}
+.main-d-ban-swiper .swiper-slide .item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	height: 10.7rem;
+	border: 1px solid gray;
+}
+.main-d-ban-swiper .swiper-slide .item img {
+	margin: 0 auto;
+}
+.main-d-ban-swiper .swiper-indicator {
+	justify-content: center;
+}
+.swiper-indicator .swiper-pagination:not(.swiper-pagination-fraction) {
+	height: initial;
+	padding: initial;
+	border: initial;
+	background-color: initial;
+}
+
+/* 금융감독원 소식 */
+
+/* 금융소비자 */
+.cs-card-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	width: 116.4rem;
+	margin: auto;
+}
+.cs-card-list li {
+	width: calc((100% - 2rem) / 2);
+}
+.cs-card-list li .item {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	/* align-items: flex-end; */
+	width: 100%;
+	overflow: hidden;
+}
+.cs-card-list li .item .img {
+	height: 27.5rem;
+	margin-bottom: 1rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:  cover;
+}
+.cs-card-list li .item .img::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	background-color: rgb(8, 56, 145, .3);
+}
+.cs-card-list li .item .img.ty1 {
+	background-image: url(../img/imsy/img_cs_1.png);
+}
+.cs-card-list li .item .img.ty2 {
+	background-image: url(../img/imsy/img_cs_2.png);
+}
+.cs-card-list li .item .img.ty3 {
+	background-image: url(../img/imsy/img_cs_3.png);
+}
+.cs-card-list li .item .img.ty4 {
+	background-image: url(../img/imsy/img_cs_4.png);
+}
+.cs-card-list li .item .txt {
+	display: inline-flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 1rem;
+	width: 26.4rem;
+	padding: 1.6rem;
+	border-radius: 1rem 0 1rem 0;
+	background-color: #063A74;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+
+/* 서비스 찾기 */
 .service-wrap {
 	display: flex;
 	align-items: center;
@@ -27,10 +139,56 @@
 	margin-top: 4rem;
 }
 .sch-form-wrap {
-	width: 109.4rem;
+	width: 116.4rem;
+	margin: 9rem auto 11rem;
 }
-img {
-	cursor: pointer;
+.icon-list {
+	display: inline-flex;
+	gap: 5rem;
+}
+.icon-list li .item {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	flex-direction: column;
+}
+.icon-list .icon {
+	display: inline-flex;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	background-color: #BACBDE;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 6rem;
+}
+.icon-list .icon:hover {
+	background-color: #063A74;
+	transition: all 0.4s ease;
+}
+.icon-list .icon.ty1 {
+	background-image: url(../img/imsy/icon_service_01.png);
+}
+.icon-list .icon.ty2 {
+	background-image: url(../img/imsy/icon_service_02.png);
+}
+.icon-list .icon.ty3 {
+	background-image: url(../img/imsy/icon_service_03.png);
+}
+.icon-list .icon.ty4 {
+	background-image: url(../img/imsy/icon_service_04.png);
+}
+.icon-list .icon.ty5 {
+	background-image: url(../img/imsy/icon_service_05.png);
+}
+.icon-list .icon.ty6 {
+	background-image: url(../img/imsy/icon_service_06.png);
+}
+.icon-list .icon.ty7 {
+	background-image: url(../img/imsy/icon_service_07.png);
+}
+.icon-list .icon.ty8 {
+	background-image: url(../img/imsy/icon_service_08.png);
 }
 
 /* 업무자료 */
@@ -64,12 +222,11 @@ img {
 .job-list li a {
 	position: absolute;
 	display: block;
-	bottom: 0;
-	right: 0;
-	width: 4.4rem;
-	height: 4.4rem;
-	background: #063A74 url(../img/component/icon/ico_flow_arrow.svg) no-repeat center / contain;
-	background-size: 2rem;
+	bottom: 3rem;
+	right: 4rem;
+	width: 4.8rem;
+	height: 4.8rem;
+	background: url(../img/imsy/ico_arrow.png) no-repeat center / contain;
 
 }
 /* 홍보관 */
@@ -128,15 +285,16 @@ img {
 	padding: 2rem 4rem;
 }
 
+/* 소셜 미디어 센터 */
 
 
 /* 우측 바로가기 아이콘 */
 .quick-menu {
 	position: fixed;
-	top: 0;
-	/* bottom: 0; */
-	right: 0;
-	width: 7.2rem;
-	background-color: #063A74;
+	top: 20rem;
+	right: 3rem;
+	width: 5rem;
+	height: 38.1rem;
+	background: url(../img/imsy/quick_menu.png);
 	z-index: 999;
 }

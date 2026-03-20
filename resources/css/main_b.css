@@ -459,6 +459,19 @@ img {
 	align-items: flex-end;
 	gap: 2rem;
 }
+.promotion-list li {
+	display: flex;
+	align-items: flex-end;
+}
+.promotion-list li:first-child {
+	width: 39rem;
+	height: 40.8rem;
+}
+.promotion-list li:last-child {
+	width: 28.9rem;
+	height: 32rem;
+	margin-left: 10rem;
+}
 .promotion-list .card-wrap {
 	display: flex;
 	flex-direction: column;
@@ -477,6 +490,10 @@ img {
 	color: #fff;
 	font-size: 2rem;
 	font-weight: 700;
+}
+.promotion-list li:last-child .card-wrap .txt {
+	padding: 3rem;
+	font-size: 1.8rem;
 }
 .promotion-list .card-wrap.active .txt {
 	background-color: #02162C;

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body {
+	font-size: 1.6rem;	
+}
+
 img {
 	cursor: pointer;
 }
@@ -37,7 +41,111 @@ img {
 	font-size: 4rem;
 }
 
-/* visual swiper */
+/* main visual */
+.main-visual-wrap {
+	display: flex;
+	width: 100%;
+	margin-bottom: 4rem;
+	border-radius: 3rem 0 3rem 0;
+	overflow: hidden;
+}
+.main-visual-wrap .vb-swiper {
+	width: calc(100% - 54rem);
+}
+.main-visual-wrap .board-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 54rem;
+	color: #fff;
+}
+.main-visual-wrap .board-wrap > * {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	padding: 3rem 4rem;
+	background-color: #58616A;
+}
+.main-visual-wrap .board-wrap .ty1 {
+	background-color: #1C589C;
+}
+.main-visual-wrap .board-wrap .tit {
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.main-visual-wrap .board-list {
+	display: flex;
+	flex-direction: column;
+	gap: .8rem;
+}
+.main-visual-wrap .board-list li {
+	display: flex;
+	justify-content: space-between;
+}
+.main-visual-wrap .board-list li .link:hover {
+	text-decoration: underline;
+	text-underline-offset: .5rem;
+}
+.main-visual-wrap .board-list li .date {
+	color: #BACBDE;
+}
+
+/* main visual swiper */
+.main-visual-wrap .vb-swiper {
+	position: relative;
+}
+.main-visual-wrap .vb-swiper .item {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 52rem;
+}
+.main-visual-wrap .vb-swiper .img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.main-visual-wrap .vb-swiper .img.ty1 {
+	background-image: url(../img/imsy/img_main_visual1.png);
+}
+.main-visual-wrap .vb-swiper .img.ty2 {
+	background-image: url(../img/imsy/img_main_visual2.png);
+}
+.main-visual-wrap .vb-swiper .text {
+	padding: 8rem 0 0 8rem;
+	color: #fff;
+	font-size: 6rem;
+	z-index: 1;
+}
+.main-visual-wrap .vb-swiper .text > * {
+	line-height: 1.2;
+}
+.main-visual-wrap .vb-swiper .tit {
+	font-weight: 700;
+}
+.main-visual-wrap .vb-swiper .swiper-indicator {
+	position: absolute;
+	bottom: 4rem;
+	left: 8rem;
+	z-index: 1;
+}
+.main-visual-wrap .vb-swiper .swiper-pagination.swiper-pagination-fraction,
+.main-visual-wrap .vb-swiper [class^=swiper-button-] {
+	height: initial;
+	border: none;
+	background-color: initial;
+	color: #fff;
+}
+.main-visual-wrap .vb-swiper [class^=swiper-button-]::after {
+	background-color: #ffffff;
+}
+.main-visual-wrap .vb-swiper .swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
+	color: #fff;
+}
 
 /* full banner */
 .main-d-ban-swiper {
@@ -50,7 +158,6 @@ img {
 	align-items: flex-start;
 	justify-content: center;
 	height: 10.7rem;
-	border: 1px solid gray;
 }
 .main-d-ban-swiper .swiper-slide .item img {
 	margin: 0 auto;
@@ -64,8 +171,119 @@ img {
 	border: initial;
 	background-color: initial;
 }
+.main-d-ban-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	height: .4rem;
+	border-radius: 1rem;
+}
+.main-d-ban-swiper [class^=swiper-button-] {
+	width: 5.6rem;
+	height: 5.6rem;
+	border-radius: 0;
+	background-color: transparent !important;
+}
 
 /* 금융감독원 소식 */
+.news-wrap {
+	display: flex;
+	gap: 6rem;
+	margin-bottom: 4rem;
+}
+.news-wrap > * {
+	width: calc( (100% - 6rem) / 2);
+}
+.news-wrap .tit-area {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+}
+.news-wrap .tit-area .tit {
+	color: #111;
+	font-size: 2.8rem;
+	font-weight: 700;
+}
+.news-wrap .tit-area .btn-more {
+	display: inline-flex;
+	align-items: center;
+	color: #444;
+}
+.news-wrap .tit-area .btn-more::after {
+	content: '';
+	display: inline-flex;
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-left: 1rem;
+	background: url(../img/imsy/ico_more.png) no-repeat center / 1.5rem auto;
+}
+.news-wrap .notice-list-wrap {
+	padding-top: .3rem;
+	border: 1px solid #111111;
+	border-width: 3px 0 1px 0;
+}
+.news-wrap .notice-list-wrap li {
+	display: flex;
+	justify-content: space-between;
+	padding: 2.4rem 1rem 2.2rem;
+	border-bottom: 1px solid #ddd;
+	color: #444;
+}
+.news-wrap .notice-list-wrap li .krds-btn {
+	color: #111;
+	font-size: 1.8rem;
+}
+/* 금감원 새소식 */
+.news-wrap .news-card-wrap {
+	display: flex;
+	gap: 2rem;
+}
+.news-wrap .news-card-wrap .card-area {
+	width: calc( (100% - 2rem) / 2);
+	border: 1px solid gray;
+	border-radius: 3rem 0 3rem 0;
+	overflow: hidden;
+}
+.news-wrap .news-card-wrap .card-area a {
+	display: flex;
+	flex-direction: column;
+}
+.news-wrap .news-card-wrap .card-area .img {
+	display: flex;
+	height: 21.3rem;
+	overflow: hidden;
+}
+.news-wrap .news-card-wrap .card-area .img span {
+	width: 100%;
+	/* display: flex; */
+	/* height: 21.3rem; */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transition: transform 0.4s ease;
+	overflow: hidden;
+}
+
+.news-wrap .news-card-wrap .card-area .img:hover span {
+	transform: scale(1.2);
+}
+.news-wrap .news-card-wrap .card-area .img.ty1 .bg {
+	background-image: url(../img/imsy/img_news_1.png);
+}
+.news-wrap .news-card-wrap .card-area .img.ty2 .bg {
+	background-image: url(../img/imsy/img_news_2.png);
+}
+.news-wrap .news-card-wrap .card-area .info {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 4rem 3rem;
+	color: #444;
+}
+.news-wrap .news-card-wrap .card-area .txt {
+	color: #111;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
 
 /* 금융소비자 */
 .cs-card-list {

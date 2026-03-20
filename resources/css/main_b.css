@@ -450,61 +450,46 @@ img {
 /* 홍보관 */
 .promotion-wrap {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	gap: 3rem;
 }
 .promotion-list {
 	display: flex;
-	gap: 2rem;
-}
-.promotion-list > * {
-	width: calc((100% - 4rem)/2);
-}
-.promotion-list .rt {
-	display: flex;
-	flex-direction: column;
+	align-items: flex-end;
 	gap: 2rem;
 }
 .promotion-list .card-wrap {
 	display: flex;
-	position: relative;
-	border: 1px solid #CCCCCC;
-	border-radius: 1rem 0 1rem 0;
+	flex-direction: column;
+ 	border-radius: 3rem 0 3rem 0;
 	overflow: hidden;
-}
-.promotion-list .lt .card-wrap {
-	height: 58rem;
 }
 .promotion-list .card-wrap img {
 	height: 100%;
 }
-.promotion-list .lt .card-wrap .txt-area {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 4rem;
-	background-color: rgba(0, 0, 0, .8);
-	color: #fff;
-	font-size: 2.4rem;
-	font-weight: 700;
-}
-.promotion-list .rt .card-wrap {
-	display: flex;
-	height: 18rem;
-}
-.promotion-list .rt .card-wrap .img-area {
- min-width: 50%;
-}
-.promotion-list .rt .card-wrap .txt-area {
+.promotion-list .card-wrap .txt {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 2rem 4rem;
+	padding: 4rem;
+	background-color: #063A74;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+}
+.promotion-list .card-wrap.active .txt {
+	background-color: #02162C;
+	font-size: 2.4rem;
 }
 
 /* 소셜 미디어 센터 */
-
+.main-sns-swiper {
+	
+}
+.main-sns-swiper .swiper-indicator  {
+	justify-content: center;
+}
 
 /* 우측 바로가기 아이콘 */
 .quick-menu {

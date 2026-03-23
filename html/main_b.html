@@ -1177,14 +1177,17 @@
 		// element banner
 		const eleSnsSwiper = new Swiper(".main-sns-swiper .swiper", {
 			slidesPerView: 7,
-			spaceBetween: 20,
-			// speed: 500,
+      // slidesPerGroup: 1,
+      spaceBetween: 20,
+			centeredslides: true,
+      // speed: 500,
 			loop: true,
 			// autoplay: {
 			// 	delay: 2500,
 			// 	disableOnInteraction: false,
 			// 	pauseOnMouseEnter: true,
 			// },
+      slideActiveClass: 'swiper-slide-active',
 			pagination: {
 				el: ".main-sns-swiper .swiper-pagination",
 				clickable: true,

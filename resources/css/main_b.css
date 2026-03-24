@@ -887,3 +887,13 @@ img {
 	background: url(../img/imsy/quick_menu.png);
 	z-index: 999;
 }
+
+#krds-footer {
+	text-align: center;
+}
+#krds-footer img {
+	cursor: initial;
+}
+#krds-footer .inner {
+	display: none;
+}

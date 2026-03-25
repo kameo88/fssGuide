@@ -1,0 +1,290 @@
+@charset "UTF-8";
+#krds-header {
+	position: fixed;
+	right: 0;
+}
+#wrap.scroll-down #krds-header:not(.sample) .header-in {
+	transform: initial;
+}
+#container.main > .section {
+	width: 100%;
+	height: 100vh;
+	/* min-height: 96rem; */
+}
+#container.main #section1 .sec-inner {
+	position: relative;
+}
+#container.main #section3 {
+	background-color: #D8E5FD;
+}
+#container.main #section5 {
+	background-color: #ECF2FE;
+}
+
+.main-visual-wrap .inner {
+	max-width: 100%;
+	height: 100%;
+	padding: 0;
+}
+.main-visual-wrap .vb-swiper {
+	height: 100%;
+	padding: 0;
+}
+.main-visual-wrap .vb-swiper .swiper-slide {
+	justify-content: flex-start;
+	height: 100vh;
+	padding-top: 0;
+	color: #fff;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .item {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .text {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	padding: 32rem 0 0 16rem;
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .tit span {
+	display: block;
+	line-height: 130%;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .tit {
+	font-size: 8rem;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .item.ty1 {
+	background: #00000080 url(../../resources/img/main/img_vb_main1.png) no-repeat center;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .item.ty2 {
+	background: #00000080 url(../../resources/img/main/img_vb_main2.png) no-repeat center;
+}
+.main-visual-wrap .vb-swiper .swiper-slide .item.ty3 {
+	background: #00000080 url(../../resources/img/main/img_vb_main3.png) no-repeat center;
+}
+
+.main-visual-wrap .main-d-ban-swiper {
+	position: absolute;
+	bottom: 12rem;
+	right: 16rem;
+	width: 64rem;
+	height: 40rem;
+	border-radius: 2.4rem;
+	overflow: hidden;
+	/* z-index: 1; */
+}
+.main-visual-wrap .main-d-ban-swiper .swiper-slide .item {
+	display: flex;
+	/* width: 64rem; */
+	height: 40rem;
+	padding: 4rem;
+	border-radius: 2.4rem;
+	color: #fff;
+}
+.main-visual-wrap .main-d-ban-swiper .swiper-slide .item::after {
+	content: '';
+	display: inline-flex;
+	position: absolute;
+	bottom: 0;
+	right: 4.8rem;
+	width: 16rem;
+	height: 16rem;
+	background: url(../../resources/img/main/img_vb_icon.png) no-repeat right bottom;
+}
+.main-visual-wrap .main-d-ban-swiper .item.ty1 {
+	background: linear-gradient(90deg, #256EF4, #0B50D0);
+}
+.main-visual-wrap .main-d-ban-swiper .item.ty2 {
+	background: linear-gradient(90deg, #038C8E, #027678);
+}
+.main-visual-wrap .main-d-ban-swiper .item.ty3 {
+	background: linear-gradient(90deg, #7C3AED, #6D28D9);
+}
+.main-visual-wrap .main-d-ban-swiper .item .cate::after {
+	content: '';
+	display: inline-flex;
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-left: 1.6rem;
+	border-radius: 50%;
+	background-color: yellow;
+}
+
+.main-visual-wrap .main-d-ban-swiper .item .text {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	font-size: 2.4rem;
+}
+.main-visual-wrap .main-d-ban-swiper .item .tit {
+	font-size: 3.2rem;
+	font-weight: 700;
+}
+.main-visual-wrap .main-d-ban-swiper .swiper-indicator {
+	bottom: 6rem;
+	left: 4rem;
+}
+
+/* reset - siwper indicator for ".main-visual-wrap"  */
+.main-visual-wrap .swiper-indicator {
+	position: absolute;
+	bottom: 12rem;
+	left: 4rem;
+}
+.main-visual-wrap .vb-swiper .swiper-indicator {
+	bottom: 4rem;
+	left: 16rem;
+	/* width: 40rem; */
+	z-index: 1;
+}
+.main-visual-wrap .swiper-indicator .swiper-pagination {
+	order: 2;
+}
+.main-visual-wrap .swiper-indicator .swiper-controller {
+	order: 4;
+	z-index: 1;
+}
+.main-visual-wrap .swiper-indicator .swiper-button-prev {
+	order: 1;
+}
+.main-visual-wrap .swiper-indicator .swiper-button-next {
+	order: 3;
+}
+.main-visual-wrap .vb-swiper .swiper-indicator .swiper-fraction {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	color: #fff;
+	font-size: 1.8rem;
+	order: 2;
+}
+.main-visual-wrap .vb-swiper .swiper-indicator .swiper-pagination {
+	order: initial;
+}
+.main-visual-wrap .swiper-fraction span {
+	display: inline-flex;
+	justify-content: center;
+}
+.swiper-indicator .swiper-pagination:not(.swiper-pagination-fraction) {
+	height: initial;
+	padding: initial;
+	border: initial;
+	background-color: initial;
+}
+.main-visual-wrap .swiper-pagination.swiper-pagination-fraction,
+.main-visual-wrap [class^=swiper-button-] {
+	height: initial;
+	border: none;
+	background-color: initial;
+	color: #fff;
+}
+.main-visual-wrap [class^=swiper-button-]::after {
+	background-color: #ffffff;
+}
+.main-visual-wrap .swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
+	color: #fff;
+}
+.main-visual-wrap .swiper-pagination.swiper-pagination-progressbar {
+	width: 20rem;
+	height: 2px;
+	background-color: rgb(255, 255, 255, .5);
+}
+.main-visual-wrap .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background-color: #fff;
+}
+
+
+#container.main .sec_inner {
+	display: flex;
+	padding-top: 11.4rem;
+	padding-bottom: 12rem;
+}
+#container.main #section2 .sec_inner {
+	padding-top: 24rem;
+}
+#container.main #section3 .sec_inner {
+	padding-left: 16rem;
+	padding-right: 16rem;
+}
+#container.main .main-tit-wrap {
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+#container.main .section:not(#section3) .main-tit-wrap {
+	margin-left: 16rem;
+}
+#container.main .main-tit-wrap .tit {
+	font-size: 6.4rem;
+	line-height: 130%;
+}
+#container.main .main-tit-wrap .desc {
+	color: #464C53;
+	font-size: 2.4rem;
+}
+#container.main .conts-wrap > * {
+	flex: 1;
+}
+#container.main .conts-wrap {
+	display: flex;
+	gap: 8rem;
+}
+#container.main .service-list {
+	display: flex;
+	gap: 4.8rem;
+}
+#container.main .service-list .item {
+	max-width: 36rem;
+	min-width: 36rem;
+	height: 26rem;
+	padding: 2rem;
+	border-radius: 2.4rem;
+	background-color: #f2f2f2;
+	color: #fff;
+	font-size: 3.2rem;
+	font-weight: 700;
+}
+#container.main .service-list .item + .item {
+	margin-top: 4.8rem;
+}
+#container.main .service-list .item.ty1 {
+	background: linear-gradient(90deg, #256EF4, #0B50D0);
+}
+#container.main .service-list .item.ty2 {
+	background: linear-gradient(90deg, #7C3AED, #6D28D9);
+}
+#container.main .service-list .item.ty3 {
+	background: linear-gradient(90deg, #038C8E, #027678);
+}
+#container.main .service-list .item.ty4 {
+	background: linear-gradient(90deg, #1C589C, #063A74);
+}
+
+
+
+/* 우측 바로가기 아이콘 */
+.quick-menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 7.2rem;
+	background-color: #063A74;
+	z-index: 999;
+}
+
+#krds-footer>.inner {
+	max-width: 160rem;
+}
+
+@media (max-width: 1400px) {
+	#container.main > .section {
+		height: 100%;
+	}
+	.conts-wrap {
+		flex-direction: column;
+	}
+}

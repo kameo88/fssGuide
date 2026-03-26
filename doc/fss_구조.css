@@ -1,0 +1,217 @@
+####		file directory		####
+
+fss-uiux
+├─ html // 작업 파일
+│ ├─ inc
+│ └─ main.html, 
+│	    subpage.html ...
+├─ ia_guide
+│ ├─ css				// ia guide list css
+│ ├─ js				// ia_front.js for include html
+│ └─ // guide files
+├─ krds_sample			// 삭제 예정
+│ ├─ krds sample files
+├─ resources
+│ ├─  css				// style.css, krds.min.css, custom.css
+│ 	└─
+│ ├─ font			// 웹폰트
+│ ├─ img			// krds svg 아이콘
+│ │    └─ common
+│ │    └─ component
+│ ├─ js	 			// krds js
+│ │   └─ **
+│ └─ **
+└─ index.html
+
+
+####		layout		####
+
+skip_link
+masthead
+header
+    ㄴmain_menu_pc
+    ㄴmain_menu_mobile
+
+main
+    ㄴside_navigation
+    ㄴcontents
+	    ㄴbreadcrumb
+	    ㄴtitle
+
+footer
+
+
+
+structured_list_table
+tts
+tts_icon
+tts_size
+
+####		css		####
+
+>> krds.min.css
+이미지 경로 로컬로 수정해서 사용
+
+>> common.css
+; 커스텀 만들기
+
+
+>> gap size 정리하기
+
+
+    --krds-number-0: 0rem;
+    --krds-number-1: 0.1rem;
+    --krds-number-2: 0.2rem;
+    --krds-number-3: 0.4rem;
+    --krds-number-4: 0.6rem;
+    --krds-number-5: 0.8rem;
+    --krds-number-6: 1rem;
+    --krds-number-7: 1.2rem;
+    --krds-number-8: 1.6rem;
+    --krds-number-9: 2rem;
+    --krds-number-10: 2.4rem;
+    --krds-number-11: 2.8rem;
+    --krds-number-12: 3.2rem;
+    --krds-number-13: 3.6rem;
+    --krds-number-14: 4rem;
+    --krds-number-15: 4.4rem;
+    --krds-number-16: 4.8rem;
+    --krds-number-17: 5.6rem;
+    --krds-number-18: 6.4rem;
+    --krds-number-19: 7.2rem;
+    --krds-number-20: 8rem;
+    --krds-number-21: 9.6rem;
+    --krds-number-max: 100rem;
+
+
+    --krds-gap-1: var(--krds-number-2);
+    --krds-gap-2: var(--krds-number-3);
+    --krds-gap-3: var(--krds-number-5);
+    --krds-gap-4: var(--krds-number-7);
+    --krds-gap-5: var(--krds-number-8);
+    --krds-gap-6: var(--krds-number-9);
+    --krds-gap-7: var(--krds-number-10);
+    --krds-gap-8: var(--krds-number-12);
+    --krds-gap-9: var(--krds-number-14);
+    --krds-gap-10: var(--krds-number-16);
+    --krds-gap-11: var(--krds-number-18);
+    --krds-gap-12: var(--krds-number-20);
+
+
+>> color
+ --krds-color-light-primary-5: #ecf2fe;
+    --krds-color-light-primary-10: #d8e5fd;
+    --krds-color-light-primary-20: #b1cefb;
+    --krds-color-light-primary-30: #86aff9;
+    --krds-color-light-primary-40: #4c87f6;
+    --krds-color-light-primary-50: #256ef4;
+    --krds-color-light-primary-60: #0b50d0;
+    --krds-color-light-primary-70: #083891;
+    --krds-color-light-primary-80: #052561;
+    --krds-color-light-primary-90: #03163a;
+    --krds-color-light-primary-95: #020f27;
+    --krds-color-light-secondary-5: #eef2f7;
+    --krds-color-light-secondary-10: #d6e0eb;
+    --krds-color-light-secondary-20: #bacbde;
+    --krds-color-light-secondary-30: #90b0d5;
+    --krds-color-light-secondary-40: #6b96c7;
+    --krds-color-light-secondary-50: #346fb2;
+    --krds-color-light-secondary-60: #1c589c;
+    --krds-color-light-secondary-70: #063a74;
+    --krds-color-light-secondary-80: #052b57;
+    --krds-color-light-secondary-90: #031f3f;
+    --krds-color-light-secondary-95: #02162c;
+
+
+>> 반응형 krds.min.css
+
+@media (max-width: 1023px) {
+    :root {
+        --krds-contents-padding-x:16px
+    }
+}
+
+@media (max-width: 767px) {
+    .krds-drop-wrap .drop-menu .drop-list .item-link {
+        font-size:var(--krds-dropdown--list-item-mobile-font-size)
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size:var(--krds-mobile-font-size-body-medium)
+    }
+
+    .pc-only {
+        display: none!important
+    }
+
+    .pc-only.read {
+        position: absolute!important;
+        width: 1px!important;
+        height: 1px!important;
+        padding: 0!important;
+        margin: -1px!important;
+        overflow: hidden!important;
+        clip: rect(0,0,0,0)!important;
+        white-space: nowrap!important;
+        border: 0!important
+    }
+
+    .mob-line {
+        display: block;
+        line-height: inherit
+    }
+}
+
+@media (min-width: 1024px) {
+    .inner {
+        margin:0 auto
+    }
+}
+
+@media (min-width: 768px) {
+    .mob-only {
+        display:none!important
+    }
+
+    .mob-only.read {
+        position: absolute!important;
+        width: 1px!important;
+        height: 1px!important;
+        padding: 0!important;
+        margin: -1px!important;
+        overflow: hidden!important;
+        clip: rect(0,0,0,0)!important;
+        white-space: nowrap!important;
+        border: 0!important
+    }
+
+    .pc-line {
+        display: block;
+        line-height: inherit
+    }
+}
+
+@media (max-width: 420px) {
+@media (max-width: 440px)
+@media (max-width: 359px) {
+
+
+>> 반응형 scss 참조
+	ㄴ _variables_for_code.scss
+	ㄴ _breakpoints.scss
+
+
+//CONTENTS MAX WIDTH
+$contents-size: 1200px !default;
+$contents-padding-x-pc: 24px !default;
+$contents-padding-x-mobile: 16px !default;
+$contents-wrap-size: $contents-size + ($contents-padding-x-pc * 2) !default;
+
+//BREAK POINTS
+$breakpoint-small: 360px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-large: 1024px !default;
+$breakpoint-xlarge: 1280px !default;
+$breakpoint-xxlarge: 1440px !default;

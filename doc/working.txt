@@ -1,0 +1,693 @@
+########################	시험연구원
+
+https://www.kotiti-global.com/ko/index.do
+
+########################	KRDS smaple page	############################	접근성 관련해서 재확인 필요
+
+>> 로그인 샘플
+https://www.krds.go.kr/html/pattern/sample_login_0101.html
+
+>> layout
+https://www.krds.go.kr/html/pattern/sample_sub_01.html
+https://www.krds.go.kr/html/pattern/sample_sub_02.html
+
+>> contenst (콘텐츠 내 탐색)
+- 일반형 html 화면
+https://www.krds.go.kr/html/pattern/sample_appl_02.html
+
+- 탭형 html 화면
+https://www.krds.go.kr/html/pattern/sample_appl_0201.html
+
+
+>> 디스클로저
+- 바구니에서 확인
+https://www.krds.go.kr/html/pattern/sample_cart_01.html
+
+>> 캐러셀				==>> 메인 화면 sample !!
+sample page 6 개 확인 필요
+
+https://www.krds.go.kr/html/pattern/sample_main_01.html ~ 
+
+>> 도움 패널
+
+https://www.krds.go.kr/html/pattern/sample_appl_0301.html
+
+https://www.krds.go.kr/html/pattern/sample_helper_type2.html
+
+>>따라하기 패널
+https://www.krds.go.kr/html/pattern/sample_coach_01.html
+
+
+########################	link 확인 필요 	############################
+
+<a href="../style/style_01.html">디자인 스타일 소개</a>
+<a href="../style/style_02.html">디자인 스타일 소개</a>
+<a href="../style/style_03.html">디자인 스타일 소개</a>
+<a href="../style/style_04.html">디자인 스타일 소개</a>
+
+<a href="../outline/outline_01.html">KRDS 시작하기</a>
+<a href="../outline/outline_02.html">KRDS 시작하기</a> ~05
+
+<a href="../component/component_summary.html">메인</a>
+<a href="../component/component_02_01.html">서브</a>
+<a href="../component/component_03_01.html">아이덴티티</a>
+<a href="../component/component_11_01.html">아이덴티티</a>
+<a href="../component/component_12_01.html">아이덴티티</a>
+
+####################################################################
+
+layout 구성을 iframe 으로?
+로컬에서 전체이지 나오게...
+
+####################################################################
+
+<li class="gnb-dropdown"></li>
+
+class="gnb-dropdown 가 없음
+
+
+=====================
+화면 설정
+=====================
+
+젠스파크 ai 기획자, / 기획자가 사용하는 ai
+https://contents.premium.naver.com/vbcoding/vibecoding/contents/260219010618773wc
+
+>> 오늘 할 일
+- 
+	icon, 
+- css  여백 관련 var 정리
+--------------------------------------
+
+>> 접근성 관련 별도의 정리가 필요함
+common.js에서 자동으로 부여되므로
+
+
+Genspark AI 슬라이드
+클로드 AI
+
+>> 컴포넌트 가이드 목록
+
+https://kameo88.github.io/fss/ia_guide/page_01.html
+https://kameo88.github.io/fss/ia_guide/page_02_1.html
+https://kameo88.github.io/fss/ia_guide/page_02_2.html
+https://kameo88.github.io/fss/ia_guide/page_03.html
+https://kameo88.github.io/fss/ia_guide/page_04.html
+https://kameo88.github.io/fss/ia_guide/page_05.html
+
+
+>> 서브 페이지
+
+https://kameo88.github.io/fss/html/subpage.html
+
+
+>> design style guide 작업 상황
+
+- "액션 & 선택" menu 1차 완료
+
+- "피드백&도움말" menu 1차 완료
+
+
+>> layer close button bg color 확인 필요
+
+.krds-btn.icon .svg-icon {}
+	#33363D	or 	#1E2124
+
+	background-color: var(--krds-light-color-icon-gray); 33363D
+
+	background-color: var(--krds-light-color-text-basic); 1E2124
+
+
+
+
+
+>> 추가 작업할 분량 check
+
+alert(표현2-긴급공지 3.11 완료)
+시작 전 가이드
+인포박스(표현1-항목추가  3.12 완료)
+프로그레스 바(피드백)
+search(form)
+만족도 조사(피드백-항목 추가)
+
+full popup(표현2-)
+
+
+enjoy figma design for up to 3 day while waiting for admin review
+
+피그마 계정 신청 후 어드민이 권한 설정
+
+
+$$$$		swiper 함수로 정리 필요 	$$$$
+
+1. play & stop function 만들기					=> 완료
+2. type progressbar + fraction(script로 추가)		=> perplexity 참조
+	slideChange 스타일로 정리 필요
+	추가된 fraction 에 접근성 코드 추가 필요			=>> 작업 필요
+
+3. 무한 루프인 경우, 접근성 확인 필요 focusing
+ 
+main_b.html	==> 접근성 무시하고 effect 만 구성함
+
+
+4. swiper-indicator 내 순서
+swiper-pagination		>	swiper-controller(재생, 멈춤)	>	swiper-navigation (이전, 다음)
+
+예외적으로 class swiper-navigation 를 삭제하고, 버튼만 넣는다
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		parallax 만들기
+			ㄴ "한국은행-mainsection.js" 참조
+		디자인 토큰 만들기
+			ㄴ 피그마 참조
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	문구 움직임 : https://www.jbfg.com/ko/main.do
+	GNB 2depth click : https://www.uwurology.com/
+	카드 노출 : https://www.jbfg.com/ko/main.do
+	보도자료 섹션 데코 움직임 : https://www.champodonamu.com/
+	미디어 센터 움직임 : https://www.champodonamu.com/
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####		03.26. 요일
+
+
+
+####		03.25. 수요일
+
+>> 시안 a 퍼블 시작
+main_sec_a.html
+main_sec_a.css
+
+
+>> 패럴렉스 관련 파일
+- 한국은행
+section.js
+
+
+
+####		03.24. 화요일
+
+>> 시안 B 퍼블 완료
+디자인 effect 모두 적용
+
+>> swiper play & stop 함수 작업 완료
+main-sample.html 에 넣어놨음
+
+
+####		03.23. 월요일
+
+>> 시안 b 코딩
+변경된 디자인 적용 중
+
+####		03.19. 목요일
+
+
+E8EAF2
+E8EAF2
+
+
+####		03.18.
+
+>> 시안용 퍼블 작업 필요
+
+
+
+####		03.17.
+
+>> 기존 사이트 및 타사이트 분석 
+
+- parallax behavior
+	1200px 이하에서는 해제됨
+
+
+>> guide page
+- include file 로 작업 중
+	; page_05.html 우선 적용
+
+
+####		03.16.		병가
+
+>> main 작업 준비 작업
+
+
+
+####		03.13.
+
+## header/footer inc 파일 만들기	==> 추가 테스트 필요
+
+- ia_front_2.js 방식 perplexity 참조
+	; common.js 에서 코드 추가 후 동작
+
+- ia_front_bak.js	chatgtp 참조
+	; 동작하지 않음
+
+
+
+## design style guide 적용 중
+
+>> 날짜입력필드 추가 수정 완료 (Date input)
+
+>> 텍스트 영역 추가 수정 완료(textarea)
+	; hint 및 textarea counter  동시 적용
+
+>> 텍스트 입력 필드(input)
+	; input style 수정 작업 완료
+
+>> alert(표현2-긴급공지 3.11 완료)		==>> class 정리 완료( --asses 삭제)
+
+>> top button 추가 완료
+	; 각 페이지 모두 적용
+	; ui_front.js 모든 페이지 적용
+
+	ㄴ ui_front.js 으로 파일명 변경 ; guide file 전용 script 생성
+
+
+
+####		03.12.
+
+## design style guide 적용 중
+
+>> 인포박스
+	; 추가 완료
+
+- info box 아래 참조
+https://www.krds.go.kr/html/pattern/sample_login_0101.html
+
+
+>> guide 모바일 메뉴 추가 완료
+	; 가이드 전 페이지에 "mobile 전체 메뉴" 추가		==> 각 페이지 top 으로 link (script 수정 필요)
+
+
+
+
+####		03.11.
+
+## design style guide 적용 중
+
+>> alert(표현2-긴급공지)  추가 작업 완료
+- icon ...
+	ico_error_fill
+	ico_warning_fill
+	ico_success_fill
+	ico_information_fill			ico_notice_fill_blue
+
+
+
+>> page top button 기능 추가			==>	공통 파일 작업 필요
+	; page_01.html 에 임시 적용 중
+
+
+>> modal size 추가에 따른 나머지 작업 완료
+
+- 닫기 버튼 색상 아래 코드로 전체 적용
+.krds-btn.icon .svg-icon {
+	background-color: var(--krds-light-color-icon-gray);
+}
+
+- bottom sheet 추가 작업 완료
+
+- check box 있는 case
+	; 기능별 case 로 추가 작업완료
+
+
+
+####		03.10.
+
+## design style guide 시작 - 번외
+
+>> page-top-button
+	; 버튼 생성 "탐색&설정" 페이지에 추가
+	; hover bg 		pressed bg
+	#ECF2FE		#D8E5FD
+
+
+## design style guide 적용 중
+
+>> modal size 추가			==> 기본은 large, medium, small 추가
+
+ 			large				medium				small
+size			760				560					400
+padding 		56/40/40/40			56/40/40/40				56/40/24/40
+
+    --krds-modal--padding: var(--krds-padding-10);
+ 	
+    --krds-modal--mobile-btn-padding-top: var(--krds-padding-6);
+    --krds-modal--mobile-btn-padding-bottom: var(--krds-padding-8);
+							    --krds-padding-8: var(--krds-number-10);
+
+
+>> calendar 까지 작업 완료
+
+>> swiper 작업 완료 (auto player 함수로 정리하기)
+	; 일반
+	icon size	&	border color	&	icon bg color		& 	hover bg		& 	pressed bg
+	40*40			#CDD1D5		#33363D				#ECF2FE			#D8E5FD
+
+	; pagination
+	number text color
+	#0B50D0
+
+    --krds-light-color-text-secondary: var(--krds-color-light-secondary-80); #052561
+						    --krds-light-color-text-primary: var(--krds-color-light-primary-60); #0B50D0
+
+
+
+    --krds-light-color-text-secondary: var(--krds-color-light-secondary-80);
+==>	#0B50D0 으로 변경
+    --krds-light-color-text-secondary: var(--krds-color-light-secondary-60);
+
+
+--krds-color-light-secondary-60
+
+
+>> 텍스트 목록 (Text list) 작업 완료
+	; 순차적 간격 확인
+
+>> 표 (table) 작업 완료
+th font size		& 	color		&	bg color	&	border color
+15px				#131416		#ECF2FE		#D8E5FD
+
+td font size		& 	color		&	border color
+17px				#464C53		#CDD1D5
+
+
+>> 아코디언 작업 중
+	; 사이즈별 및 반응형 작업 완료
+
+
+####		03.09.
+
+## design style guide 적용 중
+
+>> 아코디언 작업 중
+	; 사이즈별 정리 완료 
+
+>> 배지
+	; 작업 완료
+	; 디자인 가이드에서 font size & border color  달라서 모두 적용
+
+
+>> 모달
+	; 기본 항목 확인 완료
+	; 디자인 가이드에 pc용 사이즈 분리됨			==> 확인 필요
+	; button 좌측에 checkbox 있는 스타일			==> 확인 필요
+
+
+
+>> 디스클로저
+	; 간격은 디자인 가이드 기준으로 적용
+
+
+####		03.06.
+
+
+## design style guide 적용 중
+
+>> 디스클로저
+	; 간격 조정 부터 시작
+
+
+>> 긴급공지 (알럿) 작업 완료
+	; m-hide 처리 (420 이하)
+
+>> 툴팁
+	; ico-help.svg 변경
+
+>> 맥락적 도움말 완료
+	; ico_tooltip.svg 변경 및 bg color 적용
+
+>> 도움패널		=> 차후 예정
+
+>> 스피너 작업 완료
+	; 사이즈 추가
+
+>> 단계 표시기 작업완료
+	; fixed 추가
+
+>> select - custom select 만들기
+	; option hover, active 일 때 별도 작업 필요
+
+
+####		03.05.
+
+## design style guide 적용 중
+
+>> "액션 & 선택" menu 1차 완료
+
+>> tag 작업 완료
+
+>> select
+	; 기본 적용 완료
+
+>> checkbox
+	; chip 까지 작업 완료
+	; indeterminate 디자인 O, 퍼블 X			==>		확인 필요
+
+>> radio button 작업 완료
+	; chip 까지 작업 완료
+	; radio sorting 디자인 O, 퍼블 X				==>		확인 필요
+
+
+
+####		03.04.
+
+## design style guide 적용 중
+
+>> radio button 작업 중
+	; unchecked, checked 까지 작업 완료
+
+
+>> link 작업 완료
+
+>> button & text button 작업 완료
+ 	; secondary hover 부터 확인할 것
+
+
+
+>> guide page 전체 메뉴 정리 완료
+
+
+
+####		03.03.
+
+>> 탐색 & 설정
+	; page_01.html  파일 생성
+
+
+
+####		02.27.
+
+>> 접근성 관련 항목 table 로 정리하기
+
+>> top button
+
+>>  In page navigation							==> 작업 완료
+	; 해당 기능으로 class 추가
+		ㄴ class="scroll-check" 
+		ㄴ section에  class="section-link" 
+
+	; In page navigation 에서 active 입력 안되는 경우 발생
+		ㄴ page_02_2.html
+		ㄴ tab 이 있는 경우
+
+>> swiper 접근성 완료
+
+
+
+####		02.26.
+
+>> "구조화 목록" 반응형 확인 필요
+- page_02_01.html
+
+
+>> "레이아웃 & 표현" 페이지 생성 후 작업 중
+
+- 작업 완료 항목
+	; modal, Carousel
+
+>> calendar input 카테고리 이동
+레이아웃&표현	==> 입력 으로
+
+>> form 관련 gap 간격
+.fieldset		2.4rem
+.form_group 	0.8rem
+.form-conts		1.2rem
+
+
+####		02.25.
+
+>> "피드백&도움말" 페이지 작업 완료
+
+>> "레이아웃 & 표현" 페이지 생성 후 작업 중
+- page_02.html
+- 작업 완료 항목
+	; text list, table, badge, 디스클로저 
+
+- page_02.html 다음과 같이 분리 작업
+page_02_01.html 5개
+구조화 목록, 배지, 이미지, 표, 텍스트 목록
+
+page_02_02.html 7개
+긴급공지, 달력, 디스클로저, 모달, 아코디언, 탭, 캐러셀
+
+
+####		02.24.
+
+>> "피드백&도움말" 페이지 생성 후 작업 중
+- page_05.html
+- tooltip 까지 정리 완료
+
+
+>> "입력" 페이지 생성 후 작업 완료
+- page_04.html
+- Text input delete icon button  오작동			==> edge에서 문제
+- Date input z-index 문제						==> 해결
+
+
+>> link #id 위치 조정 수정
+	; guide.css 에 추가
+
+
+
+####		02.20.
+
+>> images folder 정리
+
+
+>> index.html 
+- 해당 파일은 doc 문서 정리 (상단 메뉴 없는 것으로)
+- menu 정리 완료
+- page_03.html 생성
+
+
+>> font css
+- font.css file 생성 & font local path 추가
+- pretendard-gov-subset.css 사용하기
+
+
+>> 디자인 & 퍼블 가이드 차이점									==> 정리 필요
+
+- 아이덴티티&탐색&설정
+탭바 																		==> 모바일 ??
+
+- 레이아웃
+구조화 목록 / 긴급공지 /  달력 / 스플래시 스크린										==> index.html에 추가
+
+- etc
+단계 표시기 / 스피너 / 도움패널 / 맥락적 도움말 / 코치마크 / 툴팁							==> index.html에 추가
+얼럿 / 바텀시트 / 칩 / 시작 전 가이드 / 인포박스 / 프로그레스 바 /  서치 / 탑 버튼 / 만족도 조사 		==> 모바일 
+
+
+
+####		02.13.
+
+>> guide 작업 예정
+
+- 모달 팝업
+- component 작업 확인 필요
+
+>> header 정리하기
+- mobile gnb 검토하기
+
+
+####		02.12.
+
+>> header gnb 정리하기
+- pc gnb 검토 완료
+
+>> guide sample 페이지 작업 완료
+
+>> 웹서버 생성
+https://kameo88.github.io/fss/
+
+
+
+
+
+####		02.11.
+
+>> github repository 생성 후 업로드
+
+>> guide sample 페이지 생성 중
+
+
+####		02.10.
+
+>> index.html (ia guide)
+- main & subpage 와 메뉴 구성이 다름
+- 
+
+>> custom.css 생성
+
+
+>> krds.min.css
+	; 이미지 경로를 상대경로로 수정
+
+https://www.krds.go.kr/resources/img/component/icon/
+../img/component/icon/
+
+>> breadcrumb 완료
+
+>> krds-side-navigation 완료
+	; custom 추가
+
+>> main page
+
+
+####		02.09.
+
+>> 작업 순서 정하기
+1. layout 작업 중
+
+- go to dir / header / main / footer
+- include html
+
+
+>> prettier 사용법 확인하기
+
+
+####		02.06.
+
+>> 접근성 점검 결과 ppt 작성 완료 (en)
+
+>> 영문 엑셀 파일 정리
+
+>> 오전에 진행할 항목
+셀렉트		==> 검색 항목 또는 아래 항목에서
+https://www.fss.or.kr/fss/partcptn/smsrChrgManInfoEng/joinStep4.do?menuNo=201147
+달력			==> 완료
+textarea		==> 삭제
+파일업로드		==> 삭제
+언어 변경		==> 작업 완료
+
+
+####		02.05.
+
+>> 참조 사이트
+https://www.fss.or.kr/fss/cvpl/beffatDscssAply/typeChk.do?menuNo=201114
+
+https://www.fss.or.kr/fss/cvpl/beffatDscssAply/joinStep3.do
+
+https://www.fss.or.kr/fss/partcptn/fndpyIntrrtPrtc/forInsert.do?menuNo=200390
+
+https://www.moel.go.kr/index.do
+
+
+>> 접근성 점검 결과 ppt 작성 중 (en)
+
+>> 접근성 점검 결과 ppt 작성 완료 (kr)
+
+
+
+####		02.04.
+
+>> 접근성 점검 결과 작성 중
+- 레이아웃 > 탭까지 작업 완료
+
+
+####		02.03.
+
+>> 금융감독원 홈페이지_UIUX_접근성_체크리스트_v0.1.xlsx 작성
+
+>> 접근성 결과 작성 중

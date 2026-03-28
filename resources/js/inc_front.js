@@ -3,8 +3,8 @@
 (function() {
   // 0. include 대상과 파일 매핑
   const includeMap = [
-    { selector: '#krds-header', file: 'inc/g_header.html' },
-    { selector: '#krds-header', file: 'inc/header.html' },
+    { selector: '.g-krds-header', file: 'inc/g_header.html' },
+    // { selector: '#krds-header', file: 'inc/header.html' },
     { selector: '#krds-footer', file: 'inc/g_footer.html' },
     // 필요하면 여기 계속 추가
     // { selector: '#sub-nav', file: 'inc/sub_nav.html' },
@@ -34,23 +34,27 @@
     });
 
     return Promise.all(promises).then(() => {
-      document.dispatchEvent(new CustomEvent('all:includes:loaded', {
-        detail: { loadedCount: includeMap.length }
-      }));
-      triggerEventRebind();
+      document.dispatchEvent(new CustomEvent('all:includes:loaded'));
     });
+
+    // return Promise.all(promises).then(() => {
+    //   document.dispatchEvent(new CustomEvent('all:includes:loaded', {
+    //     detail: { loadedCount: includeMap.length }
+    //   }));
+    //   triggerEventRebind();
+    // });
   }
 
-  function triggerEventRebind() {
-    if (window.initCommonEvents) {
-      window.initCommonEvents();
-    }
+  // function triggerEventRebind() {
+  //   if (window.initCommonEvents) {
+  //     window.initCommonEvents();
+  //   }
 
-    const header = document.querySelector('#site-header');
-    if (header) {
-      header.dispatchEvent(new Event('DOMNodeInserted', { bubbles: true }));
-    }
-  }
+  //   const header = document.querySelector('#site-header');
+  //   if (header) {
+  //     header.dispatchEvent(new Event('DOMNodeInserted', { bubbles: true }));
+  //   }
+  // }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadAllIncludes, { once: true });

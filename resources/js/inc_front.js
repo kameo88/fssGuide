@@ -34,7 +34,11 @@
     });
 
     return Promise.all(promises).then(() => {
-      document.dispatchEvent(new CustomEvent('all:includes:loaded'));
+      document.dispatchEvent(
+        new CustomEvent('all:includes:loaded', {
+          detail: { loadedCount: includeMap.length }
+        })
+      );
     });
 
     // return Promise.all(promises).then(() => {

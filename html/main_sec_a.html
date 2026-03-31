@@ -246,7 +246,23 @@
 					</div>
 				</nav>
 				<!-- //메인메뉴 : 데스크탑 -->
-
+				<!-- 헤더 상단 utiity -->
+				<div class="header-utility">
+					<div class="lang-area">
+						<a href="javascript:void(0);" class="link on">KO</a>
+						<a href="javascript:void(0);" class="link">EN</a>
+					</div>
+					<div class="search-area">
+						<button type="button" class="krds-btn icon large ico-search">
+							<span class="sr-only">검색</span>
+							<i class="svg-icon ico-sch"></i>
+						</button>
+					</div>
+				</div>
+				<!-- //헤더 상단 utiity -->
+				<div class="menu-all-area">
+					<button type="button" class="btn-menu-all"><i class="svg-icon ico-all"></i><span class="sr-only">전체메뉴</span></button>
+				</div>
 			</div>
 
 
@@ -527,7 +543,7 @@
 
 			</section>
 			<section id="section2" class="section">
-				<div class="sec_inner">
+				<div class="sec-inner active">
 
 					<div class="main-tit-wrap">
 						<h2 class="tit">
@@ -545,19 +561,19 @@
 						<!-- tab list -->
 						<div class="tab line">
 							<ul role="tablist">
-								<li id="tab_news_01" role="tab" aria-selected="true" aria-controls="panel_news_01" class="active">
+								<li id="tab_news_01" role="tab" aria-selected="true" aria-controls="panel_news_01">
 									<button type="button" class="btn-tab">보도자료 <i class="sr-only created"> 선택됨</i></button>
 								</li>
-								<li id="tab_news_02" role="tab" aria-selected="false" aria-controls="panel_news_02">
+								<li id="tab_news_02" role="tab" aria-selected="false" aria-controls="panel_news_02" class="active">
 									<button type="button" class="btn-tab">행사일정</button>
 								</li>
-								<li id="tab_news_03" role="tab" aria-selected="false" aria-controls="panel_news_03">
+								<li id="tab_news_03" role="tab" aria-selected="false" aria-controls="panel_news_02">
 									<button type="button" class="btn-tab">금융시장동향</button>
 								</li>
-								<li id="tab_news_04" role="tab" aria-selected="false" aria-controls="panel_news_04">
+								<li id="tab_news_04" role="tab" aria-selected="false" aria-controls="panel_news_02">
 									<button type="button" class="btn-tab">새소식</button>
 								</li>
-								<li id="tab_news_05" role="tab" aria-selected="false" aria-controls="panel_news_05">
+								<li id="tab_news_05" role="tab" aria-selected="false" aria-controls="panel_news_02">
 									<button type="button" class="btn-tab">공지사항</button>
 								</li>
 							</ul>
@@ -566,7 +582,7 @@
 						
 						<!-- tab contents -->
 						<div class="tab-conts-wrap">
-							<section id="panel_news_01" aria-labelledby="tab_news_01" class="tab-conts active" data-quick-nav="false">
+							<section id="panel_news_01" aria-labelledby="tab_news_01" class="tab-conts" data-quick-nav="false">
 								<h3 class="sr-only">보도자료</h3>
 
 								<!-- 보도자료 swiper -->
@@ -647,9 +663,105 @@
 								<!-- //보도자료 swiper -->
 
 							</section>
-							<section id="panel_news_02" aria-labelledby="tab_news_02" class="tab-conts" data-quick-nav="false">
+							<section id="panel_news_02" aria-labelledby="tab_news_02" class="tab-conts active" data-quick-nav="false">
 								<h3 class="sr-only">행사일정</h3>
-								행사일정
+
+								<div class="schedule-wrap">
+									<div class="daily-report">
+										<div class="date">2026.<em>03</em></div>
+										<div class="txt">총 <strong>8</strong>의 일정이 등록되어 있습니다.</div>
+										<div class="btn-area">
+											<button class="krds-btn">오늘일정확인<i class="svg-icon ico-angle right"></i></button>
+										</div>
+									</div>
+									<!-- 행사일정 swiper -->
+									<div class="main-schedule-swiper">
+										<div class="swiper">
+											<ul class="swiper-wrapper">
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.04<em class="day">(수)</em></strong></div>
+														<ul class="list">
+															<li><span class="time">09:00</span><span class="txt">제4차 금융위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
+														<ul class="list">
+															<li><em class="time">09:00</em><span class="txt">제4차 금융위원회</span></li>
+															<li><em class="time">09:00</em><span class="txt">제4차 제제심의위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.11<em class="day">(수)</em></strong></div>
+														<ul class="list">
+															<li><em class="time">09:00</em><span class="txt">제5차 증권선물위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.18<em class="day">(수)</em></strong></div>
+														<ul class="list">
+															<li><em class="time">09:00</em><span class="txt">제4차 자본시장조사 심의위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.19<em class="day">(목)</em></strong></div>
+														<ul class="list">
+															<li><span class="time">09:00</span><span class="txt">제4차 금융위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.20<em class="day">(금)</em></strong></div>
+														<ul class="list">
+															<li><em class="time">09:00</em><span class="txt">제4차 금융위원회</span></li>
+															<li><em class="time">09:00</em><span class="txt">제4차 제제심의위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
+														<ul class="list">
+															<li><em class="time">09:00</em><span class="txt">제5차 증권선물위원회</span></li>
+														</ul>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="card-wrap">
+														<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
+														<ul class="list">
+															<li><em class="time">09:00</em><span class="txt">제4차 자본시장조사 심의위원회</span></li>
+														</ul>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="swiper-indicator">
+											<button type="button" class="swiper-button-prev">
+												<span class="sr-only">이전</span>
+											</button>
+											<div class="swiper-pagination"></div>
+											<button type="button" class="swiper-button-next">
+												<span class="sr-only">다음</span>
+											</button>
+											<a href="javascript:void(0);" class="swiper-button-more">
+												<span class="sr-only">더 보기</span>
+											</a>
+										</div>
+									</div>
+									<!-- //행사일정 swiper -->
+								</div>
+
 							</section>
 							<section id="panel_news_03" aria-labelledby="tab_news_03" class="tab-conts" data-quick-nav="false">
 								<h3 class="sr-only">금융시장동향</h3>
@@ -671,7 +783,7 @@
 				</div>
 			</section>
 			<section id="section3" class="section">
-				<div class="sec_inner">
+				<div class="sec-inner active">
 
 					<div class="conts-wrap">
 						<!-- search area -->
@@ -764,7 +876,7 @@
 				</div>
 			</section>
 			<section id="section4" class="section">
-				<div class="sec_inner">
+				<div class="sec-inner active">
 
 					<div class="main-tit-wrap">
 						<h2 class="tit">
@@ -908,7 +1020,7 @@
 				</div>
 			</section>
 			<section id="section5" class="section">
-				<div class="sec_inner">
+				<div class="sec-inner active">
 
 					<div class="main-tit-wrap">
 						<h2 class="tit">
@@ -1033,10 +1145,10 @@
 				</div>
 			</section>
 			<section id="section6" class="section">
-				<div class="sec_inner">
+				<div class="sec-inner active">
 
 					<div class="main-tit-wrap">
-						<h2 class="tit">금융감독원 미디어센터</h2>
+						<h2 class="tit"><span>금융감독원 미디어센터</span></h2>
 						<p class="desc">
 							<span>믿을 수 있는 금융 파트너,</span>
 							<span>금융감독원이 더 가까이 다가갑니다.</span>
@@ -1054,10 +1166,10 @@
 								<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_02" class="active">
 									<button type="button" class="btn-tab"><i class="svg-icon ico-sns-blog"></i><span class="sr-only">블로그</span></button>
 								</li>
-								<li id="tab_media_03" role="tab" aria-selected="false" aria-controls="panel_media_03">
+								<li id="tab_media_03" role="tab" aria-selected="false" aria-controls="panel_media_02">
 									<button type="button" class="btn-tab"><i class="svg-icon ico-sns-facebook"></i><span class="sr-only">페이스북</span></button>
 								</li>
-								<li id="tab_media_04" role="tab" aria-selected="false" aria-controls="panel_media_04">
+								<li id="tab_media_04" role="tab" aria-selected="false" aria-controls="panel_media_02">
 									<button type="button" class="btn-tab"><i class="svg-icon ico-sns-insta"></i><span class="sr-only">인스타그램</span></button>
 								</li>
 							</ul>
@@ -1304,7 +1416,18 @@
 			<!-- //contents -->
 
 			<div class="quick-menu m-hide">
-
+				<div class="top">
+					<a href="javascript:void(0);" class="go-sns"><i class="svg-icon ico-sns-youtube"></i><span class="sr-only">유튜브</span></a>
+					<a href="javascript:void(0);" class="go-sns"><i class="svg-icon ico-sns-blog"></i><span class="sr-only">블로그</span></a>
+					<a href="javascript:void(0);" class="go-sns"><i class="svg-icon ico-sns-facebook"></i><span class="sr-only">페이스북</span></a>
+					<a href="javascript:void(0);" class="go-sns"><i class="svg-icon ico-sns-insta"></i><span class="sr-only">인스타그램</span></a>
+				</div>
+				<div class="middle">navi</div>
+				<div class="bottom">
+					<button type="button" class="chat"><i class="ico-chat"></i><span class="sr-only">ai 채팅</span></button>
+					<button type="button" class="bookmark"><i class="svg-icon ico-scrap"></i><span class="sr-only">즐겨찾기</span></button>
+					<a href="#top" class="go-top"><i class="svg-icon ico-go-top"></i>위로</a>
+				</div>
 			</div>
 		</main>
 		<!-- //container -->
@@ -1366,10 +1489,10 @@
 			slidesPerView: 1,
 			spaceBetween: 0,
 			//speed: 400,
-			// effect: "fade",
+			effect: "fade",
       loop: true,
 			autoplay: {
-				delay: 2000,
+				delay: 2700,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true,
 			},
@@ -1439,7 +1562,7 @@
 			//speed: 400,
 			loop: true,
 			autoplay: {
-				delay: 2000,
+				delay: 2700,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true,
 			},
@@ -1458,6 +1581,7 @@
 			},
 		});
 
+		// 보도자료
 		const newsSwiper = new Swiper(".main-news-swiper .swiper", {
 			slidesPerView: 'auto',
 			spaceBetween: 48,
@@ -1467,6 +1591,20 @@
 			},
 			pagination: {
 				el: ".main-news-swiper .swiper-pagination",
+				type: 'fraction',
+			},
+		});
+
+		// 보도자료
+		const scheduleSwiper = new Swiper(".main-schedule-swiper .swiper", {
+			slidesPerView: 'auto',
+			spaceBetween: 48,
+			navigation: {
+				nextEl: ".main-schedule-swiper .swiper-button-next",
+				prevEl: ".main-schedule-swiper .swiper-button-prev",
+			},
+			pagination: {
+				el: ".main-schedule-swiper .swiper-pagination",
 				type: 'fraction',
 			},
 		});
@@ -1490,14 +1628,14 @@
 			slidesPerView: 2.5,
 			spaceBetween: 100,
 			centeredSlides: true,
-			loop: true,
+			// loop: true,
 			navigation: {
 				nextEl: ".main-ytube-swiper .swiper-button-next",
 				prevEl: ".main-ytube-swiper .swiper-button-prev",
 			},
 		});
 
-		// #section6 미디어 - 유튜브
+		// #section6 미디어 - blog
 		const blogSwiper = new Swiper(".main-blog-swiper .swiper", {
 			slidesPerView: 'auto',
 			spaceBetween: 64,

@@ -11,20 +11,12 @@
 	padding-right: 7.2rem;
 	background-color: #063A74;
 }
+.is-gnb #krds-header .header-in {
+	border-bottom: .1rem solid var(--krds-header--utility-color-divider);
+}
 
 #wrap:not(.g-wrap) #krds-header .header-container .logo a {
 	background-image: url(../img/main/ico_h_logo.svg);
-}
-
-/* menu click event */
-.is-gnb-web #wrap:not(.g-wrap) #krds-header .header-in {
-	background-color: #fff;
-}
-.is-gnb-web #wrap:not(.g-wrap) #krds-header .header-container .logo a {
-	background-image: url(../img/main/ico_h_logo_on.svg);
-}
-.is-gnb-web #wrap:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger {
-	color: #1E2124;
 }
 
 #wrap:not(.g-wrap) #krds-header .krds-main-menu {
@@ -158,6 +150,25 @@
 }
 #wrap:not(.g-wrap).scroll-down #krds-header .header-utility .lang-area .link:not(:first-child)::before {
 	border-color: rgba(0, 0, 0, 0.5);
+}
+/* reset gnb scroll & click event */
+body[class*=is-gnb] #wrap:not(.g-wrap) #krds-header .header-in {
+	background-color: #fff;
+}
+body[class*=is-gnb] #wrap:not(.g-wrap) #krds-header .header-container .logo a {
+	background-image: url(../img/main/ico_h_logo_on.svg);
+}
+body[class*=is-gnb] #wrap:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger {
+	color: #1E2124;
+}
+body[class*=is-gnb] #krds-header .header-utility {
+	color: #1E2124;
+}
+body[class*=is-gnb] #krds-header .header-utility .lang-area .link:not(:first-child)::before {
+	border-color: #1E2124;
+}
+body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
+	background-color: #1E2124;
 }
 
 /*  section - fullpage scroll */
@@ -531,6 +542,37 @@
 .main .krds-tab-area .tab .btn-tab:not(:disabled):hover {
 	background-color: initial;
 }
+
+/* #section2 vector animation */
+.vector-ani {
+	display: flex;
+	align-items: flex-start;
+	position: absolute;
+	top: 9.6rem;
+	right: 0;
+}
+.vector-ani span {
+	display: inline-flex;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.vector-ani span:nth-child(1) {
+	width: 56.8rem;
+	height: 18.2rem;
+	background-image: url(../img/main/vector_1.svg);
+}
+.vector-ani span:nth-child(2) {
+	width: 13.8rem;
+	height: 10rem;
+	background-image: url(../img/main/vector_2.svg);
+}
+.vector-ani span:nth-child(3) {
+	width: 24rem;
+	height: 20.6rem;
+	background-image: url(../img/main/vector_3.svg);
+}
+
 /* 보도자료 swiper */
 .main-news-swiper {
 	position: relative;

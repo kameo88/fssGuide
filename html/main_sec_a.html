@@ -578,6 +578,12 @@
 										<span>환경을 조성합니다.</span>
 									</p>
 								</div>
+								<!-- 도형 animation -->
+								<div class="vector-ani">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
 
 								<!-- tab area -->
 								<div class="krds-tab-area layer">
@@ -1642,9 +1648,9 @@
 				slideChange: function () {
 					updateActiveClass(this);
 					if (this.activeIndex !== 0) {
-						document.body.classList.add("kameo");
+						document.body.classList.add("is-gnb");
 					} else {
-						document.body.classList.remove("kameo");
+						document.body.classList.remove("is-gnb");
 					}
 				},
 			}

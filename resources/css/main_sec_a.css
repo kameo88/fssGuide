@@ -71,18 +71,24 @@ body.scroll-no {
 	height: 9.6rem;
 	background-color: #063A74;
 }
-#krds-header .header-in .btn-menu-all .ico-all {
-	width: 3.2rem;
-	height: 3.2rem;
-	background-color: #fff;
-}
 #krds-header .header-in .btn-menu-all {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 7.2rem;
 	height: 100%;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 	background: rgba(0, 0, 0, 0.50);
 }
+#krds-header .header-in .btn-menu-all .ico-all {
+	width: 3.2rem;
+	height: 3.2rem;
+	background-color: #fff;
+}
 /* reset gnb */
+#wrap:not(.g-wrap) #krds-header .krds-main-menu .gnb-menu {
+	gap: 6.4rem;
+}
 #wrap:not(.g-wrap) #krds-header li {
 	position: relative;
 }
@@ -100,7 +106,14 @@ body.scroll-no {
 }
 #wrap:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger {
 	height: 4rem;
+	padding: 0;
 	color: #fff;
+}
+#wrap:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger:focus {
+	outline: none;
+	border: none;
+	outline-offset: unset;
+	background-color: transparent;
 }
 #wrap:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger:hover {
 	background-color: unset;
@@ -475,11 +488,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	color: #fff;
 }
 
-.main .main-visual-wrap .swiper-indicator button:focus {
+.main-visual-wrap .swiper-indicator button:focus {
 	outline: none !important;
-	outline-offset: 0;
 	box-shadow: none !important;
-	transition: outline 0s,box-shadow 0s!important
 }
 .main-visual-wrap [class^=swiper-button-]::after {
 	background-color: #ffffff;

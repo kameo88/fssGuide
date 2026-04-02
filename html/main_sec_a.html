@@ -37,7 +37,7 @@
 						<div class="header-branding">
 							<!-- logo -->
 							<h2 class="logo">
-								<a href="../index.html">
+								<a href="javascript:void(0);">
 									<span class="sr-only">금융감독원</span>
 								</a>
 							</h2>
@@ -1739,10 +1739,18 @@
 
 
 	<script>
-		const swiper = new Swiper(".parallax", {
+		// 필요가 없음 - 확인 필요
+		// window.addEventListener('load', function() {
+		// 	if (parallaxSwiper.activeIndex !== 0) {  // 또는 mySwiper.realIndex !== 0 (loop 모드 시)
+		// 		document.body.classList.add('is-gnb');
+		// 	}
+		// });
+
+		// parallax swiper
+		const parallaxSwiper = new Swiper(".parallax", {
 			direction: "vertical",
 			slidesPerView: 1,
-			spaceBetween: 30,
+			spaceBetween: 0,
 			mousewheel: {
 				// enabled: true,
 				// sensitivity: 0.3,  // 1보다 작게: 느리게, 크게: 빠르게 [web:30]
@@ -1766,6 +1774,7 @@
 				},
 				slideChange: function () {
 					updateActiveClass(this);
+
 					if (this.activeIndex !== 0) {
 						document.body.classList.add("is-gnb");
 					} else {
@@ -1790,7 +1799,7 @@
 				target.classList.add('active');
 			}
 		}
-		// wheel 이벤트로 스와이퍼 제어 
+		// wheel 이벤트로 parallax 제어
 		window.addEventListener('wheel', function (event) {
 			if (event.deltaY < 0) {
 				swiper.mousewheel.enable();

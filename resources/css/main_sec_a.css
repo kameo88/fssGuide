@@ -474,6 +474,13 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	background-color: initial;
 	color: #fff;
 }
+
+.main .main-visual-wrap .swiper-indicator button:focus {
+	outline: none !important;
+	outline-offset: 0;
+	box-shadow: none !important;
+	transition: outline 0s,box-shadow 0s!important
+}
 .main-visual-wrap [class^=swiper-button-]::after {
 	background-color: #ffffff;
 }

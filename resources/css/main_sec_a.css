@@ -251,6 +251,11 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	padding-right: 16rem;
 }
 
+#container.main #section3 .sec-inner {
+	justify-content: flex-start;
+	padding-top: 18.8rem;
+}
+
 #container.main #section1 .sec-inner {
 	position: relative;
 }
@@ -346,6 +351,26 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	transition-duration: .5s;
 }
 
+
+/* 실험실 */
+.main-visual-wrap .main-d-ban-swiper .swiper-slide {
+  transform: scale(0.85);
+  /* opacity: 0.5; */
+  z-index: 1;
+}
+
+.main-visual-wrap .main-d-ban-swiper .swiper-slide-active {
+  transform: scale(1);
+  /* opacity: 1; */
+  z-index: 3; /* 핵심 */
+}
+
+.main-visual-wrap .main-d-ban-swiper .swiper-slide-prev,
+.main-visual-wrap .main-d-ban-swiper .swiper-slide-next {
+  z-index: 2;
+}
+
+
 .main-visual-wrap .main-d-ban-swiper {
 	position: absolute;
 	bottom: 14.4rem;
@@ -387,11 +412,11 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main-visual-wrap .main-d-ban-swiper .item .cate::after {
 	content: '';
 	display: inline-flex;
-	width: 1.6rem;
-	height: 1.6rem;
+	width: 1.2rem;
+	height: 1.2rem;
 	margin-left: 1.6rem;
 	border-radius: 50%;
-	background-color: yellow;
+	background-color: #FFB114;
 }
 
 .main-visual-wrap .main-d-ban-swiper .item .text {
@@ -442,6 +467,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .main-visual-wrap .swiper-pagination.swiper-pagination-fraction,
 .main .main-visual-wrap .swiper-indicator [class^=swiper-button-] {
 	height: initial;
+	padding: 0;
 	border: none;
 	background-color: initial;
 	color: #fff;
@@ -548,30 +574,55 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 /* #section2 vector animation */
-.vector-ani {
+.sec-inner.active .vector-ani {
 	display: flex;
 	align-items: flex-start;
 	position: absolute;
 	top: 9.6rem;
 	right: 0;
 }
-.vector-ani span {
+.sec-inner.active .vector-ani span {
 	display: inline-flex;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	/* opacity: 0; */
+	transform: translateY(-40px);
+	animation: fadeUpAni 2.5s ease forwards;
+	animation-iteration-count: infinite;
 }
-.vector-ani span:nth-child(1) {
+
+/* .main .sec-inner.active .main-tit-wrap .tit span:first-child */
+
+.sec-inner.active .vector-ani span:nth-child(1) { animation-delay: 0.2s; }
+.sec-inner.active .vector-ani span:nth-child(2) { animation-delay: 0.4s; }
+.sec-inner.active .vector-ani span:nth-child(3) { animation-delay: 0.8s; }
+@keyframes fadeUpAni {
+	0% {
+		opacity: .5;
+		transform: translateY(-40px);
+	}
+	30% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: .6;
+		transform: translateY(-40px);
+	}
+}
+.sec-inner.active .vector-ani span:nth-child(1) {
 	width: 56.8rem;
 	height: 18.2rem;
 	background-image: url(../img/main/vector_1.svg);
+	/* transform: translateY(-40px); */
 }
-.vector-ani span:nth-child(2) {
+.sec-inner.active .vector-ani span:nth-child(2) {
 	width: 13.8rem;
 	height: 10rem;
 	background-image: url(../img/main/vector_2.svg);
 }
-.vector-ani span:nth-child(3) {
+.sec-inner.active .vector-ani span:nth-child(3) {
 	width: 24rem;
 	height: 20.6rem;
 	background-image: url(../img/main/vector_3.svg);
@@ -944,7 +995,24 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 .main .service-list .item:hover .icon {
 	margin-top: 1rem;
+	/* transition-delay: .5s; */
 }
+/* .main .service-list .item.ty1::after {
+	background: url(../img/main/icon_service1.png) no-repeat center / 9.6rem auto;
+} */
+.main .service-list .item.ty1:hover {
+	height: 42rem;
+}
+.main .service-list .item.ty2:hover {
+	height: 40rem;
+}
+.main .service-list .item.ty3:hover {
+	height: 37rem;
+}
+.main .service-list .item.ty4:hover {
+	height: 37rem;
+}
+
 .main .service-list .item.ty1 .icon {
 	background-image: url(../img/main/icon_service1.png);
 }
@@ -962,9 +1030,17 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	font-weight: 700;
 }
 .main .service-list .item .dir-list {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	gap: 2.4rem;
+	transform: translateY(30px);
+	transition: all .3s ease;
+	opacity: 0;
+}
+.main .service-list .item:hover .dir-list {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: .3s;
 }
 .main .service-list .item:hover,
 .main .service-list .item.active {

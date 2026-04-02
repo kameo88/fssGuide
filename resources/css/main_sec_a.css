@@ -94,12 +94,12 @@ body.scroll-no {
 }
 #wrap:not(.g-wrap) #krds-header .gnb-toggle-wrap {
 	top: calc(100% + 27px);
-	left: -50%;
+	left: 50%;
 	width: fit-content;
 	padding: 0;
 	background-color: #063A74;
 	color: #fff;
-	/* transform: translateX(-50px); */
+	transform: translateX(-50%);
 }
 #wrap:not(.g-wrap) .krds-main-menu .gnb-toggle-wrap .gnb-main-list {
 	/* max-width: auto; */

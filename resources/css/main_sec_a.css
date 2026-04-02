@@ -136,6 +136,7 @@ body.scroll-no {
 	margin-top: 1.6rem;
 	color: rgba(255, 255, 255, 0.75);
 	font-size: 1.7rem;
+	white-space: nowrap;
 }
 #wrap:not(.g-wrap) .krds-main-menu .gnb-toggle-wrap .gnb-sub-list .gnb-sub-content>ul a:hover, 
 #wrap:not(.g-wrap) .krds-main-menu .gnb-toggle-wrap .gnb-sub-list .gnb-sub-content>ul button:hover {
@@ -375,8 +376,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	position: absolute;
 	bottom: 14.4rem;
 	right: 16rem;
-	width: 54rem;
+	width: 59rem; /* 540 + 50 좌우여백 */
 	height: 32rem;
+	padding: 0 2rem;
 	border-radius: 2.4rem;
 	overflow: hidden;
 	/* z-index: 1; */
@@ -1150,11 +1152,12 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 /* #section5 contents */
 .main-market-swiper {
 	position: relative;
-	padding-top: 7.8rem;
+	padding-top: 5.8rem;
 	padding-right: 7.2rem;
 }
 .main-market-swiper .swiper-wrapper {
 	align-items: flex-end;
+	padding-top: 2rem;
 }
 .main-market-swiper .swiper-slide {
 	width: 30rem;
@@ -1163,7 +1166,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .sec-inner.active .main-market-swiper .swiper-slide {
 	opacity: 0;
 	transform: translate(20px,-24px);
-	animation: fadeUp .7s ease forwards;
+	animation: fadeUp2 .7s ease forwards;
 	animation-delay: calc(var(--i) * 0.2s);
 }
 .main-market-swiper .swiper-indicator {
@@ -1271,6 +1274,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main-ytube-swiper {
 	position: relative;
 }
+.main-ytube-swiper .swiper-wrapper {
+	align-items: center;
+}
 .main-ytube-swiper .swiper-indicator {
 	justify-content: space-between;
 	position: absolute;
@@ -1305,18 +1311,20 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 .main-ytube-swiper .card-wrap .img {
 	width: 100%;
-	height: 40.5rem;
+	/* height: 40.5rem; */
 	border-radius: 2rem;
 	background-color: blueviolet;
 	overflow: hidden;
 }
 .main-ytube-swiper .card-wrap .text {
+	display: none;
 	width: 100%;
 	padding: 2.4rem 3.2rem;
 	opacity: 0;
 	transition: opacity 1s;
 }
 .main-ytube-swiper .swiper-slide-active .card-wrap .text {
+	display: block;
 	opacity: 1;
 }
 .main-ytube-swiper .card-wrap .tit {

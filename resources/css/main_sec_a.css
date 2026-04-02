@@ -183,7 +183,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .parallax .swiper-pagination-full {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: .8rem;
 	position: fixed;
 	right: 2.8rem;
 	/* background-color: black; */
@@ -200,6 +200,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	position: relative;
 	width: 1.6rem;
 	height: 1.6rem;
+	margin: 0;
 	background-color: transparent;
 	opacity: 1;
 }
@@ -236,7 +237,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	justify-content: center;
 	flex-direction: column;
 	height: 100%;
-	padding-top: 6.4rem;
+	padding-top: 16rem;
 	padding-bottom: 6.4rem;
 }
 #container.main .section:not(#section6) .sec-inner {
@@ -839,13 +840,13 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .sec-inner.active .tab-conts-wrap .active .daily-report {
 	opacity: 0;
 	transform: translate(20px,-24px);
-	animation: fadeUp .4s ease forwards;
+	animation: fadeUp2 .4s ease forwards;
 	/* animation-delay: calc(var(--i) * 0.3s); */
 }
 .main .sec-inner.active .tab-conts-wrap .active .main-schedule-swiper .swiper-slide {
 	opacity: 0;
 	transform: translate(20px,-24px);
-	animation: fadeUp .8s ease forwards;
+	animation: fadeUp2 .8s ease forwards;
 	animation-delay: calc(var(--i) * 0.3s);
 }
 

@@ -265,15 +265,16 @@
 						<a href="javascript:void(0);" class="link">EN</a>
 					</div>
 					<div class="search-area">
-						<button type="button" class="krds-btn icon large ico-search">
-							<span class="sr-only">검색</span>
+						
+						<button type="button" class="krds-btn icon large ico-search open-modal" data-target="modal_search_full">
+							<span class="sr-only">통합 검색</span>
 							<i class="svg-icon ico-sch"></i>
 						</button>
 					</div>
 				</div>
 				<!-- //헤더 상단 utiity -->
 				<div class="menu-all-area">
-					<button type="button" class="btn-menu-all"><i class="svg-icon ico-all"></i><span class="sr-only">전체메뉴</span></button>
+					<button type="button" class="btn-menu-all open-modal" data-target="modal_menu_full"><i class="svg-icon ico-all"></i><span class="sr-only">전체메뉴</span></button>
 				</div>
 			</div>
 
@@ -1212,7 +1213,7 @@
 											<li id="tab_media_01" role="tab" aria-selected="true" aria-controls="panel_media_01" class="active">
 												<button type="button" class="btn-tab"><i class="svg-icon ico-tab-youtube"></i><span class="sr-only">유튜브</span><i class="sr-only created"> 선택됨</i></button>
 											</li>
-											<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_02">
+											<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_01">
 												<button type="button" class="btn-tab"><i class="svg-icon ico-tab-blog"></i><span class="sr-only">블로그</span></button>
 											</li>
 											<li id="tab_media_03" role="tab" aria-selected="false" aria-controls="panel_media_02">
@@ -1565,7 +1566,7 @@
 					<div class="middle"><span class="sr-only">parallax pagination area</span></div>
 					<div class="bottom">
 						<button type="button" class="chat"><i class="ico-chat"></i><span class="sr-only">ai 채팅</span></button>
-						<button type="button" class="bookmark"><i class="svg-icon ico-scrap"></i><span class="sr-only">즐겨찾기</span></button>
+						<button type="button" class="bookmark open-modal" data-target="modal_bookmark_full"><i class="svg-icon ico-scrap"></i><span class="sr-only">즐겨찾기</span></button>
 						<a href="#top" class="go-top"><i class="svg-icon ico-go-top"></i>위로</a>
 					</div>
 				</div>
@@ -1625,6 +1626,134 @@
 		<!-- //footer inc -->
 
 	</div>
+
+
+	<!-- modal total search full -->
+	<div id="modal_search_full" class="krds-modal" data-type="full" role="dialog" aria-labelledby="tit_modal_search_full">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_modal_search_full" class="modal-title">
+						모달 제목
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts">
+					<div class="conts-area">
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. <br />
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+					</div>
+				</div>
+				<!-- //modal contents -->
+				<!-- modal btn -->
+				<div class="modal-btn btn-wrap">
+					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+					<button type="button" class="krds-btn medium primary close-modal">예</button>
+				</div>
+				<!-- //modal btn -->
+				<!-- close button -->
+				<button type="button" class="krds-btn medium icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<div class="modal-back in"></div>
+	</div>
+	<!-- //modal total search full -->
+
+	<!-- modal total menu full -->
+	<div id="modal_menu_full" class="krds-modal" data-type="full" role="dialog" aria-labelledby="tit_modal_menu_full">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_modal_menu_full" class="modal-title">
+						전체 메뉴
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts">
+					<div class="conts-area">
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. <br />
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+					</div>
+				</div>
+				<!-- //modal contents -->
+				<!-- modal btn -->
+				<div class="modal-btn btn-wrap">
+					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+					<button type="button" class="krds-btn medium primary close-modal">예</button>
+				</div>
+				<!-- //modal btn -->
+				<!-- close button -->
+				<button type="button" class="krds-btn medium icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<div class="modal-back in"></div>
+	</div>
+	<!-- //modal total menu full -->
+
+	<!-- modal bookmark full -->
+	<div id="modal_bookmark_full" class="krds-modal" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_modal_bookmark_full" class="modal-title">
+						my favorite
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts">
+					<div class="conts-area">
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. <br />
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+						대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+					</div>
+				</div>
+				<!-- //modal contents -->
+				<!-- modal btn -->
+				<div class="modal-btn btn-wrap">
+					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+					<button type="button" class="krds-btn medium primary close-modal">예</button>
+				</div>
+				<!-- //modal btn -->
+				<!-- close button -->
+				<button type="button" class="krds-btn medium icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<div class="modal-back in"></div>
+	</div>
+	<!-- //modal bookmark full -->
+
 
 	<script>
 		const swiper = new Swiper(".parallax", {
@@ -1860,12 +1989,12 @@
 			},
 		});
 		// tabBtn 클릭 시 해당 슬라이드 업데이트==> 안됨
-		const tabBtn = document.querySelector('.krds-tab-area.media .btn-tab');
-		tabBtn.addEventListener('click', () => {
-			blogSwiper.update();
-			ytubeSwiper.update();
-			alert('블로그 탭이 선택되었습니다. 슬라이드가 업데이트되었습니다.');
-		});
+		// const tabBtn = document.querySelector('.krds-tab-area.media .btn-tab');
+		// tabBtn.addEventListener('click', () => {
+		// 	blogSwiper.update();
+		// 	ytubeSwiper.update();
+		// 	alert('블로그 탭이 선택되었습니다. 슬라이드가 업데이트되었습니다.');
+		// });
 
 
 

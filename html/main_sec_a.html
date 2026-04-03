@@ -915,6 +915,26 @@
 										</div>
 									</div>
 									<!-- //servcice area -->
+<script>
+
+const items = document.querySelectorAll('.service-list .item');
+
+items.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    // 모든 item에서 active 제거
+    items.forEach(el => el.classList.remove('active'));
+    // 현재 item만 active 추가
+    item.classList.add('active');
+  });
+
+  item.addEventListener('mouseleave', () => {
+    // 마우스 아웃 시 active 클래스 삭제
+    item.classList.remove('active');
+  });
+});
+
+</script>
+
 								</div>
 
 							</div>
@@ -1711,15 +1731,15 @@
 	<!-- //modal total menu full -->
 
 	<!-- modal bookmark full -->
-	<div id="modal_bookmark_full" class="krds-modal" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
+	<div id="modal_bookmark_full" class="krds-modal bookmark" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- modal title -->
-				<!-- <div class="modal-header">
+				<div class="modal-header sr-only">
 					<h2 id="tit_modal_bookmark_full" class="modal-title">
 						my favorite
 					</h2>
-				</div> -->
+				</div>
 				<!-- //modal title -->
 				<!-- modal contents -->
 				<div class="modal-conts">
@@ -1728,12 +1748,6 @@
 					</div>
 				</div>
 				<!-- //modal contents -->
-				<!-- modal btn -->
-				<!-- <div class="modal-btn btn-wrap">
-					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
-					<button type="button" class="krds-btn medium primary close-modal">예</button>
-				</div> -->
-				<!-- //modal btn -->
 				<!-- close button -->
 				<button type="button" class="krds-btn medium icon btn-close close-modal">
 					<span class="sr-only">닫기</span>
@@ -1748,12 +1762,6 @@
 
 
 	<script>
-		// 필요가 없음 - 확인 필요
-		// window.addEventListener('load', function() {
-		// 	if (parallaxSwiper.activeIndex !== 0) {  // 또는 mySwiper.realIndex !== 0 (loop 모드 시)
-		// 		document.body.classList.add('is-gnb');
-		// 	}
-		// });
 
 		// parallax swiper
 		const parallaxSwiper = new Swiper(".parallax", {
@@ -1838,13 +1846,13 @@
 		const vbSwiper = new Swiper('.vb-swiper .swiper', {
 			slidesPerView: 1,
 			spaceBetween: 0,
-			speed: 700,
+			speed: 1000,
 			effect: "fade",
       loop: true,
 			autoplay: {
-				delay: 2700,
+				delay: 3500,
 				disableOnInteraction: false,
-				pauseOnMouseEnter: true,
+				// pauseOnMouseEnter: true,
 			},
 			navigation: {
 				nextEl: '.vb-swiper .swiper-button-next',

@@ -303,17 +303,17 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 /* start : mouse wheel  */
-.mouseWrap.off {
-	opacity: 0;
-}
 .mouseWrap {
 	position: fixed;
 	left: 50%;
-	bottom: 10px;
+	bottom: 18px;
 	transform: translateX(-50%);
 	z-index: 70;
 	opacity: 1;
 	transition: all 0.5s;
+}
+.mouseWrap.off {
+	opacity: 0;
 }
 .mouseWrap .mouse {
 	width: 4.2rem;

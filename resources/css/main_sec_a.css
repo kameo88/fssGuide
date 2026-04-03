@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body.scroll-no {
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 #wrap:not(.g-wrap) #krds-header {
 	position: fixed;

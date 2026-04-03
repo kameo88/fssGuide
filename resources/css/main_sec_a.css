@@ -1102,9 +1102,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	margin-top: 1rem;
 	/* transition-delay: .5s; */
 }
-/* .main .service-list .item.ty1::after {
-	background: url(../img/main/icon_service1.png) no-repeat center / 9.6rem auto;
-} */
 .main .service-list .item.ty1:hover {
 	height: 42rem;
 }
@@ -1706,7 +1703,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	background-image: url(../img/main/img_menu_3.png);
 }
 
-#modal_bookmark_full .img-bookmark {
+.bookmark .img-bookmark {
 	width: 107.2rem;
 	height: 100vh;
 	margin: auto;

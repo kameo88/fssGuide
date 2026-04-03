@@ -428,24 +428,28 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main-visual-wrap .vb-swiper .swiper-slide .txt {
 	opacity: 0;
 	transform: translateY(70px);
-	transition: all .4s ease-out;
+	transition: all 1s ease-out;
 }
 .main-visual-wrap .vb-swiper .swiper-slide-active .tit span,
 .main-visual-wrap .vb-swiper .swiper-slide-active .txt {
 	opacity: 1;
 	transform: unset;
 }
+.main-visual-wrap .vb-swiper .swiper-slide-active .tit span:nth-child(1) {
+	transition-delay: .4s;
+	transition-duration: 1s;
+}
 .main-visual-wrap .vb-swiper .swiper-slide-active .tit span:nth-child(2) {
-	transition-delay: .8s;
-	transition-duration: .5s;
+	transition-delay: 1s;
+	transition-duration: 1s;
 }
 .main-visual-wrap .vb-swiper .swiper-slide-active .tit span:nth-child(3) {
-	transition-delay: 1.2s;
-	transition-duration: .5s;
+	transition-delay: 2s;
+	transition-duration: 1s;
 }
 .main-visual-wrap .vb-swiper .swiper-slide-active .txt {
-	transition-delay: 1.6s;
-	transition-duration: .5s;
+	transition-delay: 3s;
+	transition-duration: 1s;
 }
 
 
@@ -472,9 +476,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	position: absolute;
 	bottom: 14.4rem;
 	right: 16rem;
-	width: 59rem;
+	width: 54rem;
 	height: 32rem;
-	padding: 0 2rem;
+	/* padding: 0 2rem; */
 	border-radius: 2.4rem;
 }
 .main-visual-wrap .main-d-ban-swiper .swiper-slide .item {

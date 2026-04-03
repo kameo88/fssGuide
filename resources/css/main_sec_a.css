@@ -168,22 +168,29 @@ body.scroll-no {
 #wrap:not(.g-wrap).scroll-down #krds-header .header-utility .lang-area .link:not(:first-child)::before {
 	border-color: rgba(0, 0, 0, 0.5);
 }
+
 /* reset gnb scroll & click event */
 body[class*=is-gnb] #wrap:not(.g-wrap) #krds-header .header-in {
 	background-color: #fff;
 }
+#wrap[class*=scroll]:not(.g-wrap) #krds-header .header-container .logo a,
 body[class*=is-gnb] #wrap:not(.g-wrap) #krds-header .header-container .logo a {
 	background-image: url(../img/main/ico_h_logo_on.svg);
 }
+#wrap[class*=scroll] #krds-header:not(.sample) .header-in,
+#wrap[class*=scroll]:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger,
 body[class*=is-gnb] #wrap:not(.g-wrap) .krds-main-menu .gnb-menu .gnb-main-trigger {
-	color: #1E2124;
+	color: #1E2124 !important;
 }
+#wrap[class*=scroll] #krds-header .header-utility, 
 body[class*=is-gnb] #krds-header .header-utility {
 	color: #1E2124;
 }
+#wrap[class*=scroll] #krds-header .header-utility .lang-area .link:not(:first-child)::before,
 body[class*=is-gnb] #krds-header .header-utility .lang-area .link:not(:first-child)::before {
 	border-color: #1E2124;
 }
+#wrap[class*=scroll] #krds-header .header-utility .search-area .ico-sch,
 body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	background-color: #1E2124;
 }
@@ -294,6 +301,41 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .swiper-indicator [class^=swiper-button-]:disabled {
 	background-color: #CDD1D5;
 }
+
+/* mouse wheel start */
+.section_5 .mouseWrap {
+	opacity: 0;
+}
+.mouseWrap {
+	position: fixed;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+	z-index: 100;
+	opacity: 1;
+	transition: 0.5s;
+}
+.mouseWrap .mouse {
+	width: 4rem;
+	height: 4rem;
+	background: url(../img/main/ico_mouse.svg);
+	animation: nudgeMouse 5s ease-out infinite;
+	margin: 0 auto;
+}
+.mouseWrap .mouseTxt {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.3rem;
+	margin-top: .1rem;
+	color: #fff;
+	font-size: 1.5rem;
+}
+.mouseWrap .mouseTxt {
+	color: #1E2124;
+}
+
+/* mouse wheel end */
 
 /* main top visual */
 .main-visual-wrap .inner {
@@ -1199,7 +1241,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	padding-top: 2rem;
 }
 .main-market-swiper .swiper-slide {
-	width: 30rem;
+	width: 32rem;
 }
 /* market swiper animation */
 .sec-inner.active .main-market-swiper .swiper-slide {

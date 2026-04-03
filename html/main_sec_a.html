@@ -427,6 +427,13 @@
 		<!-- container -->
 		<main id="container" class="main">
 
+			<!-- mouse wheel -->
+			<!-- <div class="mouseWrap">
+				<div class="mouse"></div>
+				<div class="mouseTxt">Scroll</div>
+			</div> -->
+			<!-- //mouse wheel -->
+
 			<!-- contents -->
 			<div class="swiper parallax">
 				<div class="swiper-wrapper">
@@ -1098,7 +1105,7 @@
 											<li class="swiper-slide" style="--i:2">
 												<a href="javascript:void(0);" class="card-wrap">
 													<div class="img">
-														<img src="../resources/img/main/img_market_02.png" alt="" />
+														<img src="../resources/img/main/img_market_22.png" alt="" />
 													</div>
 													<div class="text">
 														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
@@ -1109,7 +1116,7 @@
 											<li class="swiper-slide" style="--i:3">
 												<a href="javascript:void(0);" class="card-wrap">
 													<div class="img">
-														<img src="../resources/img/main/img_market_03.png" alt="" />
+														<img src="../resources/img/main/img_market_04.png" alt="" />
 													</div>
 													<div class="text">
 														<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
@@ -1120,7 +1127,7 @@
 											<li class="swiper-slide" style="--i:4">
 												<a href="javascript:void(0);" class="card-wrap">
 													<div class="img">
-														<img src="../resources/img/main/img_market_04.png" alt="" />
+														<img src="../resources/img/main/img_market_03.png" alt="" />
 													</div>
 													<div class="text">
 														<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
@@ -1768,7 +1775,7 @@
 			on: {
 				reachEnd: function () {
 					// 마지막 슬라이드 → footer로 자연 스크롤 허용
-					swiper.mousewheel.disable();
+					parallaxSwiper.mousewheel.disable();
 				},
 				fromEdge: function () {
 					// 다시 위로 올라오면 swiper 다시 활성화
@@ -1804,7 +1811,7 @@
 		// wheel 이벤트로 parallax 제어
 		window.addEventListener('wheel', function (event) {
 			if (event.deltaY < 0) {
-				swiper.mousewheel.enable();
+				parallaxSwiper.mousewheel.enable();
 			} else if (event.deltaY > 0 ) {
 					// swiper.mousewheel.disable();
 

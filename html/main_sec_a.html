@@ -428,10 +428,10 @@
 		<main id="container" class="main">
 
 			<!-- mouse wheel -->
-			<!-- <div class="mouseWrap">
+			<div class="mouseWrap">
 				<div class="mouse"></div>
 				<div class="mouseTxt">Scroll</div>
-			</div> -->
+			</div>
 			<!-- //mouse wheel -->
 
 			<!-- contents -->
@@ -1776,10 +1776,13 @@
 				reachEnd: function () {
 					// 마지막 슬라이드 → footer로 자연 스크롤 허용
 					parallaxSwiper.mousewheel.disable();
+					document.querySelector('.mouseWrap').classList.add('off');
 				},
 				fromEdge: function () {
 					// 다시 위로 올라오면 swiper 다시 활성화
 					// swiper.mousewheel.enable();
+					document.querySelector('.mouseWrap').classList.remove('off');
+
 				},
 				slideChange: function () {
 					updateActiveClass(this);
@@ -1839,7 +1842,7 @@
 			effect: "fade",
       loop: true,
 			autoplay: {
-				delay: 2200,
+				delay: 2700,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true,
 			},

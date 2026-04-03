@@ -2,6 +2,21 @@
 body.scroll-no {
 	/* overflow: hidden; */
 }
+.hasScrollY .quick-menu {
+	/* margin-right: 16px; */
+	
+}
+.hasScrollY .mouseWrap,
+.hasScrollY #wrap:not(.g-wrap) #krds-header:not(.sample),
+.hasScrollY .parallax .swiper-pagination-full,
+.hasScrollY #wrap:not(.g-wrap) #krds-header,
+.hasScrollY .quick-menu {
+	right: 14px;
+}
+.hasScrollY {
+	background-color: #063A74;
+}
+
 #wrap:not(.g-wrap) #krds-header {
 	position: fixed;
 	right: 0;
@@ -308,7 +323,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	left: 50%;
 	bottom: 18px;
 	transform: translateX(-50%);
-	z-index: 70;
+	z-index: 52;
 	opacity: 1;
 	transition: all 0.5s;
 }

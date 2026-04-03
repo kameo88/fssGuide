@@ -444,6 +444,7 @@
 											<ul class="swiper-wrapper">
 												<li class="swiper-slide">
 													<a href="javascript:void(0);" class="item ty1">
+														<div class="img"></div>
 														<div class="text">
 															<p class="tit">
 																<span>금융소비자</span>
@@ -456,6 +457,7 @@
 												</li>
 												<li class="swiper-slide">
 													<a href="javascript:void(0);" class="item ty2">
+														<div class="img"></div>
 														<!-- <div class="text">
 															<p class="tit">
 																<span>금융소비자</span>
@@ -1751,13 +1753,13 @@
 			direction: "vertical",
 			slidesPerView: 1,
 			spaceBetween: 0,
-			mousewheel: {
-				// enabled: true,
-				// sensitivity: 0.3,  // 1보다 작게: 느리게, 크게: 빠르게 [web:30]
-				// releaseOnEdges: true,
-				// thresholdDelta: 20,  // 최소 스크롤량 (옵션, 디바운스 강화)
-				// thresholdTime: 500,  // 최소 시간 간격 (ms, 연속 스크롤 방지)
-			},
+			// mousewheel: {
+			// 	enabled: true,
+			// 	sensitivity: 0.3,  // 1보다 작게: 느리게, 크게: 빠르게 [web:30]
+			// 	releaseOnEdges: true,
+			// 	thresholdDelta: 20,  // 최소 스크롤량 (옵션, 디바운스 강화)
+			// 	thresholdTime: 500,  // 최소 시간 간격 (ms, 연속 스크롤 방지)
+			// },
 			mousewheel: true,
 			pagination: {
 				el: ".swiper-pagination-full",
@@ -1826,7 +1828,7 @@
 		const vbSwiper = new Swiper('.vb-swiper .swiper', {
 			slidesPerView: 1,
 			spaceBetween: 0,
-			//speed: 400,
+			speed: 700,
 			effect: "fade",
       loop: true,
 			autoplay: {

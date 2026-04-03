@@ -994,7 +994,7 @@ items.forEach(item => {
 												<button type="button" class="krds-btn secondary medium"><i class="svg-icon ico-setting"></i>메뉴설정</button>
 											</div>
 											<!-- favorite list -->
-											<ul class="favorite-list">
+											<ul class="bookmark-list">
 												<li>
 													<a href="javascript:void(0);" class="item ty1">
 														<div class="txt">
@@ -1635,14 +1635,14 @@ items.forEach(item => {
 
 
 	<!-- modal total search full -->
-	<div id="modal_search_full" class="krds-modal" data-type="full" role="dialog" aria-labelledby="tit_modal_search_full">
+	<div id="modal_search_full" class="krds-modal search" data-type="full" role="dialog" aria-labelledby="tit_modal_search_full">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- modal title -->
-				<div class="modal-header">
-					<!-- <h2 id="tit_modal_search_full" class="modal-title">
+				<div class="modal-header sr-only">
+					<h2 id="tit_modal_search_full" class="modal-title">
 						통합 검색
-					</h2> -->
+					</h2>
 				</div>
 				<!-- //modal title -->
 				<!-- modal contents -->
@@ -1731,7 +1731,7 @@ items.forEach(item => {
 	<!-- //modal total menu full -->
 
 	<!-- modal bookmark full -->
-	<div id="modal_bookmark_full" class="krds-modal bookmark" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
+	<div id="modal_bookmark_full" class="krds-modal bookmark shown in" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- modal title -->
@@ -1743,9 +1743,146 @@ items.forEach(item => {
 				<!-- //modal title -->
 				<!-- modal contents -->
 				<div class="modal-conts">
-					<div class="conts-area">
-						<div class="img-bookmark"></div>
+					<!-- 사용자별 맞춤메뉴 -->
+					<div class="bookmark-wrap">
+						<div class="tit-wrap">
+							사용자별 맞춤메뉴 title area
+								<div class="btn-area">
+									<button type="button" class="krds-btn secondary medium"><i class="svg-icon ico-setting"></i>메뉴설정</button>
+								</div>
+
+						</div>
+
+						<!-- tab area -->
+						<div class="krds-tab-area layer">
+							<!-- tab list -->
+							<div class="tab fill full">
+								<ul role="tablist">
+									<li id="tab_mynews_11" role="tab" aria-selected="true" aria-controls="panel_mynews_11" class="active">
+										<button type="button" class="btn-tab">즐겨찾는메뉴 <i class="sr-only created"> 선택됨</i></button>
+									</li>
+									<li id="tab_mynews_12" role="tab" aria-selected="false" aria-controls="panel_mynews_12">
+										<button type="button" class="btn-tab">민원인</button>
+									</li>
+									<li id="tab_mynews_13" role="tab" aria-selected="false" aria-controls="panel_mynews_13">
+										<button type="button" class="btn-tab">금융인</button>
+									</li>
+									<li id="tab_mynews_14" role="tab" aria-selected="false" aria-controls="panel_mynews_14">
+										<button type="button" class="btn-tab">학생</button>
+									</li>
+									<li id="tab_mynews_15" role="tab" aria-selected="false" aria-controls="panel_mynews_15">
+										<button type="button" class="btn-tab">일반인</button>
+									</li>
+									<li id="tab_mynews_16" role="tab" aria-selected="false" aria-controls="panel_mynews_16">
+										<button type="button" class="btn-tab">나의메뉴</button>
+									</li>
+								</ul>
+							</div>
+							<!-- //tab list -->
+							
+							<!-- tab contents -->
+							<div class="tab-conts-wrap">
+								<section id="panel_mynews_11" aria-labelledby="tab_mynews_11" class="tab-conts active" data-quick-nav="false">
+									<h3 class="sr-only">즐겨찾는메뉴</h3>
+
+									<!-- favorite list -->
+									<ul class="bookmark-list">
+										<li>
+											<a href="javascript:void(0);" class="item ty1">
+												<div class="txt">
+													<span>금융상품</span>
+													<span>통합 비교공시</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty2">
+												<div class="txt">
+													<span>업무자료</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty3">
+												<div class="txt">
+													<span>내게 맞는</span>
+													<span>서민금융제도 안내</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty4">
+												<div class="txt">
+													<span>제도권</span>
+													<span>금융회사 조회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty5">
+												<div class="txt">
+													<span>보이스피싱</span>
+													<span>피해금 환급절차 안내</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty6">
+												<div class="txt">
+													<span>상속인</span>
+													<span>금융거래 조회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty7">
+												<div class="txt">
+													<span>금융꿀팁</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="item ty8">
+												<div class="txt">
+													<span>개인정보 노출</span>
+													<span>등록ㆍ해제</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<!-- //favorite list -->
+
+								</section>
+								<section id="panel_mynews_12" aria-labelledby="tab_mynews_12" class="tab-conts" data-quick-nav="false">
+									<h3 class="sr-only">민원인</h3>
+									민원인
+								</section>
+								<section id="panel_mynews_13" aria-labelledby="tab_mynews_13" class="tab-conts" data-quick-nav="false">
+									<h3 class="sr-only">금융인</h3>
+									금융인
+								</section>
+								<section id="panel_mynews_14" aria-labelledby="tab_mynews_14" class="tab-conts" data-quick-nav="false">
+									<h3 class="sr-only">학생</h3>
+									학생
+								</section>
+								<section id="panel_mynews_15" aria-labelledby="tab_mynews_15" class="tab-conts" data-quick-nav="false">
+									<h3 class="sr-only">일반인</h3>
+									일반인
+								</section>
+								<section id="panel_mynews_16" aria-labelledby="tab_mynews_16" class="tab-conts" data-quick-nav="false">
+									<h3 class="sr-only">나의메뉴</h3>
+									나의메뉴
+								</section>
+							</div>
+							<!-- //tab contents -->
+						</div>
+						<!-- //tab area -->
+
+
+
 					</div>
+					<!-- //사용자별 맞춤메뉴 -->
+
 				</div>
 				<!-- //modal contents -->
 				<!-- close button -->

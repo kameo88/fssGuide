@@ -10,7 +10,8 @@ body.scroll-no {
 .hasScrollY .quick-menu {
 	/* right: 14px; */
 }
-.hasScrollY {
+body.is-gnb-web {
+	/* scrollbar-gutter: stable; */
 	/* background-color: #063A74; */
 }
 

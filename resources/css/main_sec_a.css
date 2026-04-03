@@ -1,19 +1,4 @@
 @charset "UTF-8";
-body.scroll-no {
-	/* overflow: hidden; */
-}
-/* gnb submenu 클릭시, 스크롤바 없애는 대신에 간격 */
-.hasScrollY .mouseWrap,
-.hasScrollY #wrap:not(.g-wrap) #krds-header:not(.sample),
-.hasScrollY .parallax .swiper-pagination-full,
-.hasScrollY #wrap:not(.g-wrap) #krds-header,
-.hasScrollY .quick-menu {
-	/* right: 14px; */
-}
-body.is-gnb-web {
-	/* scrollbar-gutter: stable; */
-	/* background-color: #063A74; */
-}
 
 #wrap:not(.g-wrap) #krds-header {
 	position: fixed;
@@ -212,6 +197,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .parallax {
 	height: 100vh;
 	z-index: 51;
+	scroll-behavior: smooth;
 }
 .parallax .section {
 	width: 100%;

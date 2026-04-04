@@ -16,6 +16,8 @@
 	<!-- <script src="../resources/js/section.js"></script> -->
 	<script src="../resources/js/component/ui-script.js"></script>
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> -->
+
 
 	<title>금융감독원 통합홈페이지</title>
 </head>
@@ -1731,7 +1733,7 @@ items.forEach(item => {
 	<!-- //modal total menu full -->
 
 	<!-- modal bookmark full -->
-	<div id="modal_bookmark_full" class="krds-modal bookmark shown in" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
+	<div id="modal_bookmark_full" class="krds-modal bookmark" data-type="full" role="dialog" aria-labelledby="tit_modal_bookmark_full">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- modal title -->
@@ -1978,7 +1980,8 @@ items.forEach(item => {
 			spaceBetween: 0,
 			speed: 3000,
 			effect: "fade",
-      loop: true,
+			loop: true,
+			grabCursor: true,
 			autoplay: {
 				delay: 8000,
 				disableOnInteraction: false,
@@ -2045,25 +2048,29 @@ items.forEach(item => {
 
 		// element banner
 		const eleBanSwiper = new Swiper(".main-d-ban-swiper .swiper", {
-			slidesPerView: 1,
-			spaceBetween: 0,
+			// slidesPerView: "auto",
 			centeredSlides: true,
-			effect: 'cards',
-			// effect: 'creative',
-			// creativeEffect: {
-			// 	prev: {
-			// 		translate:["-80%",0,-1200],
-			// 	},
-			// 	next: {
-			// 		translate:["80%",0,-1200],
-
-			// 	}
-			// },
 			loop: true,
+			initialSlide: 0, 
+			grabCursor: true,
+			speed: 600,
+			effect: 'creative',
+			creativeEffect: {
+				limitProgress: 1,
+				prev: {
+					opacity:1,
+					scale: 0.9,
+					translate: [-100, 0, -200],
+				},
+				next: {
+					scale: 0.9,
+					translate: [100, 0, -200],
+				},
+			},
 			autoplay: {
 				delay: 2700,
 				disableOnInteraction: false,
-				pauseOnMouseEnter: true,
+				// pauseOnMouseEnter: true,
 			},
 			navigation: {
 				nextEl: ".main-d-ban-swiper .swiper-button-next",
@@ -2076,7 +2083,7 @@ items.forEach(item => {
 			on: {
 				init(swiper) {
 					attachAutoplayControl(swiper, ".main-d-ban-swiper");
-				},				
+				},
 			},
 		});
 

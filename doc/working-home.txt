@@ -1,0 +1,60 @@
+########################	작업항목
+
+
+
+####	한국은행	####
+- swiper
+https://static-cdn.bok.or.kr/static/portal/js/main.js
+
+####	04.05.	####
+
+>> 미적용 ani
+- gnb
+- 민원상담 service list ani
+
+
+## 보도자료 card animation 수정
+	; 아래에서 위로 이동
+
+## main-ytube-swiper
+1. main-ytube-swiper option 수정 (아래 항목 추가)
+			centeredSlidesBounds: true,
+
+2. hover img 수정
+
+ㄴ 미해결 acitive가 중앙이미지만 첫번째 슬라이드가 오지 않음
+
+
+##########################################
+####	swiper option	####
+
+			slidesPerView: 1,
+			centeredSlides: true,
+			loop: true,
+			// loopAddBlankSlides: true,
+			loopedSlides: 6,
+			observer: true,
+			observeParents: true,
+			watchSlidesProgress: true,
+			grabCursor: true,
+			speed: 800,
+
+
+			loopedSlides: 6,           // 전체 슬라이드 개수와 동일하게 설정
+  		loopAdditionalSlides: 3,   // 뷰포트 바깥에 여분의 복제본을 더 생성
+
+// 핵심: 루프 시 복제본 개수를 강제로 슬라이드 전체 개수만큼 할당
+  loopAddCards: 6, 
+  
+  // 화면에 보이는 것보다 훨씬 많은 슬라이드가 있는 것처럼 속임
+  loopedSlides: 12,
+
+
+			centeredSlides: true,
+			centeredSlidesBounds: true, // 슬라이드가 중앙에 완전히 오도록 제한
+			initialSlide: 0, // 초기 슬라이드 설정 (0부터 시작)
+			loop: true,
+			loopAdditionalSlides: 1,
+			observer: true,
+			observeParents: true,
+##########################################

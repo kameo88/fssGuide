@@ -436,6 +436,12 @@
 			</div>
 			<!-- //mouse wheel -->
 
+			<!--
+			##############################
+				아래 id는 퍼블 css에서 사용 중 !	
+				#section1 ~ #section6
+			##############################
+			-->
 			<!-- contents -->
 			<div class="swiper parallax">
 				<div class="swiper-wrapper">
@@ -504,7 +510,7 @@
 										</div>
 									</div>
 									<!-- banner swiper -->
-									<div class="main-d-ban-swiper">
+									<div class="main-bn-swiper">
 										<div class="swiper">
 											<ul class="swiper-wrapper">
 												<li class="swiper-slide">
@@ -580,7 +586,7 @@
 						<section id="section2" class="section">
 							<div class="sec-inner">
 
-								<div class="main-tit-wrap">
+								<div class="main-tit-wrap on">
 									<h2 class="tit">
 										<span>공정하고 투명한</span>
 										<span>금융질서 확립</span>
@@ -834,7 +840,7 @@
 								<div class="conts-wrap">
 									<!-- search area -->
 									<div class="search-area">
-										<div class="main-tit-wrap">
+										<div class="main-tit-wrap on">
 											<h2 class="tit">
 												<span>윤리와 책임을</span>
 												<span>기반으로 한 금융감독</span>
@@ -949,7 +955,7 @@ items.forEach(item => {
 						<section id="section4" class="section">
 							<div class="sec-inner">
 
-								<div class="main-tit-wrap">
+								<div class="main-tit-wrap on">
 									<h2 class="tit">
 										<span>당신에게 꼭 필요한</span>
 										<span>금융의 시작</span>
@@ -1098,7 +1104,7 @@ items.forEach(item => {
 						<section id="section5" class="section">
 							<div class="sec-inner">
 
-								<div class="main-tit-wrap">
+								<div class="main-tit-wrap on">
 									<h2 class="tit">
 										<span>안정적인 금융시장과</span>
 										<span>신속한 대응</span>
@@ -1228,7 +1234,7 @@ items.forEach(item => {
 						<section id="section6" class="section">
 							<div class="sec-inner">
 
-								<div class="main-tit-wrap">
+								<div class="main-tit-wrap on">
 									<h2 class="tit"><span>금융감독원 미디어센터</span></h2>
 									<p class="desc">
 										<span>믿을 수 있는 금융 파트너,</span>
@@ -1335,12 +1341,15 @@ items.forEach(item => {
 													</ul>
 												</div>
 												<div class="swiper-indicator">
-													<button type="button" class="swiper-button-prev">
-														<span class="sr-only">이전</span>
-													</button>
-													<button type="button" class="swiper-button-next">
-														<span class="sr-only">다음</span>
-													</button>
+													<div class="swiper-pagination"></div>
+													<div class="swiper-controller">
+														<button type="button" class="swiper-button-prev">
+															<span class="sr-only">이전</span>
+														</button>
+														<button type="button" class="swiper-button-next">
+															<span class="sr-only">다음</span>
+														</button>
+													</div>
 												</div>
 											</div>
 											<!-- //유튜브 미디어센터 swiper -->
@@ -1499,12 +1508,15 @@ items.forEach(item => {
 													</ul>
 												</div>
 												<div class="swiper-indicator">
-													<button type="button" class="swiper-button-prev">
-														<span class="sr-only">이전</span>
-													</button>
-													<button type="button" class="swiper-button-next">
-														<span class="sr-only">다음</span>
-													</button>
+													<div class="swiper-pagination"></div>
+													<div class="swiper-controller">
+														<button type="button" class="swiper-button-prev">
+															<span class="sr-only">이전</span>
+														</button>
+														<button type="button" class="swiper-button-next">
+															<span class="sr-only">다음</span>
+														</button>
+													</div>
 												</div>
 											</div>
 											<!-- //블로그 미디어센터 swiper -->
@@ -1532,7 +1544,7 @@ items.forEach(item => {
 				<div class="swiper-pagination-full"></div>
 
 				<!-- quick menu -->
-				<div class="quick-menu m-hide">
+				<div class="quick-menu">
 					<div class="top">
 						<a href="javascript:void(0);" class="go-sns"><i class="svg-icon ico-sns-youtube"></i><span class="sr-only">유튜브</span></a>
 						<a href="javascript:void(0);" class="go-sns"><i class="svg-icon ico-sns-blog"></i><span class="sr-only">블로그</span></a>
@@ -1868,7 +1880,6 @@ items.forEach(item => {
 
 
 	<script>
-
 		// parallax swiper
 		const parallaxSwiper = new Swiper(".parallax", {
 			direction: "vertical",
@@ -1890,6 +1901,15 @@ items.forEach(item => {
 				el: ".swiper-pagination-full",
 				clickable: true,
 			},
+			breakpoints: {
+				1199: {
+					 enabled: false,
+				},
+				1200: {
+					// direction: "vertical",
+				},
+			},
+
 			on: {
 				reachEnd: function () {
 					// 마지막 슬라이드 → footer로 자연 스크롤 허용
@@ -1951,6 +1971,7 @@ items.forEach(item => {
 			}
 		});
 		// 마우스 휠 control end
+
 
 		// main visual banner
 		const vbSwiper = new Swiper('.vb-swiper .swiper', {
@@ -2028,16 +2049,10 @@ items.forEach(item => {
 
 
 		// element banner
-		const eleBanSwiper = new Swiper(".main-d-ban-swiper .swiper", {
+		const eleBanSwiper = new Swiper(".main-bn-swiper .swiper", {
 			slidesPerView: 1,
+			spaceBetween: 0,
 			centeredSlides: true,
-			loop: true,
-			// loopAddBlankSlides: true,
-			observer: true,
-			observeParents: true,
-			watchSlidesProgress: true,
-			grabCursor: true,
-			speed: 800,
 			effect: 'creative',
 			creativeEffect: {
 				limitProgress: 1,
@@ -2051,23 +2066,39 @@ items.forEach(item => {
 					translate: [100, 0, -200],
 				},
 			},
+			loop: true,
+			observer: true,
+			observeParents: true,
+			watchSlidesProgress: true,
+			grabCursor: true,
+			speed: 800,
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 				// pauseOnMouseEnter: true,
 			},
 			navigation: {
-				nextEl: ".main-d-ban-swiper .swiper-button-next",
-				prevEl: ".main-d-ban-swiper .swiper-button-prev",
+				nextEl: ".main-bn-swiper .swiper-button-next",
+				prevEl: ".main-bn-swiper .swiper-button-prev",
 			},
 			pagination: {
-				el: ".main-d-ban-swiper .swiper-pagination",
+				el: ".main-bn-swiper .swiper-pagination",
 				type: "fraction",
 			},
 			on: {
 				init(swiper) {
-					attachAutoplayControl(swiper, ".main-d-ban-swiper");
+					attachAutoplayControl(swiper, ".main-bn-swiper");
 				},
+			},
+			breakpoints: {
+				// 600: {
+				// 	effect: 'slide',
+				// 	creativeEffect: null,
+				// },
+				// 1200: {
+				// 	effect: 'creative',
+				// 	// creativeEffect: null,
+				// },
 			},
 		});
 
@@ -2111,6 +2142,16 @@ items.forEach(item => {
 				el: ".main-market-swiper .swiper-pagination",
 				type: 'fraction',
 			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.2,
+					spaceBetween: 12,
+				},
+				767: {
+					slidesPerView: 'auto',
+					spaceBetween: 48,
+				}
+			},
 			on: {
 				slideChange: function () {
 				},
@@ -2128,9 +2169,30 @@ items.forEach(item => {
 			loopAdditionalSlides: 1,
 			observer: true,
 			observeParents: true,
+			pagination: {
+				el: ".main-ytube-swiper .swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+						// Swiper는 렌더링 시점에 active 클래스가 붙은 bullet이 없으므로
+						// 첫 번째 bullet(=index 0)에 '현재 슬라이드'를 기본으로 부여
+						const isActive = index === 0 ? ' title="현재 슬라이드"' : '';
+						return `<button type="button" class="${className}" aria-label="${index + 1}번 슬라이드로 이동"${isActive}></button>`;
+				},
+			},
 			navigation: {
 				nextEl: ".main-ytube-swiper .swiper-button-next",
 				prevEl: ".main-ytube-swiper .swiper-button-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					// initialSlide: 1, // 초기 슬라이드 설정
+				},
+				767: {
+					slidesPerView: 2.5,
+					spaceBetween: 100,
+				}
 			},
 		});
 
@@ -2151,9 +2213,30 @@ items.forEach(item => {
 
 			observer: true,
 			observeParents: true,
+			pagination: {
+				el: ".main-blog-swiper .swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+						// Swiper는 렌더링 시점에 active 클래스가 붙은 bullet이 없으므로
+						// 첫 번째 bullet(=index 0)에 '현재 슬라이드'를 기본으로 부여
+						const isActive = index === 0 ? ' title="현재 슬라이드"' : '';
+						return `<button type="button" class="${className}" aria-label="${index + 1}번 슬라이드로 이동"${isActive}></button>`;
+				},
+			},
 			navigation: {
 				nextEl: ".main-blog-swiper .swiper-button-next",
 				prevEl: ".main-blog-swiper .swiper-button-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					// initialSlide: 1, // 초기 슬라이드 설정
+				},
+				767: {
+					slidesPerView: 4.2,
+					spaceBetween: 100,
+				}
 			},
 		});
 		// tabBtn 클릭 시 해당 슬라이드 업데이트==> 안됨

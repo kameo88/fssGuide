@@ -1,5 +1,33 @@
 ########################	작업항목
 
+####	swiper 항목 관련 참조	####
+
+google search - 1200 해상도에서 swiper vertical scroll 기능 제거 -----------------------------------------------
+
+Breakpoints에서 Swiper 비활성화 (Destroy)
+1200px 이상일 때 Swiper 기능을 완전히 제거하고 일반 블록 요소처럼 보이게 합니다. 
+디자인키트
+디자인키트
+javascript
+const swiper = new Swiper('.swiper', {
+  // ... 기본 설정
+  direction: 'vertical',
+
+  breakpoints: {
+    1200: {
+      // 1200px 이상에서 swiper가 동작하지 않도록 설정
+      enabled: false, 
+    }
+  }
+});
+추가 팁
+CSS 설정: 1200px 이상에서 Swiper가 움직이지 않도록 높이(height)를 auto로 설정해야 할 수도 있습니다.
+init 옵션: Swiper 인스턴스를 생성할 때 init: false로 설정하고 브레이크포인트에 따라 init()과 destroy()를 수동으로 제어할 수도 있습니다. 
+-----------------------------------------------------------------------------------------------------------
+
+https://www.designkits.co.kr/blog/know-how/swiper-breakpoint?srsltid=AfmBOorTBRnj2EBHx_lY_2Obl-d9pVAPdZLHoRQ7tdvpxmVzOO0ygunB#:~:text=Swiper.js%EB%A5%BC%20%ED%8A%B9%EC%A0%95%20%ED%95%B4%EC%83%81%EB%8F%84%EC%97%90%EC%84%9C%EB%A7%8C%20%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B3%A0%20%EB%B6%88%ED%95%84%EC%9A%94%ED%95%A0%20%EB%95%8C%20%EC%A0%9C%EA%B1%B0(destroy)%ED%95%98%EB%8A%94%20%EA%B8%B0%EB%8A%A5%EC%9D%84%20%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4.
+
+https://ducklett.tistory.com/44
 
 
 ####	한국은행	####

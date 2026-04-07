@@ -60,10 +60,20 @@ body.scroll-no {
 #krds-header .header-utility .search-area {
 	display: flex;
 }
-#krds-header .header-utility .search-area .ico-sch {
+#krds-header .header-utility button,
+#krds-header .header-utility .svg-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	width: 3.2rem;
 	height: 3.2rem;
+}
+#krds-header .header-utility .svg-icon {
 	background-color: #fff;
+}
+#krds-header .header-utility .bookmark-area,
+#krds-header .header-utility .nav-area {
+	display: none;
 }
 #krds-header .header-in .menu-all-area {
 	position: fixed;
@@ -513,6 +523,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main-bn-swiper .item .tit {
 	font-size: 2.8rem;
 	font-weight: 700;
+}
+.main-bn-swiper .item .tit > span {
+	display: block;
 }
 .main-bn-swiper .swiper-indicator {
 	position: absolute;
@@ -1182,11 +1195,94 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .krds-tab-area.my .btn-area {
 	text-align: right;
 }
-.bookmark-list {
+/* .my-bookmark-swiper */
+.my-bookmark-swiper {
+	/* height: 33.6rem; */
+	margin-top: 4.2rem;
+}
+.my-bookmark-swiper .swiper {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: visible;
+}
+.my-bookmark-swiper .swiper-wrapper {
+	/* flex-direction: row; */
+}
+.my-bookmark-swiper .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	text-align: center;
+}
+
+.my-bookmark-swiper .item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 15.2rem;
+	padding: 3.2rem;
+	border: 2px solid #fff;
+	border-radius: 1.6rem;
+	background-color: #fff;
+	transition: all .3s ease;
+}
+.my-bookmark-swiper .item:hover {
+	border-color: #063A74;
+	box-shadow: 0 4px 20px 0  rgba(0, 0, 0, 0.09);
+	/* transform: translateY(-10px); */
+}
+.my-bookmark-swiper .item::after {
+	content: '';
+	display: inline-flex;
+	width: 6.4rem;
+	height: 6.4rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 6.4rem auto;
+}
+.my-bookmark-swiper .item.ty1::after {
+	background-image: url(../img/main/ico_quick_01.svg);
+}
+.my-bookmark-swiper .item.ty2::after {
+	background-image: url(../img/main/ico_quick_02.svg);
+}
+.my-bookmark-swiper .item.ty3::after {
+	background-image: url(../img/main/ico_quick_03.svg);
+}
+.my-bookmark-swiper .item.ty4::after {
+	background-image: url(../img/main/ico_quick_04.svg);
+}
+.my-bookmark-swiper .item.ty5::after {
+	background-image: url(../img/main/ico_quick_05.svg);
+}
+.my-bookmark-swiper .item.ty6::after {
+	background-image: url(../img/main/ico_quick_06.svg);
+}
+.my-bookmark-swiper .item.ty7::after {
+	background-image: url(../img/main/ico_quick_07.svg);
+}
+.my-bookmark-swiper .item.ty8::after {
+	background-image: url(../img/main/ico_quick_08.svg);
+}
+.my-bookmark-swiper .item .txt {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+/* 삭제 swiper 로 변환 */
+/* .bookmark-list {
 	display: flex;
 	gap: 3.2rem;
 	flex-wrap: wrap;
 	margin-top: 3.2rem;
+	display: none;
 }
 .bookmark-list li {
 	width: calc((100% - 9.6rem)/4);
@@ -1205,9 +1301,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .bookmark-list .item:hover {
 	border-color: #063A74;
 	box-shadow: 0 4px 20px 0  rgba(0, 0, 0, 0.09);
-
 	transform: translateY(-10px);
-	
 }
 .bookmark-list .item::after {
 	content: '';
@@ -1247,7 +1341,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	flex-direction: column;
 	font-size: 2.2rem;
 	font-weight: 700;
-}
+} */
 
 /* #section5 contents */
 .main-market-swiper {
@@ -1839,8 +1933,52 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 /* for mobile */
 @media (max-width: 767px) {
+	#wrap:not(.g-wrap) #krds-header .header-in {
+		height: 6.4rem;
+		padding: 0 .8rem 0 1.6rem;
+	}
+	#krds-header .header-container .logo {
+		width: 11rem;
+	}
+	#krds-header .header-container .inner {
+		padding: 0;
+		border: none;
+	}
+	#krds-header .header-utility {
+		gap: .4rem;
+		height: 4rem;
+		padding-right: 0;
+	}
+	#krds-header .header-utility .lang-area {
+		display: none;
+	}
+	#krds-header .header-utility button {
+		width: 4rem;
+		height: 4rem;
+	}
+	#krds-header .header-utility .svg-icon {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+	#wrap[class*=scroll] #krds-header .header-utility .svg-icon {
+		background-color: #33363D;
+	}
+	#krds-header .header-utility .bookmark-area,
+	#krds-header .header-utility .nav-area {
+		display: flex;
+	}
+
 	#krds-header .header-in .menu-all-area {
 		display: none;
+	}
+	.parallax {
+		height: 100%;
+	}
+	.parallax > .swiper-wrapper > .swiper-slide {
+		height: 100% !important;
+	}
+	.parallax .section {
+		height: auto;
 	}
 	#container.main .section .sec-inner,
 	#container.main #section3 .sec-inner {
@@ -1867,6 +2005,33 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		display: none;
 	}
 
+	/* main visual */
+	.vb-swiper {
+		position: relative;
+	}
+	.vb-swiper .swiper-slide {
+		height: 48rem;
+	}
+	.vb-swiper .swiper-indicator {
+		bottom: 4rem;
+		left: 1.6rem;
+	}
+	.vb-swiper .swiper-slide .item.ty1 .img {
+		background-image:  url(../../resources/img/main/img_vb_main1_m.png);
+		background-position: bottom center;
+	}
+	.vb-swiper .swiper-slide .text {
+		padding: 14.4rem 0 0 1.6rem;
+		font-size: 1.9rem;
+	}
+	.vb-swiper .swiper-slide .tit {
+		font-size: 3.2rem;
+	}
+	.main-visual-wrap .swiper-pagination.swiper-pagination-progressbar {
+		width: 10rem;
+	}
+
+
 	/* main visual banner 소비자경보 */
 	.main-visual-wrap .main-bn-swiper {
 		position: unset;
@@ -1876,10 +2041,14 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		/* overflow: hidden; */
 	}
 	.main-bn-swiper .swiper-slide .item {
+		padding: 3.2rem 1.6rem;
 		border-radius: 0;
 	}
 	.main-bn-swiper .item .tit {
 		font-size: 2.4rem;
+	}
+	.main-bn-swiper .item .tit > span {
+		display: unset;
 	}
 	.main-bn-swiper .swiper-indicator {
 		left: 1.6rem;
@@ -1893,6 +2062,21 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main .section#section6 .main-tit-wrap {
 		margin-left: 0;
 	}
+
+	/* main visual indicator 공통 */
+	.main-visual-wrap .swiper-button-stop::after,
+	.main-visual-wrap .swiper-button-play::after,
+	.main-visual-wrap .swiper-indicator [class^=swiper-button-],
+	/* .main-visual-wrap .swiper-indicator > [class^=swiper-button-], */
+	.main-visual-wrap .swiper-indicator > [class^=swiper-button-]::after {
+		width: 2rem;
+		height: 2rem;
+	}
+	.main-visual-wrap .swiper-pagination span, 
+	.main-visual-wrap .swiper-fraction span {
+		font-size: 1.5rem;
+	}
+	
 
 	/* 검색 */
 	.conts-wrap {
@@ -1918,6 +2102,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main .krds-tab-area,
 	.main .krds-tab-area.my {
 		gap: 2.4rem !important;
+	}
+	.main .krds-tab-area.my .tab-conts {
+		gap: 1.6rem;
 	}
 	.main .krds-tab-area .tab.line>ul,
 	.main .krds-tab-area.my .tab.line>ul {
@@ -1952,12 +2139,16 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		flex-direction: column;
 	}
 	
-	.bookmark-list {
-		flex-direction: column;
-		margin-top: 0;
+	/* #secton4 즐겨찾기 */
+	.my-bookmark-swiper {
+		margin: 0;
 	}
-	.bookmark-list li {
-		width: 100%;
+	.my-bookmark-swiper .item {
+		height: 10.6rem;
+	}
+	.my-bookmark-swiper .item .txt {
+		font-size: 1.9rem;
+		font-size: 400;
 	}
 	
 	.main-market-swiper {

@@ -940,21 +940,21 @@
 									<!-- //servcice area -->
 <script>
 
-const items = document.querySelectorAll('.service-list .item');
+	const itemsService = document.querySelectorAll('.service-list .item');
 
-items.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    // 모든 item에서 active 제거
-    items.forEach(el => el.classList.remove('active'));
-    // 현재 item만 active 추가
-    item.classList.add('active');
-  });
+	itemsService.forEach(item => {
+		item.addEventListener('mouseenter', () => {
+			// 모든 item에서 on 제거
+			itemsService.forEach(el => el.classList.remove('on'));
+			// 현재 item만 on 추가
+			item.classList.add('on');
+		});
 
-  item.addEventListener('mouseleave', () => {
-    // 마우스 아웃 시 active 클래스 삭제
-    item.classList.remove('active');
-  });
-});
+		item.addEventListener('mouseleave', () => {
+			// 마우스 아웃 시 on 클래스 삭제
+			item.classList.remove('on');
+		});
+	});
 
 </script>
 
@@ -1598,23 +1598,49 @@ items.forEach(item => {
 
 		<!-- footer inc -->
 		<footer id="krds-footer">
-			<div class="inner" style="display: none;">
+			<div class="foot-quick">
+				<div class="inner">
+					<button type="button" class="link" title="related_site 레이어">유관기관 및 관련사이트</button>
+					<button type="button" class="link" title="related_site 레이어">부가서비스</button>
+					<button type="button" class="link" title="related_site 레이어">related_site</button>
+					<button type="button" class="link" title="related_site 레이어">related_site</button>
+				</div>
+			</div>
+			<div class="inner">
 				<div class="f-logo">
 					<span class="sr-only">KRDS - Korea Design System</span>
 				</div>
 				<div class="f-cnt">
 					<div class="f-info">
 						<ul class="info-cs">
-							<li><strong class="key-info">대표전화 <span>053-230-1923</span> </strong></li>
-							<li><strong class="key-info">대표이메일 <span><a href="mailto:krds@nia.or.kr">krds@nia.or.kr</a></span></strong></li>
+							<li><strong class="key-info add"><span>07321 서울특별시 영등포구 여의대로38</span></strong></li>
+							<li><strong class="key-info">금감원콜센터 <span>1332 (유료, 통화료 발신자 부담)</span></strong></li>
+							<li><strong class="key-info">대표전화 <span>02-3145-5114</span></strong></li>
 						</ul>
 					</div>
 
 					<div class="f-link">
 						<div class="link-go">
-							<a href="../community/community_06.html" class="krds-btn medium text">문의 및 건의 <i class="svg-icon ico-page-next"></i></a>
-							<a href="https://github.com/KRDS-uiux/krds-uiux" class="krds-btn medium text" target="_blank" title="새 창 열림">Git <i class="svg-icon ico-go"></i></a>
-							<a href="https://www.figma.com/@krds" class="krds-btn medium text" target="_blank" title="새 창 열림">Figma <i class="svg-icon ico-go"></i></a>
+							<a href="javascript:void(0);" class="krds-btn medium text">홈페이지 개선제안 <i class="svg-icon ico-page-next"></i></a>
+							<a href="javascript:void(0);" class="krds-btn medium text">찾아오시는 길 <i class="svg-icon ico-page-next"></i></a>
+						</div>
+						<div class="link-sns">
+							<a href="javascript:void(0);" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+								<span class="sr-only">인스타그램</span>
+								<i class="svg-icon ico-instagram"></i>
+							</a>
+							<a href="javascript:void(0);" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+								<span class="sr-only">유튜브</span>
+								<i class="svg-icon ico-youtube"></i>
+							</a>
+							<a href="javascript:void(0);" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+								<span class="sr-only">페이스북</span>
+								<i class="svg-icon ico-facebook"></i>
+							</a>
+							<a href="javascript:void(0);" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+								<span class="sr-only">블로그</span>
+								<i class="svg-icon ico-blog"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -1622,22 +1648,24 @@ items.forEach(item => {
 				<div class="f-btm">
 					<div class="f-btm-text">
 						<div class="f-menu">
-							<a href="../utility/utility_01.html" class="krds-btn small text">KRDS 소개</a>
-							<a href="../utility/utility_05.html" class="krds-btn small text">이용 안내</a>
-							<a href="../utility/utility_06.html" class="krds-btn small text">저작권정책</a>
+							<a href="javascript:void(0);" class="krds-btn medium link"><strong>개인정보처리방침</strong></a>
+							<a href="javascript:void(0);" class="krds-btn medium link basic">이메일무단수집거부</a>
+							<a href="javascript:void(0);" class="krds-btn medium link basic">저작권 정책</a>
+							<a href="javascript:void(0);" class="krds-btn medium link basic">뷰어다운로드</a>
 						</div>
-						<p class="f-copy">© 2023 Ministry of the Interior and Safety. All rights reserved.</p>
-						<a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" title="새 창 열림" target="_blank" class="f-mark"><img src="../../../resources/img/common/web_accessibility_mark.png" alt="(사)한국장애인단체총연합회한국웹접근성인증평가원웹접근성 우수사이트인증마크(WA인증마크)" width="68" height="48"></a>
+						<p class="f-copy">© Copyright financial supervisory service. All rights reserved.</p>
+						<!-- <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006" title="새 창 열림" target="_blank" class="f-mark"><img src="../../../resources/img/common/web_accessibility_mark.png" alt="(사)한국장애인단체총연합회한국웹접근성인증평가원웹접근성 우수사이트인증마크(WA인증마크)" width="68" height="48"></a> -->
 					</div>
 
 					<!-- identifier -->
-					<div class="krds-identifier">
+					<!-- <div class="krds-identifier">
 						<span class="logo">
 							<span class="sr-only">행정안전부</span>
 						</span>
 						<span class="ban-txt">이 누리집은 행정안전부 산하기관 누리집입니다.</span>
-					</div>
+					</div> -->
 					<!-- //identifier -->
+
 				</div>
 			</div>
 		</footer>
@@ -2141,14 +2169,8 @@ items.forEach(item => {
 			},
 			breakpoints: {
 				360: {
-					// slidesPerView: 1.2,
-					spaceBetween: 10,
-					effect: 'fade',
-
-					// creativeEffect: null,
 				},
 				1200: {
-
 				},
 			},
 		});

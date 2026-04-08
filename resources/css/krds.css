@@ -4294,7 +4294,7 @@ table {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: var(--krds-gap-8);
+    gap: var(--krds-gap-7);
     width: 100%
 }
 

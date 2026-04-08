@@ -285,8 +285,8 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 #container.main #section3 .sec-inner {
-	justify-content: flex-start;
-	padding-top: 18.8rem;
+	/* justify-content: flex-start;
+	padding-top: 18.8rem; */
 }
 
 #container.main #section1 .sec-inner {
@@ -825,7 +825,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .sec-inner.active .tab-conts-wrap .active .main-news-swiper .swiper-slide {
 	opacity: 0;
 	transform: translate(20px,-24px);
-	animation: fadeUp .8s ease forwards;
+	animation: fadeUp2 .8s ease forwards;
 	animation-delay: calc(var(--i) * 0.3s);
 }
 
@@ -1041,9 +1041,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	border: 3px solid #063A74;
 	border-radius: 2rem;
 }
-.main .conts-wrap .service-area {
-	display: flex;
-}
 .main .conts-wrap .krds-tag-wrap {
 	gap: var(--krds-gap-5);
 	max-width: 64rem;
@@ -1063,9 +1060,16 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	content: "#";
 	display: inline-flex;
 }
+.main .conts-wrap .service-area {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	position: relative;
+}
 .main .service-list {
 	display: flex;
 	gap: 4.8rem;
+	position: absolute;
 	min-height: 63.2rem;
 }
 .main .service-list .lt {
@@ -1802,13 +1806,15 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 #krds-footer {
-	height: 44.4rem;
-	background: url(../img/main/footer_pc.svg) no-repeat center / cover;
+	/* height: 44.4rem; */
 }
-#krds-footer>.inner {
+#krds-footer .inner {
 	max-width: 160rem;
+	padding-bottom: 2.4rem;
 }
-
+#krds-footer .info-cs li:first-child {
+	margin-bottom: 1.6rem;
+}
 
 /* modal */
 #modal_menu_full.krds-modal[data-type=full] {
@@ -2275,5 +2281,15 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 
 	/* pc quick menu */
-	.quick-menu {display: none;}
+	.quick-menu {
+		display: none;
+	}
+
+
+	#krds-footer .f-logo {
+		background-position: center left;
+	}
+	#krds-footer .f-cnt .f-link {
+		gap: var(--krds-gap-7);
+	}
 }

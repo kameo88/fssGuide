@@ -1192,13 +1192,20 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .krds-tab-area.my .tab.line>ul {
 	gap: 4.8rem;
 }
-.main .krds-tab-area.my .btn-area {
-	text-align: right;
-}
 /* .my-bookmark-swiper */
+.bookmark-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 4.2rem;
+	overflow: hidden;
+}
+.bookmark-wrap .btn-area {
+	display: flex;
+	justify-content: flex-end;
+}
 .my-bookmark-swiper {
 	/* height: 33.6rem; */
-	margin-top: 4.2rem;
+	/* margin-top: 4.2rem; */
 }
 .my-bookmark-swiper .swiper {
 	width: 100%;
@@ -1217,7 +1224,10 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	height: auto;
 	text-align: center;
 }
-
+.my-bookmark-swiper .swiper-indicator {
+	justify-content: center;
+	margin-top: 1.6rem;
+}
 .my-bookmark-swiper .item {
 	display: flex;
 	align-items: center;
@@ -1238,6 +1248,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .my-bookmark-swiper .item::after {
 	content: '';
 	display: inline-flex;
+	/* flex: 0 0 6.4rem; */
 	width: 6.4rem;
 	height: 6.4rem;
 	background-repeat: no-repeat;
@@ -1879,11 +1890,27 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	align-items: center;
 	justify-content: center;
 }
-.krds-modal.bookmark .bookmark-wrap {
+.krds-modal.bookmark .modal-dialog .modal-conts .conts-area >.bookmark-wrap {
+	gap: 6.4rem;
+	position: relative;
 	width: 107.2rem;
+	padding: 2rem 0;
+	margin: auto;
+}
+.krds-modal.bookmark .bookmark-wrap .tit-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	position: relative;
+	padding-right: 16.3rem;
+	font-size: 1.9rem;
+}
+.krds-modal.bookmark .bookmark-wrap .tit-wrap .tit {
+	font-size: 4rem;
 }
 .krds-modal.bookmark .krds-tab-area {
-	margin-top: 6.4rem;
+	gap: 4.8rem;
+	/* margin-top: 6.4rem; */
 }
 .krds-modal.bookmark .tab .btn-tab {
 	background-color: #fff;
@@ -1894,25 +1921,26 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .krds-modal.bookmark .tab-conts {
 		min-height: 41.2rem;
 }
-.krds-modal.bookmark .bookmark-list {
-	gap: var(--krds-gap-7);
-	margin-top: 0;
+.krds-modal.bookmark .bookmark-wrap .btn-area {
+	/* display: flex; */
+	position: absolute;
+	top: 5.7rem;
+	right: 0;
 }
-.krds-modal.bookmark .bookmark-list .item {
+
+
+.krds-modal.bookmark .my-bookmark-swiper .item {
 	justify-content: flex-start;
 	flex-direction: column;
-	min-height: 19.4rem;
+	height: 19.4rem;
+	padding-bottom: 2.4rem;
 }
-.krds-modal.bookmark .bookmark-list .item .txt {
+.krds-modal.bookmark .my-bookmark-swiper .item .txt {
 	align-items: center;
-	/* justify-content: flex-start; */
 	order: 1;
+	margin-top: 1.6rem;
 	font-size: 1.9rem;
 	font-weight: 400;
-}
-.krds-modal.bookmark .bookmark-list .item span {
-	/* display: flex; */
-	/* align-items: center; */
 }
 
 /* quick menu modal search */
@@ -2076,7 +2104,17 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main-visual-wrap .swiper-fraction span {
 		font-size: 1.5rem;
 	}
-	
+	/* 공통 - mobile indicator button size */
+	.main .swiper .swiper-indicator [class^=swiper-button-] {
+		background-color: initial;
+	}
+	.main .swiper .swiper-indicator [class^=swiper-button-],
+	.main .swiper .swiper-indicator [class^=swiper-button-]::after {
+		width: 2rem;
+		height: 2rem;
+		padding: 0;
+		border: none;
+	}
 
 	/* 검색 */
 	.conts-wrap {
@@ -2112,7 +2150,17 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 	.main .krds-tab-area.media .tab>ul {
 		gap: 1.2rem;
+	}
 
+	.main .tab.line {
+		width: 100%;
+	}
+	.main .tab.line>ul {
+		flex-wrap: nowrap
+	}
+	.main .tab.line>ul>li {
+		width: fit-content;
+		flex: none
 	}
 
 	.main .krds-tab-area .tab.line .btn-tab {
@@ -2140,17 +2188,27 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 	
 	/* #secton4 즐겨찾기 */
+	.bookmark-wrap {
+		gap: 1.6rem;
+	}
 	.my-bookmark-swiper {
 		margin: 0;
 	}
 	.my-bookmark-swiper .item {
 		height: 10.6rem;
+		padding: 2.4rem;
 	}
 	.my-bookmark-swiper .item .txt {
 		font-size: 1.9rem;
 		font-size: 400;
 	}
-	
+	.my-bookmark-swiper .item::after {
+		width: 5.4rem;
+		height: 5.4rem;
+		background-size: 5.4rem auto;
+	}
+
+
 	.main-market-swiper {
 		padding-top: 4rem;
 		padding-right: 0;
@@ -2177,8 +2235,44 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main-blog-swiper .card-wrap .img {
 		height: 18.4rem;
 	}
+	.main-ytube-swiper .swiper-controller,
+	.main-blog-swiper .swiper-controller {
+		position: unset;
+	}
 
-
+	.krds-modal.bookmark .modal-conts {
+		justify-content: flex-start;
+	}
+	.krds-modal.bookmark .modal-dialog .modal-conts .conts-area >.bookmark-wrap {
+		width: 100%;
+		padding: 6.4rem 0 4rem;
+	}
+	.krds-modal.bookmark .bookmark-wrap {
+		width: 100%;
+	}
+	.krds-modal.bookmark .bookmark-wrap .tit-wrap {
+		padding: 0;
+	}
+	.krds-modal.bookmark .krds-tab-area {
+		gap: 2.4rem;
+	}
+	.krds-modal.bookmark .tab .btn-tab {
+		background-color: transparent;
+	}
+	.krds-modal.bookmark .bookmark-wrap .btn-area {
+		position: unset;
+	}
+	.krds-modal.bookmark .my-bookmark-swiper .item {
+		justify-content: space-between;
+		flex-direction: row;
+		height: 10.6rem;
+		padding: 2.4rem;
+	}
+	.krds-modal.bookmark .my-bookmark-swiper .item .txt {
+		align-items: flex-start;
+		order: unset;
+		margin-top: 0;
+	}
 
 	/* pc quick menu */
 	.quick-menu {display: none;}

@@ -1066,6 +1066,28 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	justify-content: flex-end;
 	position: relative;
 }
+
+/* service swiper for mobile */
+.main .main-service-swiper {
+	display: none;
+	width: 100%;
+}
+.main .main-service-swiper .item {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 3.2rem;
+	border-radius: 2.4rem;
+	background-color: #f2f2f2;
+	color: #fff;
+	font-size: 1.7rem;
+	cursor: pointer;
+}
+.main .main-service-swiper .swiper-indicator {
+	justify-content: center;
+	margin-top: 1.6rem;
+}
+
 .main .service-list {
 	display: flex;
 	gap: 4.8rem;
@@ -1092,18 +1114,23 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .service-list .item + .item {
 	margin-top: 4.8rem;
 }
+.main .main-service-swiper .item.ty1,
 .main .service-list .item.ty1 {
 	background: linear-gradient(107deg, #256EF4, #0B50D0);
 }
+.main .main-service-swiper .item.ty2,
 .main .service-list .item.ty2 {
 	background: linear-gradient(107deg, #7C3AED, #6D28D9);
 }
+.main .main-service-swiper .item.ty3,
 .main .service-list .item.ty3 {
 	background: linear-gradient(107deg, #038C8E, #027678);
 }
+.main .main-service-swiper .item.ty4,
 .main .service-list .item.ty4 {
 	background: linear-gradient(107deg, #1C589C, #063A74);
 }
+.main .main-service-swiper .item .icon,
 .main .service-list .item .icon {
 	display: flex;
 	width: 100%;
@@ -1131,21 +1158,31 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	height: 37rem;
 }
 
+.main .main-service-swiper .item.ty1 .icon,
 .main .service-list .item.ty1 .icon {
 	background-image: url(../img/main/icon_service1.png);
 }
+.main .main-service-swiper .item.ty2 .icon,
 .main .service-list .item.ty2 .icon {
 	background-image: url(../img/main/icon_service2.png);
 }
+.main .main-service-swiper .item.ty3 .icon,
 .main .service-list .item.ty3 .icon {
 	background-image: url(../img/main/icon_service3.png);
 }
+.main .main-service-swiper .item.ty4 .icon,
 .main .service-list .item.ty4 .icon {
 	background-image: url(../img/main/icon_service4.png);
 }
+.main .main-service-swiper .item .tit,
 .main .service-list .item .tit {
 	font-size: 3.2rem;
 	font-weight: 700;
+}
+.main .main-service-swiper .item .dir-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
 }
 .main .service-list .item .dir-list {
 	display: flex;
@@ -1169,11 +1206,13 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	display: flex;
 	margin-top: 1.6rem;
 }
+.main .main-service-swiper .item .dir-list .link, 
 .main .service-list .item .dir-list .link {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
+.main .main-service-swiper .item .dir-list .link::after,
 .main .service-list .item .dir-list .link::after {
 	content: '';
 	width: var(--krds-icon--size-medium);
@@ -1188,6 +1227,8 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	mask-size: contain;
 	background-color: #fff;
 }
+
+
 
 /* #section4 contents */
 .main .krds-tab-area.my {
@@ -2127,8 +2168,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 
 	/* 검색 */
-	.conts-wrap {
+	.main .conts-wrap {
 		flex-direction: column;
+		gap: 4rem;
 	}
 	.main .conts-wrap .sch-form-wrap {
 		margin-top: 4rem;
@@ -2136,7 +2178,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main .conts-wrap .krds-tag-wrap {
 		display: none;
 	}
-
+	
 	/* 반응형 - tab 공통 */
 	.main .krds-tab-area {
 		align-items: flex-start;
@@ -2190,12 +2232,31 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		display: none;
 	}
 
-	.main-market-swiper .swiper-slide {
-		width: auto;
+	/* #secton3 서비스 */
+	.main .main-service-swiper {
+		display: block;
+	}
+	.main .main-service-swiper .swiper-slide {
+		height: 40.2rem;
+	}
+	.main .main-service-swiper .item {
+		padding: 2rem;		
+	}
+	.main .main-service-swiper .item .tit {
+		font-size: 2.4rem;
+	}
+	.main .main-service-swiper .item .icon {
+		margin-top: 1rem;
+	}
+	.main .main-service-swiper .item .dir-list {
+		/* justify-content: flex-end; */
+		flex: 1;
+		gap: 1.6rem;
+		margin-top: 2.4rem;
+		padding: 1.6rem 0;
 	}
 	.main .service-list {
-		flex-direction: column;
-		position: unset;
+		display: none;
 	}
 	
 	/* #secton4 즐겨찾기 */
@@ -2220,6 +2281,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 
 
+	/* #section5 */
 	.main-market-swiper {
 		padding-top: 4rem;
 		padding-right: 0;
@@ -2227,12 +2289,16 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main-market-swiper .swiper-wrapper {
 		padding-top: 0;
 	}
+	.main-market-swiper .swiper-slide {
+		width: auto;
+	}
 	.main-market-swiper .swiper-indicator {
 		display: none;
 	}
 	.krds-tab-area.media .swiper-pagination {
 		display: flex;
 	}
+	/*  #section6 */
 	/* 유튜브 */
 	.main-ytube-swiper .card-wrap .img {
 		height: 18.4rem;
@@ -2249,7 +2315,15 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main-ytube-swiper .swiper-controller,
 	.main-blog-swiper .swiper-controller {
 		position: unset;
+		width: 100%;
+		margin-top: -1.2rem;
 	}
+	.main-ytube-swiper .swiper-indicator,
+	.main-blog-swiper .swiper-indicator {
+		flex-direction: column;
+		position: relative;
+	}
+
 
 	.krds-modal.bookmark .modal-conts {
 		justify-content: flex-start;

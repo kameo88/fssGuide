@@ -207,6 +207,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 /*  section - fullpage scroll */
+
 .parallax {
 	height: 100vh;
 	z-index: 51;
@@ -2006,8 +2007,45 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 }
 
-/* for mobile */
-@media (max-width: 767px) {
+/* 1280 ~ 1699 */
+@media (max-width: 1699px) {
+	#wrap:not(.g-wrap) #krds-header .krds-main-menu .gnb-menu {
+		gap: 3.2rem;
+	}
+	#krds-header .header-utility {
+		gap: 3.2rem;
+		padding-right: 2.4rem;
+	}
+
+	#container.main .section:not(#section6) .sec-inner {
+		padding-left: 2.4rem;
+	}
+
+
+
+}
+
+/* 768 ~ 1279 */
+/* mobile menu */
+@media (max-width: 1279px) {
+	
+	/* parallax destroy code */
+	.parallax {
+		height: 100%;
+	}
+	.parallax > .swiper-wrapper {
+		overflow: auto;
+		
+	}
+	.parallax > .swiper-wrapper > .swiper-slide {
+		height: 100% !important;
+	}
+	.parallax .section {
+		height: auto;
+	}
+
+
+
 	#wrap:not(.g-wrap) #krds-header .header-in {
 		height: 6.4rem;
 		padding: 0 .8rem 0 1.6rem;
@@ -2046,19 +2084,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	#krds-header .header-in .menu-all-area {
 		display: none;
 	}
-	.parallax {
-		height: 100%;
-	}
-	.parallax > .swiper-wrapper {
-		overflow: auto;
-		
-	}
-	.parallax > .swiper-wrapper > .swiper-slide {
-		height: 100% !important;
-	}
-	.parallax .section {
-		height: auto;
-	}
+
 	#container.main .section .sec-inner,
 	#container.main #section3 .sec-inner {
 		padding-top: 6.4rem;
@@ -2114,7 +2140,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	/* main visual banner 소비자경보 */
 	.main-visual-wrap .main-bn-swiper {
 		position: unset;
-		width: 100%;
+		/* width: 100%; */
 	}
 	.main-bn-swiper .swiper {
 		/* overflow: hidden; */
@@ -2221,6 +2247,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.main .krds-tab-area .tab.line .active .btn-tab {
 		/* font-size: 2.4rem; */
 	}
+
 	.main-news-swiper,
 	.main-schedule-swiper,
 	.main-news-swiper .swiper,
@@ -2371,4 +2398,15 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	#krds-footer .f-cnt .f-link {
 		gap: var(--krds-gap-7);
 	}
+
+}
+
+/* 361 ~ 767 */
+@media (max-width: 767px) {
+
+}
+
+/* 0 ~ 360 */
+@media (max-width: 360px) {
+
 }

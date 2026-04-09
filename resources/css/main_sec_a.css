@@ -2249,7 +2249,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		margin-top: 1rem;
 	}
 	.main .main-service-swiper .item .dir-list {
-		/* justify-content: flex-end; */
+		justify-content: flex-end;
 		flex: 1;
 		gap: 1.6rem;
 		margin-top: 2.4rem;

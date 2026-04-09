@@ -12,8 +12,11 @@ body.scroll-no {
 	align-items: center;
 	justify-content: space-between;
 	height: 9.6rem;
-	padding-right: 7.2rem;
+	padding: 0 calc(7.2rem + 4rem) 0 4rem;
 	background-color: #063A74;
+}
+#wrap:not(.g-wrap) #krds-header .header-container .inner {
+	padding: 0;
 }
 .is-gnb #krds-header .header-in {
 	border-bottom: .1rem solid var(--krds-header--utility-color-divider);
@@ -33,7 +36,6 @@ body.scroll-no {
 	display: flex;
 	align-items: center;
 	gap: 6.4rem;
-	padding-right: 4rem;
 	color: #fff;
 }
 #krds-header .header-utility .lang-area,
@@ -1025,7 +1027,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	animation-delay: calc(var(--i) * 0.3s);
 }
 
-/* #section3 */
+/* #section3 contents */
 .main .conts-wrap > * {
 	/* flex: 1; */
 }
@@ -1034,8 +1036,11 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	justify-content: space-between;
 	gap: 8rem;
 }
-.main .conts-wrap .sch-form-wrap {
+.main .conts-wrap .search-area {
 	max-width: 64rem;
+}
+.main .conts-wrap .sch-form-wrap {
+	/* max-width: 64rem; */
 	margin-top: 12rem;
 }
 .main .conts-wrap .sch-form-wrap .krds-input {
@@ -1044,7 +1049,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 .main .conts-wrap .krds-tag-wrap {
 	gap: var(--krds-gap-5);
-	max-width: 64rem;
+	/* max-width: 64rem; */
 	margin-top: 4.8rem;
 }
 .main .conts-wrap .krds-btn-tag {
@@ -1093,7 +1098,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	display: flex;
 	gap: 4.8rem;
 	position: absolute;
+	top: 50%;
 	min-height: 63.2rem;
+	transform: translateY(-50%);
 }
 .main .service-list .lt {
 	display: flex;
@@ -2009,19 +2016,89 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 /* 1280 ~ 1699 */
 @media (max-width: 1699px) {
+	#wrap:not(.g-wrap) #krds-header .header-in {
+		padding: 0 calc(7.2rem + 2.4rem) 0 2.4rem;
+	}
 	#wrap:not(.g-wrap) #krds-header .krds-main-menu .gnb-menu {
 		gap: 3.2rem;
 	}
 	#krds-header .header-utility {
 		gap: 3.2rem;
-		padding-right: 2.4rem;
 	}
 
 	#container.main .section:not(#section6) .sec-inner {
 		padding-left: 2.4rem;
 	}
+	#container.main .section#section3 .sec-inner, 
+	#container.main .section#section4 .sec-inner {
+		padding-right: calc(7.2rem + 2.4rem);
+	}
 
+	.main .section#section6 .main-tit-wrap {
+		margin-left: 2.4rem;
+	}
 
+	.main .main-tit-wrap .tit {
+		font-size: 4.8rem;
+	}
+	.main .main-tit-wrap .desc {
+		font-size: 1.9rem;
+	}
+	.main .krds-tab-area {
+		margin-top: -4.7rem;
+		gap: 3rem;
+	}
+
+	.main .krds-tab-area .tab.line>ul {
+		gap: 2.6rem;
+	}
+	.main .krds-tab-area.news .tab>ul {
+		padding-right: 2.4rem;
+	}
+	.main .krds-tab-area .tab.line .btn-tab {
+		font-size: 2.4rem;
+	}
+	.main-news-swiper .swiper-indicator,
+	.main-schedule-swiper .swiper-indicator {
+		right: 2.4rem;
+	}
+	.main-news-swiper .swiper-slide {
+		width: 26rem;
+	}
+
+	/* #section3 contents */
+	.main .conts-wrap {
+		gap: 5.3rem;
+	}
+	.main .conts-wrap .search-area {
+		max-width: 52.3rem;
+	}
+	.main .conts-wrap .sch-form-wrap {
+		margin-top: 8rem;
+	}
+	.main .service-list {
+		gap: 2.4rem;
+		min-height: 45.6rem;
+	}
+	.main .service-list .item {
+		min-width: 28rem;
+		height: 20rem;
+		padding: 2.4rem;
+	}
+	.main .main-service-swiper .item .icon, 
+	.main .service-list .item .icon {
+		margin-top: 3rem;
+		height: 8rem;
+		background-size: 10rem auto;
+	}
+	.main .service-list .item + .item {
+		margin-top: 2.4rem;
+	}
+	
+	.main .main-service-swiper .item .tit, 
+	.main .service-list .item .tit {
+		font-size: 2.8rem;
+	}
 
 }
 

@@ -2008,6 +2008,10 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	.parallax {
 		height: 100%;
 	}
+	.parallax > .swiper-wrapper {
+		overflow: auto;
+		
+	}
 	.parallax > .swiper-wrapper > .swiper-slide {
 		height: 100% !important;
 	}
@@ -2191,6 +2195,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 	.main .service-list {
 		flex-direction: column;
+		position: unset;
 	}
 	
 	/* #secton4 즐겨찾기 */

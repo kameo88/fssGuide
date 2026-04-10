@@ -691,6 +691,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .main .krds-tab-area .tab .btn-tab:not(:disabled):hover {
 	background-color: initial;
 }
+.main .tab-conts-wrap {
+	overflow: hidden;
+}
 
 /* #section2 vector animation */
 .sec-inner.active .vector-ani {
@@ -1451,7 +1454,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	overflow: hidden;
 }
 .main-market-swiper .card-wrap .img img {
-	max-height: 34rem;
+	/* max-height: 34rem; */
+	/* min-width: fit-content; */
+	height: 21rem;
 	transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
 	/* transition: all .3s ease-in-out; */
 }
@@ -1903,7 +1908,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 4rem 4rem 0 4rem ;
+	width: 184rem;
+	padding: 4rem 0 0 0 ;
+	margin: auto;
 }
 #modal_menu_full .menu-list {
 	display: inline-flex;
@@ -2217,7 +2224,8 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	/* main visual banner 소비자경보 */
 	.main-visual-wrap .main-bn-swiper {
 		position: unset;
-		/* width: 100%; */
+		width: 100%;
+		overflow: hidden;
 	}
 	.main-bn-swiper .swiper {
 		/* overflow: hidden; */

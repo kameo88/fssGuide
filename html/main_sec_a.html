@@ -469,7 +469,7 @@
 							<div class="main-visual-wrap">
 								<div class="inner">
 			
-									<div class="vb-swiper">
+									<div class="main-vb-swiper">
 										<div class="swiper">
 											<ul class="swiper-wrapper">
 												<li class="swiper-slide">
@@ -1355,7 +1355,7 @@
 											<li id="tab_media_01" role="tab" aria-selected="true" aria-controls="panel_media_01" class="active">
 												<button type="button" class="btn-tab"><i class="svg-icon ico-tab-youtube"></i><span class="sr-only">유튜브</span><i class="sr-only created"> 선택됨</i></button>
 											</li>
-											<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_01">
+											<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_02">
 												<button type="button" class="btn-tab"><i class="svg-icon ico-tab-blog"></i><span class="sr-only">블로그</span></button>
 											</li>
 											<li id="tab_media_03" role="tab" aria-selected="false" aria-controls="panel_media_01">
@@ -1874,19 +1874,19 @@
 										<li id="tab_mynews_11" role="tab" aria-selected="true" aria-controls="panel_mynews_11" class="active">
 											<button type="button" class="btn-tab">즐겨찾는메뉴 <i class="sr-only created"> 선택됨</i></button>
 										</li>
-										<li id="tab_mynews_12" role="tab" aria-selected="false" aria-controls="panel_mynews_11">
+										<li id="tab_mynews_12" role="tab" aria-selected="false" aria-controls="panel_mynews_12">
 											<button type="button" class="btn-tab">민원인</button>
 										</li>
-										<li id="tab_mynews_13" role="tab" aria-selected="false" aria-controls="panel_mynews_11">
+										<li id="tab_mynews_13" role="tab" aria-selected="false" aria-controls="panel_mynews_13">
 											<button type="button" class="btn-tab">금융인</button>
 										</li>
-										<li id="tab_mynews_14" role="tab" aria-selected="false" aria-controls="panel_mynews_11">
+										<li id="tab_mynews_14" role="tab" aria-selected="false" aria-controls="panel_mynews_14">
 											<button type="button" class="btn-tab">학생</button>
 										</li>
-										<li id="tab_mynews_15" role="tab" aria-selected="false" aria-controls="panel_mynews_11">
+										<li id="tab_mynews_15" role="tab" aria-selected="false" aria-controls="panel_mynews_15">
 											<button type="button" class="btn-tab">일반인</button>
 										</li>
-										<li id="tab_mynews_16" role="tab" aria-selected="false" aria-controls="panel_mynews_11">
+										<li id="tab_mynews_16" role="tab" aria-selected="false" aria-controls="panel_mynews_16">
 											<button type="button" class="btn-tab">나의메뉴</button>
 										</li>
 									</ul>
@@ -2137,7 +2137,7 @@ window.addEventListener('wheel', function (event) {
 
 
 		// main visual banner
-		const vbSwiper = new Swiper('.vb-swiper .swiper', {
+		const vbSwiper = new Swiper('.main-vb-swiper .swiper', {
 			slidesPerView: 1,
 			spaceBetween: 0,
 			speed: 3000,
@@ -2153,11 +2153,11 @@ window.addEventListener('wheel', function (event) {
 				// pauseOnMouseEnter: true,
 			},
 			navigation: {
-				nextEl: '.vb-swiper .swiper-button-next',
-				prevEl: '.vb-swiper .swiper-button-prev',
+				nextEl: '.main-vb-swiper .swiper-button-next',
+				prevEl: '.main-vb-swiper .swiper-button-prev',
 			},
 			pagination: {
-				el: ".vb-swiper .swiper-pagination",
+				el: ".main-vb-swiper .swiper-pagination",
 				type: 'progressbar',
 				//clickable: true,
 				renderBullet: function (index, className) {
@@ -2177,7 +2177,7 @@ window.addEventListener('wheel', function (event) {
 			},
 			on: {
 				init(swiper) {
-					attachAutoplayControl(swiper, ".vb-swiper");
+					attachAutoplayControl(swiper, ".main-vb-swiper");
 				},				
 				slideChange: function () {
 					// 활성화된 pagination만 title 유지
@@ -2196,8 +2196,8 @@ window.addEventListener('wheel', function (event) {
 
 
 		// slide 숫자 표시
-		const currentEl	= document.querySelector('.vb-swiper .swiper-fraction .current');
-		const totalEl		= document.querySelector('.vb-swiper .swiper-fraction .total');
+		const currentEl	= document.querySelector('.main-vb-swiper .swiper-fraction .current');
+		const totalEl		= document.querySelector('.main-vb-swiper .swiper-fraction .total');
 
 		const total = vbSwiper.slides.length;   // 총 슬라이드 개수
 		totalEl.textContent = total;

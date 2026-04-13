@@ -5,7 +5,7 @@
   const includeMap = [
     { selector: '.g-krds-header', file: 'inc/g_header.html' },
     // { selector: '#krds-header', file: 'inc/header.html' },
-    { selector: '#krds-footer', file: 'inc/g_footer.html' },
+    { selector: '.g-krds-footer', file: 'inc/g_footer.html' },
     // 필요하면 여기 계속 추가
     // { selector: '#sub-nav', file: 'inc/sub_nav.html' },
   ];

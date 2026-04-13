@@ -170,7 +170,7 @@ body {
 	border-width: .3rem;
 }
 .krds-step-wrap.fixed li {
-	max-width: 10rem;
+	max-width: 12rem;
 }
 /* spinner */
 .krds-spinner.medium::before {

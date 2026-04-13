@@ -160,14 +160,15 @@ body.scroll-no {
 	justify-content: center;
 	padding: .4rem .8rem;
 	margin-top: 1.6rem;
+	background-color: transparent;
 	color: rgba(255, 255, 255, 0.75);
 	font-size: 1.7rem;
 	white-space: nowrap;
 }
-#wrap .krds-main-menu .gnb-toggle-wrap .gnb-sub-list .gnb-sub-content>ul a:hover, 
+/* #wrap .krds-main-menu .gnb-toggle-wrap .gnb-sub-list .gnb-sub-content>ul a:hover, 
 #wrap .krds-main-menu .gnb-toggle-wrap .gnb-sub-list .gnb-sub-content>ul button:hover {
-	background: none;
-}
+	background-color: none;
+} */
 
 #wrap.scroll-down #krds-header:not(.sample) .header-in {
 	transform: initial;

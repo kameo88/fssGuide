@@ -1891,7 +1891,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	gap: 6.4rem;
 	position: relative;
 	width: 107.2rem;
-	padding: 2rem 0;
+	padding: 4rem 0;
 	margin: auto;
 }
 .krds-modal.bookmark .bookmark-wrap .tit-wrap {
@@ -1948,7 +1948,18 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	background: url(../img/main/img_search.png) no-repeat center / 79.2rem auto;
 }
 
+.footer-link-wrap {
+	/* 작업 중 kameo */
+}
 
+@media (min-width: 1700px) {
+	/* full popup 닫기 버튼 위치 조정 */
+	.krds-modal[data-type=full] .modal-dialog .krds-btn.btn-close {
+		top: 16rem;
+		right: 28rem;
+	}
+
+}
 
 @media (max-width: 1400px) {
 	#container.main > .section {

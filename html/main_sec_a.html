@@ -1762,7 +1762,114 @@
 				<!-- modal contents -->
 				<div class="modal-conts">
 					<div class="conts-area">
-						<div class="img-search"></div>
+						<div class="total-search-wrap">
+
+							<!-- search form -->
+							<div class="sch-form-wrap vert">
+								<div class="form-tit">
+									<label for="search-total">검색어를 입력해주세요</label>
+								</div>
+								<div class="sch-input">
+									<input type="text" class="krds-input xlarge" id="search-total" placeholder="검색어를 입력해주세요.">
+									<button type="button" class="krds-btn icon xlarge ico-search">
+										<span class="sr-only">통합 검색</span>
+										<i class="svg-icon ico-sch"></i>
+									</button>
+								</div>
+							</div>
+							<!-- //search form -->
+
+							<!-- 연관 검색어 -->
+							<div class="sch-word-wrap">
+								<!-- 인기 검색어 -->
+								<div class="trending-area">
+									<h3 class="tit">인기검색어</h3>
+									<ol class="trending-list">
+										<li>
+											<a href="javascript:void(0);" class="link">제재공시</a>
+											<span class="status up">1</span>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">상속인 금융거래조회 상속인 금융거래조회 상속인 금융거래조회</a>
+											<span class="status">-</span>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">퇴직금계산기</a>
+											<span class="status up">3</span>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">계좌통합조회</a>
+											<span class="status">-</span>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">보이스피싱</a>
+											<span class="status">-</span>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">국민내일배움</a>
+											<span class="status down">2</span>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">노사협의회</a>
+											<span class="status down">6</span>
+										</li>
+									</ol>
+								</div>
+								<!-- 최근 검색어 -->
+								<div class="recent-area">
+									<h3 class="tit">최근검색어</h3>
+									<ul class="recent-list">
+										<li>
+											<a href="javascript:void(0);" class="link">금융</a>
+											<button type="button" class="krds-btn xsmall icon">
+													<span class="sr-only">삭제</span>
+													<i class="svg-icon ico-delete-fill"></i>
+											</button>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">보험사기</a>
+											<button type="button" class="krds-btn xsmall icon">
+													<span class="sr-only">삭제</span>
+													<i class="svg-icon ico-delete-fill"></i>
+											</button>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="link">상속인 금융거래조회</a>
+											<button type="button" class="krds-btn xsmall icon">
+													<span class="sr-only">삭제</span>
+													<i class="svg-icon ico-delete-fill"></i>
+											</button>
+										</li>
+									</ul>
+									<button type="button" class="krds-btn medium text">최근검색어 전체 삭제 <i class="svg-icon ico-delete-fill"></i></button>
+								</div>
+							</div>
+							<!-- //연관 검색어 -->
+
+							<!-- banner -->
+							<div class="bnr-wrap">
+								<ul class="bnr-list">
+									<li>
+										<a href="javascript:void(0);" class="item ty1">
+											<div class="text">
+												<p class="tit">금융감독연구</p>
+												<p class="desc">금융감독 전문학술지</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="item ty2">
+											<div class="text">
+												<p class="tit">금융마루</p>
+												<p class="desc">금융감독원 소개 및 주요 역할&역사</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //banner -->
+
+						</div>
 					</div>
 				</div>
 				<!-- //modal contents -->
@@ -1862,7 +1969,7 @@
 						<!-- 사용자별 맞춤메뉴 -->
 						<div class="bookmark-wrap">
 							<div class="tit-wrap">
-								<h3 class="tit">사용자별 맞춤메뉴</h3>
+								<h3 class="tit-sub">사용자별 맞춤메뉴</h3>
 								<p class="desc">자주쓰는 메뉴를 설정하시거나, 유형별 서비스를 찾아서 바로 이용해보세요.</p>
 							</div>
 	
@@ -2046,10 +2153,21 @@
 						
 						<div class="footer-link-wrap">
 							<div class="tit-wrap">
-								<h3 class="tit">사용자별 맞춤메뉴</h3>
+								<h3 class="tit-sub">유관기관 및 관련사이트</h3>
 							</div>
 							<ul class="link-list">
-								<li>list</li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">전자공시 DART</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">서민금융 1332</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">금융소비자 정보포털 파인</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">민원상담챗봇</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">e-금융교육센터</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">통합연금포털</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">금융상품 한눈에</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">금융통계정보</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">금융중심지지원센터</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">인재채용</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">공인회계사시험</a></li>
+								<li><a href="javascript:void(0);" class="krds-btn link basic" title="새 창 열림" target="_blank">금감원가족</a></li>
 							</ul>
 						</div>
 

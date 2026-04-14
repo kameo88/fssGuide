@@ -1887,23 +1887,12 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	align-items: center;
 	justify-content: center;
 }
-.krds-modal.bookmark .modal-dialog .modal-conts .conts-area >.bookmark-wrap {
+.krds-modal.bookmark .modal-conts .bookmark-wrap {
 	gap: 6.4rem;
 	position: relative;
 	width: 107.2rem;
 	padding: 4rem 0;
 	margin: auto;
-}
-.krds-modal.bookmark .bookmark-wrap .tit-wrap {
-	display: flex;
-	flex-direction: column;
-	gap: 1.6rem;
-	position: relative;
-	padding-right: 16.3rem;
-	font-size: 1.9rem;
-}
-.krds-modal.bookmark .bookmark-wrap .tit-wrap .tit {
-	font-size: 4rem;
 }
 .krds-modal.bookmark .krds-tab-area {
 	gap: 4.8rem;
@@ -1940,17 +1929,223 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	font-weight: 400;
 }
 
-/* quick menu modal search */
-.krds-modal.search .img-search {
+/* quick menu modal total search */
+.krds-modal.search .modal-conts {
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.krds-modal.search .modal-conts .total-search-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
 	width: 79.2rem;
-	height: 100vh;
+	padding: 4rem 0;
 	margin: auto;
-	background: url(../img/main/img_search.png) no-repeat center / 79.2rem auto;
+}
+.krds-modal.search .total-search-wrap .sch-form-wrap {
+	gap: 1.2rem;
+	padding-bottom: 4rem;
+	border-bottom: 1px solid #D6E0EB;
+}
+.krds-modal.search .total-search-wrap .form-tit {
+	font-size: 3.2rem;
+	font-weight: 700;
+}
+/* 통합 검색 - 인기/최근 검색어 */
+.krds-modal.search .sch-word-wrap {
+	display: flex;
+}
+.krds-modal.search .sch-word-wrap > * {
+	flex: 1;
+	padding: 0 2.4rem;
+}
+.krds-modal.search .sch-word-wrap .tit {
+	font-size: 1.9rem;
+	margin-bottom: 2.4rem;
+}
+/* 통합 검색 - 인기 검색어 */
+.krds-modal.search .sch-word-wrap .trending-area {
+	border-right: 1px solid #D6E0EB;
+}
+.krds-modal.search .sch-word-wrap .trending-list li {
+	display: flex;
+	justify-content: space-between;
+	gap: .8rem;
+	counter-increment: item;
+}
+.krds-modal.search .sch-word-wrap .trending-list li + li {
+	margin-top: 1.6rem;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .link {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .link::before {
+	content: counter(item);
+	display: inline-flex;
+	width: 2.8rem;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .status {
+	display: inline-flex;
+	align-items: center;
+	padding-right: 1rem;
+	margin-left: auto;
+	font-size: 1.5rem;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .status::before {
+	content: '';
+	display: inline-flex;
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-right: .2rem;
+	background-repeat: no-repeat;
+	background-position: no-repeat;
+	background-size: contain;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .status.up {
+	color: #AB2B36;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .status.up::before {
+	background-image: url(../img/main/ico_lanking_up.svg);
+}
+.krds-modal.search .sch-word-wrap .trending-list li .status.down {
+	color: #096AB3;
+}
+.krds-modal.search .sch-word-wrap .trending-list li .status.down::before {
+	background-image: url(../img/main/ico_lanking_down.svg);
+}
+/* 통합 검색 - 최근 검색어 */
+.krds-modal.search .sch-word-wrap .recent-area {
+	display: flex;
+	flex-direction: column;
+}
+.krds-modal.search .sch-word-wrap .recent-area .krds-btn.text {
+	margin-top: auto;
+}
+.krds-modal.search .sch-word-wrap .recent-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .8rem;
+}
+.krds-modal.search .sch-word-wrap .recent-list li + li {
+	margin-top: 1.6rem;
+}
+.krds-modal.search .sch-word-wrap .recent-list li .icon {
+	flex: 0 0 1.6rem;
 }
 
-.footer-link-wrap {
-	/* 작업 중 kameo */
+/* 통합 검색 - 하단 배너 */
+.krds-modal.search .bnr-list {
+	display: inline-flex;
+	gap: 2rem;
+	width: 100%;
 }
+.krds-modal.search .bnr-list li {
+	width: calc((100% - 2rem)/2);
+}
+.krds-modal.search .bnr-list li .item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: .8rem;
+	width: 100%;
+	height: 11.2rem;
+	padding: 2rem 2.4rem;
+	border-radius: 1rem;
+}
+.krds-modal.search .bnr-list li .item::after {
+	content: '';
+	width: 7.2rem;
+	height: 7.2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.krds-modal.search .bnr-list li .item.ty1 {
+	background-color: #ECE6FC;
+}
+.krds-modal.search .bnr-list li .item.ty1::after {
+	background-image: url(../img/main/icon_service2.png);
+}
+.krds-modal.search .bnr-list li .item.ty2 {
+	background-color: #D1E2FF;
+}
+.krds-modal.search .bnr-list li .item.ty2::after {
+	background-image: url(../img/main/icon_service1.png);
+}
+.krds-modal.search .bnr-list li .item .tit {
+	color: #1E2124;
+	font-size: 1.9rem;
+	font-weight: 700;
+}
+.krds-modal.search .bnr-list li .item .desc {
+	margin-top: .8rem;
+	color: #464C53;
+	font-size: 1.5rem;
+}
+
+/* footer 유사기관 */
+.krds-modal.link .modal-conts {
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.krds-modal.link .modal-conts .footer-link-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 6.4rem;
+	width: 107.2rem;
+	padding: 4rem 0;
+	margin: auto;
+}
+.krds-modal .footer-link-wrap .link-list {
+	display: inline-flex;
+	/* flex-direction: row; */
+	flex-wrap: wrap;
+	gap: .8rem 4rem;
+}
+.krds-modal .footer-link-wrap .link-list li {
+	width: calc((100% - 12rem)/4);
+}
+.krds-modal .footer-link-wrap .link-list .link {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0;
+	padding: 1rem .8rem;
+	color: #1E2124;
+}
+.krds-modal .footer-link-wrap .link-list .link::before {
+	content: '';
+	display: inline-flex;
+	width: .6rem;
+	height: .6rem;
+	margin-right: .6rem;
+	border-radius: 5rem;
+	background-color: #33363D;
+	
+}
+
+/* full modal tit-sub 공통 */
+.krds-modal[data-type=full] .tit-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	position: relative;
+	padding-right: 16.3rem;
+	font-size: 1.9rem;
+}
+.krds-modal[data-type=full] .tit-wrap .tit-sub {
+	font-size: 4rem;
+}
+
 
 @media (min-width: 1700px) {
 	/* full popup 닫기 버튼 위치 조정 */
@@ -2383,10 +2578,19 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 
 
+	/* 통합 검색 */
+	.krds-modal.search .modal-conts {
+		justify-content: flex-start;
+	}
+	.krds-modal.search .modal-conts .total-search-wrap {
+		width: 100%;
+	}
+
 	.krds-modal.bookmark .modal-conts {
 		justify-content: flex-start;
 	}
-	.krds-modal.bookmark .modal-dialog .modal-conts .conts-area >.bookmark-wrap {
+	.krds-modal.bookmark .modal-conts .bookmark-wrap {
+		gap: 2.4rem;
 		width: 100%;
 		padding: 6.4rem 0 4rem;
 	}
@@ -2417,6 +2621,33 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		margin-top: 0;
 	}
 
+	/* footer 유사기관 */
+	.krds-modal.link .modal-conts {
+		justify-content: flex-start;
+	}
+	.krds-modal.link .modal-conts .footer-link-wrap {
+		gap: 2.4rem;
+		width: 100%;
+		padding: 6.4rem 0 4rem;
+	}
+	.krds-modal .footer-link-wrap .link-list li {
+		width: calc((100% - 8rem)/3);
+	}
+
+	/* full modal tit-sub 공통 */
+	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts {
+		padding-inline: 2.4rem;
+	}
+	.krds-modal[data-type=full] .tit-wrap {
+		gap: .8rem;
+		font-size: 1.7rem;
+		padding: 0;
+	}
+	.krds-modal[data-type=full] .tit-wrap .tit-sub {
+		font-size: 2.4rem;
+	}
+
+
 	/* pc quick menu */
 	.quick-menu {
 		display: none;
@@ -2434,7 +2665,55 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 /* 361 ~ 767 */
 @media (max-width: 767px) {
+	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts {
+		padding-inline: 1.6rem;
+	}
 
+	/* 통합검색 - 검색 폼 */
+	.krds-modal.search .modal-conts .total-search-wrap {
+		gap: 2.4rem;
+	}
+	.krds-modal.search .total-search-wrap .form-tit {
+		font-size: 2.4rem;
+	}
+	.krds-modal.search .total-search-wrap .sch-form-wrap {
+		padding-bottom: 2.4rem;
+	}
+	.krds-modal.search .total-search-wrap .krds-input {
+		height: 6.4rem;
+	}
+	.krds-modal.search .sch-word-wrap .tit {
+		margin-bottom: 1.6rem;
+	}
+	.krds-modal.search .sch-word-wrap > * {
+		padding: 0;
+	}
+	.krds-modal.search .sch-word-wrap .trending-area {
+		padding-bottom: 2.4rem;
+		margin-bottom: 2.4rem;
+		border: 1px solid #D6E0EB;
+		border-width: 0 0 1px 0;
+	}
+	.krds-modal.search .sch-word-wrap .recent-area .krds-btn.text {
+		margin-top: 1.6rem;
+	}
+	.krds-modal.search .sch-word-wrap,
+	.krds-modal.search .bnr-list {
+		flex-direction: column;
+	}
+	.krds-modal.search .bnr-list {
+		gap: 1.6rem;
+	}
+	.krds-modal.search .bnr-list li {
+		width: 100%;
+	}
+
+	.krds-modal .footer-link-wrap .link-list {
+		gap: 0;
+	}
+	.krds-modal .footer-link-wrap .link-list li {
+		width: 100%;
+	}
 }
 
 /* 0 ~ 360 */

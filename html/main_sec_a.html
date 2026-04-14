@@ -303,12 +303,28 @@
 					<div class="gnb-header">
 						<!-- gnb-utils -->
 						<div class="gnb-utils">
-							<ul class="utility-list">
-								<li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
-								<li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
-							</ul>
+							<div class="lang-area">
+								<a href="javascript:void(0);" class="link on">KO</a>
+								<a href="javascript:void(0);" class="link">EN</a>
+							</div>
 						</div>
 						<!-- //gnb-utils -->
+						<!-- gnb-login -->
+						<div class="gnb-login">
+							<!-- <span class="user">홍길동님</span>
+							<button type="button" class="krds-btn large text"><i class="svg-icon ico-logout"></i> 로그아웃</button> -->
+							<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을 해주세요</button>
+						</div>
+						<!-- //gnb-login -->
+						<!-- 검색 -->
+						<div class="sch-input">
+							<input type="text" class="krds-input" placeholder="메뉴명을 입력해주세요" title="메뉴명을 입력해주세요" />
+							<button type="button" class="krds-btn small icon ico-search">
+								<span class="sr-only">검색</span>
+								<i class="svg-icon ico-sch"></i>
+							</button>
+						</div>
+						<!-- //검색 -->
 					</div>
 					<!-- //gnb-header -->
 					
@@ -1873,12 +1889,6 @@
 					</div>
 				</div>
 				<!-- //modal contents -->
-				<!-- modal btn -->
-				<!-- <div class="modal-btn btn-wrap">
-					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
-					<button type="button" class="krds-btn medium primary close-modal">예</button>
-				</div> -->
-				<!-- //modal btn -->
 				<!-- close button -->
 				<button type="button" class="krds-btn xlarge icon btn-close close-modal">
 					<span class="sr-only">닫기</span>
@@ -1933,12 +1943,6 @@
 					</div>
 				</div>
 				<!-- //modal contents -->
-				<!-- modal btn -->
-				<!-- <div class="modal-btn btn-wrap">
-					<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
-					<button type="button" class="krds-btn medium primary close-modal">예</button>
-				</div> -->
-				<!-- //modal btn -->
 				<!-- close button -->
 				<button type="button" class="krds-btn large icon btn-close close-modal">
 					<span class="sr-only">닫기</span>
@@ -2463,7 +2467,7 @@ window.addEventListener('wheel', function (event) {
 		// 서비스 목록 for mobile
 		const serviceSwiper = new Swiper(".main-service-swiper .swiper", {
 			slidesPerView: 1,
-			spaceBetween: 10,
+			spaceBetween: 0,
 			loop: true,
 			loopAdditionalSlides: 1,
 			navigation: {
@@ -2474,6 +2478,14 @@ window.addEventListener('wheel', function (event) {
 				el: ".main-service-swiper .swiper-pagination",
 				clickable: true,
 			},
+			breakpoints: {
+					0: {
+					},
+					500: {
+						slidesPerView: 2,
+						spaceBetween: 16,
+					},
+				},
 		});
 		
 		
@@ -2501,6 +2513,14 @@ window.addEventListener('wheel', function (event) {
 				breakpoints: {
 					0: {
 						slidesPerView: 1,
+						spaceBetween: 16,
+						grid: { 
+							rows: 4, 
+							fill: "row" 
+						}
+					},
+					768: {
+						slidesPerView: 2,
 						spaceBetween: 16,
 						grid: { 
 							rows: 4, 

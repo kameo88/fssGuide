@@ -209,8 +209,47 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	background-color: #1E2124;
 }
 
-/*  section - fullpage scroll */
+/* mobile gnb */
+#mobile-nav.krds-main-menu-mobile {
+	/* 임시 */
+}
+#mobile-nav .gnb-header {
+	padding: 1.6rem;
+}
+#mobile-nav .gnb-utils {
+	align-items: center;
+	height: 3.2rem;
+}
+#mobile-nav .gnb-utils .lang-area,
+#mobile-nav .gnb-utils .lang-area .link {
+	display: flex;
+	position: relative;
+	font-size: 1.5rem;
+}
+#mobile-nav .gnb-utils .lang-area .link:not(:first-child) {
+	margin-left: 1.6rem;
+}
+#mobile-nav .gnb-utils .lang-area .link:not(:first-child)::before {
+	content: '';
+	display: flex;
+	position: absolute;
+	top: .7rem;
+	left: -.8rem;
+	border: 1px solid #D8D8D8;
+	border-width: 0 0 0 1px;
+	height: 1rem;
+}
+#mobile-nav .gnb-utils .lang-area .link.on {
+	font-weight: 700;
+}
+#mobile-nav .sch-input .krds-input {
+	height: 4.8rem;
+}
 
+
+
+
+/*  section - fullpage scroll */
 .parallax {
 	height: 100vh;
 	z-index: 51;
@@ -1843,9 +1882,8 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 184rem;
-	padding: 4rem 0 0 0 ;
-	margin: auto;
+	/* width: 184rem; */
+	padding: 4rem ;
 }
 #modal_menu_full .menu-list {
 	display: inline-flex;
@@ -2672,6 +2710,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	/* 통합검색 - 검색 폼 */
 	.krds-modal.search .modal-conts .total-search-wrap {
 		gap: 2.4rem;
+		padding: 6.4rem 0 4rem;
 	}
 	.krds-modal.search .total-search-wrap .form-tit {
 		font-size: 2.4rem;

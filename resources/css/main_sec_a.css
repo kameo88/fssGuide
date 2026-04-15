@@ -619,10 +619,10 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	color: #fff;
 }
 
-/* kameo */
+/* kameo 임시 */
 .main-visual-wrap .swiper-indicator button:focus {
-	outline: none !important;
-	box-shadow: none !important;
+	/* outline: none !important;
+	box-shadow: none !important; */
 }
 .main-visual-wrap [class^=swiper-button-]::after {
 	background-color: #ffffff;
@@ -667,10 +667,12 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	transform: translateY(40px);
 	transition: all 1.2s ease;
 }
-.main .sec-inner.active .main-tit-wrap .tit span,
-.main .sec-inner.active .main-tit-wrap .desc,
+/* on 으로 변환 작업 중
 .main .sec-inner .main-tit-wrap.on .tit span,
-.main .sec-inner .main-tit-wrap.on .desc {
+.main .sec-inner .main-tit-wrap.on .desc 
+*/
+.main .sec-inner.active .main-tit-wrap .tit span,
+.main .sec-inner.active .main-tit-wrap .desc {
 	opacity: 1;
 	transform: translateY(0);
 }

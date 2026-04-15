@@ -1906,8 +1906,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	/* width: 184rem; */
-	padding: 4rem ;
+	width: 184rem;
+	padding: 4rem 0;
+	margin: auto;
 }
 #modal_menu_full .menu-list {
 	display: inline-flex;

@@ -1742,8 +1742,55 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 
+/* sns link style 추가 */
+.sns-link-list .go-sns {
+	display: flex;
+	width: 2.4rem;
+	height: 2.4rem;
+	margin: auto;
+}
+.sns-link-list .go-sns .svg-icon {
+	background-color: initial;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.sns-link-list .go-sns .ico-sns-youtube {
+	background-image: url(../img/main/ico_sns_youtube.svg);
+}
+.sns-link-list .go-sns .ico-sns-blog {
+	background-image: url(../img/main/ico_sns_blog.svg);
+}
+.sns-link-list .go-sns .ico-sns-facebook {
+	background-image: url(../img/main/ico_sns_facebook.svg);
+}
+.sns-link-list .go-sns .ico-sns-insta {
+	background-image: url(../img/main/ico_sns_insta.svg);
+}
+/* mobile quick menu */
+.mo-quick-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.2rem 1.6rem;
+	background-color: #063A74;
+}
+.mo-quick-menu .sns-link-list {
+	display: flex;
+	gap: .4rem;
+}
+.mo-quick-menu .sns-link-list .go-sns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+}
+.mo-quick-menu .krds-btn .ico-chat {
+	background: url(../img/main/ico_chat.svg) no-repeat center / contain;
+}
 
-/* 우측 바로가기 아이콘 */
+/* PC 우측 바로가기 아이콘 */
 .quick-menu {
 	display: flex;
 	/* align-items: flex-start; */
@@ -1760,38 +1807,15 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	z-index: 69;
 }
 .quick-menu .top {
+	padding: 4rem 0;
+}
+.quick-menu .top .sns-link-list {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	gap: 3.2rem;
-	padding: 4rem 0;
 }
-.quick-menu .top .go-sns {
-	display: flex;
-	width: 2.4rem;
-	height: 2.4rem;
-	margin: auto;
-}
-.quick-menu .top .go-sns .svg-icon {
-	background-color: initial;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}
-.quick-menu .top .go-sns .ico-sns-youtube {
-	background-image: url(../img/main/ico_sns_youtube.svg);
-}
-.quick-menu .top .go-sns .ico-sns-blog {
-	background-image: url(../img/main/ico_sns_blog.svg);
-}
-.quick-menu .top .go-sns .ico-sns-facebook {
-	background-image: url(../img/main/ico_sns_facebook.svg);
-}
-.quick-menu .top .go-sns .ico-sns-insta {
-	background-image: url(../img/main/ico_sns_insta.svg);
-}
-
 .quick-menu .middle {
 	display: flex;
 	align-items: center;

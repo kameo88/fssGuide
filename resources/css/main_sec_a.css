@@ -1746,121 +1746,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 
-/* sns link style 추가 */
-.sns-link-list .go-sns {
-	display: flex;
-	width: 2.4rem;
-	height: 2.4rem;
-	margin: auto;
-}
-.sns-link-list .go-sns .svg-icon {
-	background-color: initial;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}
-.sns-link-list .go-sns .ico-sns-youtube {
-	background-image: url(../img/main/ico_sns_youtube.svg);
-}
-.sns-link-list .go-sns .ico-sns-blog {
-	background-image: url(../img/main/ico_sns_blog.svg);
-}
-.sns-link-list .go-sns .ico-sns-facebook {
-	background-image: url(../img/main/ico_sns_facebook.svg);
-}
-.sns-link-list .go-sns .ico-sns-insta {
-	background-image: url(../img/main/ico_sns_insta.svg);
-}
-/* mobile quick menu */
-.mo-quick-menu {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 1.2rem 1.6rem;
-	background-color: #063A74;
-}
-.mo-quick-menu .sns-link-list {
-	display: flex;
-	gap: .4rem;
-}
-.mo-quick-menu .sns-link-list .go-sns {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 4rem;
-	height: 4rem;
-}
-.mo-quick-menu .krds-btn .ico-chat {
-	background: url(../img/main/ico_chat.svg) no-repeat center / contain;
-}
-
-/* PC 우측 바로가기 아이콘 */
-.quick-menu {
-	display: flex;
-	/* align-items: flex-start; */
-	justify-content: flex-start;
-	flex-direction: column;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	width: 7.2rem;
-	padding-top: 9.6rem;
-	background-color: #063A74;
-	color: white;
-	z-index: 69;
-}
-.quick-menu .top {
-	padding: 4rem 0;
-}
-.quick-menu .top .sns-link-list {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	gap: 3.2rem;
-}
-.quick-menu .middle {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	flex: 1;
-}
-.quick-menu .bottom button,
-.quick-menu .bottom a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
-}
-.quick-menu .bottom .chat {
-	padding: 2.4rem 1.2rem;
-}
-.quick-menu .bottom .chat .ico-chat {
-	width: 4.8rem;
-	height: 4.8rem;
-	background: url(../img/main/ico_chat.svg) no-repeat center / contain;
-}
-.quick-menu .bottom .bookmark {
-	height: 7.2rem;
-	background-color: #7C3AED;
-}
-.quick-menu .bottom .bookmark:hover {
-	background-color: #5D2BB2;
-}
-.quick-menu .bottom .bookmark .ico-scrap {
-	background-color: #fff;
-}
-.quick-menu .bottom .go-top {
-	height: 9.6rem;
-	background-color: #256EF4;
-}
-.quick-menu .bottom .go-top .ico-go-top {
-	background-color: #fff;
-}
-
 #krds-footer {
 	/* height: 44.4rem; */
 }
@@ -2272,11 +2157,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 
 @media (min-width: 1700px) {
-	/* full popup 닫기 버튼 위치 조정 */
-	.krds-modal[data-type=full] .modal-dialog .krds-btn.btn-close {
-		top: 16rem;
-		right: 28rem;
-	}
 
 }
 
@@ -2288,15 +2168,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 /* 1280 ~ 1699 */
 @media (max-width: 1699px) {
-	#wrap #krds-header .header-in {
-		padding: 0 calc(7.2rem + 2.4rem) 0 2.4rem;
-	}
-	#wrap #krds-header .krds-main-menu .gnb-menu {
-		gap: 3.2rem;
-	}
-	#krds-header .header-utility {
-		gap: 3.2rem;
-	}
 
 	#container.main .section:not(#section6) .sec-inner {
 		padding-left: 2.4rem;
@@ -2395,44 +2266,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 
 
-	#wrap #krds-header .header-in {
-		height: 6.4rem;
-		padding: 0 .8rem 0 1.6rem;
-	}
-	#krds-header .header-container .logo {
-		width: 11rem;
-	}
-	#krds-header .header-container .inner {
-		padding: 0;
-		border: none;
-	}
-	#krds-header .header-utility {
-		gap: .4rem;
-		height: 4rem;
-		padding-right: 0;
-	}
-	#krds-header .header-utility .lang-area {
-		display: none;
-	}
-	#krds-header .header-utility button {
-		width: 4rem;
-		height: 4rem;
-	}
-	#krds-header .header-utility .svg-icon {
-		width: 2.4rem;
-		height: 2.4rem;
-	}
-	#wrap[class*=scroll] #krds-header .header-utility .svg-icon {
-		background-color: #33363D;
-	}
-	#krds-header .header-utility .bookmark-area,
-	#krds-header .header-utility .nav-area {
-		display: flex;
-	}
-
-	#krds-header .header-in .menu-all-area {
-		display: none;
-	}
 
 	#container.main .section .sec-inner,
 	#container.main #section3 .sec-inner {
@@ -2449,9 +2282,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		display: block;
 	}
 
-	#wrap #krds-header .krds-main-menu {
-		display: none;
-	}
 	.mouseWrap {
 		display: none;
 	}
@@ -2706,146 +2536,18 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	}
 
 
-	/* 통합 검색 */
-	.krds-modal.search .modal-conts {
-		justify-content: flex-start;
-	}
-	.krds-modal.search .modal-conts .total-search-wrap {
-		width: 100%;
-	}
-
-	.krds-modal.bookmark .modal-conts {
-		justify-content: flex-start;
-	}
-	.krds-modal.bookmark .modal-conts .bookmark-wrap {
-		gap: 2.4rem;
-		width: 100%;
-		padding: 6.4rem 0 4rem;
-	}
-	.krds-modal.bookmark .bookmark-wrap {
-		width: 100%;
-	}
-	.krds-modal.bookmark .bookmark-wrap .tit-wrap {
-		padding: 0;
-	}
-	.krds-modal.bookmark .krds-tab-area {
-		gap: 2.4rem;
-	}
-	.krds-modal.bookmark .tab .btn-tab {
-		background-color: transparent;
-	}
-	.krds-modal.bookmark .bookmark-wrap .btn-area {
-		position: unset;
-	}
-	.krds-modal.bookmark .my-bookmark-swiper .item {
-		justify-content: space-between;
-		flex-direction: row;
-		height: 10.6rem;
-		padding: 2.4rem;
-	}
-	.krds-modal.bookmark .my-bookmark-swiper .item .txt {
-		align-items: flex-start;
-		order: unset;
-		margin-top: 0;
-	}
-
-	/* footer 유사기관 */
-	.krds-modal.link .modal-conts {
-		justify-content: flex-start;
-	}
-	.krds-modal.link .modal-conts .footer-link-wrap {
-		gap: 2.4rem;
-		width: 100%;
-		padding: 6.4rem 0 4rem;
-	}
-	.krds-modal .footer-link-wrap .link-list li {
-		width: calc((100% - 8rem)/3);
-	}
-
-	/* full modal tit-sub 공통 */
-	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts {
-		padding-inline: 2.4rem;
-	}
-	.krds-modal[data-type=full] .tit-wrap {
-		gap: .8rem;
-		font-size: 1.7rem;
-		padding: 0;
-	}
-	.krds-modal[data-type=full] .tit-wrap .tit-sub {
-		font-size: 2.4rem;
-	}
-
-
-	/* pc quick menu */
-	.quick-menu {
-		display: none;
-	}
-
-
-	#krds-footer .f-logo {
-		background-position: center left;
-	}
-	#krds-footer .f-cnt .f-link {
-		gap: var(--krds-gap-7);
-	}
-
 }
 
 /* 361 ~ 767 */
 @media (max-width: 767px) {
-	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts {
-		padding-inline: 1.6rem;
-	}
 
-	/* 통합검색 - 검색 폼 */
-	.krds-modal.search .modal-conts .total-search-wrap {
-		gap: 2.4rem;
-		padding: 6.4rem 0 4rem;
-	}
-	.krds-modal.search .total-search-wrap .form-tit {
-		font-size: 2.4rem;
-	}
-	.krds-modal.search .total-search-wrap .sch-form-wrap {
-		padding-bottom: 2.4rem;
-	}
-	.krds-modal.search .total-search-wrap .krds-input {
-		height: 6.4rem;
-	}
-	.krds-modal.search .sch-word-wrap .tit {
-		margin-bottom: 1.6rem;
-	}
-	.krds-modal.search .sch-word-wrap > * {
-		padding: 0;
-	}
-	.krds-modal.search .sch-word-wrap .trending-area {
-		padding-bottom: 2.4rem;
-		margin-bottom: 2.4rem;
-		border: 1px solid #D6E0EB;
-		border-width: 0 0 1px 0;
-	}
-	.krds-modal.search .sch-word-wrap .recent-area .krds-btn.text {
-		margin-top: 1.6rem;
-	}
-	.krds-modal.search .sch-word-wrap,
-	.krds-modal.search .bnr-list {
-		flex-direction: column;
-	}
-	.krds-modal.search .bnr-list {
-		gap: 1.6rem;
-	}
-	.krds-modal.search .bnr-list li {
-		width: 100%;
-	}
 
-	.krds-modal .footer-link-wrap .link-list {
-		gap: 0;
-	}
-	.krds-modal .footer-link-wrap .link-list li {
-		width: 100%;
-	}
+
 }
 
 /* 0 ~ 360 */
 @media (max-width: 360px) {
+
+
 
 }

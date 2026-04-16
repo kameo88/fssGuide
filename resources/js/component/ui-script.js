@@ -421,6 +421,9 @@ const krds_mainMenuMobile = {
     const headerTabArea = mobileGnb.querySelector(".gnb-tab-nav");
     const headerTabMenu = headerTabArea?.querySelector(".menu-wrap");
 
+		// by kameo
+    if (!headerTabMenu) return; // 요소가 없을 경우 함수 종료
+
     gnbBody.addEventListener("scroll", () => {
       const scrollTop = gnbBody.scrollTop;
       const scrollHeight = gnbBody.scrollHeight;
@@ -471,13 +474,15 @@ const krds_mainMenuMobile = {
     });
   },
   setupAnchorLinks(mobileGnb) {
-    const menuItems = mobileGnb.querySelectorAll(".menu-wrap .gnb-main-trigger");
+    // by kameo
+		// const menuItems = mobileGnb.querySelectorAll(".menu-wrap .gnb-main-trigger");
     const navItems = mobileGnb.querySelectorAll(".submenu-wrap .gnb-sub-list");
 
-    if (!document.querySelector(".menu-wrap .gnb-main-trigger.active")) {
-      menuItems[0].classList.add("active");
-      menuItems[0].setAttribute("aria-selected", "true");
-    }
+		// 기능 해지 주석 처리 by kameo
+		// if (!document.querySelector(".menu-wrap .gnb-main-trigger.active")) {
+    //   menuItems[0].classList.add("active");
+    //   menuItems[0].setAttribute("aria-selected", "true");
+    // }
 
     // 3depth
     navItems.forEach((item) => {
@@ -2667,7 +2672,7 @@ window.addEventListener("resize", () => {
 document.addEventListener("all:includes:loaded", function() {
   // 헤더 이벤트 재초기화
 	krds_mainMenuPC.init();
-  krds_mainMenuMobile.init();
+  // krds_mainMenuMobile.init();
   krds_modal.init();
   krds_dropEvent.init();
 });

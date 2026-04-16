@@ -1,6 +1,7 @@
 /* @import "../../resources/css/plugin/swiper-bundle.min.css"; */
 @import "../../resources/css/krds.min.css"; /* krds css, 이미지 경로는 상대경로로 수정함 */
 @import "../../resources/css/font.css"; /* local path */
+@import "../../resources/css/reset.css"; /* fss design style 적용 */
 @import "../../resources/css/common.css"; /* fss common custom */
 @import "../../resources/css/content.css"; /* fss content custom */
 

@@ -213,7 +213,12 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 
 /* mobile gnb */
 #mobile-nav.krds-main-menu-mobile {
-	/* 임시 */
+	/* kameo */
+}
+.krds-main-menu-mobile.is-open {
+	/* kameo */
+	overflow: visible;
+	right: 0;
 }
 #mobile-nav .gnb-header {
 	padding: 1.6rem;
@@ -247,7 +252,61 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 #mobile-nav .sch-input .krds-input {
 	height: 4.8rem;
 }
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list:not(:first-child) {
+	border-top: 4px solid #CDD1D5;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .sub-title {
+	padding: .4rem .8rem 1.2rem;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .svg-icon {
+	width: 2rem;
+	height: 2rem;
+	margin-left: auto;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list>ul {
+	padding: 1.6rem 0 0;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .gnb-sub-trigger {
+	gap: .8rem;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .gnb-sub-trigger:not(.has-depth3)::after {
+	content: '';
+	flex: 0 0 2rem;
+	width: 2rem;
+	height: 2rem;
+	margin-left: auto;
+	background-color: #1E2124;
+	-webkit-mask-image: url(../img/component/icon/ico_more.svg);
+	mask-image: url(../img/component/icon/ico_more.svg);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center right;
+	mask-position:  center right;
+	-webkit-mask-size: 2rem auto;
+	mask-size: 2rem auto;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .gnb-sub-trigger.has-depth3.active,
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .gnb-sub-trigger:hover,
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .depth3-wrap .depth3-trigger:hover {
+	background-color: #EEF2F7;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .depth3-wrap {
+	margin-top: 0;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .depth3-wrap>ul {
+	gap: 0;
+}
+#mobile-nav .gnb-body .submenu-wrap .gnb-sub-list .depth3-wrap .depth3-trigger {
+	align-items: flex-start;
+	gap: .5rem;
+	min-height: 4.6rem;
+}
+#mobile-nav .gnb-body .submenu-wrap .depth4-wrap .depth4-body .depth4-ul {
+	gap: 0;
+	margin: 1.6rem 0;
+}
 
+/* .krds-main-menu-mobile .gnb-wrap .gnb-body .gnb-menu .submenu-wrap .gnb-sub-list .gnb-sub-trigger {} */
 
 
 /* modal 전체 메뉴 in full popup */

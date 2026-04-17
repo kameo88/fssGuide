@@ -314,39 +314,15 @@
 							<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을 해주세요</button>
 						</div>
 						<!-- //gnb-login -->
-						 <div class="gnb-tab-nav">
-
-							 <!-- 검색 -->
-							 <div class="sch-input">
-								 <input type="text" class="krds-input" placeholder="메뉴명을 입력해주세요" title="메뉴명을 입력해주세요" />
-								 <button type="button" class="krds-btn small icon ico-search">
-									 <span class="sr-only">검색</span>
-									 <i class="svg-icon ico-sch"></i>
-								 </button>
-							 </div>
-							 <!-- //검색 -->
-							<!-- <div class="menu-wrap">
-								<ul>
-									<li>
-										<a href="#mGnb-anchor1" class="gnb-main-trigger">MyGOV</a>
-									</li>
-									<li>
-										<a href="#mGnb-anchor2" class="gnb-main-trigger">민원서비스</a>
-									</li>
-									<li>
-										<a href="#mGnb-anchor3" class="gnb-main-trigger">보조금24</a>
-									</li>
-									<li>
-										<a href="#mGnb-anchor4" class="gnb-main-trigger">정책정보</a>
-									</li>
-									<li>
-										<a href="#mGnb-anchor5" class="gnb-main-trigger">고객센터</a>
-									</li>
-									<li><a href="#" class="gnb-main-trigger">단순링크</a></li>
-								</ul>
-							</div> -->
+						<!-- 검색 -->
+						<div class="sch-input">
+							<input type="text" class="krds-input" placeholder="메뉴명을 입력해주세요" title="메뉴명을 입력해주세요" />
+							<button type="button" class="krds-btn small icon ico-search">
+								<span class="sr-only">검색</span>
+								<i class="svg-icon ico-sch"></i>
+							</button>
 						</div>
-            <!-- //gnb-tab-nav -->
+						<!-- //검색 -->
 					</div>
 					<!-- //gnb-header -->
 
@@ -367,7 +343,8 @@
 						<!-- gnb-menu -->
 						<div class="gnb-menu">
 							<div class="submenu-wrap">
-								<div class="gnb-sub-list" id="mGnb-anchor1">
+								<!-- 임시 주석 처리 kameo -->
+								<!-- <div class="gnb-sub-list" id="mGnb-anchor1">
 									<h2 class="sub-title">MyGOV</h2>
 									<ul>
 										<li><a href="#" class="gnb-sub-trigger">MyGOV 홈</a></li>
@@ -375,35 +352,21 @@
 										<li><a href="#" class="gnb-sub-trigger">나의 생활정보</a></li>
 										<li><a href="#" class="gnb-sub-trigger">나의 정보관리</a></li>
 									</ul>
-								</div>
+								</div> -->
 								<div class="gnb-sub-list" id="mGnb-anchor2">
-									<h2 class="sub-title">민원서비스</h2>
+									<h2 class="sub-title">민원 &middot; 신고</h2>
 									<ul>
-										<li><a href="#" class="gnb-sub-trigger">민원 신청&middot;안내</a></li>
-										<li><a href="#" class="gnb-sub-trigger">사실/진위 확인</a></li>
-										<li><a href="#" class="gnb-sub-trigger">원스톱 서비스</a></li>
-										<li><a href="#" class="gnb-sub-trigger">분야별 서비스</a></li>
-										<li><a href="#" class="gnb-sub-trigger">기업/단체 서비스</a></li>
-										<li><a href="#" class="gnb-sub-trigger">돌봄시설 등 위치 찾기</a></li>
-									</ul>
-									<div class="gnb-sub-banner">
-										<span class="krds-badge bg-primary">신규 서비스</span>
-										<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
-									</div>
-								</div>
-								<div class="gnb-sub-list" id="mGnb-anchor3">
-									<h2 class="sub-title">보조금24</h2>
-									<ul>
-										<li><a href="#" class="gnb-sub-trigger">보조금24 홈</a></li>
-										<li><a href="#" class="gnb-sub-trigger">나의 혜택</a></li>
-										<li><a href="#" class="gnb-sub-trigger">간편 찾기</a></li>
-										<li><a href="#" class="gnb-sub-trigger">전체 혜택</a></li>
 										<li>
-											<a href="#" class="gnb-sub-trigger has-depth3">보조금24란</a>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">민원 &middot; 신고</a>
+
+											<!-- depth 3 -->
 											<div class="depth3-wrap">
 												<ul>
 													<li>
-														<a href="#" class="depth3-trigger has-depth4">소개(4depth)</a>
+														<a href="#" class="depth3-trigger has-depth4">민원 &middot; 신고</a>
+
+														<!-- depth 4 -->
 														<div class="depth4-wrap">
 															<div class="depth4-head">
 																<button type="button" class="krds-btn medium icon trigger-prev">
@@ -416,45 +379,313 @@
 																</button>
 															</div>
 															<ul class="depth4-body">
-																<h4 class="sub-title">4depth title</h4>
+																<h4 class="sub-title">민원 &middot; 신고</h4>
 																<ul class="depth4-ul">
-																	<li><a href="#">depth title</a></li>
-																	<li><a href="#">depth title</a></li>
-																	<li><a href="#">depth title</a></li>
-																	<li><a href="#">depth title</a></li>
+																	<li><a href="#">금융민원상담 안내</a></li>
+																	<li><a href="#">금융민원신청 안내</a></li>
+																	<li><a href="#">협회등 관련기관 안내itle</a></li>
+																	<li><a href="#">금융회사민원부서 안내</a></li>
 																</ul>
 															</ul>
 														</div>
+														<!-- //depth 4 -->
+
 													</li>
-													<li><a href="#" class="depth3-trigger">이용안내</a></li>
-													<li><a href="#" class="depth3-trigger">자주묻는 질문</a></li>
+													<li><a href="#" class="depth3-trigger" target="_blank" title="새 창 열림">민원조회 <i class="svg-icon ico-go"></i></a></li>
+													<li>
+														<a href="#" class="depth3-trigger has-depth4">정보공개청구</a>
+
+														<!-- depth 4 -->
+														<div class="depth4-wrap">
+															<div class="depth4-head">
+																<button type="button" class="krds-btn medium icon trigger-prev">
+																	<span class="sr-only">이전화면</span>
+																	<i class="svg-icon ico-angle left"></i>
+																</button>
+																<button type="button" class="krds-btn medium icon trigger-close">
+																	<span class="sr-only">전체메뉴 닫기</span>
+																	<i class="svg-icon ico-popup-close"></i>
+																</button>
+															</div>
+															<ul class="depth4-body">
+																<h4 class="sub-title">정보공개청구</h4>
+																<ul class="depth4-ul">
+																	<li><a href="#">제도안내</a></li>
+																	<li><a href="#">정보공개청구/조회</a></li>
+																	<li><a href="#">보유정보목록</a></li>
+																	<li><a href="#">사전공표정보목록</a></li>
+																	<li><a href="#">비공개세부기준</a></li>
+																	<li><a href="#">공공데이터 개방</a></li>
+																</ul>
+															</ul>
+														</div>
+														<!-- //depth 4 -->
+
+													</li>
+													<li><a href="#" class="depth3-trigger" target="_blank" title="새 창 열림">민원상담 챗봇 <i class="svg-icon ico-go"></i></a></li>
+													<li><a href="#" class="depth3-trigger" target="_blank" title="새 창 열림">제도권금융회사조회 <i class="svg-icon ico-go"></i></a></li>
 												</ul>
 											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">분쟁조정정보</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">분쟁조정결정례</a></li>
+													<li><a href="#" class="depth3-trigger">분쟁해결기준</a></li>
+													<li><a href="#" class="depth3-trigger">분쟁조정사례</a></li>
+													<li><a href="#" class="depth3-trigger">주요판례</a></li>
+													<li><a href="#" class="depth3-trigger">보도자료(소비자 유의사항 등)</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">인허가 등록 &middot; 신고</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">인허가 사전협의(S.T.A.R.T)</a></li>
+													<li><a href="#" class="depth3-trigger" target="_blank" title="새 창 열림">인허가등록신고시스템<i class="svg-icon ico-go"></i></a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">불공정 금융관행 신고센터</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">이용안내</a></li>
+													<li><a href="#" class="depth3-trigger">신고하기</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">불법사금융 지킴이</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">불법사금융 지킴이</a></li>
+													<li><a href="#" class="depth3-trigger">불법사금융이란</a></li>
+													<li><a href="#" class="depth3-trigger">불법사금융 이자부담을 계산해보세요 (불법사금융 이자율 계산기)</a></li>
+													<li><a href="#" class="depth3-trigger">소액·급전을 찾고 있나요? (불법사금융 피해예방)</a></li>
+													<li><a href="#" class="depth3-trigger">불법사금융 피해를 입으셨나요?(불법사금융 피해구제)</a></li>
+													<li><a href="#" class="depth3-trigger">불법사금융 정보모음</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">보이스피싱 지킴이</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">보이스피싱지킴이</a></li>
+													<li><a href="#" class="depth3-trigger">보이스피싱 한 눈에</a></li>
+													<li><a href="#" class="depth3-trigger">보이스피싱 사전예방</a></li>
+													<li><a href="#" class="depth3-trigger">보이스피싱을 당했다면 어떻게?</a></li>
+													<li><a href="#" class="depth3-trigger">참여마당</a></li>
+													<li><a href="#" class="depth3-trigger">피해금 환급 등 보이스피싱 관련 조회</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">불법금융신고센터</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">공익신고(청렴포털)</a></li>
+													<li><a href="#" class="depth3-trigger">금융부조리신고</a></li>
+													<li><a href="#" class="depth3-trigger">대형가맹점 리베이트 신고</a></li>
+													<li><a href="#" class="depth3-trigger">보험모집질서 위반신고</a></li>
+													<li><a href="#" class="depth3-trigger">보험사기신고</a></li>
+													<li><a href="#" class="depth3-trigger">이하 생략...</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger">상장법인 등 임원 선임, 재임 제한 명령 부과 여부 확인</a>
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger">상속인 금융거래 조회</a>
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">옴부즈만 고충민원</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">이용안내</a></li>
+													<li><a href="#" class="depth3-trigger">옴부즈만 신청</a></li>
+													<li><a href="#" class="depth3-trigger">옴부즈만 신청 처리결과 조회</a></li>
+													<li><a href="#" class="depth3-trigger">옴부즈만 주요활동실적</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">Q&A</a>
+
+											<!-- depth 3 -->
+											<div class="depth3-wrap">
+												<ul>
+													<li><a href="#" class="depth3-trigger">Q&A 신청</a></li>
+													<li><a href="#" class="depth3-trigger">공개Q&A 조회</a></li>
+													<li><a href="#" class="depth3-trigger">처리결과조회</a></li>
+												</ul>
+											</div>
+											<!-- //depth 3 -->
+
+										</li>
+									</ul>
+									<!-- 신규 서비스 배너 필요시 사용 -->
+									<!-- <div class="gnb-sub-banner">
+										<span class="krds-badge bg-primary">신규 서비스</span>
+										<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+									</div> -->
+									<!-- //신규 서비스 배너 필요시 사용 -->
+								</div>
+								<div class="gnb-sub-list" id="mGnb-anchor3">
+									<h2 class="sub-title">참여 &middot; 소통</h2>
+									<ul>
+										<li><a href="#" class="gnb-sub-trigger">참여 &middot; 소통</a></li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">고객의 소리</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">금융소비자리포터</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">국민검사청구제도</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">금융회사 소통</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">중소기업 금융애로 상담센터</a>
+
 										</li>
 									</ul>
 								</div>
 								<div class="gnb-sub-list" id="mGnb-anchor4">
-									<h2 class="sub-title">정책정보</h2>
+									<h2 class="sub-title">업무자료</h2>
 									<ul>
-										<li><a href="#" class="gnb-sub-trigger">분야별 정책정보</a></li>
-										<li><a href="#" class="gnb-sub-trigger">정부/지자체 조직도</a></li>
-										<li><a href="#" class="gnb-sub-trigger">정부/지자체 누리집</a></li>
-										<li><a href="#" class="gnb-sub-trigger">지자체 소식</a></li>
-										<li><a href="#" class="gnb-sub-trigger">공모전</a></li>
-										<li><a href="#" class="gnb-sub-trigger">공공자원공유</a></li>
-										<li><a href="#" class="gnb-sub-trigger">국고보조금 부정수급 신고</a></li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger">업무자료</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger">업무처리 절차</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">공통</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">은행ㆍ중소서민금융</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">금융투자</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">금융소비자보호법</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">보험</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">공시</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">회계</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">외국환</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">검사ㆍ제재</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">금융감독법규정보</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">해외금융감독</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">기타</a>
+
+										</li>
+										<li>
+											<!-- depth 2 -->
+											<a href="#" class="gnb-sub-trigger has-depth3">금융감독연구</a>
+
+										</li>
 									</ul>
-								</div>
-								<div class="gnb-sub-list" id="mGnb-anchor5">
-									<h2 class="sub-title">고객센터</h2>
-									<ul>
-										<li><a href="#" class="gnb-sub-trigger">공지사항</a></li>
-										<li><a href="#" class="gnb-sub-trigger">이용안내</a></li>
-										<li><a href="#" class="gnb-sub-trigger">자주 묻는 질문(FAQ)</a></li>
-										<li><a href="#" class="gnb-sub-trigger">자료실</a></li>
-										<li><a href="#" class="gnb-sub-trigger">상담 예약</a></li>
-										<li><a href="#" class="gnb-sub-trigger">개선 의견</a></li>
-									</ul>
+
 								</div>
 							</div>
 						</div>

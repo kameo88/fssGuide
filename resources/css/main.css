@@ -65,7 +65,7 @@
 
 
 
-#container.main .sec-inner {
+.main #container .sec-inner {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -73,29 +73,29 @@
 	padding-top: 16rem;
 	padding-bottom: 6.4rem;
 }
-#container.main .section:not(#section6) .sec-inner {
+.main #container .section:not(#section6) .sec-inner {
 	padding-left: 16rem;
 }
-#container.main .section#section3 .sec-inner,
-#container.main .section#section4 .sec-inner {
+.main #container .section#section3 .sec-inner,
+.main #container .section#section4 .sec-inner {
 	padding-right: 16rem;
 }
 
-#container.main #section3 .sec-inner {
+.main #container #section3 .sec-inner {
 	/* justify-content: flex-start;
 	padding-top: 18.8rem; */
 }
 
-#container.main #section1 .sec-inner {
+.main #container #section1 .sec-inner {
 	position: relative;
 }
-#container.main #section3 {
+.main #container #section3 {
 	background-color: #D8E5FD;
 }
-#container.main #section4 {
+.main #container #section4 {
 	background-color: #F4F5F6;
 }
-#container.main #section6 {
+.main #container #section6 {
 	background-color: #ECF2FE;
 }
 
@@ -1505,7 +1505,7 @@
 }
 
 @media (max-width: 1400px) {
-	#container.main > .section {
+	.main #container > .section {
 		height: 100%;
 	}
 }
@@ -1513,11 +1513,11 @@
 /* 1280 ~ 1699 */
 @media (max-width: 1699px) {
 
-	#container.main .section:not(#section6) .sec-inner {
+	.main #container .section:not(#section6) .sec-inner {
 		padding-left: 2.4rem;
 	}
-	#container.main .section#section3 .sec-inner, 
-	#container.main .section#section4 .sec-inner {
+	.main #container .section#section3 .sec-inner, 
+	.main #container .section#section4 .sec-inner {
 		padding-right: calc(7.2rem + 2.4rem);
 	}
 
@@ -1609,18 +1609,18 @@
 	}
 
 
-	#container.main .section .sec-inner,
-	#container.main #section3 .sec-inner {
+	.main #container .section .sec-inner,
+	.main #container #section3 .sec-inner {
 		padding-top: 6.4rem;
 		padding-left: 1.6rem !important;
 	}
-	#container.main .section#section3 .sec-inner, 
-	#container.main .section#section4 .sec-inner, 
-	#container.main .section#section6 .sec-inner {
+	.main #container .section#section3 .sec-inner, 
+	.main #container .section#section4 .sec-inner, 
+	.main #container .section#section6 .sec-inner {
 		padding-right: 1.2rem;
 	}
 
-	#container.main .main-tit-wrap .desc span {
+	.main #container .main-tit-wrap .desc span {
 		display: block;
 	}
 

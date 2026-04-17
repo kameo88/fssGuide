@@ -419,10 +419,6 @@
 	transform: translateY(40px);
 	transition: all 1.2s ease;
 }
-/* on 으로 변환 작업 중
-.main .sec-inner .main-tit-wrap.on .tit span,
-.main .sec-inner .main-tit-wrap.on .desc 
-*/
 .main .sec-inner.active .main-tit-wrap .tit span,
 .main .sec-inner.active .main-tit-wrap .desc {
 	opacity: 1;
@@ -1613,8 +1609,6 @@
 	}
 
 
-
-
 	#container.main .section .sec-inner,
 	#container.main #section3 .sec-inner {
 		padding-top: 6.4rem;
@@ -1723,6 +1717,12 @@
 		height: 2rem;
 		padding: 0;
 		border: none;
+	}
+
+	.main .sec-inner .main-tit-wrap .tit span,
+	.main .sec-inner .main-tit-wrap .desc {
+		opacity: 1;
+		transform: translateY(0);		
 	}
 
 	/* 검색 */

@@ -315,7 +315,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 #container>.inner .contents {
 	width: 120rem;
-	padding-top: 6.4rem;
+	padding: 6.4rem 0 8rem;
 	margin: 0 auto;
 }
 
@@ -407,7 +407,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	justify-content: flex-start; */
 	border-bottom: 1px solid #CDD1D5;
 }
-.all-menu .all-menu-wrap dl.sub-menu .tit-sub {
+.all-menu .all-menu-wrap dl.sub-menu .sub-tit {
 	display: inline-flex;
 	align-items: center;
 	height: 3.7rem;
@@ -432,7 +432,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .all-menu .all-menu-wrap .menu-area .menu-sub {
 	width: calc((100% - 12.8rem) / 5);
 }
-.all-menu .all-menu-wrap .menu-area .tit-sub {
+.all-menu .all-menu-wrap .menu-area .sub-tit {
 	padding: 0 .8rem;
 }
 .all-menu .all-menu-wrap .menu-area .menu-list {
@@ -668,7 +668,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 }
 
 
-/* full modal tit-sub 공통 */
+/* full modal sub-tit 공통 */
 .krds-modal[data-type=full] .tit-wrap {
 	display: flex;
 	flex-direction: column;
@@ -677,7 +677,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	padding-right: 16.3rem;
 	font-size: 1.9rem;
 }
-.krds-modal[data-type=full] .tit-wrap .tit-sub {
+.krds-modal[data-type=full] .tit-wrap .sub-tit {
 	font-size: 4rem;
 }
 
@@ -796,6 +796,71 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 .mo-quick-menu .krds-btn .ico-chat {
 	background: url(../img/main/ico_chat.svg) no-repeat center / contain;
 }
+
+
+.page-title-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: var(--krds-number-14);
+	gap: var(--krds-pc-gap-layout-title-body-large);
+}
+.page-title-wrap .h-tit {
+	font-size: 4rem;
+	/* letter-spacing: var(--krds-typo-letter-spacing-1); */
+	font-weight: 700;
+}
+.page-title-wrap .utility {
+	/* position: relative; */
+	display: flex;
+	align-items: center;
+}
+.page-title-wrap .utility li {
+	display: inline-flex;
+	align-items: center;
+
+}
+.page-title-wrap .utility li ~ li {
+	margin-left: 2.4rem;
+}
+.page-title-wrap .utility li ~ li::before {
+	content: '';
+	display: inline-flex;
+	height: 1.6rem;
+	padding-left: 2.4rem;
+	border-left: 1px solid rgba(0, 0, 0, 0.5);
+
+}
+
+/* kameo 확인 필요 */
+.conts-area {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	/* gap: 4rem; */
+	width: 100%;
+}
+.conts-area .conts-wrap {
+	width: 100%;
+}
+/* //kameo 확인 필요 */
+
+/* sub detail 공통 */
+.cnts-area > .section,
+.sub-cnts {
+	margin-top: 6.4rem;
+}
+.cnts-area h2.tit {
+	margin-bottom: 2.4rem;
+	font-size: 3.2rem;
+}
+.sub-cnts .sub-tit {
+	margin-top: 4.8rem;
+	margin-bottom: 2rem;
+	font-size: 2.4rem;
+}
+
 
 
 #krds-footer {
@@ -991,7 +1056,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		width: calc((100% - 8rem)/3);
 	}
 
-	/* full modal tit-sub 공통 */
+	/* full modal sub-tit 공통 */
 	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts {
 		padding-inline: 2.4rem;
 	}
@@ -1000,7 +1065,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		font-size: 1.7rem;
 		padding: 0;
 	}
-	.krds-modal[data-type=full] .tit-wrap .tit-sub {
+	.krds-modal[data-type=full] .tit-wrap .sub-tit {
 		font-size: 2.4rem;
 	}
 

@@ -286,7 +286,7 @@
 	border-radius: 1.2rem;
 	background-color: #F4F5F6;
 }
-.txt-box .tit {
+.txt-box > .txt-tit {
 	font-size: 1.9rem;
 	font-weight: 700;
 }
@@ -296,12 +296,12 @@
 	background-color: #fff;
 }
 /* 하단 담당부서 안내 for team */
-.txt-box.team .tit {
+.txt-box.team .txt-tit {
 	display: flex;
 	align-items: center;
 	gap: .8rem;
 }
-.txt-box.team .tit::before {
+.txt-box.team .txt-tit::before {
 	content: '';
 	display: inline-flex;
 	width: 2.4rem;

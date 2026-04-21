@@ -322,6 +322,94 @@
 	font-weight: 700;
 }
 
+/* 금융민원 절차 */
+.process-list {
+	display: inline-flex;
+	gap: 5.6rem;
+	margin-bottom: 2.4rem;
+}
+.process-list .item {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: calc((100% - 11.2rem)/3);
+	padding: 3.2rem;
+	border-radius: 1.2rem;
+	background-color: #ECF2FE;
+}
+.process-list .item:not(:last-child)::after {
+	content: '';
+	display: inline-flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -4rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	margin: auto;
+	background: url(../img/component/icon/ico_angle.svg);
+	transform: rotate(-90deg);
+}
+.process-list .item .card-header {
+	color: #464C53;
+	font-size: 1.5rem;
+}
+.process-list .item .card-header .tit {
+	margin-top: .4rem;
+	color: #052B57;
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.process-list .item .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+	margin-top: 2rem;
+	border-top: 1px solid #D6E0EB;
+}
+.process-list .item .card-body .txt {
+	padding: 2rem 0;
+}
+
+/* download list */
+.download-list {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 1.6rem;
+	width: 100%;
+}
+.download-list .item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: calc((100% - 1.6rem) /2 );
+	padding: 2rem 2.4rem;
+	border: 1px solid #CDD1D5;
+	border-radius: 1.2rem;
+	color: #131416;
+}
+.download-list .item .btn {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+.download-list .item .icon {
+	display: inline-flex;
+	width: 2.4rem;
+	height: 2.4rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.download-list .item .icon.ico-hwp {
+	background-image: url(../img/component/icon/ico_hwp.svg);
+}
+.download-list .item .icon.ico-pdf {
+	background-image: url(../img/component/icon/ico_pdf.svg);
+}
+
+
 /* alert new style */
 .alerts-message {
 	display: flex;

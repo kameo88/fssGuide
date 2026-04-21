@@ -403,10 +403,10 @@
 	background-size: contain;
 }
 .download-list .item .icon.ico-hwp {
-	background-image: url(../img/component/icon/ico_hwp.svg);
+	background-image: url(../img/common/icon/ico_hwp.svg);
 }
 .download-list .item .icon.ico-pdf {
-	background-image: url(../img/component/icon/ico_pdf.svg);
+	background-image: url(../img/common/icon/ico_pdf.svg);
 }
 
 

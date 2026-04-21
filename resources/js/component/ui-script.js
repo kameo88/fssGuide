@@ -34,11 +34,11 @@ const scrollManager = {
       const _scrollUp = _scrollY < this._lastScrollY;
 
       if (_scrollY > _conOffsetTop + 50 && _scrollDown) {
-        $wrap.classList.add("scroll-down");
-        $wrap.classList.remove("scroll-up");
+        // $wrap.classList.add("scroll-down");
+        // $wrap.classList.remove("scroll-up");
       } else if (_scrollY > _conOffsetTop + 50 && _scrollUp) {
-        $wrap.classList.add("scroll-up");
-        $wrap.classList.remove("scroll-down");
+        // $wrap.classList.add("scroll-up");
+        // $wrap.classList.remove("scroll-down");
       } else {
         $wrap.classList.remove("scroll-down", "scroll-up");
       }

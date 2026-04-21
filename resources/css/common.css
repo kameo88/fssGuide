@@ -1033,13 +1033,21 @@ color: #17294D;
 	#krds-header .header-utility {
 		gap: 3.2rem;
 	}
-
+	#container>.inner .contents {
+		width: 100%;
+		padding-left: 1.6rem;
+		padding-right: calc(7.2rem + 1.6rem);
+	}
 
 }
 
 /* 768 ~ 1279 */
 /* mobile menu */
 @media (max-width: 1279px) {
+	#wrap #krds-header {
+		position: fixed;
+		right: 0;
+	}
 	#wrap #krds-header .header-in {
 		height: 6.4rem;
 		padding: 0 .8rem 0 1.6rem;
@@ -1077,6 +1085,13 @@ color: #17294D;
 
 	#wrap #krds-header .krds-main-menu {
 		display: none;
+	}
+	/* contents 여백 */
+	#container>.inner {
+		padding-top: 6.4rem;
+	}
+	#container>.inner .contents {
+		padding-right: 1.6rem;
 	}
 
 
@@ -1198,6 +1213,33 @@ color: #17294D;
 
 /* 361 ~ 767 */
 @media (max-width: 767px) {
+
+
+	/* contents 여백 */
+	#container>.inner .contents {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	.cnts-area > .section, 
+	.sub-cnts {
+		margin-top: 3.2rem;
+	}
+	.page-title-wrap {
+		margin-bottom: 2rem;
+	}
+	.page-title-wrap .h-tit {
+		font-size: 2.8rem;
+	}
+	
+	.cnts-area h2.tit {
+		margin-bottom: 2rem;
+		font-size: 2.4rem;
+	}
+	.sub-cnts .sub-tit {
+		margin-top: 3.2rem;
+		margin-bottom: 1.6rem;
+		font-size: 2.2rem;
+	}
 
 	.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts {
 		padding-inline: 1.6rem;

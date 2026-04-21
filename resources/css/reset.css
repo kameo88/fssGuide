@@ -522,12 +522,12 @@ body {
 }
 @media (max-width: 767px) {
 	.page-title-wrap {
-		margin-bottom: var(--krds-mobile-gap-layout-h2-h3);
-		gap: var(--krds-mobile-gap-layout-title-body-large);
+		/* margin-bottom: var(--krds-mobile-gap-layout-h2-h3);
+		gap: var(--krds-mobile-gap-layout-title-body-large); */
 	}
 	.page-title-wrap .h-tit {
-		font-size: var(--krds-mobile-font-size-heading-xlarge);
-		letter-spacing: var(--krds-typo-letter-spacing-1);
+		/* font-size: var(--krds-mobile-font-size-heading-xlarge);
+		letter-spacing: var(--krds-typo-letter-spacing-1); */
 	}
 	.krds-step-wrap.fixed li {
 		max-width: initial;

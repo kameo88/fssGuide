@@ -510,6 +510,64 @@
 	}
 }
 @media (max-width: 767px) {
+
+	.info-box {
+		padding: 2rem;
+	}
+	.helper-box {
+		margin-top: 1.6rem;
+	}
+
+	.txt-box.team .info {
+		flex-direction: column;
+		gap: 1.6rem;
+	}
+	.txt-box.team .info dl {
+		flex-direction: column;
+		gap: .4rem;
+	}
+
+	/* 금융민원 절차  */
+	.process-list {
+		flex-direction: column;
+		gap: 4.8rem;
+		margin-bottom: 2rem;
+	}
+	.process-list .item {
+		width: 100%;
+		padding: 2.4rem;
+	}
+	.process-list .item:not(:last-child)::after {
+		top: unset;
+		bottom: -3.6rem;
+		right: 50%;
+		transform: translateX(-50%);
+	}
+	.process-list .item .card-header .tit {
+		font-size: 2.2rem;
+	}
+	.process-list .item .card-body {
+		margin-top: 1.6rem;
+	}
+	.process-list .item .card-body .txt {
+		padding: 1.6rem 0;
+	}
+
+	.download-list {
+		gap: 1.2rem;
+	}
+	.download-list .item {
+		width: 100%;
+		padding: 1.6rem 2rem;
+	}
+
+
+
+	/* 여백 */
+	.krds-info-list + .krds-btn {
+		margin-top: 1.6rem;
+	}
+
 	.search-list-top .sch-sort .w-sort-btn {
 		display: none;
 	}

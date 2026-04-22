@@ -326,7 +326,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 	margin: 0;
 	border-bottom: 1px solid #CDD1D5;
 	background: #fff;
-	z-index: 70;
+	z-index: 69;
 }
 .krds-breadcrumb-wrap .breadcrumb-nav {
 	display: flex;

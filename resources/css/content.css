@@ -486,6 +486,267 @@
 }
 
 
+
+/* sub main */
+.sub-visual-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 28rem;
+	background: url(../img/contents/img_vb_sub_01.png) no-repeat center / cover;
+}
+.sub-visual-wrap .tit-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: #fff;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+.sub-visual-wrap .tit-wrap .tit {
+	font-size: 5.6rem;
+}
+.section .sub-inner {
+	padding: 12rem 16rem;
+}
+.section.point-1 {
+	background-color: #ECF2FE;
+}
+.section.point-2 {
+	background-color: #F4F5F6;
+}
+.section .sub-tit-wrap .tit {
+	font-size: 4rem;
+}
+.section .sub-conts-wrap {
+	display: flex;
+	gap: 6.4rem;
+}
+.section .sub-conts-wrap > * {
+	width: calc((100% - 6.4rem) /2);
+}
+.sub-conts-wrap .conts-tit-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 3.2rem;
+}
+.sub-conts-wrap .conts-tit-wrap .tit {
+	font-size: 3.2rem;
+}
+.sub-conts-wrap .conts-tit-wrap .more {
+	display: inline-flex;
+	align-items: center;
+}
+.sub-conts-wrap .conts-tit-wrap .more::after {
+	content: '';
+	display: inline-flex;
+	width: 2rem;
+	height: 2rem;
+	margin-left: .4rem;
+	background: url(../img/component/icon/ico_plus.svg) no-repeat top -2px center / contain;
+}
+
+
+/* card text style 공통 */
+.card-txt-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 32rem;
+	padding: 3.2rem;
+	border-radius: 2rem;
+	background: #fff;
+	transition: all .5s ease;
+}
+.card-txt-wrap .label {
+	display: inline-block;
+	max-width: 16rem;
+	min-height: 4rem;
+	padding: .8rem 2rem;
+	border-radius: 100rem;
+	background: #063A74;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.card-txt-wrap .tit {
+	flex: 1;
+	margin-top: 1.6rem;
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 700;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
+.card-txt-wrap .date {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 2.4rem;
+	color: #464C53;
+}
+.card-txt-wrap .date::after {
+	content: '';
+	display: inline-flex;
+	width: 2rem;
+	height: 2rem;
+	background-color: #33363D;
+	-webkit-mask-image: url(../img/component/icon/ico_more.svg);
+	mask-image: url(../img/component/icon/ico_more.svg);
+	-webkit-mask-size: 2rem auto;
+	mask-size: 2rem auto;
+}
+/* card image style 공통 */
+.card-img-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;
+	border-radius: 2rem;
+	background: #EEF2F7;
+	overflow: hidden;
+}
+.card-img-wrap .img {
+	width: 100%;
+	border-radius: 2rem;
+	overflow: hidden;
+}
+.card-img-wrap .img img {
+	height: 22rem;
+	transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-img-wrap .img:hover img {
+	transform: scale(1.2);
+}
+.card-img-wrap .text {
+	width: 100%;
+	padding: 2rem 2.4rem;
+}
+.card-img-wrap .tit {
+	width: 100%;
+	font-size: 1.9rem;
+	font-weight: 700;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.card-img-wrap .date {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: .4rem;
+	color: #464C53;
+}
+.card-img-wrap .date::after {
+	content: '';
+	display: inline-flex;
+	width: 2rem;
+	height: 2rem;
+	background-color: gray;
+	background: url(../img/component/icon/ico_more.svg) no-repeat center / 2rem auto;
+}
+
+
+/* 불법금융예방 swiper */
+.guidebook-swiper {
+	position: relative;
+	padding-top: 2.4rem;
+}
+.guidebook-swiper .swiper {
+	padding-top: 2rem;
+}
+.guidebook-swiper .swiper-wrapper {
+	align-items: flex-end;
+}
+.guidebook-swiper .swiper-slide {
+	/* width: 36.4rem; */
+}
+/* market swiper animation 수정 필요 */
+.sec-inner.active .guidebook-swiper .swiper-slide {
+	opacity: 0;
+	transform: translate(20px,-24px);
+	animation: fadeUp2 .7s ease forwards;
+	animation-delay: calc(var(--i) * 0.2s);
+}
+.guidebook-swiper .swiper-indicator {
+	position: absolute;
+	top: -4rem;
+	right: 0;
+}
+
+/* 자료실 swiper */
+.archive-swiper {
+	position: relative;
+	padding-top: 2.4rem;
+}
+.archive-swiper .swiper {
+	padding-top: 2.4rem;
+}
+.archive-swiper .swiper-slide {
+	width: 36.4rem;
+}
+.archive-swiper .swiper-indicator {
+	position: absolute;
+	top: -4rem;
+	right: 0;
+}
+
+/* 서브 메인 공개 Q&A */
+.sub-conts-wrap .qna-list > li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.8rem 0;
+	border-bottom: 1px solid #CDD1D5;
+}
+.sub-conts-wrap .qna-list > li .link {
+	display: flex;
+	align-items: center;
+	min-width: 0;
+	font-size: 1.9rem;
+}
+.sub-conts-wrap .qna-list > li .link::before {
+	content: '';
+	display: inline-flex;
+	flex: 0 0 auto;
+	width: 2.8rem;
+	height: 2.8rem;
+	margin-right: 1.6rem;
+	background: url(../img/common/icon/ico_qa.svg) no-repeat center / contain;
+}
+/* for 말줄임 */
+.sub-conts-wrap .qna-list > li .link .txt {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	flex: 1;
+}
+.sub-conts-wrap .qna-list > li .date {
+	margin-left: 1.6rem;
+	color: #464C53;
+	white-space: nowrap;
+}
+/* 홍보영상 */
+.media-list {
+	display: inline-flex;
+	gap: 4.8rem;
+}
+.media-list li {
+	width: calc((100% - 4.8rem) / 2);
+	width: 35.6rem;
+}
+
+
 @media (min-width: 1024px) {
 	.inner {
 		margin: 0 auto;

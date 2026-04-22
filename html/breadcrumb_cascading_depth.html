@@ -1,0 +1,283 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.bc-shell{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:1.5rem}
+.bc-wrap{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:0 8px;position:relative}
+.bc-nav{display:flex;align-items:center;list-style:none;min-height:48px;flex-wrap:nowrap;gap:0;overflow:visible}
+.bc-nav>li{position:relative;display:flex;align-items:center}
+.bc-nav>li+li::before{content:'';display:inline-block;width:5px;height:5px;border-right:1.5px solid var(--color-border-secondary);border-top:1.5px solid var(--color-border-secondary);transform:rotate(45deg);margin:0 8px;flex-shrink:0}
+.bc-nav>li>.lnk{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--color-text-secondary);cursor:pointer;padding:5px 6px;border-radius:6px;white-space:nowrap;text-decoration:none;transition:color .12s,background .12s;user-select:none;line-height:1}
+.bc-nav>li>.lnk:hover{color:var(--color-text-primary);background:var(--color-background-secondary)}
+.bc-nav>li.current>.lnk{color:var(--color-text-primary);font-weight:500;cursor:default;pointer-events:none}
+.bc-nav>li.home-li>.lnk{width:30px;height:30px;padding:0;justify-content:center;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:6px}
+.bc-nav>li.home-li>.lnk:hover{background:var(--color-background-tertiary)}
+.arr{width:9px;height:9px;flex-shrink:0;transition:transform .18s}
+.bc-nav>li.open>.lnk .arr{transform:rotate(180deg)}
+.dd{display:none;position:absolute;top:calc(100% + 8px);left:0;z-index:200;min-width:150px;background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);overflow:hidden}
+.bc-nav>li.open>.dd{display:block}
+.dd ul{list-style:none;padding:5px}
+.dd li a{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--color-text-secondary);padding:7px 10px;border-radius:6px;text-decoration:none;white-space:nowrap;transition:background .1s,color .1s;cursor:pointer}
+.dd li a:hover{background:var(--color-background-secondary);color:var(--color-text-primary)}
+.dd li.on>a{color:var(--color-text-primary);font-weight:500;background:var(--color-background-secondary)}
+.ext{display:inline-flex;align-items:center;justify-content:center;width:11px;height:11px;border:1.5px solid currentColor;border-radius:2px;flex-shrink:0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.hint{font-size:12px;color:var(--color-text-secondary);margin-top:10px;text-align:center}
+</style>
+
+<h2 class="sr-only">브레드크럼 단계별 연결 드롭다운 데모</h2>
+<div class="bc-shell">
+  <nav class="bc-wrap" aria-label="현재 경로">
+    <ul class="bc-nav" id="bcNav"></ul>
+  </nav>
+  <p class="hint" id="hint">dep1 메뉴 항목을 클릭해 이동해보세요</p>
+</div>
+
+<script>
+const DATA = {
+  dep1: [
+    { id:'civil',         label:'민원·신고' },
+    { id:'participation', label:'참여·소통' },
+    { id:'work',          label:'업무자료' }
+  ],
+  dep2: {
+    civil:         [
+      { id:'c2-1', label:'민원·신고 개요' },
+      { id:'c2-2', label:'분쟁조정정보' },
+      { id:'c2-3', label:'Q&A' }
+    ],
+    participation: [
+      { id:'p2-1', label:'공지사항' },
+      { id:'p2-2', label:'보도자료' },
+      { id:'p2-3', label:'뉴스레터' }
+    ],
+    work: [
+      { id:'w2-1', label:'법규·규정' },
+      { id:'w2-2', label:'통계자료' },
+      { id:'w2-3', label:'연구보고서', ext:true }
+    ]
+  },
+  dep3: {
+    'c2-1': [
+      { id:'c3-1', label:'민원·신고' },
+      { id:'c3-2', label:'민원조회', ext:true }
+    ],
+    'c2-2': [
+      { id:'c3-3', label:'조정신청 안내' },
+      { id:'c3-4', label:'조정사례 검색', ext:true }
+    ],
+    'c2-3': [
+      { id:'c3-5', label:'자주 묻는 질문' },
+      { id:'c3-6', label:'1:1 문의' }
+    ],
+    'p2-1': [
+      { id:'p3-1', label:'전체 공지' },
+      { id:'p3-2', label:'중요 공지' }
+    ],
+    'p2-2': [
+      { id:'p3-3', label:'전체 보도자료' },
+      { id:'p3-4', label:'연도별 보도자료' }
+    ],
+    'p2-3': [
+      { id:'p3-5', label:'뉴스레터 구독' },
+      { id:'p3-6', label:'지난 뉴스레터' }
+    ],
+    'w2-1': [
+      { id:'w3-1', label:'법령 목록' },
+      { id:'w3-2', label:'규정 검색' }
+    ],
+    'w2-2': [
+      { id:'w3-3', label:'연도별 통계' },
+      { id:'w3-4', label:'기관별 통계' }
+    ],
+    'w2-3': [
+      { id:'w3-5', label:'연구보고서 목록' },
+      { id:'w3-6', label:'발간물 신청', ext:true }
+    ]
+  },
+  dep4: {
+    'c3-1': [
+      { id:'c4-1', label:'금융민원상담 안내' },
+      { id:'c4-2', label:'금융민원신청 안내' }
+    ],
+    'c3-2': [
+      { id:'c4-3', label:'민원번호 조회' },
+      { id:'c4-4', label:'처리현황 확인', ext:true }
+    ],
+    'p3-1': [
+      { id:'p4-1', label:'전체 목록' },
+      { id:'p4-2', label:'카테고리별' }
+    ],
+    'p3-2': [
+      { id:'p4-3', label:'긴급 공지' },
+      { id:'p4-4', label:'중요 공지 목록' }
+    ],
+    'w3-1': [
+      { id:'w4-1', label:'법령 전체' },
+      { id:'w4-2', label:'개정 법령' }
+    ],
+    'w3-3': [
+      { id:'w4-3', label:'연도 선택' },
+      { id:'w4-4', label:'분기별 통계' }
+    ]
+  }
+};
+
+let state = {
+  dep1: 'civil',
+  dep2: 'c2-1',
+  dep3: 'c3-1',
+  dep4: 'c4-2'
+};
+
+function arrSvg(){
+  return `<svg class="arr" viewBox="0 0 9 9" fill="none"><path d="M1.5 3l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+function homeSvg(){
+  return `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1.5 5.5L7 1.5l5.5 4V12a.5.5 0 01-.5.5H9V9H5v3.5H2a.5.5 0 01-.5-.5V5.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>`;
+}
+function extSvg(){
+  return `<span class="ext"></span>`;
+}
+
+function makeDd(items, selectedId, onSelect){
+  const ul = document.createElement('ul');
+  items.forEach(item => {
+    const li = document.createElement('li');
+    if(item.id === selectedId) li.classList.add('on');
+    const a = document.createElement('a');
+    a.href='javascript:void(0)';
+    a.innerHTML = item.label + (item.ext ? extSvg() : '');
+    a.addEventListener('click', e => { e.stopPropagation(); onSelect(item); });
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  const dd = document.createElement('div');
+  dd.className='dd';
+  dd.appendChild(ul);
+  return dd;
+}
+
+function makeLi(label, hasArrow, selectedId, items, onSelect, isCurrent){
+  const li = document.createElement('li');
+  if(isCurrent) li.classList.add('current');
+  const lnk = document.createElement('a');
+  lnk.href='javascript:void(0)';
+  lnk.className='lnk';
+  lnk.innerHTML = label + (hasArrow && !isCurrent ? arrSvg() : '');
+  li.appendChild(lnk);
+  if(items && items.length && !isCurrent){
+    const dd = makeDd(items, selectedId, item => {
+      li.classList.remove('open');
+      onSelect(item);
+    });
+    li.appendChild(dd);
+    lnk.addEventListener('click', e => {
+      e.stopPropagation();
+      const wasOpen = li.classList.contains('open');
+      closeAll();
+      if(!wasOpen) li.classList.add('open');
+    });
+  }
+  return li;
+}
+
+function closeAll(){
+  document.querySelectorAll('#bcNav li.open').forEach(l=>l.classList.remove('open'));
+}
+
+function render(){
+  const nav = document.getElementById('bcNav');
+  nav.innerHTML='';
+
+  const d1items = DATA.dep1;
+  const d1sel = d1items.find(i=>i.id===state.dep1);
+  const d2items = DATA.dep2[state.dep1]||[];
+  const d2sel = d2items.find(i=>i.id===state.dep2);
+  const d3items = state.dep2 ? (DATA.dep3[state.dep2]||[]) : [];
+  const d3sel = d3items.find(i=>i.id===state.dep3);
+  const d4items = state.dep3 ? (DATA.dep4[state.dep3]||[]) : [];
+  const d4sel = d4items.find(i=>i.id===state.dep4);
+
+  const homeLi = document.createElement('li');
+  homeLi.className='home-li';
+  const homeLnk = document.createElement('a');
+  homeLnk.href='javascript:void(0)';
+  homeLnk.className='lnk';
+  homeLnk.innerHTML=homeSvg()+'<span class="sr-only">홈</span>';
+  homeLi.appendChild(homeLnk);
+  nav.appendChild(homeLi);
+
+  const isCurrent4 = d4items.length === 0;
+  const isCurrent3 = !isCurrent4 && d4items.length === 0;
+
+  nav.appendChild(makeLi(
+    d1sel ? d1sel.label : '',
+    true, state.dep1, d1items,
+    item => {
+      state.dep1 = item.id;
+      const nd2 = DATA.dep2[item.id]||[];
+      state.dep2 = nd2[0]?.id||null;
+      const nd3 = state.dep2 ? (DATA.dep3[state.dep2]||[]) : [];
+      state.dep3 = nd3[0]?.id||null;
+      const nd4 = state.dep3 ? (DATA.dep4[state.dep3]||[]) : [];
+      state.dep4 = nd4[0]?.id||null;
+      render();
+    },
+    false
+  ));
+
+  if(d2items.length){
+    const hasD3 = d3items.length > 0;
+    const hasD4 = d4items.length > 0;
+    const dep2IsCurrent = !hasD3 && !hasD4;
+    nav.appendChild(makeLi(
+      d2sel ? d2sel.label : '',
+      true, state.dep2, d2items,
+      item => {
+        state.dep2 = item.id;
+        const nd3 = DATA.dep3[item.id]||[];
+        state.dep3 = nd3[0]?.id||null;
+        const nd4 = state.dep3 ? (DATA.dep4[state.dep3]||[]) : [];
+        state.dep4 = nd4[0]?.id||null;
+        render();
+      },
+      dep2IsCurrent
+    ));
+  }
+
+  if(d3items.length){
+    const hasD4 = d4items.length > 0;
+    const dep3IsCurrent = !hasD4;
+    nav.appendChild(makeLi(
+      d3sel ? d3sel.label : '',
+      true, state.dep3, d3items,
+      item => {
+        state.dep3 = item.id;
+        const nd4 = DATA.dep4[item.id]||[];
+        state.dep4 = nd4[0]?.id||null;
+        render();
+      },
+      dep3IsCurrent
+    ));
+  }
+
+  if(d4items.length){
+    nav.appendChild(makeLi(
+      d4sel ? d4sel.label : '',
+      true, state.dep4, d4items,
+      item => {
+        state.dep4 = item.id;
+        render();
+      },
+      true
+    ));
+  }
+
+  const hint = document.getElementById('hint');
+  const path = [d1sel?.label, d2sel?.label, d3sel?.label, d4sel?.label].filter(Boolean);
+  hint.textContent = '현재 경로: ' + path.join(' > ');
+}
+
+document.addEventListener('click', closeAll);
+render();
+</script>

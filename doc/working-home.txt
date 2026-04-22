@@ -34,6 +34,17 @@ https://ducklett.tistory.com/44
 - swiper
 https://static-cdn.bok.or.kr/static/portal/js/main.js
 
+
+
+아래 js 참조
+<script src="https://static-cdn.bok.or.kr/static/portal/js/main.js"></script>
+
+<script src="https://static-cdn.bok.or.kr/static/portal/js/mainsection.js"></script>
+
+<script src="https://static-cdn.bok.or.kr/static/portal/js/unpl-util.js"></script>
+
+
+
 ####	04.05.	####
 
 >> 미적용 ani

@@ -79,7 +79,7 @@ body {
 }
 
 #krds-header .header-container .logo a {
-	background-image: url(../img/common/logo.png);
+	background-image: url(../img/common/icon/ico_h_logo.svg);
 }
 
 .krds-btn:hover,
@@ -367,7 +367,7 @@ body {
 
 #krds-footer .f-logo {
 	width: 20rem;
-	background-image: url(../img/common/ico_logo.svg);
+	background-image: url(../img/common/icon/ico_h_logo.svg);
 }
 
 /* subpage layout */

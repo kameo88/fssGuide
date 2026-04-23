@@ -13,7 +13,8 @@
 	<link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
 	<script src="../resources/js/component/ui-script.js"></script>
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
-
+	<!-- breadcrumb navigation sample js -->
+	<script src="../resources/js/nav_breadcrumb.js"></script>
 
 	<title>금융감독원 통합홈페이지</title>
 </head>
@@ -729,7 +730,7 @@
 		<!-- container -->
 		<main id="container">
 			<div class="inner">
-				<div class="sub-visual-wrap">
+				<div class="sub-visual-wrap on">
 					<div class="tit-wrap">
 						<h1 class="tit">민원 &middot; 신고</h1>
 						<div class="desc">금융민원 및 불법금융신고, 보이스피싱, 옴부즈만 고충민원 등 서비스를 제공합니다.</div>
@@ -738,43 +739,6 @@
 
 				<!-- breadcrumb -->
 				<nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb-home">
-					<ul class="breadcrumb-nav">
-						<li>
-							<a href="javascript:void(0);" class="link home"><span class="sr-only">홈</span></a>
-						</li>
-						<li>
-							<!-- menu depth 1 -->
-							<a href="javascript:void(0);" class="link">민원 &middot; 신고</a>
-
-							<!-- txt 를 클릭하면 dep2가 보임 -->
-							<div class="depth2">
-								<ul>
-									<li class="on">
-										<a href="javascript:void(0);" class="link">민원 &middot; 신고</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="link">참여 &middot; 소통</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="link">업무자료</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="link">금융통계</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="link">금융소비자보호</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="link">보도 &middot; 알림</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="link">금감원소개</a>
-									</li>
-								</ul>
-							</div>
-							<!-- //menu depth 1 -->
-						</li>
-					</ul>
 				</nav>
 				<!-- //breadcrumb -->
 
@@ -782,7 +746,137 @@
 				<section class="section point-1">
 					<div class="sub-inner">
 
-						card & swiper
+						<!-- 바로가기 banner -->
+						<div class="shortcuts-wrap">
+							<ul class="shortcuts-list">
+								<li>
+									<a href="javascript:void(0);" class="link item1">
+										<div class="tit-area">
+											<div class="tit">민원신청</div>
+											<div class="decs">불법 금융행위 근절 및 신용카드 결제 거부 신고를 위한 서비스</div>
+										</div>
+										<div class="icon-area">
+											<span class="sr-only">바로가기</span>
+											<i class="svg-icon ico-more"></i>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="link item2">
+										<div class="tit-area">
+											<div class="tit">옴부즈만신청</div>
+											<div class="decs">금융 소비자 권익 보호 및 불합리한 관행 개선을 위한 고충 민원 신청</div>
+										</div>
+										<div class="icon-area">
+											<span class="sr-only">바로가기</span>
+											<i class="svg-icon ico-more"></i>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="link item3">
+										<div class="tit-area">
+											<div class="tit">Q&A신청</div>
+											<div class="decs">금융 소비자 권익 보호 및 부당행위 대응 을 위한 질의와 답변</div>
+										</div>
+										<div class="icon-area">
+											<span class="sr-only">바로가기</span>
+											<i class="svg-icon ico-more"></i>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //바로가기 banner -->
+
+						<!-- favorite swiper -->
+						<div class="my-bookmark-swiper">
+							<div class="swiper">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty1">
+											<div class="txt">
+												<span>금융상품</span>
+												<span>통합 비교공시</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty2">
+											<div class="txt">
+												<span>업무자료</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty3">
+											<div class="txt">
+												<span>내게 맞는</span>
+												<span>서민금융제도 안내</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty4">
+											<div class="txt">
+												<span>제도권</span>
+												<span>금융회사 조회</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty5">
+											<div class="txt">
+												<span>보이스피싱</span>
+												<span>피해금 환급절차 안내</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty6">
+											<div class="txt">
+												<span>상속인</span>
+												<span>금융거래 조회</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty7">
+											<div class="txt">
+												<span>금융꿀팁</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty8">
+											<div class="txt">
+												<span>개인정보 노출</span>
+												<span>등록ㆍ해제</span>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty8">
+											<div class="txt">
+												<span>개인정보 노출</span>
+												<span>등록ㆍ해제</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-indicator">
+								<button type="button" class="swiper-button-prev">
+									<span class="sr-only">이전</span>
+								</button>
+								<div class="swiper-pagination"></div>
+								<button type="button" class="swiper-button-next">
+									<span class="sr-only">다음</span>
+								</button>
+							</div>
+						</div>
+						<!-- //favorite swiper -->
+
 
 					</div>
 				</section>
@@ -1876,7 +1970,7 @@
 
 		// 
 		const guidebookSwiper = new Swiper(".guidebook-swiper .swiper", {
-			slidesPerView: 4,
+			slidesPerView: 'auto',
 			spaceBetween: 48,
 			navigation: {
 				nextEl: ".guidebook-swiper .swiper-button-next",
@@ -1892,7 +1986,7 @@
 					spaceBetween: 12,
 				},
 				767: {
-					slidesPerView: 4,
+					slidesPerView: 'auto',
 					spaceBetween: 48,
 				}
 			},
@@ -1902,7 +1996,30 @@
 			}
 		});
 
+		/* ─────────────────────────────────────────────
+				공통 메뉴 데이터 — 여러 페이지 공유
+		───────────────────────────────────────────── */
+		const MENU_DATA = {
+			dep1: [
+					{ id: 'civil',         label: '민원 · 신고' },
+					{ id: 'participation', label: '참여 · 소통' },
+					{ id: 'work',          label: '업무자료'    }
+			],
+		};
 
+
+		/* ─────────────────────────────────────────────
+				페이지 초기화 — 금융민원신청 안내
+		───────────────────────────────────────────── */
+		const bcA = new BreadcrumbNav(
+			'#breadcrumb-home',
+			MENU_DATA,
+			{ dep1: 'civil' },
+			(depthKey, item) => {
+				/* 선택 이벤트 콜백 — 필요 시 페이지 이동 로직 추가 */
+				console.log('[페이지A] 선택:', depthKey, item);
+			}
+		);
 
 </script>
 

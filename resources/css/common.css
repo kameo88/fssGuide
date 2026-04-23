@@ -5,8 +5,9 @@ body.scroll-no {
 }
 #krds-header {
 	position: relative;
+	height: 9.6rem;
 }
-#wrap.main #krds-header {
+#wrap #krds-header.active {
 	position: fixed;
 	right: 0;
 }
@@ -319,6 +320,7 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 /* breadcrumb navigation Custom */
 .krds-breadcrumb-wrap {
 	align-items: center;
+	/* css sticky 사용 위해서 상위 부모들에 overflow 속성 금지 */
 	position: sticky;
 	top: 0;
 	height: 6.4rem;
@@ -1070,8 +1072,9 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 /* mobile menu */
 @media (max-width: 1279px) {
 	#krds-header {
-		position: fixed;
-		right: 0;
+		/* position: fixed;
+		right: 0; */
+		height: auto;
 	}
 	#krds-header .header-in {
 		height: 6.4rem;

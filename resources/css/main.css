@@ -8,6 +8,8 @@
 	height: 100vh;
 	z-index: 51;
 	scroll-behavior: smooth;
+	/* z index 관련 임시 kameo */
+	position: unset;
 }
 .parallax .section {
 	width: 100%;

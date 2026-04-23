@@ -13,6 +13,8 @@
 	<link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
 	<script src="../resources/js/component/ui-script.js"></script>
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
+	<!-- breadcrumb navigation sample js -->
+	<script src="../resources/js/nav_breadcrumb.js"></script>
 
 
 	<title>금융감독원 통합홈페이지</title>
@@ -731,136 +733,6 @@
 			<div class="inner">
 				<!-- breadcrumb -->
 				<nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb-home">
-					<ul class="breadcrumb-nav">
-						<li>
-							<a href="javascript:void(0);" class="txt home"><span class="sr-only">홈</span></a>
-						</li>
-						<li>
-							<!-- menu depth 1 -->
-							<a href="javascript:void(0);" class="txt">민원 &middot; 신고 dep1</a>
-
-							<!-- txt 를 클릭하면 dep2가 보임 -->
-							<div class="depth2">
-								<ul>
-									<li class="on">
-										<a href="javascript:void(0);" class="txt">민원 &middot; 신고</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">참여 &middot; 소통</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">업무자료</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">금융통계</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">금융소비자보호</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">보도 &middot; 알림</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">금감원소개</a>
-									</li>
-								</ul>
-							</div>
-							<!-- //menu depth 1 -->
-						</li>
-						<li>
-							<!-- menu depth 2 -->
-							<a href="javascript:void(0);" class="txt">민원 &middot; 신고 depth 2</a>
-
-							<!-- txt 클릭하면 dep2가 보임 -->
-							<div class="depth2">
-								<ul>
-									<li class="on">
-										<a href="javascript:void(0);" class="txt">민원 &middot; 신고</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">분쟁조정정보</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">인허가 / 등록 &middot; 신고</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">불공정 금융관행 신고센터</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">불법사금융 지킴이</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">보이스피싱 지킴이</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">불법금융신고센터</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">상장법인 등 임원선임, 재임 제한 명령 부과 여부 확인</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">상속인금융거래 조회</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">옴브즈만 고충민원</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">Q&A</a>
-									</li>
-								</ul>
-							</div>
-							<!-- menu depth 2 -->
-						</li>
-						<li>
-							<!-- menu depth 3 -->
-							<a href="javascript:void(0);" class="txt">민원 &middot; 신고 depth 3</a>
-
-							<!-- txt 클릭하면 dep2가 보임 -->
-							<div class="depth2">
-								<ul>
-									<li class="on">
-										<a href="javascript:void(0);" class="txt">민원 &middot; 신고</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">민원조회<i class="svg-icon ico-go"></i></a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">정보공개청구</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">민원상담 챗봇<i class="svg-icon ico-go"></i></a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">제도권금융회사조회<i class="svg-icon ico-go"></i></a>
-									</li>
-								</ul>
-							</div>
-							<!-- //menu depth 3 -->
-						</li>
-						<li>
-							<!-- menu depth 4 -->
-							<a href="javascript:void(0);" class="txt">금융민원신청 안내</a>
-
-							<!-- txt 클릭하면 dep2가 보임 -->
-							<div class="depth2">
-								<ul>
-									<li>
-										<a href="javascript:void(0);" class="txt">금융민원상담 안내</a>
-									</li>
-									<li class="on">
-										<a href="javascript:void(0);" class="txt">금융민원신청 안내</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">협회등 관련기관 안내</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="txt">금융회사민원부서 안내</a>
-									</li>
-								</ul>
-							</div>
-							<!-- //menu depth 4 -->
-						</li>
-					</ul>
 				</nav>
 				<!-- //breadcrumb -->
 
@@ -1907,6 +1779,133 @@
 			indicator.style.display = isLocked ? 'none' : '';
 		}
 
+
+		/* ─────────────────────────────────────────────
+				공통 메뉴 데이터 — 여러 페이지 공유
+		───────────────────────────────────────────── */
+		const MENU_DATA = {
+			dep1: [
+					{ id: 'civil',         label: '민원 · 신고' },
+					{ id: 'participation', label: '참여 · 소통' },
+					// { id: 'work',          label: '업무자료'    }
+			],
+			dep2: {
+				civil: [
+					{ id: 'c2-1', label: '민원 · 신고'      },
+					{ id: 'c2-2', label: '분쟁조정정보'      },
+					{ id: 'c2-3', label: '인허가·등록 신고'  }
+				],
+				participation: [
+					{ id: 'p2-1', label: '고객의 소리'      },
+					{ id: 'p2-2', label: '금융소비자리포터'  },
+					{ id: 'p2-3', label: '국민검사청구제도'  }
+				],
+				work: [
+					// { id: 'w2-1', label: '업무처리 절차'   },
+					// { id: 'w2-2', label: '공통'                      },
+					// { id: 'w2-3', label: '은행ㆍ중소서민금융', ext: true          }
+				]
+			},
+			dep3: {
+				'c2-1': [
+					{ id: 'c3-1', label: '민원·신고'          },
+					{ id: 'c3-2', label: '민원조회', ext: true },
+				],
+				'c2-2': [
+					{ id: 'c3-3', label: '분쟁조정결정례'          },
+					{ id: 'c3-4', label: '분쟁해결기준' },
+					{ id: 'c3-5', label: '분쟁조정사례'          },
+					{ id: 'c3-6', label: '주요판례' },
+					{ id: 'c3-7', label: '보도자료(소비자 유의사항 등)' }
+				],
+				'c2-3': [
+					{ id: 'c3-8', label: '인허가 사전협의' },
+					{ id: 'c3-9', label: '인허가 등록 신고시스템' , ext: true       }
+				],
+				'p2-1': [
+					{ id: 'p3-1', label: '국민제안' },
+					{ id: 'p3-2', label: '금융용어 개선 제안' }
+				],
+				'p2-2': [
+					{ id: 'p3-3', label: '전체 보도자료'  },
+					{ id: 'p3-4', label: '연도별 보도자료' }
+				],
+				'p2-3': [
+					{ id: 'p3-5', label: '뉴스레터 구독'  },
+					{ id: 'p3-6', label: '지난 뉴스레터'  }
+				],
+				'w2-1': [
+					{ id: 'w3-1', label: '법령 목록'  },
+					{ id: 'w3-2', label: '규정 검색'  }
+				],
+				'w2-2': [
+					{ id: 'w3-3', label: '연도별 통계' },
+					{ id: 'w3-4', label: '기관별 통계' }
+				],
+				'w2-3': [
+					// { id: 'w3-5', label: '연구보고서 목록'          },
+					// { id: 'w3-6', label: '발간물 신청', ext: true   }
+				]
+			},
+			dep4: {
+				'c3-1': [
+					{ id: 'c4-1', label: '금융민원상담 안내' },
+					{ id: 'c4-2', label: '금융민원신청 안내' },
+					{ id: 'c4-3', label: '협회등 관련기관 안내' },
+					{ id: 'c4-4', label: '금융회사민원부서 안내' }
+				],
+				'c3-2': [
+					// { id: 'c4-3', label: '민원번호 조회'             },
+					// { id: 'c4-4', label: '처리현황 확인', ext: true  }
+				],
+				'c3-3': [
+					{ id: 'c4-5', label: '조정신청서 작성'  },
+					{ id: 'c4-6', label: '신청 현황 확인'   }
+				],
+				'c3-4': [
+					{ id: 'c4-7', label: 'one'  },
+					{ id: 'c4-8', label: 'two'   }
+				],
+				'c3-8': [
+					{ id: 'c4-9', label: '인허가 사전협의 (S.T.A.R.T)'  },
+					{ id: 'c4-10', label: '사전협의신청'   },
+					{ id: 'c4-11', label: '사전협의신청 조회'   },
+					{ id: 'c4-12', label: '자료실'   }
+				],
+				'p3-1': [
+					{ id: 'p4-1', label: '국민제안 안내'   },
+					{ id: 'p4-2', label: '국민제안 제출'  },
+					{ id: 'p4-3', label: '나의제안 조회'   },
+					{ id: 'p4-4', label: '공개제안 보기'  }
+				],
+				'p3-2': [
+					{ id: 'p4-5', label: '이용안내'       },
+					{ id: 'p4-6', label: '제안하기'  }
+				],
+				'w3-1': [
+					{ id: 'w4-1', label: '법령 전체'  },
+					{ id: 'w4-2', label: '개정 법령'  }
+				],
+				'w3-3': [
+					{ id: 'w4-3', label: '연도 선택'   },
+					{ id: 'w4-4', label: '분기별 통계' }
+				]
+			}
+		};
+
+
+		/* ─────────────────────────────────────────────
+				페이지 초기화 — 금융민원신청 안내
+		───────────────────────────────────────────── */
+		const bcA = new BreadcrumbNav(
+			'#breadcrumb-home',
+			MENU_DATA,
+			{ dep1: 'civil', dep2: 'c2-1', dep3: 'c3-1', dep4: 'c4-2' },
+			(depthKey, item) => {
+				/* 선택 이벤트 콜백 — 필요 시 페이지 이동 로직 추가 */
+				console.log('[페이지A] 선택:', depthKey, item);
+			}
+		);
 
 	</script>
 

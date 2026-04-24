@@ -1144,9 +1144,6 @@ body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
 		display: none;
 	}
 	/* contents 여백 */
-	#container>.inner {
-		padding-top: 6.4rem;
-	}
 	#container>.inner .contents {
 		padding-right: 1.6rem;
 	}

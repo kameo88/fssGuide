@@ -489,15 +489,15 @@
 
 /* sub main */
 .sub-visual-wrap {
+	background-color: rgba(0, 0, 0, .5);
+}
+.sub-visual-wrap .visual-area {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 28rem;
 	background: url(../img/contents/img_vb_sub_01.png) no-repeat center / cover;
-}
-/* header에 class active 가 있는 경우 계산*/
-.sub-visual-wrap.on {
-	margin-top: 9.6rem;
+
 }
 .sub-visual-wrap .tit-wrap {
 	display: flex;
@@ -609,6 +609,54 @@
 	-webkit-mask-size: 2rem auto;
 	mask-size: 2rem auto;
 }
+/* card banner style 공통 */
+.card-bnr-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 16rem;
+	padding: 3.2rem;
+	border: 2px solid #fff;
+	border-radius: 2rem;
+	background-color: #fff;
+	transition: all .3s ease;
+}
+.card-bnr-wrap:hover {
+	border-color: #063A74;
+	box-shadow: 0 4px 20px 0  rgba(0, 0, 0, 0.09);
+	transform: translateY(-10px);
+}
+.card-bnr-wrap::after {
+	content: '';
+	display: inline-flex;
+	flex: 0 0 6.4rem;
+	width: 6.4rem;
+	height: 6.4rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 6.4rem auto;
+}
+.card-bnr-wrap .txt {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+.card-bnr-wrap.civil-ty1::after {
+	background-image: url(../img/main/ico_quick_05.svg);
+}
+.card-bnr-wrap.civil-ty2::after {
+	background-image: url(../img/main/ico_quick_04.svg);
+}
+.card-bnr-wrap.civil-ty3::after {
+	background-image: url(../img/main/ico_quick_08.svg);
+}
+.card-bnr-wrap.civil-ty4::after {
+	background-image: url(../img/main/ico_quick_03.svg);
+}
+
 /* card image style 공통 */
 .card-img-wrap {
 	display: flex;
@@ -659,23 +707,28 @@
 	background: url(../img/component/icon/ico_more.svg) no-repeat center / 2rem auto;
 }
 
-/* 바로가기 banner */
-.shortcuts-wrap {
-	margin-bottom:  4.8rem;
+/************************ 
+		shortcut banner 
+*************************/
+.shortcut-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 2.8rem;
 }
-.shortcuts-list {
+/* shortcut list */
+.shortcut-list {
 	display: flex;
 	gap: 4.8rem;
 	width: 100%;
 }
-.shortcuts-list li {
+.shortcut-list li {
 	width: calc((100% - 9.6rem) / 4);
 }
-.shortcuts-list li:first-child {
+.shortcut-list li:first-child {
 	display: flex;
 	width: 50%;
 }
-.shortcuts-list .link {
+.shortcut-list .link {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -687,7 +740,7 @@
 	color: #fff;
 	font-size: 1.9rem;
 }
-.shortcuts-list .link.item1::after {
+.shortcut-list .link.item1::after {
 	content: '';
 	position: absolute;
 	bottom: 3.2rem;
@@ -696,21 +749,21 @@
 	height: 12.8rem;
 	background: url(../img/common/icon/ico_person.svg) no-repeat center / contain;
 }
-.shortcuts-list .link.item1 {
+.shortcut-list .link.item1 {
 	background: linear-gradient(107deg, #256EF4 0%, #0B50D0 100%);
 }
-.shortcuts-list .link.item2 {
+.shortcut-list .link.item2 {
 	background: linear-gradient(107deg, #7C3AED 0%, #6D28D9 100%);
 }
-.shortcuts-list .link.item3 {
+.shortcut-list .link.item3 {
 	background: linear-gradient(107deg, #038C8E 0%, #027678 100%);
 }
-.shortcuts-list .link .tit {
+.shortcut-list .link .tit {
 	margin-bottom: 1.6rem;
 	font-size: 4rem;
 	font-weight: 700;
 }
-.shortcuts-list .link .icon-area {
+.shortcut-list .link .icon-area {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -720,13 +773,26 @@
 	border-radius: 50%;
 	background-color: rgba(0, 0, 0, .25);
 }
-.shortcuts-list .link.item1 .icon-area {
+.shortcut-list .link.item1 .icon-area {
 	margin: 0 auto 0 0;
 }
-.shortcuts-list .link .icon-area .ico-more {
+.shortcut-list .link .icon-area .ico-more {
 	background-color: #fff;
 }
-
+/* shortcut swiper */
+.shortcut-swiper .swiper {
+	padding-top: 2rem;
+}
+.shortcut-swiper .swiper-indicator {
+	justify-content: center;
+	margin-top: 2.4rem;
+}
+.shortcut-swiper .swiper.active .swiper-slide {
+	opacity: 0;
+	transform: translate(20px,-24px);
+	animation: fadeUp2 .8s ease forwards;
+	animation-delay: calc(var(--i) * 0.3s);
+}
 
 
 /* 불법금융예방 swiper */
@@ -743,8 +809,8 @@
 .guidebook-swiper .swiper-slide {
 	width: 36.4rem;
 }
-/* market swiper animation 수정 필요 */
-.sec-inner.active .guidebook-swiper .swiper-slide {
+/* swiper animation - fadeUp2 */
+ .guidebook-swiper .swiper.active .swiper-slide {
 	opacity: 0;
 	transform: translate(20px,-24px);
 	animation: fadeUp2 .7s ease forwards;
@@ -766,6 +832,13 @@
 }
 .archive-swiper .swiper-slide {
 	width: 36.4rem;
+}
+/* swiper animation - fadeUp2 */
+.archive-swiper .swiper.active .swiper-slide {
+	opacity: 0;
+	transform: translate(20px,-24px);
+	animation: fadeUp2 .7s ease forwards;
+	animation-delay: calc(var(--i) * 0.3s);
 }
 .archive-swiper .swiper-indicator {
 	position: absolute;
@@ -854,7 +927,7 @@
 /* mobile menu */
 @media (max-width: 1279px) {
 	.sub-visual-wrap.on {
-		margin: 0;
+		/* margin: 0; */
 	}
 }
 

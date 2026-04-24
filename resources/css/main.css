@@ -101,8 +101,8 @@
 	background-color: #ECF2FE;
 }
 
-/* swiper indicator */
-.main .swiper-indicator .swiper-pagination {
+/* swiper indicator kameo */
+/* .main .swiper-indicator .swiper-pagination {
 	border: none;
 }
 .main .swiper-indicator [class^=swiper-button-] {
@@ -111,7 +111,7 @@
 }
 .main .swiper-indicator [class^=swiper-button-]:disabled {
 	background-color: #CDD1D5;
-}
+} */
 
 /* start : mouse wheel  */
 .mouseWrap {

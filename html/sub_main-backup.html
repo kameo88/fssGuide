@@ -15,7 +15,6 @@
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
 	<!-- breadcrumb navigation sample js -->
 	<script src="../resources/js/nav_breadcrumb.js"></script>
-	<script src="../resources/js/sub_main.js"></script>
 
 	<title>금융감독원 통합홈페이지</title>
 </head>
@@ -29,7 +28,7 @@
 
 
 		<!-- header inc -->
-		<header id="krds-header" class="is-bg fixed">
+		<header id="krds-header" class="is-bg">
 			<div class="header-in">
 				<!-- 헤더 상단 기타메뉴 -->
 				<div class="header-container">
@@ -1838,18 +1837,18 @@
 
 	<script>
 		// sub main 에서 적용
-		// function setSubVisualPadding() {
-		// 	const header = document.querySelector("header");
-		// 	const subVisual = document.querySelector(".sub-visual-wrap");
+		function setSubVisualPadding() {
+			const header = document.querySelector("header");
+			const subVisual = document.querySelector(".sub-visual-wrap");
 
-		// 	if (!header || !subVisual) return;
-		// 	if (!header.classList.contains("is-bg")) return;
+			if (!header || !subVisual) return;
+			if (!header.classList.contains("is-bg")) return;
 
-		// 	subVisual.style.paddingTop = header.offsetHeight + "px";
-		// }
+			subVisual.style.paddingTop = header.offsetHeight + "px";
+		}
 
 
-		// 각각의 swiper 에 --i 값을 0부터 시작 for animation
+		// 각각의 swiper 에 --i 값을 0부터 시작
 		function setIndexSwiper() {
 			document.querySelectorAll('.swiper').forEach((swiper) => {
 				swiper.querySelectorAll('li').forEach((el, idx) => {
@@ -1858,53 +1857,44 @@
 			});
 		}
 
-		//Start ; swiper for animation
-		const swipers = document.querySelectorAll('.swiper');
-		let observer = null;
-
-		function initObserver() {
-			if (observer) return; // 중복 생성 방지
-
-			observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('active');
-					} else {
-						entry.target.classList.remove('active');
-					}
-				});
-			}, {
-				threshold: 0.2
-			});
-
-			swipers.forEach(swiper => observer.observe(swiper));
-		}
-		function destroyObserver() {
-			if (!observer) return;
-
-			swipers.forEach(swiper => observer.unobserve(swiper));
-			observer.disconnect();
-			observer = null;
-		}
-		function handleResponsive() {
-			if (window.innerWidth >= 1280) {
-				initObserver();
-			} else {
-				destroyObserver();
-			}
-		}
-		// 최초 실행
-		handleResponsive();
-		// End ; swiper for animation
-
 		document.addEventListener("DOMContentLoaded", () => {
-			// setSubVisualPadding();
+			setSubVisualPadding();
 			setIndexSwiper();
 		});
-		window.addEventListener("resize", () => {
-			// setSubVisualPadding();
-			handleResponsive();
+		window.addEventListener("resize", setSubVisualPadding);
+
+
+		// Start ; swiper for animation
+		const swipers = document.querySelectorAll('.swiper');
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+				} else {
+					entry.target.classList.remove('active');
+				}
+			});
+		}, {
+			threshold: 0
 		});
+
+		// 초기 진입시 한번만 animation 실행하는 경우
+		// const observer = new IntersectionObserver((entries, obs) => {
+		// 	entries.forEach(entry => {
+		// 		if (entry.isIntersecting) {
+		// 			entry.target.classList.add('active');
+
+		// 			// 다시 감지 안하도록 해제
+		// 			obs.unobserve(entry.target);
+		// 		}
+		// 	});
+		// }, {
+		// 	threshold: 0.2
+		// });
+
+		// 각 swiper 관찰 시작
+		swipers.forEach(swiper => observer.observe(swiper));
+		// End ; swiper for animation
 
 
 		// 즐겨찾기 여러 개 대응

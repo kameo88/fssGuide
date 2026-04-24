@@ -1,0 +1,13 @@
+<header id="krds-header" class="is-bg"></header>
+<main id="container">
+	<div class="sub-visual-wrap">
+		<div class="visual-area"></div>
+	</div>
+	<nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb-home"></nav>
+</main>
+페이지 로딩 후,
+1. header 높이 구하기
+2 .breadcrumb 의 위치 구하기
+3. header 에 class is-bg 가 있으면 class sub-visual-wrap 에 header height 값을 style 로 padding-top 추가
+4. scroll 할때 breadcrumb 의 위치가 header height 값에 도달하면 class is-bg 와 class sub-visual-wrap에 적용된 style 삭제
+5. 위 기능이 해상도 1280에서만 작동하고, resize 고려해야 함

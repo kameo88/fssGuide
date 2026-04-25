@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-html, body {
+		html, body {
   margin: 0;
   height: 100%;
   overscroll-behavior: none; /* iOS bounce 방지 */
 }
 
 body.fp-mode {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .section {
@@ -77,10 +77,7 @@ body.fp-mode {
 
 <script>
 
-
 (function () {
- const BREAKPOINT = 1280;
-
   const sections = document.querySelectorAll('.section');
   const navBtns = document.querySelectorAll('.fp-nav button');
   const footer = document.querySelector('.footer');
@@ -92,12 +89,12 @@ body.fp-mode {
   let touchStartY = 0;
   let isTouchMoving = false;
 
- let isActive = false; // fullpage 활성 상태
-
   // 디바이스 감지
   const isTouchDevice =
     'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
+  // 초기
+  document.body.classList.add('fp-mode');
 
   // =========================
   // 내부 스크롤 영역 체크
@@ -120,7 +117,6 @@ body.fp-mode {
   // 이동
   // =========================
   function moveTo(index) {
-    if (!isActive) return; /* kameo */
     if (index < 0 || index > sectionCount) return;
 
     isAnimating = true;
@@ -131,10 +127,10 @@ body.fp-mode {
     if (index === sectionCount) {
       // footer
       targetTop = footer.offsetTop;
-      // document.body.classList.remove('fp-mode');
+      document.body.classList.remove('fp-mode');
     } else {
       targetTop = sections[index].offsetTop;
-      // document.body.classList.add('fp-mode');
+      document.body.classList.add('fp-mode');
     }
 
     window.scrollTo({
@@ -143,22 +139,10 @@ body.fp-mode {
     });
 
     updateNav();
-    setActiveSection(current);
 
     setTimeout(() => {
       isAnimating = false;
     }, 700);
-  }
-
-  // =========================
-  // section active
-  // =========================
-  function setActiveSection(index) {
-    sections.forEach(sec => sec.classList.remove('active'));
-
-    if (sections[index]) {
-      sections[index].classList.add('active');
-    }
   }
 
   // =========================
@@ -175,8 +159,6 @@ body.fp-mode {
   // wheel (desktop)
   // =========================
   function handleWheel(e) {
-    if (!isActive) return;
-
     if (isAnimating) {
       e.preventDefault();
       return;
@@ -211,16 +193,16 @@ body.fp-mode {
   }
 
   function onTouchMove(e) {
-    if (!isActive) return;
     if (isAnimating) return;
 
     const currentY = e.touches[0].clientY;
     const diff = touchStartY - currentY;
 
     if (shouldSkip(e)) return;
+
     if (Math.abs(diff) < 30) return;
+
     if (isTouchMoving) return;
-    
     isTouchMoving = true;
 
     // footer 영역
@@ -251,78 +233,15 @@ body.fp-mode {
     });
   });
 
-
   // =========================
-  // FULLPAGE INIT / DESTROY
+  // 이벤트 분기
   // =========================
-  function initFullpage() {
-    if (isActive) return;
-
-    // document.body.classList.add('fp-mode');
-
-    if (isTouchDevice) {
-      window.addEventListener('touchstart', onTouchStart, { passive: true });
-      window.addEventListener('touchmove', onTouchMove, { passive: false });
-    } else {
-      window.addEventListener('wheel', handleWheel, { passive: false });
-    }
-
-    /* kameo */
-    updateNav();
-
-    isActive = true;
+  if (isTouchDevice) {
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: false });
+  } else {
+    window.addEventListener('wheel', handleWheel, { passive: false });
   }
-
-  function destroyFullpage() {
-    if (!isActive) return;
-
-    // document.body.classList.remove('fp-mode');
-
-    window.removeEventListener('wheel', handleWheel);
-    window.removeEventListener('touchstart', onTouchStart);
-    window.removeEventListener('touchmove', onTouchMove);
-
-    isActive = false;
-  }
-
-  // =========================
-  // 1280 미만 전용 함수 (여기 커스터마이징)
-  // =========================
-  function initMobileMode() {
-    // 여기 원하는 기능 추가
-    // 예: 일반 스크롤 기반 애니메이션, swiper 등
-    console.log('mobile mode');
-  }
-
-  function destroyMobileMode() {
-    // mobile 모드 cleanup 필요 시
-  }
-
-  // =========================
-  // BREAKPOINT 분기 (핵심)
-  // =========================
-  function checkMode() {
-    if (window.innerWidth >= BREAKPOINT) {
-      destroyMobileMode();
-      initFullpage();
-      moveTo(current);
-    } else {
-      destroyFullpage();
-      initMobileMode();
-    }
-
-    // mobile test 용
-    // if (window.innerWidth >= 0) {
-    //   initFullpage();
-    // }
-
-  }
-
-  window.addEventListener('resize', checkMode);
-
-  // init
-  checkMode();
-
 
 })();
 

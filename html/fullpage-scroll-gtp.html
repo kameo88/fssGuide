@@ -747,15 +747,32 @@ body.fp-mode {
 			<!-- //메인메뉴 : 모바일 -->
 		</header>
 		<!-- //header inc -->
+		<!-- quick menu -->
+		<div class="quick-menu">
+			<div class="top">
+				<!-- 전체 메뉴 -->
+				<div class="menu-all-area">
+					<button type="button" class="btn-menu-all open-modal" data-target="modal_menu_full"><span class="sr-only">전체메뉴</span><i class="svg-icon ico-all"></i></button>
+				</div>
+				<!-- //전체 메뉴 -->
 
-		<nav class="fp-nav">
-    <button data-index="0" class="active"></button>
-    <button data-index="1"></button>
-    <button data-index="2"></button>
-    <button data-index="3"></button>
-    <button data-index="4"></button>
-    <button data-index="5"></button>
-  </nav>
+				<!-- sns link -->
+				<ul class="sns-link-list">
+					<li><a href="javascript:void(0);" class="go-sns"><span class="sr-only">유튜브</span><i class="svg-icon ico-sns-youtube"></i></a></li>
+					<li><a href="javascript:void(0);" class="go-sns"><span class="sr-only">블로그</span><i class="svg-icon ico-sns-blog"></i></a></li>
+					<li><a href="javascript:void(0);" class="go-sns"><span class="sr-only">페이스북</span><i class="svg-icon ico-sns-facebook"></i></a></li>
+					<li><a href="javascript:void(0);" class="go-sns"><span class="sr-only">인스타그램</span><i class="svg-icon ico-sns-insta"></i></a></li>
+				</ul>
+				<!-- //sns link -->
+			</div>
+			<div class="middle"><span class="sr-only">parallax pagination area</span></div>
+			<div class="bottom">
+				<button type="button" class="chat"><span class="sr-only">ai 채팅</span><i class="ico-chat"></i></button>
+				<button type="button" class="bookmark open-modal" data-target="modal_bookmark_full"><span class="sr-only">즐겨찾기</span><i class="svg-icon ico-scrap"></i></button>
+				<a href="#top" class="go-top"><i class="svg-icon ico-go-top"></i>위로</a>
+			</div>
+		</div>
+		<!-- //quick menu -->
 
   <main id="container">
 			<!-- mouse wheel -->
@@ -764,6 +781,15 @@ body.fp-mode {
 				<div class="mouseTxt">Scroll</div>
 			</div>
 			<!-- //mouse wheel -->
+
+		<nav class="fp-nav">
+			<button data-index="0" class="active"></button>
+			<button data-index="1"></button>
+			<button data-index="2"></button>
+			<button data-index="3"></button>
+			<button data-index="4"></button>
+			<button data-index="5"></button>
+		</nav>
 
 			<section id="section1" class="section">
 

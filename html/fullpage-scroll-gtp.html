@@ -2354,55 +2354,78 @@ body.fp-mode {
 
 	let current = 0;
 	let isAnimating = false;
-	let sectionCount = sections.length;
+	let isActive = false;
 
 	let touchStartY = 0;
 	let isTouchMoving = false;
 
-	let isActive = false; // fullpage 활성 상태
+	const sectionCount = sections.length;
 
-	// 디바이스 감지
 	const isTouchDevice =
 		'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
+	// =========================
+	// 내부 스크롤 영역 체크 (개선)
+	// =========================
+	function getScrollableParent(el) {
+		while (el && el !== document.body) {
+			const style = window.getComputedStyle(el);
 
-	// =========================
-	// 내부 스크롤 영역 체크
-	// =========================
-	function isScrollable(el) {
-		return el.scrollHeight > el.clientHeight;
+			const isScrollable =
+				/(auto|scroll)/.test(style.overflowY) &&
+				el.scrollHeight > el.clientHeight;
+
+			if (isScrollable) return el;
+
+			el = el.parentNode;
+		}
+		return null;
 	}
 
 	function shouldSkip(e) {
-		let el = e.target;
+		const scrollable = getScrollableParent(e.target);
 
-		while (el && el !== document.body) {
-			if (isScrollable(el)) return true;
-			el = el.parentNode;
+		if (!scrollable) return false;
+
+		const delta = e.deltaY || (touchStartY - e.touches?.[0]?.clientY);
+
+		// 위/아래 끝 체크
+		if (delta > 0) {
+			return scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight;
+		} else {
+			return scrollable.scrollTop > 0;
 		}
-		return false;
+	}
+
+	// =========================
+	// 현재 위치 sync (추가)
+	// =========================
+	function updateCurrentByScroll() {
+		let scrollY = window.scrollY;
+
+		sections.forEach((sec, i) => {
+			if (scrollY >= sec.offsetTop - window.innerHeight / 2) {
+				current = i;
+			}
+		});
 	}
 
 	// =========================
 	// 이동
 	// =========================
 	function moveTo(index) {
-		if (!isActive) return; /* kameo */
-		if (index < 0 || index > sectionCount) return;
+		if (!isActive) return;
+		if (isAnimating) return;
+
+		index = Math.max(0, Math.min(index, sectionCount));
 
 		isAnimating = true;
 		current = index;
 
-		let targetTop;
-
-		if (index === sectionCount) {
-			// footer
-			targetTop = footer.offsetTop;
-			// document.body.classList.remove('fp-mode');
-		} else {
-			targetTop = sections[index].offsetTop;
-			// document.body.classList.add('fp-mode');
-		}
+		let targetTop =
+			index === sectionCount
+				? footer.offsetTop
+				: sections[index].offsetTop;
 
 		window.scrollTo({
 			top: targetTop,
@@ -2422,10 +2445,7 @@ body.fp-mode {
 	// =========================
 	function setActiveSection(index) {
 		sections.forEach(sec => sec.classList.remove('active'));
-
-		if (sections[index]) {
-			sections[index].classList.add('active');
-		}
+		sections[index]?.classList.add('active');
 	}
 
 	// =========================
@@ -2433,34 +2453,31 @@ body.fp-mode {
 	// =========================
 	function updateNav() {
 		navBtns.forEach(btn => btn.classList.remove('active'));
-		if (navBtns[current]) {
-			navBtns[current].classList.add('active');
-		}
+		navBtns[current]?.classList.add('active');
 	}
 
 	// =========================
-	// wheel (desktop)
+	// wheel
 	// =========================
 	function handleWheel(e) {
 		if (!isActive) return;
 
-		if (isAnimating) {
-			e.preventDefault();
-			return;
-		}
-
+		// 🔥 핵심: 이벤트 무조건 먼저 잡기
 		if (shouldSkip(e)) return;
 
-		// footer 영역
+		e.preventDefault();
+
+		if (isAnimating) return;
+
+		updateCurrentByScroll();
+
+		// footer 영역 처리
 		if (window.scrollY >= footer.offsetTop) {
 			if (e.deltaY < 0) {
 				moveTo(sectionCount - 1);
-				e.preventDefault();
 			}
 			return;
 		}
-
-		e.preventDefault();
 
 		if (e.deltaY > 0) {
 			moveTo(current + 1);
@@ -2470,7 +2487,7 @@ body.fp-mode {
 	}
 
 	// =========================
-	// touch (mobile / pad)
+	// touch
 	// =========================
 	function onTouchStart(e) {
 		touchStartY = e.touches[0].clientY;
@@ -2484,18 +2501,18 @@ body.fp-mode {
 		const currentY = e.touches[0].clientY;
 		const diff = touchStartY - currentY;
 
-		if (shouldSkip(e)) return;
 		if (Math.abs(diff) < 30) return;
 		if (isTouchMoving) return;
-		
+
+		if (shouldSkip(e)) return;
+
 		isTouchMoving = true;
 
-		// footer 영역
+		updateCurrentByScroll();
+
+		// footer
 		if (window.scrollY >= footer.offsetTop) {
-			if (diff < 0) {
-				moveTo(sectionCount - 1);
-				e.preventDefault();
-			}
+			if (diff < 0) moveTo(sectionCount - 1);
 			return;
 		}
 
@@ -2513,39 +2530,35 @@ body.fp-mode {
 	// =========================
 	navBtns.forEach(btn => {
 		btn.addEventListener('click', function () {
-			const index = parseInt(this.dataset.index, 10);
-			moveTo(index);
+			moveTo(parseInt(this.dataset.index, 10));
 		});
 	});
 
-
 	// =========================
-	// FULLPAGE INIT / DESTROY
+	// init / destroy
 	// =========================
 	function initFullpage() {
 		if (isActive) return;
-
-		// document.body.classList.add('fp-mode');
 
 		if (isTouchDevice) {
 			window.addEventListener('touchstart', onTouchStart, { passive: true });
 			window.addEventListener('touchmove', onTouchMove, { passive: false });
 		} else {
-			window.addEventListener('wheel', handleWheel, { passive: false });
+			// 🔥 capture 단계에서 잡으면 안정성 ↑
+			window.addEventListener('wheel', handleWheel, {
+				passive: false,
+				capture: true
+			});
 		}
 
-		/* kameo */
-		updateNav();
-
 		isActive = true;
+		updateNav();
 	}
 
 	function destroyFullpage() {
 		if (!isActive) return;
 
-		// document.body.classList.remove('fp-mode');
-
-		window.removeEventListener('wheel', handleWheel);
+		window.removeEventListener('wheel', handleWheel, { capture: true });
 		window.removeEventListener('touchstart', onTouchStart);
 		window.removeEventListener('touchmove', onTouchMove);
 
@@ -2553,46 +2566,26 @@ body.fp-mode {
 	}
 
 	// =========================
-	// 1280 미만 전용 함수 (여기 커스터마이징)
+	// mode
 	// =========================
-	function initMobileMode() {
-		// 여기 원하는 기능 추가
-		// 예: 일반 스크롤 기반 애니메이션, swiper 등
-		console.log('mobile mode');
-	}
+	function initMobileMode() {}
+	function destroyMobileMode() {}
 
-	function destroyMobileMode() {
-		// mobile 모드 cleanup 필요 시
-	}
-
-	// =========================
-	// BREAKPOINT 분기 (핵심)
-	// =========================
 	function checkMode() {
 		if (window.innerWidth >= BREAKPOINT) {
 			destroyMobileMode();
 			initFullpage();
-			moveTo(current);
 		} else {
 			destroyFullpage();
 			initMobileMode();
 		}
-
-		// mobile test 용
-		// if (window.innerWidth >= 0) {
-		//   initFullpage();
-		// }
-
 	}
 
 	window.addEventListener('resize', checkMode);
 
 	// init
 	checkMode();
-
-
 })();
-
 
 
 

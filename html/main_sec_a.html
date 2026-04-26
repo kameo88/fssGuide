@@ -2890,7 +2890,7 @@ html, body {
 		}
 
 		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
-		document.addEventListener('click', function () {
+		document.addEventListener('click', () => {
 			setTimeout(() => {
 				document.querySelectorAll('.swiper').forEach(el => {
 					el.swiper?.update();
@@ -3006,13 +3006,6 @@ html, body {
 				}
 			},
 		});
-		// tabBtn 클릭 시 해당 슬라이드 업데이트==> 안됨
-		// const tabBtn = document.querySelector('.krds-tab-area.media .btn-tab');
-		// tabBtn.addEventListener('click', () => {
-		// 	blogSwiper.update();
-		// 	ytubeSwiper.update();
-		// 	alert('블로그 탭이 선택되었습니다. 슬라이드가 업데이트되었습니다.');
-		// });
 
 
 		// paly & stop 공통 함수
@@ -3049,14 +3042,9 @@ html, body {
 				});
 			});
 		}
-
 		document.addEventListener("DOMContentLoaded", () => {
-			// setSubVisualPadding();
 			setIndexSwiper();
 		});
-
-
-
 
 
 
@@ -3068,6 +3056,9 @@ html, body {
 			const sections = document.querySelectorAll('.section');
 			const navBtns = document.querySelectorAll('.parallax-nav .btn');
 			const footer = document.querySelector('.footer');
+			const header = document.querySelector('header');
+			const bnrSwiper = document.querySelector('.main-bn-swiper');
+			const mouseWrap = document.querySelector('.mouseWrap');
 
 			const sectionCount = sections.length;
 			const FOOTER_INDEX = sectionCount;
@@ -3171,8 +3162,6 @@ html, body {
 				navBtns[current]?.classList.add('active');
 			}
 
-			const header = document.querySelector('header');
-			const mouseWrap = document.querySelector('.mouseWrap');
 
 
 			// =============================================
@@ -3275,8 +3264,8 @@ html, body {
 			// nav click
 			// =========================
 			navBtns.forEach(btn => {
-				btn.addEventListener('click', function () {
-					moveTo(parseInt(this.dataset.index, 10));
+				btn.addEventListener('click', () => {
+					moveTo(parseInt(btn.dataset.index, 10));
 				});
 			});
 
@@ -3348,9 +3337,30 @@ html, body {
 			}
 
 
-			// =========================
+			// ===========================================================================
+			// header 배경 토글 (scroll) main banner swiper 기준
+			// ===========================================================================
+			function handleMobileScroll() {
+				if (window.innerWidth >= BREAKPOINT) return; // PC에서는 무시
+
+				if (!bnrSwiper || !header) return;
+
+				const rect = bnrSwiper.getBoundingClientRect();
+
+				// bnrSwiper가 top에 닿으면
+				if (rect.top <= window.innerHeight * 0.05 ) {
+					header.classList.remove('is-bg');
+				} else {
+					header.classList.add('is-bg');
+				}
+			}
+
+			window.addEventListener('scroll', handleMobileScroll);
+
+
+			// ===========================================================================
 			// mobile mode - section > .sec-inner active 토글 (IntersectionObserver)
-			// =========================
+			// ===========================================================================
 			const targets = document.querySelectorAll('.swiper, .section > .sec-inner');
 			let observer = null;
 

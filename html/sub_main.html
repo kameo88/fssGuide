@@ -11,10 +11,12 @@
 
 	<link rel="shortcut icon" href="../resources/img/favicon.png">
 	<link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
+	<link href="../resources/css/main.css" type="text/css" rel="stylesheet" />
 	<script src="../resources/js/component/ui-script.js"></script>
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
 	<!-- breadcrumb navigation sample js -->
 	<script src="../resources/js/nav_breadcrumb.js"></script>
+	<!-- header + breadcrumb event sample js -->
 	<script src="../resources/js/sub_main.js"></script>
 
 	<title>금융감독원 통합홈페이지</title>
@@ -1724,6 +1726,14 @@
 																</div>
 															</a>
 														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="item ty8">
+																<div class="txt">
+																	<span>개인정보 노출</span>
+																	<span>등록ㆍ해제</span>
+																</div>
+															</a>
+														</li>
 													</ul>
 												</div>
 												<div class="swiper-indicator">
@@ -1837,17 +1847,6 @@
 
 
 	<script>
-		// sub main 에서 적용
-		// function setSubVisualPadding() {
-		// 	const header = document.querySelector("header");
-		// 	const subVisual = document.querySelector(".sub-visual-wrap");
-
-		// 	if (!header || !subVisual) return;
-		// 	if (!header.classList.contains("is-bg")) return;
-
-		// 	subVisual.style.paddingTop = header.offsetHeight + "px";
-		// }
-
 
 		// 각각의 swiper 에 --i 값을 0부터 시작 for animation
 		function setIndexSwiper() {
@@ -2018,16 +2017,28 @@
 		// ㄴ grid slide 가 1개인 경우 indicator hidden 처리
 		function swpControlUI(swiper) {
 
-			const isLocked = swiper.isLocked;
 			// 현재 swiper 기준으로 탐색
-			const container = swiper.el.closest('.my-bookmark-swiper, .shortcut-swiper');
+			const container = swiper.el.closest('.my-bookmark-swiper');
 			if (!container) return;
 			const indicator = container.querySelector('.swiper-indicator');
 			if (!indicator) return;
-			
-			indicator.style.display = isLocked ? 'none' : '';
+
+			// 페이지 개수 (grid 포함 정확 계산)
+			const pageCount = swiper.snapGrid.length;
+
+			// 1페이지면 숨김, 2페이지 이상이면 노출
+			indicator.style.display = pageCount <= 1 ? 'none' : '';
 		}
 
+
+		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
+		document.addEventListener('click', function () {
+			setTimeout(() => {
+				document.querySelectorAll('.swiper').forEach(el => {
+					el.swiper?.update();
+				});
+			}, 50); // 1프레임 정도
+		});
 
 		// 불법금융예방
 		const guidebookSwiper = new Swiper(".guidebook-swiper .swiper", {

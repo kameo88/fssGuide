@@ -29,7 +29,8 @@ body.scroll-no {
 #krds-header.is-bg .header-in {
 	border-bottom: none;
 }
-#krds-header .header-in {
+#krds-header .header-in,
+.is-gnb #krds-header .header-in {
 	border-bottom: .1rem solid var(--krds-header--utility-color-divider);
 }
 
@@ -186,10 +187,33 @@ body.scroll-no {
 	border-color: rgba(0, 0, 0, 0.5);
 }
 
-/* 
-	reset gnb scroll & click event 
-	일괄 삭제 kameo
-*/
+/* reset gnb scroll & click event */
+body[class*=is-gnb] #krds-header .header-in {
+	background-color: #fff;
+}
+#wrap[class*=scroll] #krds-header .header-container .logo a,
+body[class*=is-gnb] #krds-header .header-container .logo a {
+	background-image: url(../img/common/icon/ico_h_logo.svg);
+}
+
+/* #wrap[class*=scroll] #krds-header:not(.sample) .header-in, */
+#krds-header .krds-main-menu .gnb-menu .gnb-main-trigger,
+#wrap[class*=scroll] #krds-header .krds-main-menu .gnb-menu .gnb-main-trigger,
+body[class*=is-gnb] #krds-header .krds-main-menu .gnb-menu .gnb-main-trigger,
+/* #wrap[class*=scroll] #krds-header .header-utility,  */
+body[class*=is-gnb] #krds-header .header-utility {
+	color: #1E2124;
+}
+
+/* #wrap[class*=scroll] #krds-header .header-utility .lang-area .link:not(:first-child)::before, */
+body[class*=is-gnb] #krds-header .header-utility .lang-area .link:not(:first-child)::before,
+#krds-header .header-utility .lang-area .link:not(:first-child)::before {
+	border-color: #1E2124;
+}
+/* #wrap[class*=scroll] #krds-header .header-utility .search-area .ico-sch, */
+body[class*=is-gnb] #krds-header .header-utility .search-area .ico-sch {
+	background-color: #1E2124;
+}
 
 /* mobile gnb */
 #mobile-nav.krds-main-menu-mobile {

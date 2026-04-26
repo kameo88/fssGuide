@@ -1,5 +1,25 @@
 ########################	작업항목
 
+####	0426 작업 항목	####
+
+>> 작업 필요
+- main mobile 
+		==> section1 지날때 is-bg 삭제
+		==> animation 등 기능 구현
+
+- sub main ==> header is-bg 삭제 분기
+- sub main ==> 동영상 swiper 로 변경
+
+
+>> 작업 완료 항목
+
+- main ==> js 로 fullpage scroll 기능 구현 완료
+- main ==> section 이동할때 swiper slide 순서 초기화
+- main ==> 팝업 내 swiper 정상 작동 settim
+
+- main ==> parallax swiper 삭제
+
+
 ####	swiper 항목 관련 참조	####
 
 google search - 1200 해상도에서 swiper vertical scroll 기능 제거 -----------------------------------------------

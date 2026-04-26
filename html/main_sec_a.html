@@ -25,49 +25,6 @@ html, body {
   overscroll-behavior: none; /* iOS bounce 방지 */
 }
 
-body.fp-mode {
-  overflow: hidden;
-}
-
-.section {
-  height: 100vh !important;
-}
-
-.footer {
-  height: 440px !important;
-}
-
-/* 내부 스크롤 영역 예시 */
-.scroll-area {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* nav */
-.fp-nav {
-  position: fixed;
-  top: 50%;
-  right: 40px;
-  transform: translateY(-50%);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.fp-nav button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ccc;
-  border: none;
-  cursor: pointer;
-}
-
-.fp-nav button.active {
-  background: #000;
-}
-
 		</style>
 
 </head>
@@ -771,7 +728,9 @@ body.fp-mode {
 				</ul>
 				<!-- //sns link -->
 			</div>
-			<div class="middle"><span class="sr-only">parallax pagination area</span></div>
+			<div class="middle">
+				<span class="sr-only">parallax pagination area</span>
+			</div>
 			<div class="bottom">
 				<button type="button" class="chat"><span class="sr-only">ai 채팅</span><i class="ico-chat"></i></button>
 				<button type="button" class="bookmark open-modal" data-target="modal_bookmark_full"><span class="sr-only">즐겨찾기</span><i class="svg-icon ico-scrap"></i></button>
@@ -798,13 +757,13 @@ body.fp-mode {
 			##############################
 			-->
 			<!-- contents -->
-			<nav class="fp-nav">
-				<button data-index="0" class="active"></button>
-				<button data-index="1"></button>
-				<button data-index="2"></button>
-				<button data-index="3"></button>
-				<button data-index="4"></button>
-				<button data-index="5"></button>
+			<nav class="parallax-nav">
+				<button data-index="0" class="btn active"></button>
+				<button data-index="1" class="btn"></button>
+				<button data-index="2" class="btn"></button>
+				<button data-index="3" class="btn"></button>
+				<button data-index="4" class="btn"></button>
+				<button data-index="5" class="btn"></button>
 			</nav>
 			<!-- section1 -->
 			<section id="section1" class="section">
@@ -2539,6 +2498,14 @@ body.fp-mode {
 																</div>
 															</a>
 														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="item ty8">
+																<div class="txt">
+																	<span>개인정보 노출</span>
+																	<span>등록ㆍ해제</span>
+																</div>
+															</a>
+														</li>
 													</ul>
 												</div>
 												<div class="swiper-indicator">
@@ -2908,15 +2875,28 @@ body.fp-mode {
 		// ㄴ grid slide 가 1개인 경우 indicator hidden 처리
 		function swpControlUI(swiper) {
 
-			const isLocked = swiper.isLocked;
 			// 현재 swiper 기준으로 탐색
 			const container = swiper.el.closest('.my-bookmark-swiper');
 			if (!container) return;
 			const indicator = container.querySelector('.swiper-indicator');
 			if (!indicator) return;
-			
-			indicator.style.display = isLocked ? 'none' : '';
+
+			// 페이지 개수 (grid 포함 정확 계산)
+			const pageCount = swiper.snapGrid.length;
+
+			// 1페이지면 숨김, 2페이지 이상이면 노출
+			indicator.style.display = pageCount <= 1 ? 'none' : '';
+
 		}
+
+		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
+		document.addEventListener('click', function () {
+			setTimeout(() => {
+				document.querySelectorAll('.swiper').forEach(el => {
+					el.swiper?.update();
+				});
+			}, 50); // 1프레임 정도
+		});
 
 		// #section5 안정적인 금융시작
 		const marketSwiper = new Swiper(".main-market-swiper .swiper", {
@@ -3084,7 +3064,7 @@ body.fp-mode {
 			const BREAKPOINT = 1280;
 
 			const sections = document.querySelectorAll('.section');
-			const navBtns = document.querySelectorAll('.fp-nav button');
+			const navBtns = document.querySelectorAll('.parallax-nav .btn');
 			const footer = document.querySelector('.footer');
 
 			const sectionCount = sections.length;
@@ -3192,10 +3172,38 @@ body.fp-mode {
 			const header = document.querySelector('header');
 			const mouseWrap = document.querySelector('.mouseWrap');
 
+
+			// =============================================
+			// section 진입 시 swiper 초기 위치로 복구
+			// =============================================
+			const swipers = document.querySelectorAll('.swiper');
+
+			function resetSwiperInSection(sectionEl) {
+				const swiperEl = sectionEl.querySelector('.swiper');
+				if (!swiperEl || !swiperEl.swiper) return;
+
+				const swiper = swiperEl.swiper;
+
+				// loop 여부 대응
+				if (swiper.params.loop) {
+					swiper.slideToLoop(0, 0);
+				} else {
+					swiper.slideTo(0, 0);
+				}
+			}
+
+			// =============================================
+			// section active 토글 및 header/footer 상태
+			// =============================================
 			function setActiveSection(index) {
 				sections.forEach(sec => sec.classList.remove('active'));
 				if (index < sectionCount) {
-					sections[index].classList.add('active');
+
+					const currentSection = sections[index];
+					currentSection.classList.add('active');
+					
+					// swiper 초기 위치로 복구
+					resetSwiperInSection(currentSection);
 				}
 
 				const isFirst = index === 0;
@@ -3204,7 +3212,7 @@ body.fp-mode {
 				// header
 				header && header.classList.toggle('is-bg', isFirst);
 
-				// header
+				// mouseWrap
 				mouseWrap && mouseWrap.classList.toggle('bg-w', isFirst);
 				// document.body.classList.toggle('is-gnb', index === 0);	
 
@@ -3212,8 +3220,9 @@ body.fp-mode {
 					if (mouseWrap) {
 						mouseWrap.style.display = isFooter ? 'none' : '';
 					}
-
 			}
+
+
 
 			// =========================
 			// wheel

@@ -2912,13 +2912,12 @@ html, body {
 			},
 			breakpoints: {
 				0: {
-					slidesPerView: 1.2,
+					// slidesPerView: 1.2,
 					spaceBetween: 12,
 				},
 				767: {
-					slidesPerView: 'auto',
-					spaceBetween: 48,
-				}
+					spaceBetween: 24,
+				},
 			},
 			on: {
 				slideChange: function () {
@@ -3055,6 +3054,9 @@ html, body {
 			// setSubVisualPadding();
 			setIndexSwiper();
 		});
+
+
+
 
 
 
@@ -3345,13 +3347,44 @@ html, body {
 				isActive = false;
 			}
 
+
+			// =========================
+			// mobile mode - section > .sec-inner active 토글 (IntersectionObserver)
+			// =========================
+			const targets = document.querySelectorAll('.swiper, .section > .sec-inner');
+			let observer = null;
+
+			function initObserver() {
+				if (observer) return;
+
+				observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						entry.target.classList.toggle('active', entry.isIntersecting);
+					});
+				}, {
+					threshold: 0.3, // 40% 이상 보일 때 active 토글
+				});
+
+				targets.forEach(el => observer.observe(el));
+			}
+
+			function destroyObserver() {
+				if (!observer) return;
+
+				targets.forEach(el => observer.unobserve(el));
+				observer.disconnect();
+				observer = null;
+			}
+
 			// =========================
 			// mode
 			// =========================
 			function checkMode() {
 				if (window.innerWidth >= BREAKPOINT) {
+					destroyObserver();
 					initFullpage();
 				} else {
+					initObserver();
 					destroyFullpage();
 				}
 			}

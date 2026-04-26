@@ -3,5 +3,5 @@
 @import "font.css"; /* local path */
 @import "common.css"; /* fss common custom  */
 @import "reset.css"; /* fss design style 적용 */
-@import "main.css"; /* fss main 임시 */
+/* @import "main.css"; */ /* fss main 임시 */
 @import "content.css"; /* fss content custom */

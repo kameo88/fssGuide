@@ -11,65 +11,13 @@
 
 	<link rel="shortcut icon" href="../resources/img/favicon.png">
 	<link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
-	<link href="../resources/css/main.css" type="text/css" rel="stylesheet" />
+	<link href="../resources/css/main_swiper.css" type="text/css" rel="stylesheet" />
 	<!-- <script src="../resources/js/section.js"></script> -->
 	<script src="../resources/js/component/ui-script.js"></script>
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
 
 
 	<title>금융감독원 통합홈페이지</title>
-	<style>
-html, body {
-  margin: 0;
-  height: 100%;
-  overscroll-behavior: none; /* iOS bounce 방지 */
-}
-
-body.fp-mode {
-  overflow: hidden;
-}
-
-.section {
-  height: 100vh !important;
-}
-
-.footer {
-  height: 440px !important;
-}
-
-/* 내부 스크롤 영역 예시 */
-.scroll-area {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* nav */
-.fp-nav {
-  position: fixed;
-  top: 50%;
-  right: 40px;
-  transform: translateY(-50%);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.fp-nav button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ccc;
-  border: none;
-  cursor: pointer;
-}
-
-.fp-nav button.active {
-  background: #000;
-}
-
-		</style>
-
 </head>
 <body>
 	<div id="wrap" class="main">
@@ -798,254 +746,858 @@ body.fp-mode {
 			##############################
 			-->
 			<!-- contents -->
-			<nav class="fp-nav">
-				<button data-index="0" class="active"></button>
-				<button data-index="1"></button>
-				<button data-index="2"></button>
-				<button data-index="3"></button>
-				<button data-index="4"></button>
-				<button data-index="5"></button>
-			</nav>
-			<!-- section1 -->
-			<section id="section1" class="section">
+			<div class="swiper parallax">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
 
-				<!-- main visual -->
-				<div class="main-visual-wrap">
-					<div class="inner">
-
-						<div class="main-vb-swiper">
-							<div class="swiper">
-								<ul class="swiper-wrapper">
-									<li class="swiper-slide">
-										<a href="javascript:void(0);" class="item ty1">
-											<div class="img"></div>
-											<div class="text">
-												<p class="tit">
-													<span>금융소비자</span>
-													<span>보호와</span>
-													<span>국민 재산의 안전</span>
-												</p>
-												<p class="txt">금융소비자의 권익을 보호하고 국민의 재산을 지키는 금융감독을 실현합니다.</p>
+						<!-- section1 -->
+						<section id="section1" class="section">
+			
+							<!-- main visual -->
+							<div class="main-visual-wrap">
+								<div class="inner">
+			
+									<div class="main-vb-swiper">
+										<div class="swiper">
+											<ul class="swiper-wrapper">
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="item ty1">
+														<div class="img"></div>
+														<div class="text">
+															<p class="tit">
+																<span>금융소비자</span>
+																<span>보호와</span>
+																<span>국민 재산의 안전</span>
+															</p>
+															<p class="txt">금융소비자의 권익을 보호하고 국민의 재산을 지키는 금융감독을 실현합니다.</p>
+														</div>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="item ty2">
+														<div class="img"></div>
+														<!-- <div class="text">
+															<p class="tit">
+																<span>금융소비자</span>
+																<span>보호와</span>
+																<span>국민 재산의 안전</span>
+															</p>
+															<p class="txt">금융소비자의 권익을 보호하고 국민의 재산을 지키는 금융감독을 실현합니다.</p>
+														</div> -->
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="swiper-indicator">
+											<!-- fraction 추가 표시 -->
+											<div class="swiper-fraction">
+												<span class="current">1</span>
+												<span class="total">2</span>
+												<div class="swiper-pagination"></div>
 											</div>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="javascript:void(0);" class="item ty2">
-											<div class="img"></div>
-											<!-- <div class="text">
-												<p class="tit">
-													<span>금융소비자</span>
-													<span>보호와</span>
-													<span>국민 재산의 안전</span>
-												</p>
-												<p class="txt">금융소비자의 권익을 보호하고 국민의 재산을 지키는 금융감독을 실현합니다.</p>
+											<!-- //fraction 추가 표시 -->
+											<div class="swiper-controller">
+												<button type="button" class="swiper-button-play">
+													<span class="sr-only">슬라이드 재생</span>
+												</button>
+												<button type="button" class="swiper-button-stop">
+													<span class="sr-only">슬라이드 멈춤</span>
+												</button>
+											</div>
+											<button type="button" class="swiper-button-prev">
+												<span class="sr-only">이전</span>
+											</button>
+											<button type="button" class="swiper-button-next">
+												<span class="sr-only">다음</span>
+											</button>
+										</div>
+									</div>
+									<!-- banner swiper -->
+									<div class="main-bn-swiper">
+										<div class="swiper">
+											<ul class="swiper-wrapper">
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="item ty1">
+														<div class="text">
+															<p class="cate">소비자경보 2026-5호</p>
+															<p class="tit">
+																<span>금 팔고 받은 돈이 보이스피싱 피해금? </span>
+																<span>당신의 계좌가 사기범의 세탁 통로로 </span>
+																<span>이용될 수 있습니다.</span>
+															</p>
+														</div>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="item ty2">
+														<div class="text">
+															<p class="cate">소비자경보 2026-8호</p>
+															<p class="tit">
+																<span>고수익? 원금보장? 그런 건 없다! </span>
+																<span>중동 혼란 틈탄 투자사 기승에 대비, </span>
+																<span>소비자경보 발령</span>
+															</p>
+														</div>
+													</a>
+												</li>
+												<li class="swiper-slide">
+													<a href="javascript:void(0);" class="item ty3">
+														<div class="text">
+															<p class="cate">소비자경보 2026-3호</p>
+															<p class="tit">
+																<span>코스피 및 코스닥 열풍 속 불법 리딩방이 </span>
+																<span>기승을 부리고 있으니 금융소비자께서는 </span>
+																<span>각별히 주의하시기 바랍니다.</span>
+															</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="swiper-indicator">
+											<div class="swiper-pagination"></div>
+											<div class="swiper-controller">
+												<button type="button" class="swiper-button-play">
+													<span class="sr-only">슬라이드 재생</span>
+												</button>
+												<button type="button" class="swiper-button-stop">
+													<span class="sr-only">슬라이드 멈춤</span>
+												</button>
+											</div>
+											<button type="button" class="swiper-button-prev">
+												<span class="sr-only">이전</span>
+											</button>
+											<button type="button" class="swiper-button-next">
+												<span class="sr-only">다음</span>
+											</button>
+											<!-- <div class="swiper-navigation">
 											</div> -->
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="swiper-indicator">
-								<!-- fraction 추가 표시 -->
-								<div class="swiper-fraction">
-									<span class="current">1</span>
-									<span class="total">2</span>
-									<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<!-- //banner swiper -->
+			
 								</div>
-								<!-- //fraction 추가 표시 -->
-								<div class="swiper-controller">
-									<button type="button" class="swiper-button-play">
-										<span class="sr-only">슬라이드 재생</span>
-									</button>
-									<button type="button" class="swiper-button-stop">
-										<span class="sr-only">슬라이드 멈춤</span>
-									</button>
-								</div>
-								<button type="button" class="swiper-button-prev">
-									<span class="sr-only">이전</span>
-								</button>
-								<button type="button" class="swiper-button-next">
-									<span class="sr-only">다음</span>
-								</button>
 							</div>
-						</div>
-						<!-- banner swiper -->
-						<div class="main-bn-swiper">
-							<div class="swiper">
-								<ul class="swiper-wrapper">
-									<li class="swiper-slide">
-										<a href="javascript:void(0);" class="item ty1">
-											<div class="text">
-												<p class="cate">소비자경보 2026-5호</p>
-												<p class="tit">
-													<span>금 팔고 받은 돈이 보이스피싱 피해금? </span>
-													<span>당신의 계좌가 사기범의 세탁 통로로 </span>
-													<span>이용될 수 있습니다.</span>
-												</p>
-											</div>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="javascript:void(0);" class="item ty2">
-											<div class="text">
-												<p class="cate">소비자경보 2026-8호</p>
-												<p class="tit">
-													<span>고수익? 원금보장? 그런 건 없다! </span>
-													<span>중동 혼란 틈탄 투자사 기승에 대비, </span>
-													<span>소비자경보 발령</span>
-												</p>
-											</div>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="javascript:void(0);" class="item ty3">
-											<div class="text">
-												<p class="cate">소비자경보 2026-3호</p>
-												<p class="tit">
-													<span>코스피 및 코스닥 열풍 속 불법 리딩방이 </span>
-													<span>기승을 부리고 있으니 금융소비자께서는 </span>
-													<span>각별히 주의하시기 바랍니다.</span>
-												</p>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="swiper-indicator">
-								<div class="swiper-pagination"></div>
-								<div class="swiper-controller">
-									<button type="button" class="swiper-button-play">
-										<span class="sr-only">슬라이드 재생</span>
-									</button>
-									<button type="button" class="swiper-button-stop">
-										<span class="sr-only">슬라이드 멈춤</span>
-									</button>
-								</div>
-								<button type="button" class="swiper-button-prev">
-									<span class="sr-only">이전</span>
-								</button>
-								<button type="button" class="swiper-button-next">
-									<span class="sr-only">다음</span>
-								</button>
-								<!-- <div class="swiper-navigation">
-								</div> -->
-							</div>
-						</div>
-						<!-- //banner swiper -->
+							<!-- //main visual -->
+			
+						</section>
 
 					</div>
-				</div>
-				<!-- //main visual -->
+					<div class="swiper-slide">
 
-			</section>
+						<!-- section2 -->
+						<section id="section2" class="section">
+							<div class="sec-inner">
 
-			<!-- section2 -->
-			<section id="section2" class="section">
-				<div class="sec-inner">
+								<div class="main-tit-wrap on">
+									<h2 class="tit">
+										<span>공정하고 투명한</span>
+										<span>금융질서 확립</span>
+									</h2>
+									<p class="desc">
+										<span>건전한 신용질서와 공정한 금융거래</span>
+										<span>환경을 조성합니다.</span>
+									</p>
+								</div>
+								<!-- 도형 animation -->
+								<div class="vector-ani">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
 
-					<div class="main-tit-wrap on">
-						<h2 class="tit">
-							<span>공정하고 투명한</span>
-							<span>금융질서 확립</span>
-						</h2>
-						<p class="desc">
-							<span>건전한 신용질서와 공정한 금융거래</span>
-							<span>환경을 조성합니다.</span>
-						</p>
+								<!-- tab area -->
+								<div class="krds-tab-area layer news">
+									<!-- tab list -->
+									<div class="tab line">
+										<ul role="tablist">
+											<li id="tab_news_01" role="tab" aria-selected="true" aria-controls="panel_news_01" class="active">
+												<button type="button" class="btn-tab">보도자료 <i class="sr-only created"> 선택됨</i></button>
+											</li>
+											<li id="tab_news_02" role="tab" aria-selected="false" aria-controls="panel_news_02">
+												<button type="button" class="btn-tab">행사일정</button>
+											</li>
+											<li id="tab_news_03" role="tab" aria-selected="false" aria-controls="panel_news_02">
+												<button type="button" class="btn-tab">금융시장동향</button>
+											</li>
+											<li id="tab_news_04" role="tab" aria-selected="false" aria-controls="panel_news_02">
+												<button type="button" class="btn-tab">새소식</button>
+											</li>
+											<li id="tab_news_05" role="tab" aria-selected="false" aria-controls="panel_news_02">
+												<button type="button" class="btn-tab">공지사항</button>
+											</li>
+										</ul>
+									</div>
+									<!-- //tab list -->
+									
+									<!-- tab contents -->
+									<div class="tab-conts-wrap">
+										<section id="panel_news_01" aria-labelledby="tab_news_01" class="tab-conts active" data-quick-nav="false">
+											<h3 class="sr-only">보도자료</h3>
+
+											<!-- 보도자료 swiper -->
+											<div class="main-news-swiper">
+												<div class="swiper">
+													<ul class="swiper-wrapper">
+														<li class="swiper-slide" style="--i:1">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">신용감독국/은행리스크감독국</span>
+																<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																<div class="date"><span>26-03-09</span></div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:2">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">기업공시국</span>
+																<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																<div class="date">26-03-09</div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:3">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">연금감독실</span>
+																<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
+																<div class="date">26-03-09</div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:4">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">자본시장감독국</span>
+																<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
+																<div class="date">26-03-09</div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:5">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">민생침해대응총괄국</span>
+																<div class="tit">앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
+																<div class="date">26-03-09</div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:6">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">자본시장감독국</span>
+																<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
+																<div class="date">26-03-04</div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:7">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">신용감독국/은행리스크감독국</span>
+																<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																<div class="date"><span>26-03-03</span></div>
+															</a>
+														</li>
+														<li class="swiper-slide" style="--i:8">
+															<a href="javascript:void(0);" class="card-wrap">
+																<span class="label">기업공시국</span>
+																<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																<div class="date">26-03-02</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="swiper-indicator">
+													<button type="button" class="swiper-button-prev">
+														<span class="sr-only">이전</span>
+													</button>
+													<div class="swiper-pagination"></div>
+													<button type="button" class="swiper-button-next">
+														<span class="sr-only">다음</span>
+													</button>
+													<a href="javascript:void(0);" class="swiper-button-more">
+														<span class="sr-only">더 보기</span>
+													</a>
+												</div>
+											</div>
+											<!-- //보도자료 swiper -->
+
+										</section>
+										<section id="panel_news_02" aria-labelledby="tab_news_02" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">행사일정</h3>
+
+											<div class="schedule-wrap">
+												<div class="daily-report">
+													<div class="date">2026.<em>03</em></div>
+													<div class="txt">총 <strong>8</strong>의 일정이 등록되어 있습니다.</div>
+													<div class="btn-area">
+														<button class="krds-btn">오늘일정확인<i class="svg-icon ico-angle right"></i></button>
+													</div>
+												</div>
+												<!-- 행사일정 swiper -->
+												<div class="main-schedule-swiper">
+													<div class="swiper">
+														<ul class="swiper-wrapper">
+															<li class="swiper-slide" style="--i:1">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.04<em class="day">(수)</em></strong></div>
+																	<ul class="list">
+																		<li><span class="time">09:00</span><span class="txt">제4차 금융위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide" style="--i:2">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
+																	<ul class="list">
+																		<li><em class="time">09:00</em><span class="txt">제4차 금융위원회</span></li>
+																		<li><em class="time">09:00</em><span class="txt">제4차 제제심의위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide"	style="--i:3">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.11<em class="day">(수)</em></strong></div>
+																	<ul class="list">
+																		<li><em class="time">09:00</em><span class="txt">제5차 증권선물위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide" style="--i:4">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.18<em class="day">(수)</em></strong></div>
+																	<ul class="list">
+																		<li><em class="time">09:00</em><span class="txt">제4차 자본시장조사 심의위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide"	style="--i:5">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.19<em class="day">(목)</em></strong></div>
+																	<ul class="list">
+																		<li><span class="time">09:00</span><span class="txt">제4차 금융위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide"	style="--i:6">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.20<em class="day">(금)</em></strong></div>
+																	<ul class="list">
+																		<li><em class="time">09:00</em><span class="txt">제4차 금융위원회</span></li>
+																		<li><em class="time">09:00</em><span class="txt">제4차 제제심의위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide" style="--i:7">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
+																	<ul class="list">
+																		<li><em class="time">09:00</em><span class="txt">제5차 증권선물위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+															<li class="swiper-slide" style="--i:8">
+																<a href="javascript:void(0);" class="card-wrap">
+																	<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
+																	<ul class="list">
+																		<li><em class="time">09:00</em><span class="txt">제4차 자본시장조사 심의위원회</span></li>
+																	</ul>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="swiper-indicator">
+														<button type="button" class="swiper-button-prev">
+															<span class="sr-only">이전</span>
+														</button>
+														<div class="swiper-pagination"></div>
+														<button type="button" class="swiper-button-next">
+															<span class="sr-only">다음</span>
+														</button>
+														<a href="javascript:void(0);" class="swiper-button-more">
+															<span class="sr-only">더 보기</span>
+														</a>
+													</div>
+												</div>
+												<!-- //행사일정 swiper -->
+											</div>
+
+										</section>
+										<section id="panel_news_03" aria-labelledby="tab_news_03" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">금융시장동향</h3>
+											금융시장동향
+										</section>
+										<section id="panel_news_04" aria-labelledby="tab_news_04" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">새소식</h3>
+											새소식
+										</section>
+										<section id="panel_news_05" aria-labelledby="tab_news_05" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">공지사항</h3>
+											공지사항
+										</section>
+									</div>
+									<!-- //tab contents -->
+								</div>
+								<!-- //tab area -->
+
+							</div>
+						</section>
+
 					</div>
-					<!-- 도형 animation -->
-					<div class="vector-ani">
-						<span></span>
-						<span></span>
-						<span></span>
+					<div class="swiper-slide">
+
+						<!-- section3 -->
+						<section id="section3" class="section">
+							<div class="sec-inner">
+
+								<div class="conts-wrap">
+									<!-- search area -->
+									<div class="search-area">
+										<div class="main-tit-wrap on">
+											<h2 class="tit">
+												<span>윤리와 책임을</span>
+												<span>기반으로 한 금융감독</span>
+											</h2>
+											<p class="desc">
+												<span>높은 윤리의식과 공정성을 바탕으로</span>
+												<span>신뢰받는 금융감독을 수행합니다.</span>
+											</p>
+										</div>
+										<!-- search form -->
+										<div class="sch-form-wrap vert">
+											<div class="sch-input">
+												<input type="text" class="krds-input xlarge" id="search-total-input-id" placeholder="무엇을 도와드릴까요?">
+												<button type="button" class="krds-btn icon xlarge ico-search">
+													<span class="sr-only">검색</span>
+													<i class="svg-icon ico-sch"></i>
+												</button>
+											</div>
+										</div>
+										<!-- //search form -->
+										<!-- hashtag -->
+										<div class="krds-tag-wrap">
+											<a href="javascript:void(0);" class="krds-btn-tag">계좌통합조회</a>
+											<a href="javascript:void(0);" class="krds-btn-tag">사기이용계좌</a>
+											<a href="javascript:void(0);" class="krds-btn-tag">상속인금융거래조회서</a>
+											<a href="javascript:void(0);" class="krds-btn-tag">증권</a>
+											<a href="javascript:void(0);" class="krds-btn-tag">개인정보보호</a>
+											<a href="javascript:void(0);" class="krds-btn-tag">보험업무감독규정</a>
+											<a href="javascript:void(0);" class="krds-btn-tag">금융주소</a>
+										</div>
+										<!-- //hashtag -->
+									</div>
+									<!-- //search area -->
+
+									<!-- sevice area -->
+									<div class="service-area">
+										<!-- for PC : 서비스 목록 -->
+										<div class="service-list">
+											<div class="lt">
+												<div class="item ty1">
+													<div class="tit">민원 &middot; 상담 &middot; 조회</div>
+													<div class="icon"></div>
+													<ul class="dir-list">
+														<li><a href="javascript:void(0);" class="link">민원신청ㆍ처리결과조회</a></li>
+														<li><a href="javascript:void(0);" class="link">Q&A 신청</a></li>
+														<li><a href="javascript:void(0);" class="link">상속인 조회</a></li>
+														<li><a href="javascript:void(0);" class="link">금융자문서비스 안내</a></li>
+													</ul>
+												</div>
+												<div class="item ty2">
+													<div class="tit">보이스피싱 지킴이</div>
+													<div class="icon"></div>
+													<ul class="dir-list">
+														<li><a href="javascript:void(0);" class="link">피싱사기 정의</a></li>
+														<li><a href="javascript:void(0);" class="link">피해사례</a></li>
+														<li><a href="javascript:void(0);" class="link">피해예방 우수사례</a></li>
+														<li><a href="javascript:void(0);" class="link">예방요령</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="rt">
+												<div class="item ty3">
+													<div class="tit">금융생활 길라잡이</div>
+													<div class="icon"></div>
+													<ul class="dir-list">
+														<li><a href="javascript:void(0);" class="link">금융 FAQ</a></li>
+														<li><a href="javascript:void(0);" class="link">금융생활안내</a></li>
+														<li><a href="javascript:void(0);" class="link">소비자경보</a></li>
+													</ul>
+												</div>
+												<div class="item ty4">
+													<div class="tit">보험사기 신고</div>
+													<div class="icon"></div>
+													<ul class="dir-list">
+														<li><a href="javascript:void(0);" class="link">보험사기란?</a></li>
+														<li><a href="javascript:void(0);" class="link">보험사기 예방 및 소비자 정보</a></li>
+														<li><a href="javascript:void(0);" class="link">신고하기</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- //for PC : 서비스 목록 -->
+										<!-- Swiper for Mobile : 서비스 목록-->
+										 <div class="main-service-swiper">
+											<div class="swiper">
+												<ul class="swiper-wrapper">
+													<li class="swiper-slide">
+
+														<div class="item ty1">
+															<div class="tit">민원 &middot; 상담 &middot; 조회</div>
+															<div class="icon"></div>
+															<ul class="dir-list">
+																<li><a href="javascript:void(0);" class="link">민원신청ㆍ처리결과조회</a></li>
+																<li><a href="javascript:void(0);" class="link">Q&A 신청</a></li>
+																<li><a href="javascript:void(0);" class="link">상속인 조회</a></li>
+																<li><a href="javascript:void(0);" class="link">금융자문서비스 안내</a></li>
+															</ul>
+														</div>
+
+													</li>
+													<li class="swiper-slide">
+
+														<div class="item ty2">
+															<div class="tit">보이스피싱 지킴이</div>
+															<div class="icon"></div>
+															<ul class="dir-list">
+																<li><a href="javascript:void(0);" class="link">피싱사기 정의</a></li>
+																<li><a href="javascript:void(0);" class="link">피해사례</a></li>
+																<li><a href="javascript:void(0);" class="link">피해예방 우수사례</a></li>
+																<li><a href="javascript:void(0);" class="link">예방요령</a></li>
+															</ul>
+														</div>
+
+													</li>
+													<li class="swiper-slide">
+
+														<div class="item ty3">
+															<div class="tit">금융생활 길라잡이</div>
+															<div class="icon"></div>
+															<ul class="dir-list">
+																<li><a href="javascript:void(0);" class="link">금융 FAQ</a></li>
+																<li><a href="javascript:void(0);" class="link">금융생활안내</a></li>
+																<li><a href="javascript:void(0);" class="link">소비자경보</a></li>
+															</ul>
+														</div>
+
+													</li>
+													<li class="swiper-slide">
+
+														<div class="item ty4">
+															<div class="tit">보험사기 신고</div>
+															<div class="icon"></div>
+															<ul class="dir-list">
+																<li><a href="javascript:void(0);" class="link">보험사기란?</a></li>
+																<li><a href="javascript:void(0);" class="link">보험사기 예방 및 소비자 정보</a></li>
+																<li><a href="javascript:void(0);" class="link">신고하기</a></li>
+															</ul>
+														</div>
+
+													</li>
+												</ul>
+												<div class="swiper-indicator">
+													<button type="button" class="swiper-button-prev">
+														<span class="sr-only">이전</span>
+													</button>
+													<div class="swiper-pagination"></div>
+													<button type="button" class="swiper-button-next">
+														<span class="sr-only">다음</span>
+													</button>
+												</div>
+											</div>
+										 </div>
+										<!-- //Swiper for Mobile : 서비스 목록 -->
+
+									</div>
+									<!-- //servcice area -->
+<script>
+
+	const itemsService = document.querySelectorAll('.service-list .item');
+
+	itemsService.forEach(item => {
+		item.addEventListener('mouseenter', () => {
+			// 모든 item에서 on 제거
+			itemsService.forEach(el => el.classList.remove('on'));
+			// 현재 item만 on 추가
+			item.classList.add('on');
+		});
+
+		item.addEventListener('mouseleave', () => {
+			// 마우스 아웃 시 on 클래스 삭제
+			item.classList.remove('on');
+		});
+	});
+
+</script>
+
+								</div>
+
+							</div>
+						</section>
+
 					</div>
+					<div class="swiper-slide">
 
-					<!-- tab area -->
-					<div class="krds-tab-area layer news">
-						<!-- tab list -->
-						<div class="tab line">
-							<ul role="tablist">
-								<li id="tab_news_01" role="tab" aria-selected="true" aria-controls="panel_news_01" class="active">
-									<button type="button" class="btn-tab">보도자료 <i class="sr-only created"> 선택됨</i></button>
-								</li>
-								<li id="tab_news_02" role="tab" aria-selected="false" aria-controls="panel_news_02">
-									<button type="button" class="btn-tab">행사일정</button>
-								</li>
-								<li id="tab_news_03" role="tab" aria-selected="false" aria-controls="panel_news_02">
-									<button type="button" class="btn-tab">금융시장동향</button>
-								</li>
-								<li id="tab_news_04" role="tab" aria-selected="false" aria-controls="panel_news_02">
-									<button type="button" class="btn-tab">새소식</button>
-								</li>
-								<li id="tab_news_05" role="tab" aria-selected="false" aria-controls="panel_news_02">
-									<button type="button" class="btn-tab">공지사항</button>
-								</li>
-							</ul>
-						</div>
-						<!-- //tab list -->
-						
-						<!-- tab contents -->
-						<div class="tab-conts-wrap">
-							<section id="panel_news_01" aria-labelledby="tab_news_01" class="tab-conts active" data-quick-nav="false">
-								<h3 class="sr-only">보도자료</h3>
+						<!-- section4 -->
+						<section id="section4" class="section">
+							<div class="sec-inner">
 
-								<!-- 보도자료 swiper -->
-								<div class="main-news-swiper">
+								<div class="main-tit-wrap on">
+									<h2 class="tit">
+										<span>당신에게 꼭 필요한</span>
+										<span>금융의 시작</span>
+									</h2>
+									<p class="desc">
+										<span>나에게 꼭 필요한 메뉴만 모아,</span>
+										<span>쉽고 빠르게 이용해 보세요.</span>
+									</p>
+								</div>
+
+								<!-- tab area -->
+								<div class="krds-tab-area layer my">
+									<!-- tab list -->
+									<div class="tab line">
+										<ul role="tablist">
+											<li id="tab_mynews_01" role="tab" aria-selected="true" aria-controls="panel_mynews_01" class="active">
+												<button type="button" class="btn-tab">즐겨찾는메뉴 <i class="sr-only created"> 선택됨</i></button>
+											</li>
+											<li id="tab_mynews_02" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
+												<button type="button" class="btn-tab">민원인</button>
+											</li>
+											<li id="tab_mynews_03" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
+												<button type="button" class="btn-tab">금융인</button>
+											</li>
+											<li id="tab_mynews_04" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
+												<button type="button" class="btn-tab">학생</button>
+											</li>
+											<li id="tab_mynews_05" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
+												<button type="button" class="btn-tab">일반인</button>
+											</li>
+											<li id="tab_mynews_06" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
+												<button type="button" class="btn-tab">나의메뉴</button>
+											</li>
+										</ul>
+									</div>
+									<!-- //tab list -->
+									
+									<!-- tab contents -->
+									<div class="tab-conts-wrap">
+										<section id="panel_mynews_01" aria-labelledby="tab_mynews_01" class="tab-conts active" data-quick-nav="false">
+											<h3 class="sr-only">즐겨찾는메뉴</h3>
+
+											<div class="bookmark-wrap">
+												<div class="btn-area">
+													<button type="button" class="krds-btn secondary medium"><i class="svg-icon ico-setting"></i>메뉴설정</button>
+												</div>
+	
+												<!-- favorite swiper -->
+												<div class="my-bookmark-swiper">
+													<div class="swiper">
+														<ul class="swiper-wrapper">
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty1">
+																	<div class="txt">
+																		<span>금융상품</span>
+																		<span>통합 비교공시</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty2">
+																	<div class="txt">
+																		<span>업무자료</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty3">
+																	<div class="txt">
+																		<span>내게 맞는</span>
+																		<span>서민금융제도 안내</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty4">
+																	<div class="txt">
+																		<span>제도권</span>
+																		<span>금융회사 조회</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty5">
+																	<div class="txt">
+																		<span>보이스피싱</span>
+																		<span>피해금 환급절차 안내</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty6">
+																	<div class="txt">
+																		<span>상속인</span>
+																		<span>금융거래 조회</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty7">
+																	<div class="txt">
+																		<span>금융꿀팁</span>
+																	</div>
+																</a>
+															</li>
+															<li class="swiper-slide">
+																<a href="javascript:void(0);" class="item ty8">
+																	<div class="txt">
+																		<span>개인정보 노출</span>
+																		<span>등록ㆍ해제</span>
+																	</div>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="swiper-indicator">
+														<button type="button" class="swiper-button-prev">
+															<span class="sr-only">이전</span>
+														</button>
+														<div class="swiper-pagination"></div>
+														<button type="button" class="swiper-button-next">
+															<span class="sr-only">다음</span>
+														</button>
+													</div>
+												</div>
+												<!-- //favorite swiper -->
+											</div>
+
+										</section>
+										<section id="panel_mynews_02" aria-labelledby="tab_mynews_02" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">민원인</h3>
+											민원인
+										</section>
+										<section id="panel_mynews_03" aria-labelledby="tab_mynews_03" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">금융인</h3>
+											금융인
+										</section>
+										<section id="panel_mynews_04" aria-labelledby="tab_mynews_04" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">학생</h3>
+											학생
+										</section>
+										<section id="panel_mynews_05" aria-labelledby="tab_mynews_05" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">일반인</h3>
+											일반인
+										</section>
+										<section id="panel_mynews_06" aria-labelledby="tab_mynews_06" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">나의메뉴</h3>
+											나의메뉴
+										</section>
+									</div>
+									<!-- //tab contents -->
+								</div>
+								<!-- //tab area -->
+
+							</div>
+						</section>
+
+					</div>
+					<div class="swiper-slide">
+
+						<!-- section5 -->
+						<section id="section5" class="section">
+							<div class="sec-inner">
+
+								<div class="main-tit-wrap on">
+									<h2 class="tit">
+										<span>안정적인 금융시장과</span>
+										<span>신속한 대응</span>
+									</h2>
+									<p class="desc">
+										<span>금융시장 변화를 면밀히 분석,</span>
+										<span>신속하고 엄정하게 대응합니다.</span>
+									</p>
+								</div>
+
+								<!-- 안정적인 금융시장 swiper -->
+								<div class="main-market-swiper">
 									<div class="swiper">
 										<ul class="swiper-wrapper">
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:1">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">신용감독국/은행리스크감독국</span>
-													<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-													<div class="date"><span>26-03-09</span></div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_01.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+														<div class="date"><span>26-03-09</span></div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:2">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">기업공시국</span>
-													<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-													<div class="date">26-03-09</div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_22.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+														<div class="date">26-03-09</div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:3">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">연금감독실</span>
-													<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
-													<div class="date">26-03-09</div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_04.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
+														<div class="date">26-03-09</div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:4">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">자본시장감독국</span>
-													<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
-													<div class="date">26-03-09</div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_03.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
+														<div class="date">26-03-09</div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide"	style="--i:5">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">민생침해대응총괄국</span>
-													<div class="tit">앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
-													<div class="date">26-03-09</div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_05.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
+														<div class="date">26-03-09</div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:6">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">자본시장감독국</span>
-													<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
-													<div class="date">26-03-04</div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_01.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
+														<div class="date">26-03-04</div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:7">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">신용감독국/은행리스크감독국</span>
-													<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-													<div class="date"><span>26-03-03</span></div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_22.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+														<div class="date"><span>26-03-03</span></div>
+													</div>
 												</a>
 											</li>
-											<li class="swiper-slide">
+											<li class="swiper-slide" style="--i:8">
 												<a href="javascript:void(0);" class="card-wrap">
-													<span class="label">기업공시국</span>
-													<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-													<div class="date">26-03-02</div>
+													<div class="img">
+														<img src="../resources/img/main/img_market_03.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+														<div class="date">26-03-02</div>
+													</div>
 												</a>
 											</li>
 										</ul>
@@ -1063,903 +1615,335 @@ body.fp-mode {
 										</a>
 									</div>
 								</div>
-								<!-- //보도자료 swiper -->
+								<!-- //안정적인 금융시장 swiper -->
 
-							</section>
-							<section id="panel_news_02" aria-labelledby="tab_news_02" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">행사일정</h3>
-
-								<div class="schedule-wrap">
-									<div class="daily-report">
-										<div class="date">2026.<em>03</em></div>
-										<div class="txt">총 <strong>8</strong>의 일정이 등록되어 있습니다.</div>
-										<div class="btn-area">
-											<button class="krds-btn">오늘일정확인<i class="svg-icon ico-angle right"></i></button>
-										</div>
-									</div>
-									<!-- 행사일정 swiper -->
-									<div class="main-schedule-swiper">
-										<div class="swiper">
-											<ul class="swiper-wrapper">
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.04<em class="day">(수)</em></strong></div>
-														<ul class="list">
-															<li><span class="time">09:00</span><span class="txt">제4차 금융위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
-														<ul class="list">
-															<li><em class="time">09:00</em><span class="txt">제4차 금융위원회</span></li>
-															<li><em class="time">09:00</em><span class="txt">제4차 제제심의위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.11<em class="day">(수)</em></strong></div>
-														<ul class="list">
-															<li><em class="time">09:00</em><span class="txt">제5차 증권선물위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.18<em class="day">(수)</em></strong></div>
-														<ul class="list">
-															<li><em class="time">09:00</em><span class="txt">제4차 자본시장조사 심의위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.19<em class="day">(목)</em></strong></div>
-														<ul class="list">
-															<li><span class="time">09:00</span><span class="txt">제4차 금융위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.20<em class="day">(금)</em></strong></div>
-														<ul class="list">
-															<li><em class="time">09:00</em><span class="txt">제4차 금융위원회</span></li>
-															<li><em class="time">09:00</em><span class="txt">제4차 제제심의위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
-														<ul class="list">
-															<li><em class="time">09:00</em><span class="txt">제5차 증권선물위원회</span></li>
-														</ul>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="card-wrap">
-														<div class="time-area"><strong class="date">03.05<em class="day">(목)</em></strong></div>
-														<ul class="list">
-															<li><em class="time">09:00</em><span class="txt">제4차 자본시장조사 심의위원회</span></li>
-														</ul>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="swiper-indicator">
-											<button type="button" class="swiper-button-prev">
-												<span class="sr-only">이전</span>
-											</button>
-											<div class="swiper-pagination"></div>
-											<button type="button" class="swiper-button-next">
-												<span class="sr-only">다음</span>
-											</button>
-											<a href="javascript:void(0);" class="swiper-button-more">
-												<span class="sr-only">더 보기</span>
-											</a>
-										</div>
-									</div>
-									<!-- //행사일정 swiper -->
-								</div>
-
-							</section>
-							<section id="panel_news_03" aria-labelledby="tab_news_03" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">금융시장동향</h3>
-								금융시장동향
-							</section>
-							<section id="panel_news_04" aria-labelledby="tab_news_04" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">새소식</h3>
-								새소식
-							</section>
-							<section id="panel_news_05" aria-labelledby="tab_news_05" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">공지사항</h3>
-								공지사항
-							</section>
-						</div>
-						<!-- //tab contents -->
-					</div>
-					<!-- //tab area -->
-
-				</div>
-			</section>
-
-			<!-- section3 -->
-			<section id="section3" class="section">
-				<div class="sec-inner">
-
-					<div class="conts-wrap">
-						<!-- search area -->
-						<div class="search-area">
-							<div class="main-tit-wrap on">
-								<h2 class="tit">
-									<span>윤리와 책임을</span>
-									<span>기반으로 한 금융감독</span>
-								</h2>
-								<p class="desc">
-									<span>높은 윤리의식과 공정성을 바탕으로</span>
-									<span>신뢰받는 금융감독을 수행합니다.</span>
-								</p>
 							</div>
-							<!-- search form -->
-							<div class="sch-form-wrap vert">
-								<div class="sch-input">
-									<input type="text" class="krds-input xlarge" id="search-total-input-id" placeholder="무엇을 도와드릴까요?">
-									<button type="button" class="krds-btn icon xlarge ico-search">
-										<span class="sr-only">검색</span>
-										<i class="svg-icon ico-sch"></i>
-									</button>
+						</section>
+
+					</div>
+					<div class="swiper-slide">
+
+						<!-- section6 -->
+						<section id="section6" class="section">
+							<div class="sec-inner">
+
+								<div class="main-tit-wrap on">
+									<h2 class="tit"><span>금융감독원 미디어센터</span></h2>
+									<p class="desc">
+										<span>믿을 수 있는 금융 파트너,</span>
+										<span>금융감독원이 더 가까이 다가갑니다.</span>
+									</p>
 								</div>
+
+								<!-- tab area -->
+								<div class="krds-tab-area layer media">
+									<!-- tab list -->
+									<div class="tab line">
+										<ul role="tablist">
+											<li id="tab_media_01" role="tab" aria-selected="true" aria-controls="panel_media_01" class="active">
+												<button type="button" class="btn-tab"><span class="sr-only">유튜브</span><i class="svg-icon ico-tab-youtube"></i><i class="sr-only created"> 선택됨</i></button>
+											</li>
+											<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_02">
+												<button type="button" class="btn-tab"><span class="sr-only">블로그</span><i class="svg-icon ico-tab-blog"></i></button>
+											</li>
+											<li id="tab_media_03" role="tab" aria-selected="false" aria-controls="panel_media_01">
+												<button type="button" class="btn-tab"><span class="sr-only">페이스북</span><i class="svg-icon ico-tab-facebook"></i></button>
+											</li>
+											<li id="tab_media_04" role="tab" aria-selected="false" aria-controls="panel_media_01">
+												<button type="button" class="btn-tab"><span class="sr-only">인스타그램</span><i class="svg-icon ico-tab-insta"></i></button>
+											</li>
+										</ul>
+									</div>
+									<!-- //tab list -->
+									
+									<!-- tab contents -->
+									<div class="tab-conts-wrap">
+										<section id="panel_media_01" aria-labelledby="tab_media_01" class="tab-conts active" data-quick-nav="false">
+											<h3 class="sr-only">유튜브</h3>
+
+											<!-- 유튜브 미디어센터 swiper -->
+											<div class="main-ytube-swiper">
+												<div class="swiper">
+													<ul class="swiper-wrapper">
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_media_02.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">1.자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_media_01.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">2. 금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																	<div class="date"><span>26-03-09</span></div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_media_03.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">3.2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_media_01.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">4.디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_media_02.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">5.앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_media_03.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">6.해외 사모대출펀드 관련 증권사 간담회 개최</div>
+																	<div class="date">26-03-04</div>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="swiper-indicator">
+													<div class="swiper-pagination"></div>
+													<div class="swiper-controller">
+														<button type="button" class="swiper-button-prev">
+															<span class="sr-only">이전</span>
+														</button>
+														<button type="button" class="swiper-button-next">
+															<span class="sr-only">다음</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<!-- //유튜브 미디어센터 swiper -->
+
+										</section>
+										<section id="panel_media_02" aria-labelledby="tab_media_02" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">블로그</h3>
+
+											<!-- 블로그 미디어센터 swiper -->
+											<div class="main-blog-swiper">
+												<div class="swiper">
+													<ul class="swiper-wrapper">
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_01.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																	<div class="date"><span>26-03-09</span></div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_02.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_03.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_04.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_05.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
+																	<div class="date">26-03-09</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_01.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
+																	<div class="date">26-03-04</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_02.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																	<div class="date"><span>26-03-03</span></div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_03.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																	<div class="date">26-03-02</div>
+																</div>
+															</a>
+														</li>
+														<!-- <li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_01.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
+																	<div class="date">26-03-04</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_02.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																	<div class="date"><span>26-03-03</span></div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_03.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																	<div class="date">26-03-02</div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_02.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+																	<div class="date"><span>26-03-03</span></div>
+																</div>
+															</a>
+														</li>
+														<li class="swiper-slide">
+															<a href="javascript:void(0);" class="card-wrap">
+																<div class="img">
+																	<img src="../resources/img/main/img_sns_03.png" alt="" />
+																</div>
+																<div class="text">
+																	<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
+																	<div class="date">26-03-02</div>
+																</div>
+															</a>
+														</li> -->
+													</ul>
+												</div>
+												<div class="swiper-indicator">
+													<div class="swiper-pagination"></div>
+													<div class="swiper-controller">
+														<button type="button" class="swiper-button-prev">
+															<span class="sr-only">이전</span>
+														</button>
+														<button type="button" class="swiper-button-next">
+															<span class="sr-only">다음</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<!-- //블로그 미디어센터 swiper -->
+
+
+										</section>
+										<section id="panel_media_03" aria-labelledby="tab_media_03" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">페이스북</h3>
+											페이스북
+										</section>
+										<section id="panel_media_04" aria-labelledby="tab_media_04" class="tab-conts" data-quick-nav="false">
+											<h3 class="sr-only">인스타그램</h3>
+											인스타그램
+										</section>
+									</div>
+									<!-- //tab contents -->
+								</div>
+								<!-- //tab area -->
+
 							</div>
-							<!-- //search form -->
-							<!-- hashtag -->
-							<div class="krds-tag-wrap">
-								<a href="javascript:void(0);" class="krds-btn-tag">계좌통합조회</a>
-								<a href="javascript:void(0);" class="krds-btn-tag">사기이용계좌</a>
-								<a href="javascript:void(0);" class="krds-btn-tag">상속인금융거래조회서</a>
-								<a href="javascript:void(0);" class="krds-btn-tag">증권</a>
-								<a href="javascript:void(0);" class="krds-btn-tag">개인정보보호</a>
-								<a href="javascript:void(0);" class="krds-btn-tag">보험업무감독규정</a>
-								<a href="javascript:void(0);" class="krds-btn-tag">금융주소</a>
-							</div>
-							<!-- //hashtag -->
-						</div>
-						<!-- //search area -->
+						</section>
 
-						<!-- sevice area -->
-						<div class="service-area">
-							<!-- for PC : 서비스 목록 -->
-							<div class="service-list">
-								<div class="lt">
-									<div class="item ty1">
-										<div class="tit">민원 &middot; 상담 &middot; 조회</div>
-										<div class="icon"></div>
-										<ul class="dir-list">
-											<li><a href="javascript:void(0);" class="link">민원신청ㆍ처리결과조회</a></li>
-											<li><a href="javascript:void(0);" class="link">Q&A 신청</a></li>
-											<li><a href="javascript:void(0);" class="link">상속인 조회</a></li>
-											<li><a href="javascript:void(0);" class="link">금융자문서비스 안내</a></li>
-										</ul>
-									</div>
-									<div class="item ty2">
-										<div class="tit">보이스피싱 지킴이</div>
-										<div class="icon"></div>
-										<ul class="dir-list">
-											<li><a href="javascript:void(0);" class="link">피싱사기 정의</a></li>
-											<li><a href="javascript:void(0);" class="link">피해사례</a></li>
-											<li><a href="javascript:void(0);" class="link">피해예방 우수사례</a></li>
-											<li><a href="javascript:void(0);" class="link">예방요령</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="rt">
-									<div class="item ty3">
-										<div class="tit">금융생활 길라잡이</div>
-										<div class="icon"></div>
-										<ul class="dir-list">
-											<li><a href="javascript:void(0);" class="link">금융 FAQ</a></li>
-											<li><a href="javascript:void(0);" class="link">금융생활안내</a></li>
-											<li><a href="javascript:void(0);" class="link">소비자경보</a></li>
-										</ul>
-									</div>
-									<div class="item ty4">
-										<div class="tit">보험사기 신고</div>
-										<div class="icon"></div>
-										<ul class="dir-list">
-											<li><a href="javascript:void(0);" class="link">보험사기란?</a></li>
-											<li><a href="javascript:void(0);" class="link">보험사기 예방 및 소비자 정보</a></li>
-											<li><a href="javascript:void(0);" class="link">신고하기</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- //for PC : 서비스 목록 -->
-							<!-- Swiper for Mobile : 서비스 목록-->
-								<div class="main-service-swiper">
-								<div class="swiper">
-									<ul class="swiper-wrapper">
-										<li class="swiper-slide">
-
-											<div class="item ty1">
-												<div class="tit">민원 &middot; 상담 &middot; 조회</div>
-												<div class="icon"></div>
-												<ul class="dir-list">
-													<li><a href="javascript:void(0);" class="link">민원신청ㆍ처리결과조회</a></li>
-													<li><a href="javascript:void(0);" class="link">Q&A 신청</a></li>
-													<li><a href="javascript:void(0);" class="link">상속인 조회</a></li>
-													<li><a href="javascript:void(0);" class="link">금융자문서비스 안내</a></li>
-												</ul>
-											</div>
-
-										</li>
-										<li class="swiper-slide">
-
-											<div class="item ty2">
-												<div class="tit">보이스피싱 지킴이</div>
-												<div class="icon"></div>
-												<ul class="dir-list">
-													<li><a href="javascript:void(0);" class="link">피싱사기 정의</a></li>
-													<li><a href="javascript:void(0);" class="link">피해사례</a></li>
-													<li><a href="javascript:void(0);" class="link">피해예방 우수사례</a></li>
-													<li><a href="javascript:void(0);" class="link">예방요령</a></li>
-												</ul>
-											</div>
-
-										</li>
-										<li class="swiper-slide">
-
-											<div class="item ty3">
-												<div class="tit">금융생활 길라잡이</div>
-												<div class="icon"></div>
-												<ul class="dir-list">
-													<li><a href="javascript:void(0);" class="link">금융 FAQ</a></li>
-													<li><a href="javascript:void(0);" class="link">금융생활안내</a></li>
-													<li><a href="javascript:void(0);" class="link">소비자경보</a></li>
-												</ul>
-											</div>
-
-										</li>
-										<li class="swiper-slide">
-
-											<div class="item ty4">
-												<div class="tit">보험사기 신고</div>
-												<div class="icon"></div>
-												<ul class="dir-list">
-													<li><a href="javascript:void(0);" class="link">보험사기란?</a></li>
-													<li><a href="javascript:void(0);" class="link">보험사기 예방 및 소비자 정보</a></li>
-													<li><a href="javascript:void(0);" class="link">신고하기</a></li>
-												</ul>
-											</div>
-
-										</li>
-									</ul>
-									<div class="swiper-indicator">
-										<button type="button" class="swiper-button-prev">
-											<span class="sr-only">이전</span>
-										</button>
-										<div class="swiper-pagination"></div>
-										<button type="button" class="swiper-button-next">
-											<span class="sr-only">다음</span>
-										</button>
-									</div>
-								</div>
-								</div>
-							<!-- //Swiper for Mobile : 서비스 목록 -->
-
-						</div>
-						<!-- //servcice area -->
 					</div>
-
 				</div>
-			</section>
+				<div class="swiper-pagination-full"></div>
 
-			<!-- section4 -->
-			<section id="section4" class="section">
-				<div class="sec-inner">
-
-					<div class="main-tit-wrap on">
-						<h2 class="tit">
-							<span>당신에게 꼭 필요한</span>
-							<span>금융의 시작</span>
-						</h2>
-						<p class="desc">
-							<span>나에게 꼭 필요한 메뉴만 모아,</span>
-							<span>쉽고 빠르게 이용해 보세요.</span>
-						</p>
-					</div>
-
-					<!-- tab area -->
-					<div class="krds-tab-area layer my">
-						<!-- tab list -->
-						<div class="tab line">
-							<ul role="tablist">
-								<li id="tab_mynews_01" role="tab" aria-selected="true" aria-controls="panel_mynews_01" class="active">
-									<button type="button" class="btn-tab">즐겨찾는메뉴 <i class="sr-only created"> 선택됨</i></button>
-								</li>
-								<li id="tab_mynews_02" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
-									<button type="button" class="btn-tab">민원인</button>
-								</li>
-								<li id="tab_mynews_03" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
-									<button type="button" class="btn-tab">금융인</button>
-								</li>
-								<li id="tab_mynews_04" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
-									<button type="button" class="btn-tab">학생</button>
-								</li>
-								<li id="tab_mynews_05" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
-									<button type="button" class="btn-tab">일반인</button>
-								</li>
-								<li id="tab_mynews_06" role="tab" aria-selected="false" aria-controls="panel_mynews_01">
-									<button type="button" class="btn-tab">나의메뉴</button>
-								</li>
-							</ul>
-						</div>
-						<!-- //tab list -->
-						
-						<!-- tab contents -->
-						<div class="tab-conts-wrap">
-							<section id="panel_mynews_01" aria-labelledby="tab_mynews_01" class="tab-conts active" data-quick-nav="false">
-								<h3 class="sr-only">즐겨찾는메뉴</h3>
-
-								<div class="bookmark-wrap">
-									<div class="btn-area">
-										<button type="button" class="krds-btn secondary medium"><i class="svg-icon ico-setting"></i>메뉴설정</button>
-									</div>
-
-									<!-- favorite swiper -->
-									<div class="my-bookmark-swiper">
-										<div class="swiper">
-											<ul class="swiper-wrapper">
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty1">
-														<div class="txt">
-															<span>금융상품</span>
-															<span>통합 비교공시</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty2">
-														<div class="txt">
-															<span>업무자료</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty3">
-														<div class="txt">
-															<span>내게 맞는</span>
-															<span>서민금융제도 안내</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty4">
-														<div class="txt">
-															<span>제도권</span>
-															<span>금융회사 조회</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty5">
-														<div class="txt">
-															<span>보이스피싱</span>
-															<span>피해금 환급절차 안내</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty6">
-														<div class="txt">
-															<span>상속인</span>
-															<span>금융거래 조회</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty7">
-														<div class="txt">
-															<span>금융꿀팁</span>
-														</div>
-													</a>
-												</li>
-												<li class="swiper-slide">
-													<a href="javascript:void(0);" class="item ty8">
-														<div class="txt">
-															<span>개인정보 노출</span>
-															<span>등록ㆍ해제</span>
-														</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="swiper-indicator">
-											<button type="button" class="swiper-button-prev">
-												<span class="sr-only">이전</span>
-											</button>
-											<div class="swiper-pagination"></div>
-											<button type="button" class="swiper-button-next">
-												<span class="sr-only">다음</span>
-											</button>
-										</div>
-									</div>
-									<!-- //favorite swiper -->
-								</div>
-
-							</section>
-							<section id="panel_mynews_02" aria-labelledby="tab_mynews_02" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">민원인</h3>
-								민원인
-							</section>
-							<section id="panel_mynews_03" aria-labelledby="tab_mynews_03" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">금융인</h3>
-								금융인
-							</section>
-							<section id="panel_mynews_04" aria-labelledby="tab_mynews_04" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">학생</h3>
-								학생
-							</section>
-							<section id="panel_mynews_05" aria-labelledby="tab_mynews_05" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">일반인</h3>
-								일반인
-							</section>
-							<section id="panel_mynews_06" aria-labelledby="tab_mynews_06" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">나의메뉴</h3>
-								나의메뉴
-							</section>
-						</div>
-						<!-- //tab contents -->
-					</div>
-					<!-- //tab area -->
-
-				</div>
-			</section>
-
-			<!-- section5 -->
-			<section id="section5" class="section">
-				<div class="sec-inner">
-
-					<div class="main-tit-wrap on">
-						<h2 class="tit">
-							<span>안정적인 금융시장과</span>
-							<span>신속한 대응</span>
-						</h2>
-						<p class="desc">
-							<span>금융시장 변화를 면밀히 분석,</span>
-							<span>신속하고 엄정하게 대응합니다.</span>
-						</p>
-					</div>
-
-					<!-- 안정적인 금융시장 swiper -->
-					<div class="main-market-swiper">
-						<div class="swiper">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_01.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-											<div class="date"><span>26-03-09</span></div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_22.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-											<div class="date">26-03-09</div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_04.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
-											<div class="date">26-03-09</div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_03.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
-											<div class="date">26-03-09</div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_05.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
-											<div class="date">26-03-09</div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_01.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
-											<div class="date">26-03-04</div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_22.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-											<div class="date"><span>26-03-03</span></div>
-										</div>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="javascript:void(0);" class="card-wrap">
-										<div class="img">
-											<img src="../resources/img/main/img_market_03.png" alt="" />
-										</div>
-										<div class="text">
-											<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-											<div class="date">26-03-02</div>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="swiper-indicator">
-							<button type="button" class="swiper-button-prev">
-								<span class="sr-only">이전</span>
-							</button>
-							<div class="swiper-pagination"></div>
-							<button type="button" class="swiper-button-next">
-								<span class="sr-only">다음</span>
-							</button>
-							<a href="javascript:void(0);" class="swiper-button-more">
-								<span class="sr-only">더 보기</span>
-							</a>
-						</div>
-					</div>
-					<!-- //안정적인 금융시장 swiper -->
-
-				</div>
-			</section>
-
-			<!-- section6 -->
-			<section id="section6" class="section">
-				<div class="sec-inner">
-
-					<div class="main-tit-wrap on">
-						<h2 class="tit"><span>금융감독원 미디어센터</span></h2>
-						<p class="desc">
-							<span>믿을 수 있는 금융 파트너,</span>
-							<span>금융감독원이 더 가까이 다가갑니다.</span>
-						</p>
-					</div>
-
-					<!-- tab area -->
-					<div class="krds-tab-area layer media">
-						<!-- tab list -->
-						<div class="tab line">
-							<ul role="tablist">
-								<li id="tab_media_01" role="tab" aria-selected="true" aria-controls="panel_media_01" class="active">
-									<button type="button" class="btn-tab"><span class="sr-only">유튜브</span><i class="svg-icon ico-tab-youtube"></i><i class="sr-only created"> 선택됨</i></button>
-								</li>
-								<li id="tab_media_02" role="tab" aria-selected="false" aria-controls="panel_media_02">
-									<button type="button" class="btn-tab"><span class="sr-only">블로그</span><i class="svg-icon ico-tab-blog"></i></button>
-								</li>
-								<li id="tab_media_03" role="tab" aria-selected="false" aria-controls="panel_media_01">
-									<button type="button" class="btn-tab"><span class="sr-only">페이스북</span><i class="svg-icon ico-tab-facebook"></i></button>
-								</li>
-								<li id="tab_media_04" role="tab" aria-selected="false" aria-controls="panel_media_01">
-									<button type="button" class="btn-tab"><span class="sr-only">인스타그램</span><i class="svg-icon ico-tab-insta"></i></button>
-								</li>
-							</ul>
-						</div>
-						<!-- //tab list -->
-						
-						<!-- tab contents -->
-						<div class="tab-conts-wrap">
-							<section id="panel_media_01" aria-labelledby="tab_media_01" class="tab-conts active" data-quick-nav="false">
-								<h3 class="sr-only">유튜브</h3>
-
-								<!-- 유튜브 미디어센터 swiper -->
-								<div class="main-ytube-swiper">
-									<div class="swiper">
-										<ul class="swiper-wrapper">
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_media_02.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">1.자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_media_01.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">2. 금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-														<div class="date"><span>26-03-09</span></div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_media_03.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">3.2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_media_01.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">4.디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_media_02.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">5.앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_media_03.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">6.해외 사모대출펀드 관련 증권사 간담회 개최</div>
-														<div class="date">26-03-04</div>
-													</div>
-												</a>
-											</li>
-										</ul>
-									</div>
-									<div class="swiper-indicator">
-										<div class="swiper-pagination"></div>
-										<div class="swiper-controller">
-											<button type="button" class="swiper-button-prev">
-												<span class="sr-only">이전</span>
-											</button>
-											<button type="button" class="swiper-button-next">
-												<span class="sr-only">다음</span>
-											</button>
-										</div>
-									</div>
-								</div>
-								<!-- //유튜브 미디어센터 swiper -->
-
-							</section>
-							<section id="panel_media_02" aria-labelledby="tab_media_02" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">블로그</h3>
-
-								<!-- 블로그 미디어센터 swiper -->
-								<div class="main-blog-swiper">
-									<div class="swiper">
-										<ul class="swiper-wrapper">
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_01.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-														<div class="date"><span>26-03-09</span></div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_02.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_03.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">2026년 소비자보호총괄 부문 금융감독 업무설명회 개최</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_04.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">디폴트옵션을 제대로 활용하면 당신의 노후가 풍요로워집니다.</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_05.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다.</div>
-														<div class="date">26-03-09</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_01.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
-														<div class="date">26-03-04</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_02.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-														<div class="date"><span>26-03-03</span></div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_03.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-														<div class="date">26-03-02</div>
-													</div>
-												</a>
-											</li>
-											<!-- <li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_01.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">해외 사모대출펀드 관련 증권사 간담회 개최</div>
-														<div class="date">26-03-04</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_02.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-														<div class="date"><span>26-03-03</span></div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_03.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-														<div class="date">26-03-02</div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_02.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
-														<div class="date"><span>26-03-03</span></div>
-													</div>
-												</a>
-											</li>
-											<li class="swiper-slide">
-												<a href="javascript:void(0);" class="card-wrap">
-													<div class="img">
-														<img src="../resources/img/main/img_sns_03.png" alt="" />
-													</div>
-													<div class="text">
-														<div class="tit">자동차사고 후 렌터카 이용, 보상여부를 잘못 알면 피해자가 비용을 부담할 수도 있습니다.</div>
-														<div class="date">26-03-02</div>
-													</div>
-												</a>
-											</li> -->
-										</ul>
-									</div>
-									<div class="swiper-indicator">
-										<div class="swiper-pagination"></div>
-										<div class="swiper-controller">
-											<button type="button" class="swiper-button-prev">
-												<span class="sr-only">이전</span>
-											</button>
-											<button type="button" class="swiper-button-next">
-												<span class="sr-only">다음</span>
-											</button>
-										</div>
-									</div>
-								</div>
-								<!-- //블로그 미디어센터 swiper -->
-
-
-							</section>
-							<section id="panel_media_03" aria-labelledby="tab_media_03" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">페이스북</h3>
-								페이스북
-							</section>
-							<section id="panel_media_04" aria-labelledby="tab_media_04" class="tab-conts" data-quick-nav="false">
-								<h3 class="sr-only">인스타그램</h3>
-								인스타그램
-							</section>
-						</div>
-						<!-- //tab contents -->
-					</div>
-					<!-- //tab area -->
-
-				</div>
-			</section>
-
+			</div>
 			<!-- //contents -->
 
 		</main>
 		<!-- //container -->
 
 		<!-- footer inc -->
-		<footer id="krds-footer" class="footer">
+		<footer id="krds-footer">
 			<div class="foot-quick">
 				<div class="inner">
 					<button type="button" class="link open-modal" title="유관기관 및 관련사이트 레이어" data-target="modal_footer_link">유관기관 및 관련사이트</button>
@@ -2655,6 +2639,111 @@ body.fp-mode {
 
 
 	<script>
+		// parallax swiper
+		const parallaxSwiper = new Swiper(".parallax", {
+			direction: "vertical",
+			slidesPerView: 1,
+			spaceBetween: 0,
+			mousewheel: true,
+			mousewheel: {
+				sensitivity: 5.5, // 휠 감도 조절 (값이 클수록 빠르게 반응)
+			},
+			pagination: {
+				el: ".swiper-pagination-full",
+				clickable: true,
+			},
+			breakpoints: {
+				0: {
+					 	enabled: false,
+						// mousewheel: false,
+					},
+				1280: {
+				},
+			},
+
+			on: {
+				reachEnd: function () {
+					// 마지막 슬라이드 → footer로 자연 스크롤 허용
+					// parallaxSwiper.mousewheel.disable();
+					// document.querySelector('.mouseWrap').classList.add('off');
+
+					setTimeout(() => {
+						parallaxSwiper.mousewheel.disable();
+						document.querySelector('.mouseWrap').classList.add('off');
+					}, 400);
+
+				},
+				fromEdge: function () {
+					// 다시 위로 올라오면 swiper 다시 활성화
+					// swiper.mousewheel.enable();
+					document.querySelector('.mouseWrap').classList.remove('off');
+
+				},
+				slideChange: function () {
+					updateActiveClass(this);
+
+					if (this.activeIndex !== 0) {
+						document.body.classList.add("is-gnb");
+					} else {
+						document.body.classList.remove("is-gnb");
+					}
+				},
+			}
+		});
+		
+
+// 기존 footerObserver 제거하고 JavaScript wheel 이벤트로 통합
+
+// wheel 이벤트로 parallax 제어 (개선)
+window.addEventListener('wheel', function (event) {
+  const rect = footer.getBoundingClientRect();
+  const footerVisible = rect.top < window.innerHeight && rect.bottom > 0;
+  
+  if (event.deltaY < 0) { // 위로 스크롤
+    parallaxSwiper.mousewheel.enable();
+  } else if (event.deltaY > 0 && footerVisible) { // 아래로 + footer 보임
+    // footer가 보이면 swiper 막고 페이지 스크롤 허용 (화면에서 밀어냄)
+    parallaxSwiper.mousewheel.disable();
+    return; // 기본 스크롤 동작
+  } else {
+    parallaxSwiper.mousewheel.enable();
+  }
+}, { passive: false }); // preventDefault 위해 필요
+
+
+
+// window.addEventListener('wheel', function (event) {
+//   const rect = footer.getBoundingClientRect();
+//   const isOverFooter = rect.top < window.innerHeight && rect.bottom > 0;
+  
+//   if (event.deltaY < 0 || !isOverFooter) {
+//     parallaxSwiper.mousewheel.enable();
+//   }
+// }, { passive: false });
+
+		// 마우스 휠 control start
+		function updateActiveClass(swiper) {
+			// 전체 sec-inner active 제거
+			document.querySelectorAll('.sec-inner').forEach(el => {
+				el.classList.remove('active');
+			});
+
+			// 현재 active 슬라이드 내부에만 추가
+			const activeSlide = swiper.slides[swiper.activeIndex];
+			const target = activeSlide.querySelector('.sec-inner');
+
+			if (target) {
+				target.classList.add('active');
+			}
+		}
+		// wheel 이벤트로 parallax 제어
+		window.addEventListener('wheel', function (event) {
+			if (event.deltaY < 0) {
+				parallaxSwiper.mousewheel.enable();
+			}
+		});
+		// 마우스 휠 control end
+
 
 		// main visual banner
 		const vbSwiper = new Swiper('.main-vb-swiper .swiper', {
@@ -3036,6 +3125,8 @@ body.fp-mode {
 		// });
 
 
+
+
 		// paly & stop 공통 함수
 		function attachAutoplayControl(swiper, swpSelector) {
 			const $play = document.querySelector(`${swpSelector} .swiper-button-play`);
@@ -3060,298 +3151,6 @@ body.fp-mode {
 			$play.addEventListener("click", () => swiper.controlAutoplay("play"));
 			$stop.addEventListener("click", () => swiper.controlAutoplay("stop"));
 		}
-
-
-		// 각각의 swiper 에 --i 값을 0부터 시작 for animation
-		function setIndexSwiper() {
-			document.querySelectorAll('.swiper').forEach((swiper) => {
-				swiper.querySelectorAll('li').forEach((el, idx) => {
-					el.style.setProperty('--i', idx);
-				});
-			});
-		}
-
-		document.addEventListener("DOMContentLoaded", () => {
-			// setSubVisualPadding();
-			setIndexSwiper();
-		});
-
-
-
-
-		// parallax scroll (fullpage)
-		(function () {
-			const BREAKPOINT = 1280;
-
-			const sections = document.querySelectorAll('.section');
-			const navBtns = document.querySelectorAll('.fp-nav button');
-			const footer = document.querySelector('.footer');
-
-			const sectionCount = sections.length;
-			const FOOTER_INDEX = sectionCount;
-
-			let current = 0;
-			let isAnimating = false;
-			let isActive = false;
-
-			let touchStartY = 0;
-			let isTouchMoving = false;
-
-			const isTouchDevice =
-				'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-			// =========================
-			// 내부 스크롤 영역 체크
-			// =========================
-			function getScrollableParent(el) {
-				while (el && el !== document.body) {
-					const style = window.getComputedStyle(el);
-
-					if (
-						/(auto|scroll)/.test(style.overflowY) &&
-						el.scrollHeight > el.clientHeight
-					) {
-						return el;
-					}
-					el = el.parentNode;
-				}
-				return null;
-			}
-
-			function shouldSkip(e) {
-				const scrollable = getScrollableParent(e.target);
-				if (!scrollable) return false;
-
-				const delta = e.deltaY || (touchStartY - e.touches?.[0]?.clientY);
-
-				if (delta > 0) {
-					return scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight;
-				} else {
-					return scrollable.scrollTop > 0;
-				}
-			}
-
-			// =========================
-			// 이동 (핵심)
-			// =========================
-			function moveTo(index) {
-				if (!isActive) return;
-				if (isAnimating) return;
-
-				index = Math.max(0, Math.min(index, FOOTER_INDEX));
-
-				isAnimating = true;
-				current = index;
-
-				const targetTop =
-					index === FOOTER_INDEX
-						? footer.offsetTop
-						: sections[index].offsetTop;
-
-				window.scrollTo({
-					top: targetTop,
-					behavior: 'smooth'
-				});
-
-				updateNav();
-				setActiveSection(index);
-
-				setTimeout(() => {
-					isAnimating = false;
-				}, 700);
-			}
-
-			// =========================
-			// 상태 기반 이동 결정 (핵심)
-			// =========================
-			function getNextIndex(direction) {
-				// direction: 1 (down), -1 (up)
-
-				// footer
-				if (current === FOOTER_INDEX) {
-					return direction < 0 ? FOOTER_INDEX - 1 : FOOTER_INDEX;
-				}
-
-				// 마지막 section
-				if (current === sectionCount - 1) {
-					return direction > 0 ? FOOTER_INDEX : current - 1;
-				}
-
-				// 일반 section
-				return current + direction;
-			}
-
-			// =========================
-			// nav
-			// =========================
-			function updateNav() {
-				navBtns.forEach(btn => btn.classList.remove('active'));
-				navBtns[current]?.classList.add('active');
-			}
-
-			const header = document.querySelector('header');
-			const mouseWrap = document.querySelector('.mouseWrap');
-
-			function setActiveSection(index) {
-				sections.forEach(sec => sec.classList.remove('active'));
-				if (index < sectionCount) {
-					sections[index].classList.add('active');
-				}
-
-				const isFirst = index === 0;
-				const isFooter = index === sectionCount;
-
-				// header
-				header && header.classList.toggle('is-bg', isFirst);
-
-				// header
-				mouseWrap && mouseWrap.classList.toggle('bg-w', isFirst);
-				// document.body.classList.toggle('is-gnb', index === 0);	
-
-				// footer 진입 시 숨김 / 나오면 복구
-					if (mouseWrap) {
-						mouseWrap.style.display = isFooter ? 'none' : '';
-					}
-
-			}
-
-			// =========================
-			// wheel
-			// =========================
-			function handleWheel(e) {
-				if (!isActive) return;
-				if (shouldSkip(e)) return;
-
-				e.preventDefault();
-				if (isAnimating) return;
-
-				const direction = e.deltaY > 0 ? 1 : -1;
-				const next = getNextIndex(direction);
-
-				moveTo(next);
-			}
-
-			// =========================
-			// touch
-			// =========================
-			function onTouchStart(e) {
-				touchStartY = e.touches[0].clientY;
-				isTouchMoving = false;
-			}
-
-			function onTouchMove(e) {
-				if (!isActive) return;
-				if (isAnimating) return;
-
-				const currentY = e.touches[0].clientY;
-				const diff = touchStartY - currentY;
-
-				if (Math.abs(diff) < 30) return;
-				if (isTouchMoving) return;
-				if (shouldSkip(e)) return;
-
-				isTouchMoving = true;
-
-				const direction = diff > 0 ? 1 : -1;
-				const next = getNextIndex(direction);
-
-				moveTo(next);
-
-				e.preventDefault();
-			}
-
-			// =========================
-			// nav click
-			// =========================
-			navBtns.forEach(btn => {
-				btn.addEventListener('click', function () {
-					moveTo(parseInt(this.dataset.index, 10));
-				});
-			});
-
-			// =========================
-			// scroll sync (보조)
-			// =========================
-			
-			function syncByScroll() {
-			if (!isActive || isAnimating) return;
-
-			const scrollY = window.scrollY;
-			const trigger = window.innerHeight * 0.3;
-
-			let newIndex = 0;
-
-			// footer 우선
-			if (scrollY >= footer.offsetTop - trigger) {
-				newIndex = FOOTER_INDEX;
-			} else {
-				sections.forEach((sec, i) => {
-					if (scrollY >= sec.offsetTop - trigger) {
-						newIndex = i;
-					}
-				});
-			}
-
-			// 변경 감지 후만 업데이트
-			if (newIndex !== current) {
-				current = newIndex;
-				updateNav();
-				setActiveSection(current);
-			}
-		}
-
-			// =========================
-			// init / destroy
-			// =========================
-			function initFullpage() {
-				if (isActive) return;
-
-				if (isTouchDevice) {
-					window.addEventListener('touchstart', onTouchStart, { passive: true });
-					window.addEventListener('touchmove', onTouchMove, { passive: false });
-				} else {
-					window.addEventListener('wheel', handleWheel, {
-						passive: false,
-						capture: true
-					});
-				}
-
-				window.addEventListener('scroll', syncByScroll);
-
-				isActive = true;
-
-				// scroll 위치에 따른 초기 상태 설정
-				syncByScroll();
-				setActiveSection(current);
-			}
-
-			function destroyFullpage() {
-				if (!isActive) return;
-
-				window.removeEventListener('wheel', handleWheel, { capture: true });
-				window.removeEventListener('touchstart', onTouchStart);
-				window.removeEventListener('touchmove', onTouchMove);
-				window.removeEventListener('scroll', syncByScroll);
-
-				isActive = false;
-			}
-
-			// =========================
-			// mode
-			// =========================
-			function checkMode() {
-				if (window.innerWidth >= BREAKPOINT) {
-					initFullpage();
-				} else {
-					destroyFullpage();
-				}
-			}
-
-			window.addEventListener('resize', checkMode);
-
-			// init
-			checkMode();
-		})();
 
 	</script>
 

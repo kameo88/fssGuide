@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fullpage Scroll</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.nav {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.nav ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.nav a {
+  display: block;
+  width: 10px; height: 10px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 50%;
+  text-indent: -9999px;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav a:hover { background: rgba(0,0,0,0.6); }
+.nav a.active { background: #000; transform: scale(1.4); }
+
+@media (min-width: 1280px) {
+  html { overflow: hidden; }
+  body { height: 100vh; overflow: hidden; }
+  .fp-container {
+    height: 100vh;
+    overflow: hidden;
+    transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+  }
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  footer#footer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+section.active, footer.active {
+  outline: 3px solid royalblue;
+}
+
+@media (max-width: 1279px) {
+  section { height: 100vh; }
+  footer#footer { height: 200px; }
+  .nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <ul>
+    <li><a href="#sec1" data-target="sec1">Section 1</a></li>
+    <li><a href="#sec2" data-target="sec2">Section 2</a></li>
+    <li><a href="#sec3" data-target="sec3">Section 3</a></li>
+    <li><a href="#sec4" data-target="sec4">Section 4</a></li>
+    <li><a href="#sec5" data-target="sec5">Section 5</a></li>
+    <li><a href="#sec6" data-target="sec6">Section 6</a></li>
+    <li><a href="#footer" data-target="footer">Footer</a></li>
+  </ul>
+</nav>
+
+<header class="header"></header>
+<main>
+  <section id="sec1">Section 1</section>
+  <section id="sec2">Section 2</section>
+  <section id="sec3">Section 3</section>
+  <section id="sec4">Section 4</section>
+  <section id="sec5">Section 5</section>
+  <section id="sec6">Section 6</section>
+</main>
+<footer id="footer">Footer</footer>
+
+<script>
+(() => {
+  const BREAKPOINT = 1280;
+  const slides = [
+    ...document.querySelectorAll('main section'),
+    document.querySelector('footer#footer'),
+  ];
+  const navLinks = document.querySelectorAll('.nav a[data-target]');
+  let current = 0;
+  let isAnimating = false;
+
+  function buildContainer() {
+    const container = document.createElement('div');
+    container.className = 'fp-container';
+    const main = document.querySelector('main');
+    const footer = document.querySelector('footer#footer');
+    main.parentNode.insertBefore(container, main);
+    container.appendChild(main);
+    container.appendChild(footer);
+    return container;
+  }
+
+  let container = buildContainer();
+
+  function goTo(index) {
+    if (window.innerWidth < BREAKPOINT) return;
+    if (index < 0 || index >= slides.length) return;
+    if (isAnimating) return;
+    isAnimating = true;
+    current = index;
+    let offsetY = 0;
+    for (let i = 0; i < current; i++) {
+      offsetY += slides[i].offsetHeight;
+    }
+    container.style.transform = `translateY(-${offsetY}px)`;
+    updateActive();
+    setTimeout(() => { isAnimating = false; }, 750);
+  }
+
+  function updateActive() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    navLinks.forEach(link => {
+      const idx = slides.findIndex(s => s.id === link.dataset.target);
+      link.classList.toggle('active', idx === current);
+    });
+  }
+
+  let wheelTimer = null;
+  window.addEventListener('wheel', (e) => {
+    if (window.innerWidth < BREAKPOINT) return;
+    e.preventDefault();
+    if (isAnimating) return;
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => {
+      if (e.deltaY > 0) goTo(current + 1);
+      else goTo(current - 1);
+    }, 30);
+  }, { passive: false });
+
+  window.addEventListener('keydown', (e) => {
+    if (window.innerWidth < BREAKPOINT) return;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') goTo(current + 1);
+    if (e.key === 'ArrowUp' || e.key === 'PageUp') goTo(current - 1);
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth < BREAKPOINT) return;
+      e.preventDefault();
+      const idx = slides.findIndex(s => s.id === link.dataset.target);
+      if (idx !== -1) goTo(idx);
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < BREAKPOINT) container.style.transform = '';
+    else goTo(current);
+  });
+
+  goTo(0);
+})();
+</script>
+</body>
+</html>

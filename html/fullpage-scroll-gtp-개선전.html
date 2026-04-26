@@ -793,7 +793,125 @@ body.fp-mode {
 
 			<section id="section1" class="section">
 
-				section1
+				<!-- main visual -->
+				<div class="main-visual-wrap">
+					<div class="inner">
+
+						<div class="main-vb-swiper">
+							<div class="swiper">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty1">
+											<div class="img"></div>
+											<div class="text">
+												<p class="tit">
+													<span>금융소비자</span>
+													<span>보호와</span>
+													<span>국민 재산의 안전</span>
+												</p>
+												<p class="txt">금융소비자의 권익을 보호하고 국민의 재산을 지키는 금융감독을 실현합니다.</p>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty2">
+											<div class="img"></div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-indicator">
+								<!-- fraction 추가 표시 -->
+								<div class="swiper-fraction">
+									<span class="current">1</span>
+									<span class="total">2</span>
+									<div class="swiper-pagination"></div>
+								</div>
+								<!-- //fraction 추가 표시 -->
+								<div class="swiper-controller">
+									<button type="button" class="swiper-button-play">
+										<span class="sr-only">슬라이드 재생</span>
+									</button>
+									<button type="button" class="swiper-button-stop">
+										<span class="sr-only">슬라이드 멈춤</span>
+									</button>
+								</div>
+								<button type="button" class="swiper-button-prev">
+									<span class="sr-only">이전</span>
+								</button>
+								<button type="button" class="swiper-button-next">
+									<span class="sr-only">다음</span>
+								</button>
+							</div>
+						</div>
+						<!-- banner swiper -->
+						<div class="main-bn-swiper">
+							<div class="swiper">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty1">
+											<div class="text">
+												<p class="cate">소비자경보 2026-5호</p>
+												<p class="tit">
+													<span>금 팔고 받은 돈이 보이스피싱 피해금? </span>
+													<span>당신의 계좌가 사기범의 세탁 통로로 </span>
+													<span>이용될 수 있습니다.</span>
+												</p>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty2">
+											<div class="text">
+												<p class="cate">소비자경보 2026-8호</p>
+												<p class="tit">
+													<span>고수익? 원금보장? 그런 건 없다! </span>
+													<span>중동 혼란 틈탄 투자사 기승에 대비, </span>
+													<span>소비자경보 발령</span>
+												</p>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" class="item ty3">
+											<div class="text">
+												<p class="cate">소비자경보 2026-3호</p>
+												<p class="tit">
+													<span>코스피 및 코스닥 열풍 속 불법 리딩방이 </span>
+													<span>기승을 부리고 있으니 금융소비자께서는 </span>
+													<span>각별히 주의하시기 바랍니다.</span>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-indicator">
+								<div class="swiper-pagination"></div>
+								<div class="swiper-controller">
+									<button type="button" class="swiper-button-play">
+										<span class="sr-only">슬라이드 재생</span>
+									</button>
+									<button type="button" class="swiper-button-stop">
+										<span class="sr-only">슬라이드 멈춤</span>
+									</button>
+								</div>
+								<button type="button" class="swiper-button-prev">
+									<span class="sr-only">이전</span>
+								</button>
+								<button type="button" class="swiper-button-next">
+									<span class="sr-only">다음</span>
+								</button>
+								<!-- <div class="swiper-navigation">
+								</div> -->
+							</div>
+						</div>
+						<!-- //banner swiper -->
+
+					</div>
+				</div>
+				<!-- //main visual -->
+
 			</section>
 
 			<!-- section2 -->
@@ -1819,7 +1937,79 @@ body.fp-mode {
 </div>
 
 <script>
+		// main visual banner
+		const vbSwiper = new Swiper('.main-vb-swiper .swiper', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			speed: 3000,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true // 슬라이드 교차 시 투명도 조절을 더 매끄럽게 함
+			},
+			loop: true,
+			grabCursor: true,
+			autoplay: {
+				delay: 8000,
+				disableOnInteraction: false,
+				// pauseOnMouseEnter: true,
+			},
+			navigation: {
+				nextEl: '.main-vb-swiper .swiper-button-next',
+				prevEl: '.main-vb-swiper .swiper-button-prev',
+			},
+			pagination: {
+				el: ".main-vb-swiper .swiper-pagination",
+				type: 'progressbar',
+				//clickable: true,
+				renderBullet: function (index, className) {
+						// Swiper는 렌더링 시점에 active 클래스가 붙은 bullet이 없으므로
+						// 첫 번째 bullet(=index 0)에 '현재 슬라이드'를 기본으로 부여
+						const isActive = index === 0 ? ' title="현재 슬라이드"' : '';
+						return `<button type="button" class="${className}" aria-label="${index + 1}번 슬라이드로 이동"${isActive}></button>`;
+				},
+			},
+			a11y: {
+				enalbed: true,
+				slideRole: 'group',
+				slideLabelMessage: '{{index}} / {{slidesLength}} 슬라이드',
+				prevSlideMessage: "이전 슬라이드",
+				nextSlideMessage: "다음 슬라이드",
+				paginationBulletMessage: "{{index}}번째 슬라이드로 이동",
+			},
+			on: {
+				init(swiper) {
+					attachAutoplayControl(swiper, ".main-vb-swiper");
+				},				
+				slideChange: function () {
+					// 활성화된 pagination만 title 유지
+					const bullets = this.pagination.bullets;
 
+					bullets.forEach((bullet, idx) => {
+						if (idx === this.realIndex) {
+							bullet.setAttribute('title', '현재 슬라이드');
+						} else {
+							bullet.removeAttribute('title');
+						}
+					});
+				},
+			}
+		});
+
+
+		// slide 숫자 표시
+		const currentEl	= document.querySelector('.main-vb-swiper .swiper-fraction .current');
+		const totalEl		= document.querySelector('.main-vb-swiper .swiper-fraction .total');
+
+		const total = vbSwiper.slides.length;   // 총 슬라이드 개수
+		totalEl.textContent = total;
+
+		// 초기 값
+		currentEl.textContent = vbSwiper.realIndex + 1;
+
+		// slide 변경될 때마다 업데이트
+		vbSwiper.on('slideChange', () => {
+			currentEl.textContent = vbSwiper.realIndex + 1;
+		});
 
 
 		// element banner
@@ -2154,7 +2344,6 @@ body.fp-mode {
 			$stop.addEventListener("click", () => swiper.controlAutoplay("stop"));
 		}
 
-// parallax scroll (fullpage)
 (function () {
 	const BREAKPOINT = 1280;
 
@@ -2162,66 +2351,57 @@ body.fp-mode {
 	const navBtns = document.querySelectorAll('.fp-nav button');
 	const footer = document.querySelector('.footer');
 
-	const sectionCount = sections.length;
-	const FOOTER_INDEX = sectionCount;
-
 	let current = 0;
 	let isAnimating = false;
-	let isActive = false;
+	let sectionCount = sections.length;
 
 	let touchStartY = 0;
 	let isTouchMoving = false;
 
+	let isActive = false; // fullpage 활성 상태
+
+	// 디바이스 감지
 	const isTouchDevice =
 		'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
 
 	// =========================
 	// 내부 스크롤 영역 체크
 	// =========================
-	function getScrollableParent(el) {
-		while (el && el !== document.body) {
-			const style = window.getComputedStyle(el);
-
-			if (
-				/(auto|scroll)/.test(style.overflowY) &&
-				el.scrollHeight > el.clientHeight
-			) {
-				return el;
-			}
-			el = el.parentNode;
-		}
-		return null;
+	function isScrollable(el) {
+		return el.scrollHeight > el.clientHeight;
 	}
 
 	function shouldSkip(e) {
-		const scrollable = getScrollableParent(e.target);
-		if (!scrollable) return false;
+		let el = e.target;
 
-		const delta = e.deltaY || (touchStartY - e.touches?.[0]?.clientY);
-
-		if (delta > 0) {
-			return scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight;
-		} else {
-			return scrollable.scrollTop > 0;
+		while (el && el !== document.body) {
+			if (isScrollable(el)) return true;
+			el = el.parentNode;
 		}
+		return false;
 	}
 
 	// =========================
-	// 이동 (핵심)
+	// 이동
 	// =========================
 	function moveTo(index) {
-		if (!isActive) return;
-		if (isAnimating) return;
-
-		index = Math.max(0, Math.min(index, FOOTER_INDEX));
+		if (!isActive) return; /* kameo */
+		if (index < 0 || index > sectionCount) return;
 
 		isAnimating = true;
 		current = index;
 
-		const targetTop =
-			index === FOOTER_INDEX
-				? footer.offsetTop
-				: sections[index].offsetTop;
+		let targetTop;
+
+		if (index === sectionCount) {
+			// footer
+			targetTop = footer.offsetTop;
+			// document.body.classList.remove('fp-mode');
+		} else {
+			targetTop = sections[index].offsetTop;
+			// document.body.classList.add('fp-mode');
+		}
 
 		window.scrollTo({
 			top: targetTop,
@@ -2229,7 +2409,7 @@ body.fp-mode {
 		});
 
 		updateNav();
-		setActiveSection(index);
+		setActiveSection(current);
 
 		setTimeout(() => {
 			isAnimating = false;
@@ -2237,58 +2417,59 @@ body.fp-mode {
 	}
 
 	// =========================
-	// 상태 기반 이동 결정 (핵심)
+	// section active
 	// =========================
-	function getNextIndex(direction) {
-		// direction: 1 (down), -1 (up)
-
-		// footer
-		if (current === FOOTER_INDEX) {
-			return direction < 0 ? FOOTER_INDEX - 1 : FOOTER_INDEX;
-		}
-
-		// 마지막 section
-		if (current === sectionCount - 1) {
-			return direction > 0 ? FOOTER_INDEX : current - 1;
-		}
-
-		// 일반 section
-		return current + direction;
-	}
-
-	// =========================
-	// nav
-	// =========================
-	function updateNav() {
-		navBtns.forEach(btn => btn.classList.remove('active'));
-		navBtns[current]?.classList.add('active');
-	}
-
 	function setActiveSection(index) {
 		sections.forEach(sec => sec.classList.remove('active'));
-		if (index < sectionCount) {
+
+		if (sections[index]) {
 			sections[index].classList.add('active');
 		}
 	}
 
 	// =========================
-	// wheel
+	// nav sync
 	// =========================
-	function handleWheel(e) {
-		if (!isActive) return;
-		if (shouldSkip(e)) return;
-
-		e.preventDefault();
-		if (isAnimating) return;
-
-		const direction = e.deltaY > 0 ? 1 : -1;
-		const next = getNextIndex(direction);
-
-		moveTo(next);
+	function updateNav() {
+		navBtns.forEach(btn => btn.classList.remove('active'));
+		if (navBtns[current]) {
+			navBtns[current].classList.add('active');
+		}
 	}
 
 	// =========================
-	// touch
+	// wheel (desktop)
+	// =========================
+	function handleWheel(e) {
+		if (!isActive) return;
+
+		if (isAnimating) {
+			e.preventDefault();
+			return;
+		}
+
+		if (shouldSkip(e)) return;
+
+		// footer 영역
+		if (window.scrollY >= footer.offsetTop) {
+			if (e.deltaY < 0) {
+				moveTo(sectionCount - 1);
+				e.preventDefault();
+			}
+			return;
+		}
+
+		e.preventDefault();
+
+		if (e.deltaY > 0) {
+			moveTo(current + 1);
+		} else {
+			moveTo(current - 1);
+		}
+	}
+
+	// =========================
+	// touch (mobile / pad)
 	// =========================
 	function onTouchStart(e) {
 		touchStartY = e.touches[0].clientY;
@@ -2302,16 +2483,26 @@ body.fp-mode {
 		const currentY = e.touches[0].clientY;
 		const diff = touchStartY - currentY;
 
+		if (shouldSkip(e)) return;
 		if (Math.abs(diff) < 30) return;
 		if (isTouchMoving) return;
-		if (shouldSkip(e)) return;
-
+		
 		isTouchMoving = true;
 
-		const direction = diff > 0 ? 1 : -1;
-		const next = getNextIndex(direction);
+		// footer 영역
+		if (window.scrollY >= footer.offsetTop) {
+			if (diff < 0) {
+				moveTo(sectionCount - 1);
+				e.preventDefault();
+			}
+			return;
+		}
 
-		moveTo(next);
+		if (diff > 0) {
+			moveTo(current + 1);
+		} else {
+			moveTo(current - 1);
+		}
 
 		e.preventDefault();
 	}
@@ -2321,84 +2512,87 @@ body.fp-mode {
 	// =========================
 	navBtns.forEach(btn => {
 		btn.addEventListener('click', function () {
-			moveTo(parseInt(this.dataset.index, 10));
+			const index = parseInt(this.dataset.index, 10);
+			moveTo(index);
 		});
 	});
 
-	// =========================
-	// scroll sync (보조)
-	// =========================
-	function syncByScroll() {
-		if (!isActive || isAnimating) return;
-
-		const scrollY = window.scrollY;
-		const trigger = window.innerHeight * 0.3;
-
-		// footer 우선
-		if (scrollY >= footer.offsetTop - trigger) {
-			current = FOOTER_INDEX;
-			updateNav();
-			return;
-		}
-
-		sections.forEach((sec, i) => {
-			if (scrollY >= sec.offsetTop - trigger) {
-				current = i;
-			}
-		});
-
-		updateNav();
-	}
 
 	// =========================
-	// init / destroy
+	// FULLPAGE INIT / DESTROY
 	// =========================
 	function initFullpage() {
 		if (isActive) return;
+
+		// document.body.classList.add('fp-mode');
 
 		if (isTouchDevice) {
 			window.addEventListener('touchstart', onTouchStart, { passive: true });
 			window.addEventListener('touchmove', onTouchMove, { passive: false });
 		} else {
-			window.addEventListener('wheel', handleWheel, {
-				passive: false,
-				capture: true
-			});
+			window.addEventListener('wheel', handleWheel, { passive: false });
 		}
 
-		window.addEventListener('scroll', syncByScroll);
+		/* kameo */
+		updateNav();
 
 		isActive = true;
-		updateNav();
 	}
 
 	function destroyFullpage() {
 		if (!isActive) return;
 
-		window.removeEventListener('wheel', handleWheel, { capture: true });
+		// document.body.classList.remove('fp-mode');
+
+		window.removeEventListener('wheel', handleWheel);
 		window.removeEventListener('touchstart', onTouchStart);
 		window.removeEventListener('touchmove', onTouchMove);
-		window.removeEventListener('scroll', syncByScroll);
 
 		isActive = false;
 	}
 
 	// =========================
-	// mode
+	// 1280 미만 전용 함수 (여기 커스터마이징)
+	// =========================
+	function initMobileMode() {
+		// 여기 원하는 기능 추가
+		// 예: 일반 스크롤 기반 애니메이션, swiper 등
+		console.log('mobile mode');
+	}
+
+	function destroyMobileMode() {
+		// mobile 모드 cleanup 필요 시
+	}
+
+	// =========================
+	// BREAKPOINT 분기
 	// =========================
 	function checkMode() {
 		if (window.innerWidth >= BREAKPOINT) {
+			destroyMobileMode();
 			initFullpage();
+			moveTo(current);
 		} else {
 			destroyFullpage();
+			initMobileMode();
 		}
+
+		// mobile test 용
+		// if (window.innerWidth >= 0) {
+		//   initFullpage();
+		// }
+
 	}
 
 	window.addEventListener('resize', checkMode);
 
 	// init
 	checkMode();
+
+
 })();
+
+
 
 </script>
 </body>

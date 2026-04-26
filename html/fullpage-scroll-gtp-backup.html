@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+html, body {
+  margin: 0;
+  height: 100%;
+  overscroll-behavior: none; /* iOS bounce 방지 */
+}
+
+body.fp-mode {
+  /* overflow: hidden; */
+}
+
+.section {
+  height: 100vh !important;
+}
+
+.footer {
+  height: 300px;
+}
+
+/* 내부 스크롤 영역 예시 */
+.scroll-area {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* nav */
+.fp-nav {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fp-nav button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.fp-nav button.active {
+  background: #000;
+}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+  <nav class="fp-nav">
+    <button data-index="0" class="active"></button>
+    <button data-index="1"></button>
+    <button data-index="2"></button>
+    <button data-index="3"></button>
+  </nav>
+
+  <main id="container">
+    <section class="section">Section 1</section>
+    <section class="section">Section 2</section>
+    <section class="section">Section 3</section>
+    <section class="section">Section 4</section>
+  </main>
+
+  <footer class="footer">Footer</footer>
+</div>
+</div>
+
+<script>
+
+
+(function () {
+ const BREAKPOINT = 1280;
+
+  const sections = document.querySelectorAll('.section');
+  const navBtns = document.querySelectorAll('.fp-nav button');
+  const footer = document.querySelector('.footer');
+
+  let current = 0;
+  let isAnimating = false;
+  let sectionCount = sections.length;
+
+  let touchStartY = 0;
+  let isTouchMoving = false;
+
+ let isActive = false; // fullpage 활성 상태
+
+  // 디바이스 감지
+  const isTouchDevice =
+    'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+
+  // =========================
+  // 내부 스크롤 영역 체크
+  // =========================
+  function isScrollable(el) {
+    return el.scrollHeight > el.clientHeight;
+  }
+
+  function shouldSkip(e) {
+    let el = e.target;
+
+    while (el && el !== document.body) {
+      if (isScrollable(el)) return true;
+      el = el.parentNode;
+    }
+    return false;
+  }
+
+  // =========================
+  // 이동
+  // =========================
+  function moveTo(index) {
+    if (!isActive) return; /* kameo */
+    if (index < 0 || index > sectionCount) return;
+
+    isAnimating = true;
+    current = index;
+
+    let targetTop;
+
+    if (index === sectionCount) {
+      // footer
+      targetTop = footer.offsetTop;
+      // document.body.classList.remove('fp-mode');
+    } else {
+      targetTop = sections[index].offsetTop;
+      // document.body.classList.add('fp-mode');
+    }
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: 'smooth'
+    });
+
+    updateNav();
+    setActiveSection(current);
+
+    setTimeout(() => {
+      isAnimating = false;
+    }, 700);
+  }
+
+  // =========================
+  // section active
+  // =========================
+  function setActiveSection(index) {
+    sections.forEach(sec => sec.classList.remove('active'));
+
+    if (sections[index]) {
+      sections[index].classList.add('active');
+    }
+  }
+
+  // =========================
+  // nav sync
+  // =========================
+  function updateNav() {
+    navBtns.forEach(btn => btn.classList.remove('active'));
+    if (navBtns[current]) {
+      navBtns[current].classList.add('active');
+    }
+  }
+
+  // =========================
+  // wheel (desktop)
+  // =========================
+  function handleWheel(e) {
+    if (!isActive) return;
+
+    if (isAnimating) {
+      e.preventDefault();
+      return;
+    }
+
+    if (shouldSkip(e)) return;
+
+    // footer 영역
+    if (window.scrollY >= footer.offsetTop) {
+      if (e.deltaY < 0) {
+        moveTo(sectionCount - 1);
+        e.preventDefault();
+      }
+      return;
+    }
+
+    e.preventDefault();
+
+    if (e.deltaY > 0) {
+      moveTo(current + 1);
+    } else {
+      moveTo(current - 1);
+    }
+  }
+
+  // =========================
+  // touch (mobile / pad)
+  // =========================
+  function onTouchStart(e) {
+    touchStartY = e.touches[0].clientY;
+    isTouchMoving = false;
+  }
+
+  function onTouchMove(e) {
+    if (!isActive) return;
+    if (isAnimating) return;
+
+    const currentY = e.touches[0].clientY;
+    const diff = touchStartY - currentY;
+
+    if (shouldSkip(e)) return;
+    if (Math.abs(diff) < 30) return;
+    if (isTouchMoving) return;
+    
+    isTouchMoving = true;
+
+    // footer 영역
+    if (window.scrollY >= footer.offsetTop) {
+      if (diff < 0) {
+        moveTo(sectionCount - 1);
+        e.preventDefault();
+      }
+      return;
+    }
+
+    if (diff > 0) {
+      moveTo(current + 1);
+    } else {
+      moveTo(current - 1);
+    }
+
+    e.preventDefault();
+  }
+
+  // =========================
+  // nav click
+  // =========================
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const index = parseInt(this.dataset.index, 10);
+      moveTo(index);
+    });
+  });
+
+
+  // =========================
+  // FULLPAGE INIT / DESTROY
+  // =========================
+  function initFullpage() {
+    if (isActive) return;
+
+    // document.body.classList.add('fp-mode');
+
+    if (isTouchDevice) {
+      window.addEventListener('touchstart', onTouchStart, { passive: true });
+      window.addEventListener('touchmove', onTouchMove, { passive: false });
+    } else {
+      window.addEventListener('wheel', handleWheel, { passive: false });
+    }
+
+    /* kameo */
+    updateNav();
+
+    isActive = true;
+  }
+
+  function destroyFullpage() {
+    if (!isActive) return;
+
+    // document.body.classList.remove('fp-mode');
+
+    window.removeEventListener('wheel', handleWheel);
+    window.removeEventListener('touchstart', onTouchStart);
+    window.removeEventListener('touchmove', onTouchMove);
+
+    isActive = false;
+  }
+
+  // =========================
+  // 1280 미만 전용 함수 (여기 커스터마이징)
+  // =========================
+  function initMobileMode() {
+    // 여기 원하는 기능 추가
+    // 예: 일반 스크롤 기반 애니메이션, swiper 등
+    console.log('mobile mode');
+  }
+
+  function destroyMobileMode() {
+    // mobile 모드 cleanup 필요 시
+  }
+
+  // =========================
+  // BREAKPOINT 분기 (핵심)
+  // =========================
+  function checkMode() {
+    if (window.innerWidth >= BREAKPOINT) {
+      destroyMobileMode();
+      initFullpage();
+      moveTo(current);
+    } else {
+      destroyFullpage();
+      initMobileMode();
+    }
+
+    // mobile test 용
+    // if (window.innerWidth >= 0) {
+    //   initFullpage();
+    // }
+
+  }
+
+  window.addEventListener('resize', checkMode);
+
+  // init
+  checkMode();
+
+
+})();
+
+
+</script>
+</body>
+</html>

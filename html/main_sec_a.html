@@ -20,8 +20,8 @@
 	<title>금융감독원 통합홈페이지</title>
 	<style>
 html, body {
-  margin: 0;
-  height: 100%;
+  /* margin: 0;
+  height: 100%; */
   overscroll-behavior: none; /* iOS bounce 방지 */
 }
 
@@ -2889,15 +2889,6 @@ html, body {
 
 		}
 
-		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
-		document.addEventListener('click', () => {
-			setTimeout(() => {
-				document.querySelectorAll('.swiper').forEach(el => {
-					el.swiper?.update();
-				});
-			}, 50); // 1프레임 정도
-		});
-
 		// #section5 안정적인 금융시작
 		const marketSwiper = new Swiper(".main-market-swiper .swiper", {
 			slidesPerView: 'auto',
@@ -3032,6 +3023,15 @@ html, body {
 			$play.addEventListener("click", () => swiper.controlAutoplay("play"));
 			$stop.addEventListener("click", () => swiper.controlAutoplay("stop"));
 		}
+
+		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
+		document.addEventListener('click', () => {
+			setTimeout(() => {
+				document.querySelectorAll('.swiper').forEach(el => {
+					el.swiper?.update();
+				});
+			}, 50); // 1프레임 정도
+		});
 
 
 		// 각각의 swiper 에 --i 값을 0부터 시작 for animation

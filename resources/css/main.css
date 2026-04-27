@@ -335,13 +335,8 @@
 /* reset - siwper indicator for ".main-visual-wrap"  */
 .main-vb-swiper .swiper-indicator {
 	position: absolute;
-	bottom: 12rem;
-	left: 4rem;
-}
-.main-vb-swiper .swiper-indicator {
 	bottom: 16rem;
 	left: 16rem;
-	/* width: 40rem; */
 	z-index: 1;
 }
 .main-visual-wrap .swiper-indicator .swiper-pagination {
@@ -442,16 +437,10 @@
 
 /* contents 여백 관련 */
 .main .main-tit-wrap {
+	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
 	gap: 2.4rem;
-	z-index: 1;
-}
-.main .section#section6 .main-tit-wrap {
-	margin-left: 16rem;
-}
-.main .main-tit-wrap {
-	gap: 1.6rem;
 }
 .main .main-tit-wrap .tit {
 	font-size: 6.4rem;
@@ -496,16 +485,14 @@
 }
 
 /* #section2 vector animation */
-.section.active .vector-ani,
-.sec-inner.active .vector-ani {
+.section.active .vector-ani {
 	display: flex;
 	align-items: flex-start;
 	position: absolute;
 	top: 9.6rem;
 	right: 0;
 }
-.section.active .vector-ani span,
-.sec-inner.active .vector-ani span {
+.section.active .vector-ani span {
 	display: inline-flex;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -518,16 +505,13 @@
 
 /* .main .section.active .main-tit-wrap .tit span:first-child */
 
-.section.active .vector-ani span:nth-child(1),
-.sec-inner.active .vector-ani span:nth-child(1) {
+.section.active .vector-ani span:nth-child(1) {
 	animation-delay: 0.2s;
 }
-.section.active .vector-ani span:nth-child(2),
-.sec-inner.active .vector-ani span:nth-child(2) {
+.section.active .vector-ani span:nth-child(2) {
 	animation-delay: 0.4s;
 }
-.section.active .vector-ani span:nth-child(3),
-.sec-inner.active .vector-ani span:nth-child(3) {
+.section.active .vector-ani span:nth-child(3) {
 	animation-delay: 0.8s;
 }
 @keyframes fadeUpAni {
@@ -544,21 +528,18 @@
 		transform: translateY(-40px);
 	}
 }
-.section.active .vector-ani span:nth-child(1),
-.sec-inner.active .vector-ani span:nth-child(1) {
+.section.active .vector-ani span:nth-child(1) {
 	width: 56.8rem;
 	height: 18.2rem;
 	background-image: url(../img/main/vector_1.svg);
 	/* transform: translateY(-40px); */
 }
-.section.active .vector-ani span:nth-child(2),
-.sec-inner.active .vector-ani span:nth-child(2) {
+.section.active .vector-ani span:nth-child(2) {
 	width: 13.8rem;
 	height: 10rem;
 	background-image: url(../img/main/vector_2.svg);
 }
-.section.active .vector-ani span:nth-child(3),
-.sec-inner.active .vector-ani span:nth-child(3) {
+.section.active .vector-ani span:nth-child(3) {
 	width: 24rem;
 	height: 20.6rem;
 	background-image: url(../img/main/vector_3.svg);
@@ -1536,6 +1517,21 @@
 /* 1280 ~ 1699 */
 @media (max-width: 1699px) {
 
+	.main-vb-swiper .swiper-slide .text {
+		padding: 21rem 0 0 2.4rem;
+		font-size: 1.9rem;
+	}
+	.main-vb-swiper .swiper-slide .tit {
+		font-size: 6.4rem;
+	}
+	.main-vb-swiper .swiper-indicator {
+		bottom: 10rem;
+		left: 2.4rem;
+	}
+	.main-bn-swiper {
+		bottom: 10rem;
+		right: calc(7.2rem + 2.4rem);
+	}
 	.main #container .section:not(#section6) .sec-inner {
 		padding-left: 2.4rem;
 	}
@@ -1652,10 +1648,10 @@
 		position: relative;
 	}
 	.main-vb-swiper .swiper-slide {
-		height: 48rem;
+		height: 68.8rem;
 	}
 	.main-vb-swiper .swiper-indicator {
-		bottom: 4rem;
+		bottom: 8rem;
 		left: 1.6rem;
 	}
 	.main-vb-swiper .swiper-slide .item.ty1 .img {
@@ -1667,14 +1663,8 @@
 		background-position: bottom center;
 	}
 	.main-vb-swiper .swiper-slide .text {
-		padding: 14.4rem 0 0 1.6rem;
+		padding: 18.4rem 0 0 1.6rem;
 		font-size: 1.9rem;
-	}
-	.main-vb-swiper .swiper-slide .tit {
-		font-size: 3.2rem;
-	}
-	.main-visual-wrap .swiper-pagination.swiper-pagination-progressbar {
-		width: 10rem;
 	}
 
 
@@ -1737,9 +1727,10 @@
 
 	.section.active .vector-ani, 
 	.sec-inner.active .vector-ani {
-		top: -3.6rem;
+		/* top: -3.6rem;
 		width: 60rem;
 		height: auto;
+		z-index: -1; */
 	}
 
 	/* 검색 */
@@ -1916,6 +1907,15 @@
 /* 361 ~ 767 */
 @media (max-width: 767px) {
 
+	.main-vb-swiper .swiper-slide {
+		height: 95rem;
+	}
+	.main-vb-swiper .swiper-slide .text {
+		padding: 24rem 0 0 1.6rem;
+	}
+	.main-vb-swiper .swiper-indicator {
+		bottom: 12rem;
+	}
 
 
 }
@@ -1923,6 +1923,25 @@
 /* 0 ~ 360 */
 @media (max-width: 360px) {
 
-
+	.main-vb-swiper .swiper-slide {
+		height: 48rem;
+	}
+	.main-vb-swiper .swiper-slide .text {
+		gap: 1.6rem;
+		padding: 14.4rem 0 0 1.6rem;
+	}
+	
+	.main-vb-swiper .swiper-slide .tit {
+		font-size: 3.2rem;
+	}
+	.main-vb-swiper .swiper-slide .txt {
+		padding-right: 3rem;
+	}
+	.main-vb-swiper .swiper-indicator {
+		bottom: 4rem;
+	}
+	.main-visual-wrap .swiper-pagination.swiper-pagination-progressbar {
+		width: 10rem;
+	}
 
 }

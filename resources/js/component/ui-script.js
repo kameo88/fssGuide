@@ -2668,7 +2668,7 @@ window.addEventListener("resize", () => {
   krds_helpPanel.init();
 });
 
-//20260313 추가
+//20260313 추가 by kameo
 document.addEventListener("all:includes:loaded", function() {
   // 헤더 이벤트 재초기화
 	krds_mainMenuPC.init();

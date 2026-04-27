@@ -1848,64 +1848,6 @@
 
 	<script>
 
-		// 각각의 swiper 에 --i 값을 0부터 시작 for animation
-		function setIndexSwiper() {
-			document.querySelectorAll('.swiper').forEach((swiper) => {
-				swiper.querySelectorAll('li').forEach((el, idx) => {
-					el.style.setProperty('--i', idx);
-				});
-			});
-		}
-
-		//Start ; swiper for animation
-		const swipers = document.querySelectorAll('.swiper');
-		let observer = null;
-
-		function initObserver() {
-			if (observer) return; // 중복 생성 방지
-
-			observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('active');
-					} else {
-						entry.target.classList.remove('active');
-					}
-				});
-			}, {
-				threshold: 0.2
-			});
-
-			swipers.forEach(swiper => observer.observe(swiper));
-		}
-		function destroyObserver() {
-			if (!observer) return;
-
-			swipers.forEach(swiper => observer.unobserve(swiper));
-			observer.disconnect();
-			observer = null;
-		}
-		function handleResponsive() {
-			if (window.innerWidth >= 1280) {
-				initObserver();
-			} else {
-				destroyObserver();
-			}
-		}
-		// 최초 실행
-		handleResponsive();
-		// End ; swiper for animation
-
-		document.addEventListener("DOMContentLoaded", () => {
-			// setSubVisualPadding();
-			setIndexSwiper();
-		});
-		window.addEventListener("resize", () => {
-			// setSubVisualPadding();
-			handleResponsive();
-		});
-
-
 		// 즐겨찾기 여러 개 대응
 		const bookmarkSwipers = document.querySelectorAll('.my-bookmark-swiper .swiper');
 		bookmarkSwipers.forEach((el) => {
@@ -2031,16 +1973,7 @@
 		}
 
 
-		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
-		document.addEventListener('click', function () {
-			setTimeout(() => {
-				document.querySelectorAll('.swiper').forEach(el => {
-					el.swiper?.update();
-				});
-			}, 50); // 1프레임 정도
-		});
-
-		// 불법금융예방
+		// 불법금융예방 swiper
 		const guidebookSwiper = new Swiper(".guidebook-swiper .swiper", {
 			slidesPerView: 'auto',
 			spaceBetween: 48,
@@ -2062,13 +1995,10 @@
 					spaceBetween: 48,
 				}
 			},
-			on: {
-				slideChange: function () {
-				},
-			}
 		});
 
-		// 자료실
+
+		// 자료실 swiper
 		const archiveSwiper = new Swiper(".archive-swiper .swiper", {
 			slidesPerView: 'auto',
 			spaceBetween: 48,
@@ -2092,6 +2022,75 @@
 				},
 			},
 		});
+
+
+		// 모달 팝업 내 swiper 오픈 시, 정상 렌더링 안되는 문제 대응
+		document.addEventListener('click', () => {
+			setTimeout(() => {
+				document.querySelectorAll('.swiper').forEach(el => {
+					el.swiper?.update();
+				});
+			}, 50); // 1프레임 정도
+		});
+
+
+		// 각각의 swiper 에 --i 값을 0부터 시작 for animation
+		function setIndexSwiper() {
+			document.querySelectorAll('.swiper').forEach((swiper) => {
+				swiper.querySelectorAll('li').forEach((el, idx) => {
+					el.style.setProperty('--i', idx);
+				});
+			});
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			setIndexSwiper();
+		});
+
+
+		//Start ; swiper for animation
+		const swipers = document.querySelectorAll('.swiper');
+		let observer = null;
+
+		function initObserver() {
+			if (observer) return; // 중복 생성 방지
+
+			observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('active');
+					} else {
+						entry.target.classList.remove('active');
+					}
+				});
+			}, {
+				threshold: 0.2
+			});
+
+			swipers.forEach(swiper => observer.observe(swiper));
+		}
+		function destroyObserver() {
+			if (!observer) return;
+
+			swipers.forEach(swiper => observer.unobserve(swiper));
+			observer.disconnect();
+			observer = null;
+		}
+		function handleResponsive() {
+			if (window.innerWidth >= 1280) {
+				initObserver();
+			} else {
+				destroyObserver();
+			}
+		}
+		// 최초 실행
+		handleResponsive();
+		// End ; swiper for animation
+
+		window.addEventListener("resize", () => {
+			handleResponsive();
+		});
+
 
 		/* ─────────────────────────────────────────────
 				공통 메뉴 데이터 — 여러 페이지 공유

@@ -2699,53 +2699,139 @@ html, body {
 
 
 		// element banner
-		const eleBanSwiper = new Swiper(".main-bn-swiper .swiper", {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			centeredSlides: true,
-			effect: 'creative',
-			creativeEffect: {
-				limitProgress: 1,
-				prev: {
-					opacity:1,
-					scale: 0.9,
-					translate: [-100, 0, -200],
+		let responsiveSwiper = null;
+		const BREAKPOINT = 1280;
+
+		function initResponsiveSwiper() {
+			const el = document.querySelector('.main-bn-swiper .swiper');
+			if (!el) return;
+
+			const isDesktop = window.innerWidth >= BREAKPOINT;
+
+			// 기존 제거
+			if (responsiveSwiper) {
+				responsiveSwiper.destroy(true, true);
+				responsiveSwiper = null;
+			}
+
+			// 공통 옵션
+			const commonOptions = {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				centeredSlides: true,
+				loop: true,
+				observer: true,
+				observeParents: true,
+				grabCursor: true,
+				speed: 800,
+				autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
 				},
-				next: {
-					scale: 0.9,
-					translate: [100, 0, -200],
+				navigation: {
+					nextEl: ".main-bn-swiper .swiper-button-next",
+					prevEl: ".main-bn-swiper .swiper-button-prev",
 				},
-			},
-			loop: true,
-			observer: true,
-			observeParents: true,
-			// watchSlidesProgress: true,
-			grabCursor: true,
-			speed: 800,
-			autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-			},
-			navigation: {
-				nextEl: ".main-bn-swiper .swiper-button-next",
-				prevEl: ".main-bn-swiper .swiper-button-prev",
-			},
-			pagination: {
-				el: ".main-bn-swiper .swiper-pagination",
-				type: "fraction",
-			},
-			on: {
-				init(swiper) {
-					attachAutoplayControl(swiper, ".main-bn-swiper");
+				pagination: {
+					el: ".main-bn-swiper .swiper-pagination",
+					type: "fraction",
 				},
-			},
-			breakpoints: {
-				360: {
+				on: {
+					init(swiper) {
+						attachAutoplayControl(swiper, ".main-bn-swiper");
+					},
 				},
-				1200: {
-				},
-			},
+			};
+
+			// 분기 옵션
+			const responsiveOptions = isDesktop
+				? {
+						effect: 'creative',
+						creativeEffect: {
+							limitProgress: 1,
+							prev: {
+								opacity:1,
+								scale: 0.9,
+								translate: [-100, 0, -200],
+							},
+							next: {
+								scale: 0.9,
+								translate: [100, 0, -200],
+							},
+						},
+					}
+				: {
+						effect: 'slide',
+					};
+
+			// 생성
+			responsiveSwiper = new Swiper(el, {
+				...commonOptions,
+				...responsiveOptions,
+			});
+		}
+
+		// 최초 실행
+		document.addEventListener('DOMContentLoaded', initResponsiveSwiper);
+
+		// resize 대응 (debounce)
+		let timer;
+		window.addEventListener('resize', () => {
+			clearTimeout(timer);
+			timer = setTimeout(initResponsiveSwiper, 200);
 		});
+
+		// const eleBanSwiper = new Swiper(".main-bn-swiper .swiper", {
+		// 	slidesPerView: 1,
+		// 	spaceBetween: 0,
+		// 	centeredSlides: true,
+		// 	effect: 'creative',
+		// 	creativeEffect: {
+		// 		limitProgress: 1,
+		// 		prev: {
+		// 			opacity:1,
+		// 			scale: 0.9,
+		// 			translate: [-100, 0, -200],
+		// 		},
+		// 		next: {
+		// 			scale: 0.9,
+		// 			translate: [100, 0, -200],
+		// 		},
+		// 	},
+		// 	loop: true,
+		// 	observer: true,
+		// 	observeParents: true,
+		// 	// watchSlidesProgress: true,
+		// 	grabCursor: true,
+		// 	speed: 800,
+		// 	autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// 	},
+		// 	navigation: {
+		// 		nextEl: ".main-bn-swiper .swiper-button-next",
+		// 		prevEl: ".main-bn-swiper .swiper-button-prev",
+		// 	},
+		// 	pagination: {
+		// 		el: ".main-bn-swiper .swiper-pagination",
+		// 		type: "fraction",
+		// 	},
+		// 	on: {
+		// 		init(swiper) {
+		// 			attachAutoplayControl(swiper, ".main-bn-swiper");
+		// 		},
+		// 	},
+		// 	breakpoints: {
+		// 		360: {
+		// 		},
+		// 		1200: {
+		// 		},
+		// 	},
+		// });
+
+
+
+
 
 		// 보도자료
 		const newsSwiper = new Swiper(".main-news-swiper .swiper", {
@@ -3108,23 +3194,19 @@ html, body {
 			// 이동 (핵심)
 			// =========================
 			function moveTo(index) {
-				if (!isActive) return;
-				if (isAnimating) return;
+				if (!isActive || isAnimating) return;
 
 				index = Math.max(0, Math.min(index, FOOTER_INDEX));
 
 				isAnimating = true;
 				current = index;
 
-				const targetTop =
+				const top =
 					index === FOOTER_INDEX
 						? footer.offsetTop
 						: sections[index].offsetTop;
 
-				window.scrollTo({
-					top: targetTop,
-					behavior: 'smooth'
-				});
+				window.scrollTo({ top, behavior: 'smooth'});
 
 				updateNav();
 				setActiveSection(index);
@@ -3163,11 +3245,10 @@ html, body {
 			}
 
 
-
 			// =============================================
 			// section 진입 시 swiper 초기 위치로 복구
 			// =============================================
-			const swipers = document.querySelectorAll('.swiper');
+			// const swipers = document.querySelectorAll('.swiper');
 
 			function resetSwiperInSection(sectionEl) {
 				const swiperEl = sectionEl.querySelector('.swiper');
@@ -3205,12 +3286,11 @@ html, body {
 
 				// mouseWrap
 				mouseWrap && mouseWrap.classList.toggle('bg-w', isFirst);
-				// document.body.classList.toggle('is-gnb', index === 0);	
 
 				// footer 진입 시 숨김 / 나오면 복구
-					if (mouseWrap) {
-						mouseWrap.style.display = isFooter ? 'none' : '';
-					}
+				if (mouseWrap) {
+					mouseWrap.style.display = isFooter ? 'none' : '';
+				}
 			}
 
 
@@ -3297,8 +3377,8 @@ html, body {
 				current = newIndex;
 				updateNav();
 				setActiveSection(current);
+				}
 			}
-		}
 
 			// =========================
 			// init / destroy
@@ -3338,7 +3418,7 @@ html, body {
 
 
 			// ===========================================================================
-			// header 배경 토글 (scroll) main banner swiper 기준
+			// mobile mode - scroll header is-bg 삭제, main banner swiper 기준
 			// ===========================================================================
 			function handleMobileScroll() {
 				if (window.innerWidth >= BREAKPOINT) return; // PC에서는 무시
@@ -3355,11 +3435,9 @@ html, body {
 				}
 			}
 
-			window.addEventListener('scroll', handleMobileScroll);
-
 
 			// ===========================================================================
-			// mobile mode - section > .sec-inner active 토글 (IntersectionObserver)
+			// mobile mode - section > .sec-inner active 토글 (title 애니메이션)
 			// ===========================================================================
 			const targets = document.querySelectorAll('.swiper, .section > .sec-inner');
 			let observer = null;
@@ -3394,15 +3472,28 @@ html, body {
 					destroyObserver();
 					initFullpage();
 				} else {
-					initObserver();
 					destroyFullpage();
+					initObserver();
 				}
 			}
 
-			window.addEventListener('resize', checkMode);
+			window.addEventListener('scroll', handleMobileScroll);
 
-			// init
-			checkMode();
+			window.addEventListener('resize', () => {
+				checkMode();
+
+				clearTimeout(swiperResizeTimer);
+				swiperResizeTimer = setTimeout(initResponsiveSwiper, 200);
+
+			});
+
+			window.addEventListener('DOMContentLoaded', () => {	
+				// init
+				checkMode();
+				handleMobileScroll();
+				initResponsiveSwiper();
+			});
+
 		})();
 
 	</script>

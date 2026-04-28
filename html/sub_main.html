@@ -17,9 +17,14 @@
 	<!-- breadcrumb navigation sample js -->
 	<script src="../resources/js/nav_breadcrumb.js"></script>
 	<!-- header + breadcrumb event sample js -->
-	<script src="../resources/js/sub_main.js"></script>
+	<!-- <script src="../resources/js/sub_main.js"></script> -->
 
 	<title>금융감독원 통합홈페이지</title>
+	<style>
+		header {
+	transition: background 0.15s ease, opacity 0.15s ease;
+}
+	</style>
 </head>
 <body>
 	<div id="wrap">
@@ -2077,6 +2082,11 @@
 			observer = null;
 		}
 		function handleResponsive() {
+			// test 용
+			// if (window.innerWidth >= 0) {
+			// 	initObserver();
+			// }
+				
 			if (window.innerWidth >= 1280) {
 				initObserver();
 			} else {
@@ -2091,6 +2101,86 @@
 			handleResponsive();
 		});
 
+
+
+(function () {
+	const header = document.querySelector('header');
+	const subVisual = document.querySelector('.sub-visual-wrap');
+	const nav = document.querySelector('.krds-breadcrumb-wrap');
+
+	if (!header || !subVisual || !nav) return;
+
+	let lastScrollY = window.scrollY;
+	let isAnimating = false; // 중복 실행 방지
+
+	const DELAY = 150; // transition 시간과 맞추기
+
+	function getHeaderHeight() {
+		return header.offsetHeight;
+	}
+
+	function applyPadding() {
+		if (header.classList.contains('fixed')) {
+			subVisual.style.paddingTop = getHeaderHeight() + 'px';
+		} else {
+			subVisual.style.paddingTop = '';
+		}
+	}
+
+	// ▼ header 숨김 (down scroll)
+	function hideHeader() {
+		if (isAnimating || !header.classList.contains('fixed')) return;
+
+		isAnimating = true;
+
+		header.classList.remove('is-bg');
+
+		setTimeout(() => {
+			header.classList.remove('fixed');
+			applyPadding();
+			isAnimating = false;
+		}, DELAY);
+	}
+
+	// ▲ header 복구 (up scroll)
+	function showHeader() {
+		if (isAnimating || header.classList.contains('fixed')) return;
+
+		header.classList.add('fixed');
+		header.classList.add('is-bg');
+		applyPadding();
+	}
+
+	function handleScroll() {
+		const currentScrollY = window.scrollY;
+		const direction = currentScrollY > lastScrollY ? 'down' : 'up';
+
+		const headerHeight = getHeaderHeight();
+		const subRect = subVisual.getBoundingClientRect();
+
+		// ▼ 스크롤 다운
+		if (direction === 'down') {
+			if (subRect.bottom <= headerHeight) {
+				hideHeader();
+			}
+		}
+
+		// ▲ 스크롤 업
+		if (direction === 'up') {
+			if (subRect.bottom > headerHeight) {
+				showHeader();
+			}
+		}
+
+		lastScrollY = currentScrollY;
+	}
+
+	// 초기 상태 보정
+	applyPadding();
+
+	window.addEventListener('scroll', handleScroll);
+	window.addEventListener('resize', applyPadding);
+})();
 
 		/* ─────────────────────────────────────────────
 				공통 메뉴 데이터 — 여러 페이지 공유

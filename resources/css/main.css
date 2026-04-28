@@ -1501,9 +1501,9 @@
 	background: url(../img/component/icon/ico_more.svg) no-repeat center / 2rem auto;
 }
 
+.main .swiper-indicator.mo > [class^=swiper-button-],
 .krds-tab-area.media .swiper-pagination {
 	display: none;
-	margin-top: 1.6rem;
 }
 
 
@@ -1818,18 +1818,19 @@
 	.main-visual-wrap .swiper-fraction span {
 		font-size: 1.5rem;
 	}
-	/* 공통 - mobile indicator button size */
-	.main .swiper .swiper-indicator [class^=swiper-button-] {
+
+	/* main-service-swiper indicator button size */
+	.main .main-service-swiper .swiper-indicator [class^=swiper-button-] {
 		background-color: initial;
 	}
-	.main .swiper .swiper-indicator [class^=swiper-button-],
-	.main .swiper .swiper-indicator [class^=swiper-button-]::after {
+	.main .main-service-swiper .swiper-indicator [class^=swiper-button-],
+	.main .main-service-swiper .swiper-indicator [class^=swiper-button-]::after {
 		width: 2rem;
 		height: 2rem;
 		padding: 0;
 		border: none;
 	}
-
+	
 	.section.active .vector-ani, 
 	.sec-inner.active .vector-ani {
 		/* top: -3.6rem;
@@ -2041,11 +2042,36 @@
 		padding: 1.6rem 2rem;
 	}
 	.main-ytube-swiper .swiper-controller {
-		position: unset;
+		width: 50%;
 	}
 	.krds-tab-area.media .swiper-pagination {
 		display: flex;
 	}
+
+	/* 공통 - mobile indicator button size */
+	.main .swiper + .swiper-indicator [class^=swiper-button-] {
+		background-color: initial;
+	}
+	.main .swiper + .swiper-indicator [class^=swiper-button-],
+	.main .swiper + .swiper-indicator [class^=swiper-button-]::after {
+		width: 2rem;
+		height: 2rem;
+		padding: 0;
+		border: none;
+	}
+
+	/* for youtube indicator button */
+	.main-ytube-swiper .swiper-indicator.mo {
+		margin-top: 1.6rem;
+	}
+	.main-ytube-swiper .swiper-indicator.mo > [class^=swiper-button-] {
+		display: flex;
+		position: unset;
+	}
+	.main-ytube-swiper .swiper-controller.pc {
+		display: none;
+	}
+
 
 
 }

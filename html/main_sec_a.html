@@ -954,7 +954,7 @@ html, body {
 											<li class="swiper-slide">
 												<a href="javascript:void(0);" class="card-wrap">
 													<span class="label">신용감독국/은행리스크감독국</span>
-													<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
+													<div class="tit">금감원, 중동 상황 관련 산업전문가 간담회 실시 금감원, 중동 상황 관련 산업전문가 간담회 실시</div>
 													<div class="date"><span>26-03-09</span></div>
 												</a>
 											</li>
@@ -2847,12 +2847,13 @@ html, body {
 			},
 			breakpoints: {
 				0: {
-					spaceBetween: 16,
+					// spaceBetween: 16,
 				},
 				360: {
-					spaceBetween: 24,
+					spaceBetween: 16,
 				},
-				1700: {
+				768: {
+					spaceBetween: 24,
 
 				},
 			},
@@ -2869,6 +2870,18 @@ html, body {
 			pagination: {
 				el: ".main-schedule-swiper .swiper-pagination",
 				type: 'fraction',
+			},
+			breakpoints: {
+				0: {
+					// spaceBetween: 16,
+				},
+				360: {
+					spaceBetween: 16,
+				},
+				768: {
+					spaceBetween: 24,
+
+				},
 			},
 		});
 		
@@ -2888,10 +2901,16 @@ html, body {
 			},
 			breakpoints: {
 					0: {
+						slidesPerView: 1,
+						spaceBetween: 16,
 					},
-					500: {
+					540: {
 						slidesPerView: 2,
 						spaceBetween: 16,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 24,
 					},
 				},
 		});
@@ -2901,12 +2920,12 @@ html, body {
 		const bookmarkSwipers = document.querySelectorAll('.my-bookmark-swiper .swiper');
 		bookmarkSwipers.forEach((el) => {
 			new Swiper(el, {
-				// slidesPerView: 4,
-				// spaceBetween: 32,
-				// grid: {
-				// 	rows: 2,
-				// 	fill: "row",
-				// },
+				slidesPerView: 4,
+				spaceBetween: 32,
+				grid: {
+					rows: 2,
+					fill: "row",
+				},
 				watchOverflow: true,
 				observer: true,
 				observeParents: true,
@@ -2924,7 +2943,7 @@ html, body {
 						spaceBetween: 16,
 						grid: { 
 							rows: 4, 
-							fill: "row" 
+							// fill: "row" 
 						}
 					},
 					768: {
@@ -2932,16 +2951,14 @@ html, body {
 						spaceBetween: 16,
 						grid: { 
 							rows: 4, 
-							fill: "row" 
+							// fill: "row" 
 						}
 					},
-					1200: {
-						slidesPerView: 4,
+					1280: {
+						spaceBetween: 16,
+					},
+					1700: {
 						spaceBetween: 32,
-						grid: { 
-							rows: 2, 
-							fill: "row",
-						}
 					}
 				},
 				on: {
@@ -2990,10 +3007,13 @@ html, body {
 			breakpoints: {
 				0: {
 					// slidesPerView: 1.2,
-					spaceBetween: 12,
+					spaceBetween: 16,
 				},
-				767: {
+				768: {
 					spaceBetween: 24,
+				},
+				1700: {
+					spaceBetween: 48,
 				},
 			},
 			on: {
@@ -3033,9 +3053,17 @@ html, body {
 					spaceBetween: 0,
 					// initialSlide: 1, // 초기 슬라이드 설정
 				},
-				767: {
+				768: {
+					slidesPerView: 1.56,
+					spaceBetween: 80,
+				},
+				1280: {
+					slidesPerView: 2.4,
+					spaceBetween: 40,
+				},
+				1700: {
 					slidesPerView: 2.5,
-					spaceBetween: 100,
+					spaceBetween: 190,
 				}
 			},
 		});
@@ -3482,16 +3510,12 @@ html, body {
 			window.addEventListener('resize', () => {
 				checkMode();
 
-				clearTimeout(swiperResizeTimer);
-				swiperResizeTimer = setTimeout(initResponsiveSwiper, 200);
-
 			});
 
 			window.addEventListener('DOMContentLoaded', () => {	
 				// init
 				checkMode();
 				handleMobileScroll();
-				initResponsiveSwiper();
 			});
 
 		})();

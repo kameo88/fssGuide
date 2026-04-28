@@ -370,6 +370,7 @@ body {
 #krds-footer .f-logo {
 	width: 20rem;
 	background-image: url(../img/common/icon/ico_h_logo.svg);
+	background-position: center left;
 }
 
 /* subpage layout */

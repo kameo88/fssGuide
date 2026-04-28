@@ -990,8 +990,11 @@ body.scroll-no {
 	padding-left: 4rem;
 	padding-right: calc(7.2rem + 4rem);
 }
+#krds-footer .f-cnt {
+	gap: 2.6rem;
+}
 #krds-footer .info-cs li:first-child {
-	margin-bottom: 1.6rem;
+	margin-bottom: .8rem;
 }
 
 /* footer 유사기관 */

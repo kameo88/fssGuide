@@ -1047,7 +1047,7 @@
 	gap: 8.6rem;
 }
 .main .krds-tab-area.my .tab.line>ul {
-	gap: 4.8rem;
+	/* gap: 4rem; */
 }
 /* .my-bookmark-swiper */
 .bookmark-wrap {
@@ -1501,7 +1501,7 @@
 	background: url(../img/component/icon/ico_more.svg) no-repeat center / 2rem auto;
 }
 
-.main .swiper-indicator.mo > [class^=swiper-button-],
+.main-ytube-swiper .swiper-indicator > [class^=swiper-button-],
 .krds-tab-area.media .swiper-pagination {
 	display: none;
 }
@@ -1509,7 +1509,6 @@
 
 
 
-/* common 으로 이동예정 */
 
 
 
@@ -1915,7 +1914,8 @@
 		/* height: 40.2rem; */
 	}
 	.main .main-service-swiper .item {
-		padding: 3.2rem;		
+		height: 44.8rem;
+		padding: 3.2rem;
 	}
 	.main .main-service-swiper .item .tit {
 		font-size: 2.8rem;
@@ -1998,6 +1998,19 @@
 	.main-vb-swiper .swiper-indicator {
 		bottom: 12rem;
 	}
+
+	.main-vb-swiper .swiper-slide .tit span:not(:last-child) {
+		display: inline-flex;
+	}
+	.main-vb-swiper .swiper-slide-active .tit span:nth-child(1) {
+		transition-delay: .4s;
+		transition-duration: 1s;
+	}
+	.main-vb-swiper .swiper-slide-active .tit span:nth-child(2) {
+		/* transition-delay: 4s; */
+		transition-duration: 1s;
+	}
+
 	.main-bn-swiper .swiper-slide .item {
 		padding: 3.2rem 1.6rem;
 	}
@@ -2020,6 +2033,7 @@
 
 	/* #section3 */
 	.main .main-service-swiper .item {
+		height: 40.2rem;
 		padding: 2rem;
 	}
 	.main .main-service-swiper .item .tit {
@@ -2061,14 +2075,14 @@
 	}
 
 	/* for youtube indicator button */
-	.main-ytube-swiper .swiper-indicator.mo {
-		margin-top: 1.6rem;
+	.main-ytube-swiper .swiper-indicator {
+		margin-top: 3.2rem;
 	}
-	.main-ytube-swiper .swiper-indicator.mo > [class^=swiper-button-] {
+	.main-ytube-swiper .swiper-indicator > [class^=swiper-button-] {
 		display: flex;
 		position: unset;
 	}
-	.main-ytube-swiper .swiper-controller.pc {
+	.main-ytube-swiper .swiper-controller {
 		display: none;
 	}
 
@@ -2076,12 +2090,21 @@
 
 }
 
-@media (max-width: 540px) {
-
+/* 0 ~ 360 */
+@media (max-width: 360px) {
+	.krds-btn.medium {
+		height: 4rem;
+		padding: 0 1.2rem;
+		font-size: 1.5rem;
+	}
+	.krds-btn.medium .svg-icon {
+		width: 1.6rem;
+		height: 1.6rem;
+	}
 }
 
 
-/* 0 ~ 360 */
+/* 361 ~ 5400 */
 @media (max-width: 540px) {
 
 	.main-vb-swiper .swiper-slide {
@@ -2135,6 +2158,9 @@
 	.main-news-swiper .card-wrap .tit {
 		-webkit-line-clamp: 3;
 	}
+	.schedule-wrap .daily-report {
+		display: none;
+	}
 	.main .main-service-swiper .item .tit {
 		font-size: 2.4rem;
 	}
@@ -2162,6 +2188,9 @@
 	}
 	.main-ytube-swiper .card-wrap .img img {
 		height: 18.4rem;
+	}
+	.main-ytube-swiper .swiper-indicator {
+		margin-top: 1.6rem;
 	}
 
 

@@ -734,7 +734,10 @@
 					<div class="visual-area">
 						<div class="tit-wrap">
 							<h1 class="tit">민원 &middot; 신고</h1>
-							<div class="desc">금융민원 및 불법금융신고, 보이스피싱, 옴부즈만 고충민원 등 서비스를 제공합니다.</div>
+							<div class="desc">
+								<span>금융민원 및 불법금융신고, 보이스피싱, </span> 
+								<span>옴부즈만 고충민원 등 서비스를 제공합니다.</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1943,11 +1946,11 @@
 					slidesPerView: 2,
 					spaceBetween: 16,
 					grid: { 
-						rows: 4, 
+						rows: 2, 
 						fill: "row" 
 					}
 				},
-				1200: {
+				1700: {
 					slidesPerView: 4,
 					spaceBetween: 48,
 					grid: { 
@@ -2000,11 +2003,13 @@
 			},
 			breakpoints: {
 				0: {
-					slidesPerView: 1.2,
-					spaceBetween: 12,
-				},
-				767: {
 					slidesPerView: 'auto',
+					spaceBetween: 16,
+				},
+				1280: {
+					spaceBetween: 24,
+				},
+				1700: {
 					spaceBetween: 48,
 				}
 			},
@@ -2025,9 +2030,10 @@
 			},
 			breakpoints: {
 				0: {
+					slidesPerView: 'auto',
 					spaceBetween: 16,
 				},
-				360: {
+				1280: {
 					spaceBetween: 24,
 				},
 				1700: {
@@ -2047,17 +2053,19 @@
 			},
 			pagination: {
 				el: ".media-swiper .swiper-pagination",
-				type: 'fraction',
+				clickable: true,
 			},
 			breakpoints: {
 				0: {
-					slidesPerView: 1,
-					spaceBetween: 12,
-				},
-				768: {
 					slidesPerView: 'auto',
+					spaceBetween: 16,
+				},
+				1280: {
+					spaceBetween: 24,
+				},
+				1700: {
 					spaceBetween: 48,
-				}
+				},
 			},
 		});
 

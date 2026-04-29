@@ -611,12 +611,12 @@
 .card-bnr-wrap::after {
 	content: '';
 	display: inline-flex;
-	flex: 0 0 6.4rem;
+	flex: 0 0 auto;
 	width: 6.4rem;
 	height: 6.4rem;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 6.4rem auto;
+	background-size: contain;
 }
 .card-bnr-wrap .txt {
 	display: flex;
@@ -741,13 +741,17 @@
 }
 .shortcut-list .link .tit {
 	margin-bottom: 1.6rem;
-	font-size: 4rem;
+	font-size: 3.2rem;
 	font-weight: 700;
+}
+.shortcut-list li:first-child .link .tit {
+	font-size: 4rem;
 }
 .shortcut-list .link .icon-area {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex: 0 0 auto;
 	width: 4rem;
 	height: 4rem;
 	margin: 0 0 0 auto;
@@ -779,7 +783,7 @@
 /* 불법금융예방 swiper */
 .guidebook-swiper {
 	position: relative;
-	padding-top: 2.4rem;
+	padding-top: 2.8rem;
 }
 .guidebook-swiper .swiper {
 	padding-top: 2rem;
@@ -880,24 +884,7 @@
 		margin: 0 auto;
 	}
 }
-@media (min-width: 768px) {
-	.main-vban-wrap .vb-swiper .swiper-button-prev, 
-	.main-vban-wrap .vb-swiper .swiper-button-next {
-		width: 6.4rem;
-		height: 6.4rem;
-		transform: translateY(-50%);
-	}
-	.main-vban-wrap .vb-swiper .swiper-button-prev::after, 
-	.main-vban-wrap .vb-swiper .swiper-button-next::after {
-		width: 3.8rem;
-		height: 3.8rem;
-	}
-}
-@media (max-width: 1023px) {
-	.main-vban-wrap .vb-swiper .swiper-slide .text .tit {
-		font-size: 2.4rem;
-	}
-}
+
 
 /* 반응형 시작 */
 /* 1280 ~ 1699 */
@@ -911,6 +898,29 @@
 	.shortcut-list {
 		gap: 1.6rem;
 	}
+	.shortcut-list li {
+			width: calc((100% - 3.2rem) / 4);
+	}
+	.guidebook-swiper .swiper-slide,
+	.archive-swiper .swiper-slide {
+		width: 37rem;
+	}
+	.guidebook-swiper .card-img-wrap .img img {
+		height: 22.4rem;
+	}
+	.section .sub-conts-wrap {
+		gap: 3.2rem;
+	}
+	.section .sub-conts-wrap > * {
+		width: calc((100% - 3.2rem) /2);
+	}
+	.media-swiper .swiper-slide {
+		width: calc((100% - 2.4rem) / 2);
+	}
+	.media-swiper .card-img-wrap .img img {
+		height: 16.3rem;
+	}
+	
 }
 
 /* 768 ~ 1279 */
@@ -922,12 +932,72 @@
 	.sub-visual-wrap {
 		padding-top: 6.4rem;
 	}
+	.shortcut-list {
+		flex-wrap: wrap;
+	}
+	.shortcut-list li {
+		width: calc((100% - 1.6rem) / 2);
+	}
+	.shortcut-list li:first-child {
+		width: 100%;
+	}
+	.guidebook-swiper .swiper-slide, 
+	.archive-swiper .swiper-slide,
+	.media-swiper .swiper-slide {
+		width: 36rem;
+	}
+	.guidebook-swiper .card-img-wrap .img img,
+	.media-swiper .card-img-wrap .img img {
+		height: 21.7rem;
+	}
+	.section .sub-conts-wrap {
+		flex-direction: column;
+		gap: 6.4rem;
+	}
+	.section .sub-conts-wrap > * {
+		width: 100%;
+	}
 
 }
 
 /* 361 ~ 767 */
 @media (max-width: 767px) {
 
+	.sub-visual-wrap .visual-area {
+		height: 59.7rem;
+	}
+	.sub-visual-wrap .tit-wrap span {
+		display: block;
+		text-align: center;
+	}
+	.sub-visual-wrap .tit-wrap .desc {
+		margin-top: 1.6rem;
+	}
+	.shortcut-wrap {
+		gap: 0;
+	}
+	.guidebook-swiper {
+		padding-top: .4rem;
+	}
+	.guidebook-swiper .swiper-slide,
+	.archive-swiper .swiper-slide {
+		width: 44rem;
+	}
+	.guidebook-swiper .card-img-wrap .img img {
+		height: 26.5rem;
+	}
+	.guidebook-swiper .swiper-indicator,
+	.archive-swiper .swiper-indicator {
+		display: none;
+	}
+	
+	.media-swiper .swiper-slide {
+		width: calc((100% - 1.6rem) / 2);
+	}
+	.media-swiper .card-img-wrap .img img {
+		height: 21.7rem;
+	}
+	
 	.info-box {
 		padding: 2rem;
 	}
@@ -995,6 +1065,33 @@
 	
 }
 
+@media (max-width: 360px) {
+	
+	.card-txt-wrap {
+		padding: 2rem;
+	}
+	.card-img-wrap .text {
+		padding: 1.6rem 2rem;
+	}
+	.card-txt-wrap .tit {
+		-webkit-line-clamp: 3;
+	}
+	.card-txt-wrap .date {
+		margin-top: 3rem;
+	}
+	.card-bnr-wrap {
+		height: 9.8rem;
+		padding: 2rem;
+	}
+	.card-bnr-wrap .txt {
+		font-size: 1.9rem;
+	}
+	.card-bnr-wrap::after {
+		width: 5.6rem;
+		height: 5.6rem;
+	}
+	
+}
 
 /* 0 ~ 360 */
 @media (max-width: 360px) {
@@ -1014,6 +1111,7 @@
 	.section .sub-tit-wrap .tit {
 		font-size: 2.8rem;
 	}
+
 	.shortcut-wrap {
 		gap: 1.6rem;
 	}
@@ -1029,7 +1127,7 @@
 	}
 	.shortcut-list .link {
 		height: 28rem;
-		padding: 2.4rem;
+		padding: 2rem;
 		border-radius: 1.6rem;
 	}
 	.shortcut-list li:not(:first-child) .link {
@@ -1038,8 +1136,11 @@
 	.shortcut-list .link.item1::after {
 		bottom: 2.4rem;	
 	}
-	.shortcut-list .link .tit {
+	.shortcut-list li:first-child .link .tit {
 		font-size: 2.8rem;
+	} 
+	.shortcut-list .link .tit {
+		font-size: 2.4rem;
 	}
 	.shortcut-list li:not(:first-child) .desc {
 		display: none;
@@ -1050,6 +1151,12 @@
 	}
 	.section .sub-conts-wrap > * {
 		width: 100%;
+	}
+	.sub-conts-wrap .conts-tit-wrap .tit {
+		font-size: 2.4rem;
+	}
+	.sub-conts-wrap .conts-tit-wrap {
+		margin-bottom: 1.6rem;
 	}
 
 	.section .swiper-indicator {
@@ -1070,6 +1177,31 @@
 		width: 2rem;
 		height: 2rem;
 	}
-
+	.guidebook-swiper .swiper-slide,
+	.archive-swiper .swiper-slide {
+		width: 29.6rem;
+	}
+	.guidebook-swiper .card-img-wrap .img img {
+		height: 17.9rem;
+	}
+	.archive-swiper {
+		padding-top: 0;
+	}
+	.archive-swiper .swiper-slide .card-txt-wrap {
+		height: 26.4rem;
+	}
+	.sub-conts-wrap .qna-list > li {
+		flex-wrap: wrap;
+		padding: 1.6rem 0;
+	}
+	.sub-conts-wrap .qna-list > li .date {
+		margin: .8rem 0 0;
+	}
+	.media-swiper .swiper-slide {
+		width: 100%;
+	}
+	.media-swiper .card-img-wrap .img img {
+		height: 19.8rem;
+	}
 	
 }

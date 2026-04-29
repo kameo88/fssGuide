@@ -11,20 +11,12 @@
 
 	<link rel="shortcut icon" href="../resources/img/favicon.png">
 	<link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
-	<link href="../resources/css/main.css" type="text/css" rel="stylesheet" />
 	<script src="../resources/js/component/ui-script.js"></script>
 	<script src="../resources/js/plugin/swiper-bundle.min.js"></script>
 	<!-- breadcrumb navigation sample js -->
 	<script src="../resources/js/nav_breadcrumb.js"></script>
-	<!-- header + breadcrumb event sample js -->
-	<!-- <script src="../resources/js/sub_main.js"></script> -->
 
 	<title>금융감독원 통합홈페이지</title>
-	<style>
-		header {
-	transition: background 0.15s ease, opacity 0.15s ease;
-}
-	</style>
 </head>
 <body>
 	<div id="wrap">
@@ -36,7 +28,7 @@
 
 
 		<!-- header inc -->
-		<header id="krds-header" class="is-bg fixed">
+		<header id="krds-header" class="is-bg">
 			<div class="header-in">
 				<!-- 헤더 상단 기타메뉴 -->
 				<div class="header-container">
@@ -1113,30 +1105,46 @@
 									<h3 class="tit">홍보영상</h3>
 									<a href="javascript:void(0);" class="more">더보기</a>
 								</div>
-								<ul class="media-list">
-									<li>
-										<a href="javascript:void(0);" class="card-img-wrap">
-											<div class="img">
-												<img src="../resources/img/contents/img_media_01.png" alt="" />
-											</div>
-											<div class="text">
-												<div class="tit">숨은 금융자산이 무려 18조원</div>
-												<div class="date"><span>26-03-03</span></div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="card-img-wrap">
-											<div class="img">
-												<img src="../resources/img/contents/img_guide_01.png" alt="" />
-											</div>
-											<div class="text">
-												<div class="tit">알 수 없게 숨긴 해지버튼, 이젠 금지됩니다. 알 수 없게 숨긴 해지버튼</div>
-												<div class="date"><span>26-03-03</span></div>
-											</div>
-										</a>
-									</li>
-								</ul>
+
+								<!-- 홍보영상 swiper -->
+								<div class="media-swiper">
+									<div class="swiper">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="card-img-wrap">
+													<div class="img">
+														<img src="../resources/img/contents/img_media_01.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">숨은 금융자산이 무려 18조원</div>
+														<div class="date"><span>26-03-03</span></div>
+													</div>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="card-img-wrap">
+													<div class="img">
+														<img src="../resources/img/contents/img_guide_01.png" alt="" />
+													</div>
+													<div class="text">
+														<div class="tit">알 수 없게 숨긴 해지버튼, 이젠 금지됩니다. 알 수 없게 숨긴 해지버튼</div>
+														<div class="date"><span>26-03-03</span></div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="swiper-indicator bg-trans">
+										<button type="button" class="swiper-button-prev">
+											<span class="sr-only">이전</span>
+										</button>
+										<div class="swiper-pagination"></div>
+										<button type="button" class="swiper-button-next">
+											<span class="sr-only">다음</span>
+										</button>
+									</div>
+								</div>
+								<!-- //홍보영상 swiper -->
 							</div>
 							<!-- //홍보영상 -->
 
@@ -1741,7 +1749,7 @@
 														</li>
 													</ul>
 												</div>
-												<div class="swiper-indicator">
+												<div class="swiper-indicator bg-trans">
 													<button type="button" class="swiper-button-prev">
 														<span class="sr-only">이전</span>
 													</button>
@@ -1965,7 +1973,7 @@
 		function swpControlUI(swiper) {
 
 			// 현재 swiper 기준으로 탐색
-			const container = swiper.el.closest('.my-bookmark-swiper');
+			const container = swiper.el.closest('.my-bookmark-swiper, .shortcut-swiper');
 			if (!container) return;
 			const indicator = container.querySelector('.swiper-indicator');
 			if (!indicator) return;
@@ -2023,8 +2031,33 @@
 					spaceBetween: 24,
 				},
 				1700: {
+					spaceBetween: 48,
 
 				},
+			},
+		});
+
+		// 홍보영상 swiper
+		const mediaSwiper = new Swiper(".media-swiper .swiper", {
+			slidesPerView: 'auto',
+			spaceBetween: 48,
+			navigation: {
+				nextEl: ".media-swiper .swiper-button-next",
+				prevEl: ".media-swiper .swiper-button-prev",
+			},
+			pagination: {
+				el: ".media-swiper .swiper-pagination",
+				type: 'fraction',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 12,
+				},
+				768: {
+					slidesPerView: 'auto',
+					spaceBetween: 48,
+				}
 			},
 		});
 
@@ -2102,85 +2135,6 @@
 		});
 
 
-
-(function () {
-	const header = document.querySelector('header');
-	const subVisual = document.querySelector('.sub-visual-wrap');
-	const nav = document.querySelector('.krds-breadcrumb-wrap');
-
-	if (!header || !subVisual || !nav) return;
-
-	let lastScrollY = window.scrollY;
-	let isAnimating = false; // 중복 실행 방지
-
-	const DELAY = 150; // transition 시간과 맞추기
-
-	function getHeaderHeight() {
-		return header.offsetHeight;
-	}
-
-	function applyPadding() {
-		if (header.classList.contains('fixed')) {
-			subVisual.style.paddingTop = getHeaderHeight() + 'px';
-		} else {
-			subVisual.style.paddingTop = '';
-		}
-	}
-
-	// ▼ header 숨김 (down scroll)
-	function hideHeader() {
-		if (isAnimating || !header.classList.contains('fixed')) return;
-
-		isAnimating = true;
-
-		header.classList.remove('is-bg');
-
-		setTimeout(() => {
-			header.classList.remove('fixed');
-			applyPadding();
-			isAnimating = false;
-		}, DELAY);
-	}
-
-	// ▲ header 복구 (up scroll)
-	function showHeader() {
-		if (isAnimating || header.classList.contains('fixed')) return;
-
-		header.classList.add('fixed');
-		header.classList.add('is-bg');
-		applyPadding();
-	}
-
-	function handleScroll() {
-		const currentScrollY = window.scrollY;
-		const direction = currentScrollY > lastScrollY ? 'down' : 'up';
-
-		const headerHeight = getHeaderHeight();
-		const subRect = subVisual.getBoundingClientRect();
-
-		// ▼ 스크롤 다운
-		if (direction === 'down') {
-			if (subRect.bottom <= headerHeight) {
-				hideHeader();
-			}
-		}
-
-		// ▲ 스크롤 업
-		if (direction === 'up') {
-			if (subRect.bottom > headerHeight) {
-				showHeader();
-			}
-		}
-
-		lastScrollY = currentScrollY;
-	}
-
-	// 초기 상태 보정
-	applyPadding();
-
-	window.addEventListener('scroll', handleScroll);
-	window.addEventListener('resize', applyPadding);
-})();
 
 		/* ─────────────────────────────────────────────
 				공통 메뉴 데이터 — 여러 페이지 공유

@@ -1080,8 +1080,8 @@ body.scroll-no {
 /* mobile menu */
 @media (max-width: 1279px) {
 	#krds-header {
-		/* position: fixed;
-		right: 0; */
+		position: fixed;
+		right: 0;
 		height: auto;
 	}
 	#krds-header .header-in {
@@ -1125,8 +1125,9 @@ body.scroll-no {
 	/* contents 여백 */
 	#container>.inner .contents {
 		padding-right: 1.6rem;
+		padding-top: calc(6.4rem + 6.4rem);
 	}
-
+	
 
 	/* 통합 검색 */
 	.krds-modal.search .modal-conts {
@@ -1250,7 +1251,7 @@ body.scroll-no {
 
 	/* contents 여백 */
 	#container>.inner .contents {
-		padding-top: 4rem;
+		padding-top: calc(6.4rem + 4rem);
 		padding-bottom: 4rem;
 	}
 	.cnts-area > .section, 

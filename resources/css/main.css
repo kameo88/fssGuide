@@ -922,6 +922,7 @@
 	font-size: 1.7rem;
 	cursor: pointer;
 	transition: all .3s ease-in;
+	overflow: hidden;
 }
 .main .service-list .item + .item {
 	margin-top: 4.8rem;
@@ -953,20 +954,20 @@
 	background-size: 12rem auto;
 	transition: all .3s ease-in;
 }
-.main .service-list .item:hover .icon {
+.main .service-list .item.on .icon {
 	margin-top: 1rem;
 	/* transition-delay: .5s; */
 }
-.main .service-list .item.ty1:hover {
+.main .service-list .item.ty1.on {
 	height: 42rem;
 }
-.main .service-list .item.ty2:hover {
+.main .service-list .item.ty2.on {
 	height: 40rem;
 }
-.main .service-list .item.ty3:hover {
+.main .service-list .item.ty3.on {
 	height: 37rem;
 }
-.main .service-list .item.ty4:hover {
+.main .service-list .item.ty4.on {
 	height: 37rem;
 }
 
@@ -1004,17 +1005,17 @@
 	transition: all .3s ease;
 	opacity: 0;
 }
-.main .service-list .item:hover .dir-list {
+
+.main .service-list .item.on .dir-list {
 	opacity: 1;
 	transform: translateY(0);
 	transition-delay: .3s;
 }
-.main .service-list .item:hover,
-.main .service-list .item.active {
-	height: auto;
+.main .service-list .item.on {
+	/* height: auto !important; */
 }
-.main .service-list .item:hover .dir-list,
-.main .service-list .item.active .dir-list {
+/* .main .service-list .item:hover .dir-list, */
+.main .service-list .item.on .dir-list {
 	display: flex;
 	margin-top: 1.6rem;
 }
@@ -1633,6 +1634,9 @@
 		min-width: 28rem;
 		height: 20rem;
 		padding: 2.4rem;
+	}
+	.main .service-list .item.on {
+		height: auto !important;
 	}
 	.main .main-service-swiper .item .icon, 
 	.main .service-list .item .icon {

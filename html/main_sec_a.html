@@ -1192,7 +1192,7 @@ html, body {
 							<!-- for PC : 서비스 목록 -->
 							<div class="service-list">
 								<div class="lt">
-									<div class="item ty1">
+									<div class="item ty1" tabindex="0">
 										<div class="tit">민원 &middot; 상담 &middot; 조회</div>
 										<div class="icon"></div>
 										<ul class="dir-list">
@@ -1202,7 +1202,7 @@ html, body {
 											<li><a href="javascript:void(0);" class="link">금융자문서비스 안내</a></li>
 										</ul>
 									</div>
-									<div class="item ty2">
+									<div class="item ty2" tabindex="0">
 										<div class="tit">보이스피싱 지킴이</div>
 										<div class="icon"></div>
 										<ul class="dir-list">
@@ -1214,7 +1214,7 @@ html, body {
 									</div>
 								</div>
 								<div class="rt">
-									<div class="item ty3">
+									<div class="item ty3" tabindex="0">
 										<div class="tit">금융생활 길라잡이</div>
 										<div class="icon"></div>
 										<ul class="dir-list">
@@ -1223,7 +1223,7 @@ html, body {
 											<li><a href="javascript:void(0);" class="link">소비자경보</a></li>
 										</ul>
 									</div>
-									<div class="item ty4">
+									<div class="item ty4" tabindex="0">
 										<div class="tit">보험사기 신고</div>
 										<div class="icon"></div>
 										<ul class="dir-list">
@@ -3170,6 +3170,16 @@ html, body {
 		});
 
 
+		// service-list hover event
+		document.querySelectorAll('.service-list .item').forEach(item => {
+			item.addEventListener('mouseenter', () => {
+				item.classList.add('on');
+			});
+
+			item.addEventListener('mouseleave', () => {
+				item.classList.remove('on');
+			});
+		});
 
 
 		// parallax scroll (fullpage)

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" href="common.css"> -->
+	<title>Document</title>
+	<style>
+		body {
+			padding: 30px;
+		}
+		table {
+			border-collapse: collapse;
+		}
+		table tr,
+		table th,
+		table td {
+			padding: 8px;
+			border: 1px solid #777;
+		}
+		table td {
+			vertical-align: top;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div>접근성 목록</div> -->
+	<table style="width: 100%;">
+		<caption>접근성 목록</caption>
+		<colgroup>
+			<col style="width: 250px;">
+			<col style="width: 350px;">
+			<col style="width: 30%;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th scope="col"></th>
+			<th scope="col">접근성 코드</th>
+			<th scope="col">예제</th>
+			<th scope="col">설명</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th scope="row"> 
+				링크 <br />
+				a
+			</th>
+			<td>
+				a <br /> 
+				ㄴ title="링크 설명"
+				<br /><br />
+				a <br /> 
+				ㄴ role="button"
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1.</b></small> <br />
+				&lt;a href="#" title="링크 설명"&gt;링크&lt;/a&gt;<br />
+				&lt;a href="tel:123-456-7890" title="상담원 연결"&gt;123-456-7890&lt;/a&gt;
+
+				<br /><br />
+
+				<small><b>case 2.</b></small> <br />
+				&lt;a href="#" role="button" &gt;버튼 이벤트&lt;/a&gt;
+			</td>
+			<td>
+				<!-- 설명 -->
+				<small><b>case 1.</b></small> <br />
+				link 기능으로 사용하는 경우 
+
+				<br /><br />
+
+				<small><b>case 2.</b></small> <br />
+				button으로 사용하는 경우(모달 팝업, 아코디언, 툴팁 등)이며, 다른 접근성 속성을 추가해서 사용 <br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+				텍스트 리스트 <br />
+				ul/li
+			</th>
+			<td>
+				ul :<br /> 
+				ㄴ role="list"
+				<br /><br />
+				li :<br /> 
+				ㄴ role="listitem"
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1.</b></small> <br />
+				&lt;ul role="list"&gt; <br />
+				&emsp; &lt;li role="listitem"&gt; 리스트 항목 1 &lt;/li&gt; <br />
+				&emsp; &lt;li role="listitem"&gt; 리스트 항목 2 &lt;/li&gt; <br />
+				&lt;/ul&gt;
+				<br /><br />
+				<small><b>case 2.</b></small> <br />
+				&lt;ol role="list"&gt; <br />
+				&emsp; &lt;li role="listitem"&gt; 리스트 항목 1 &lt;/li&gt; <br />
+				&emsp; &lt;li role="listitem"&gt; 리스트 항목 2 &lt;/li&gt; <br />
+				&lt;/ol&gt;
+
+			</td>
+			<td>
+				<small><b>case 1.</b></small> <br />
+				순서 없는 목록
+				<br /><br />
+				<small><b>case 2.</b></small> <br />
+				순서 있는 목록
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">이미지 <br />img</th>
+			<td>
+				alt="이미지 설명"
+			</td>
+			<td>
+				<!-- 예제 -->
+				&lt;img src="image.png" alt="이미지 설명" /&gt;
+			</td>
+			<td>가능한 이미지 텍스트를 사용하지 않으며, 이미지에 텍스트가 포함된 경우에는 대체 텍스트를 제공</td>
+		</tr>
+		<tr>
+			<th scope="row">표 <br />table</th>
+			<td>
+				thead tr th: <br />
+				ㄴscope="col", scope="colgroup" (&darr;) <br />
+				<br /><br />
+				tbody tr th: <br />
+				ㄴscope="row", scope="rowgroup"(&rarr;)<br />
+			</td>
+			<td></td>
+			<td>
+				테이블에 th 속성이 있는경우 scope를 작성하여, 테이블이 읽히는 방향을 정해주고 caption에 th 내용을 모두 넣어 설명
+				<br /><br />
+				<b>추가 보완 필요</b>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">대체 텍스트</th>
+			<td>
+				class="sr-only" (변경 가능)
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1.</b></small> <br />
+				&lt;button type="button" class="btn-icon"&gt; <br />
+				&emsp; &lt;span class="sr-only"&gt;삭제&lt;/span&gt; <br />
+				&lt;/button&gt;
+				<br /><br />
+
+				<small><b>case 2.</b></small> <br />
+				&lt;img src="image-event.png" /&gt; <br />
+				&lt;span class="sr-only"&gt;이벤트 내용, 날짜 등&lt;/span&gt; <br />
+
+			</td>
+			<td>
+				<small><b>case 1.</b></small> <br />
+				아이콘으로만 구성된 button인 경우, 
+				<br /><br />
+				<small><b>case 2.</b></small> <br />
+				이미지에 많은 텍스트가 포함된 경우 alt 대신 class="sr-only" 가능(이벤트 이미지 등) <br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">디스클로저</th>
+			<td>
+				button class="btn"(액션 버튼) : <br /> 
+				ㄴ aria-controls="disclosure-01", <br />
+				ㄴ aria-expanded="false or true"
+				<br /><br />
+				class="disclosure-wrap"(컨텐츠 패널) : <br /> 
+				ㄴ id="disclosure-01"
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1. 닫힘</b></small> <br />
+				&lt;button type="button" class="btn" <br />
+				&emsp; aria-controls="disclosure-01" <br />
+				&emsp; aria-expanded="false"&gt;디스클로저 닫힘&lt;/button&gt; <br />
+				&lt;div class="disclosure-wrap" id="disclosure-01"&gt; <br />
+				&nbsp;&nbsp; &lt;p&gt;내용 안보임&lt;/p&gt; <br />
+				&lt;/div&gt;
+				<br /><br />
+				<small><b>case 2. 열림</b></small> <br />
+				&lt;button type="button" class="btn" <br />
+				&emsp;	aria-controls="disclosure-01"<br /> 
+				&emsp;	aria-expanded="true" &gt;디스클로저 열림&lt;/button&gt; <br />
+				&lt;div class="disclosure-wrap" id="disclosure-01"&gt; <br />
+				&emsp;	&lt;p&gt;내용 보임&lt;/p&gt; <br />
+				&lt;/div&gt;
+			</td>
+			<td>
+				특정한 정보/컨트롤/섹션에 관련된 부가적인 정보를 표시하거나 숨기는 데 사용되는 요소
+				<br /><br />
+
+				<small><b>case 1.</b></small> <br />
+				디스클로저 닫힘 상태 
+				<br /><br />
+				<small><b>case 2.</b></small> <br />
+				디스클로저 열림 상태 <br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">아코디언</th>
+			<td>
+
+				button class="btn"(액션 버튼) : <br /> 
+				ㄴ id="accordionHeader-01", <br />
+				ㄴ aria-controls="accordionCollapse-01", <br />
+				ㄴ aria-expanded="false or true"
+				<br /><br />
+				class="accordion-collapse"(컨텐츠 패널) : <br /> 
+				ㄴ id="accordionCollapse-01", <br />
+				ㄴ role="region", <br />
+				ㄴ aria-labelledby="accordionHeader-01", <br />
+				ㄴ aria-hidden="true or false"
+
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1. 닫힘</b></small> <br />
+				&lt;h5&gt;<br />
+				&emsp;	&lt;button type="button" class="btn" <br />
+				&emsp;&emsp; id="accordionHeader-01" <br />
+				&emsp;&emsp; aria-controls="accordionCollapse-01" <br />
+				&emsp;&emsp; aria-expanded="false"&gt; 아코디언 닫힘 &lt;/button&gt; <br />
+				&lt;/h5&gt;
+				<br />
+				&lt;div class="accordion-collapse" <br />
+				&emsp; id="accordionCollapse-01" <br />
+				&emsp; role="region" <br />
+				&emsp; aria-labelledby="accordionHeader-01" <br />
+				&emsp; aria-hidden="true"&gt; 아코디언 내용 안보임 &lt;/div&gt;
+
+				<br /><br />
+				<small><b>case 2. 열림</b></small><br />
+				&lt;h5&gt;<br />
+				&emsp;	&lt;button type="button" class="btn" <br />
+				&emsp;&emsp; id="accordionHeader-01" <br />
+				&emsp;&emsp; aria-controls="accordionCollapse-01" <br />
+				&emsp;&emsp; aria-expanded="true"&gt; 아코디언 열림 &lt;/button&gt; <br />
+				&lt;/h5&gt;
+				<br />
+				&lt;div class="accordion-collapse" <br />
+				&emsp; id="accordionCollapse-01" <br />
+				&emsp; role="region" <br />
+				&emsp; aria-labelledby="accordionHeader-01" <br />
+				&emsp; aria-hidden="false"&gt; 아코디언 내용 보임
+				&lt;/div&gt;
+			</td>
+			<td>
+				<small><b>case 1.</b></small><br />
+				아코디언 닫힘 상태
+				<br /><br />
+				<small><b>case 2.</b></small><br />
+				아코디언 열림 상태
+				<br /><br />
+				<!-- css에서 display:none 처리되면 aria-hidden 속성은 생략 가능 -->
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">탭</th>
+			<td>
+
+			</td>
+			<td>
+				<!-- 예제 -->
+			</td>
+			<td>
+				설명
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">모달</th>
+			<td>
+				button class="btn"(액션 버튼) : <br /> 
+				ㄴ tabindex="-1", tabindex="0" 
+				<br /><br />
+				class="modal"(모달) : <br /> 
+				ㄴ role="dialog", <br />
+				ㄴ aria-labelledby="modal-title-01",<br />
+				ㄴ aria-hidden="true or false"
+
+				<br /><br />
+				class="modal-title"(모달 제목) : <br />
+				ㄴ id="modal-title-01", <br />
+	
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1. 닫힘</b></small><br />
+				&lt;button class="btn"&gt; 팝업호출 &lt;/button&gt; <br />
+				&lt;div class="modal" <br />
+				&emsp; role="dialog" <br />
+				&emsp; aria-labelledby="modal-title-01" <br />
+				&emsp; aria-hidden="true"&gt;<br />
+				&emsp;&emsp; &lt;h2 class="modal-title" id="modal-title-01"&gt;모달 제목&lt;/h2&gt;<br />
+				&emsp;&emsp; &lt;div class="modal-body"&gt;내용 안보임 &lt;/div&gt;<br />
+				&lt;/div&gt;
+				<br /><br />
+
+				<small><b>case 2. 열림</b></small><br />
+				&lt;button class="btn"&gt; 팝업호출 &lt;/button&gt; <br />
+				&lt;div class="modal" <br />
+				&emsp; role="dialog" <br />
+				&emsp; aria-labelledby="modal-title-01" <br />
+				&emsp; aria-hidden="false"&gt; <br />
+				&emsp;&emsp; &lt;h2 class="modal-title" id="modal-title-01"&gt;모달 제목&lt;/h2&gt;<br />
+				&emsp;&emsp; &lt;div class="modal-body"&gt;내용 보임 &lt;/div&gt;<br />
+				&lt;/div&gt;
+
+			</td>
+			<td>
+				Message popup, bottom sheet, full popup 등 다양한 모달 형태가 존재
+				<br /><br />
+				<b>modal focus 처리</b> <br />
+				- modal이 열리면 포커스는 class="modal-body" 이동 <br />
+				- modal 내부에서 Tab 키를 눌러 포커스는 modal 내부에서만 이동 <br />
+				- modal 이 닫히면, 포커스는 modal을 오픈한 버튼으로 이동 <br />
+				- modal 내부에 닫기 버튼이 없는 경우(loading popup 등), 시간이 지나면 modal이 닫히도록 처리한 후에 focus는 page 최상단으로
+				<br /><br />
+				<b>popup 정리 추가 필요</b><br />
+				- style 분리<br />
+				- focus 처리<br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">토글 스위치</th>
+			<td>
+
+			</td>
+			<td>
+				<!-- 예제 -->
+			</td>
+			<td>
+				상황에 따라 on/off 상태를 나타내는 토글 스위치<br />
+				대체 텍스트로 처리 예정
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">단계 표시기</th>
+			<td>
+				class="sr-only" (변경 가능)
+			</td>
+			<td>
+				<!-- 예제 -->
+				&lt;ol &gt; <br />
+				&emsp; &lt;li &gt; &lt;span&gt; 1단계 &lt;/span&gt; &lt;/li&gt; <br />
+				&emsp; &lt;li &gt; &lt;span&gt; 2단계 &lt;/span&gt; &lt;/li&gt; <br />
+				&emsp; &lt;li &gt; &lt;span&gt; &lt;em class="sr-only"&gt;현재 단계&lt;/em&gt; 3단계 &lt;/span&gt; &lt;/li&gt; <br />
+				&emsp; &lt;li &gt; &lt;span&gt; 4단계 &lt;/span&gt; &lt;/li&gt; <br />
+				&lt;/ol&gt;
+
+			</td>
+			<td>
+				서비스 이용을 위해 사용자가 거쳐야 하는 일련의 단계를 시각화하여 표현한 것으로 진행 상태에 대한 피드백을 사용자에게 전달
+				<br /><br />
+				대체 텍스트로 "현재 단계" 표시
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">스피너</th>
+			<td>
+				role="status"
+			</td>
+			<td>
+				<!-- 예제 -->
+				&lt;div class="spinner-wrap" role="status"&gt; <br />
+				&emsp; &lt;span class="sr-only"&gt;로딩 중&lt;/span&gt; <br />
+				&lt;/div&gt;
+			</td>
+			<td>
+				스피너는 화면이나 요소의 다양한 처리 상태를 시각적으로 표시한 것으로 화면 전체나 일부 요소에 접근하기 위해 일정 시간 동안 대기해야 함을 사용자에게 안내
+				<br /><br />
+				대체 텍스트로 "로딩 중" 표시
+
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">툴팁</th>
+			<td>
+				button class="btn"(액션 버튼) : <br /> 
+				ㄴ aria-labelledby="tooltip-01"
+				<br /><br />
+				class="tooltip-txt"(툴팁 텍스트) : <br />
+				ㄴ id="tooltip-01", <br />
+				ㄴ role="tooltip", <br />
+				ㄴ aria-hidden="true or false"
+			</td>
+			<td>
+				<!-- 예제 -->
+				<small><b>case 1. 닫힘</b></small> <br />
+				&lt;button class="btn" <br />
+				&emsp; aria-labelledby="tooltip-01"&gt; &lt;span class="sr-only"&gt;도움말&lt;/span&gt; <br />
+				&lt;/button&gt; <br />
+				&lt;div class="tooltip-txt" <br />
+				&emsp; id="tooltip-01" <br />
+				&emsp; role="tooltip" <br />
+				&emsp; aria-hidden="true"&gt;툴팁 내용 안보임&lt;/div&gt;
+
+				<br /><br />
+				<small><b>case 2. 열림</b></small> <br />
+				&lt;button class="btn" <br />
+				&emsp; aria-labelledby="tooltip-01"&gt; &lt;span class="sr-only"&gt;도움말&lt;/span&gt; <br />
+				&lt;/button&gt; <br />
+				&lt;div class="tooltip-txt" <br />
+				&emsp; id="tooltip-01" <br />
+				&emsp; role="tooltip" <br />
+				&emsp; aria-hidden="false"&gt;툴팁 내용 보임&lt;/div&gt;
+			</td>
+			<td>
+				<!-- 설명 -->
+				hover 또는 focus 시, 추가적인 정보를 제공하는 작은 팝업
+				<br /><br />
+				<small><b>case 1.</b></small><br />
+				툴팁 닫힘 상태
+				<br /><br />
+				<small><b>case 2.</b></small><br />
+				툴팁 열림 상태
+				<!-- css에서 display:none 처리되면 aria-hidden 속성은 생략 가능 -->
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</body>
+</html>

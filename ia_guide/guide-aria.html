@@ -21,6 +21,9 @@
 		table td {
 			vertical-align: top;
 		}
+		.red {
+			color: red;
+		}
 	</style>
 </head>
 <body>
@@ -48,10 +51,10 @@
 				a
 			</th>
 			<td>
-				a <br /> 
+				a :<br /> 
 				ㄴ title="링크 설명"
 				<br /><br />
-				a <br /> 
+				a :<br /> 
 				ㄴ role="button"
 			</td>
 			<td>
@@ -114,7 +117,8 @@
 		<tr>
 			<th scope="row">이미지 <br />img</th>
 			<td>
-				alt="이미지 설명"
+				img : <br />
+				ㄴ alt="이미지 설명"
 			</td>
 			<td>
 				<!-- 예제 -->
@@ -126,10 +130,10 @@
 			<th scope="row">표 <br />table</th>
 			<td>
 				thead tr th: <br />
-				ㄴscope="col", scope="colgroup" (&darr;) <br />
+				ㄴ scope="col", scope="colgroup" (&darr;) <br />
 				<br /><br />
 				tbody tr th: <br />
-				ㄴscope="row", scope="rowgroup"(&rarr;)<br />
+				ㄴ scope="row", scope="rowgroup"(&rarr;)<br />
 			</td>
 			<td></td>
 			<td>
@@ -196,11 +200,12 @@
 				특정한 정보/컨트롤/섹션에 관련된 부가적인 정보를 표시하거나 숨기는 데 사용되는 요소
 				<br /><br />
 
-				<small><b>case 1.</b></small> <br />
-				디스클로저 닫힘 상태 
+				<small><b>case 1. 디스클로저 닫힘 상태</b></small> <br />
+				aria-expanded="false"
 				<br /><br />
-				<small><b>case 2.</b></small> <br />
-				디스클로저 열림 상태 <br />
+				<small><b>case 2. 디스클로저 열림 상태</b></small> <br />
+				aria-expanded="true"
+				<br />
 			</td>
 		</tr>
 		<tr>
@@ -233,7 +238,8 @@
 				&emsp; id="accordionCollapse-01" <br />
 				&emsp; role="region" <br />
 				&emsp; aria-labelledby="accordionHeader-01" <br />
-				&emsp; aria-hidden="true"&gt; 아코디언 내용 안보임 &lt;/div&gt;
+				&emsp; aria-hidden="true"&gt; 아코디언 내용 안보임 <br />
+				&lt;/div&gt;
 
 				<br /><br />
 				<small><b>case 2. 열림</b></small><br />
@@ -248,15 +254,17 @@
 				&emsp; id="accordionCollapse-01" <br />
 				&emsp; role="region" <br />
 				&emsp; aria-labelledby="accordionHeader-01" <br />
-				&emsp; aria-hidden="false"&gt; 아코디언 내용 보임
+				&emsp; aria-hidden="false"&gt; 아코디언 내용 보임<br />
 				&lt;/div&gt;
 			</td>
 			<td>
-				<small><b>case 1.</b></small><br />
-				아코디언 닫힘 상태
+				<small><b>case 1. 아코디언 닫힘 상태</b></small><br />
+				aria-expanded="false" <br />
+				aria-hidden="true"
 				<br /><br />
-				<small><b>case 2.</b></small><br />
-				아코디언 열림 상태
+				<small><b>case 2. 아코디언 열림 상태</b></small><br />
+				aria-expanded="true" <br />
+				aria-hidden="false"
 				<br /><br />
 				<!-- css에서 display:none 처리되면 aria-hidden 속성은 생략 가능 -->
 			</td>
@@ -265,12 +273,77 @@
 			<th scope="row">탭</th>
 			<td>
 
+				ul class="tab"(탭 버튼 그룹) : <br />
+				ㄴ role="tablist"
+				<br /><br />
+				li class="tab-item"(탭 버튼 영역) : <br />
+				ㄴ id="tab_temp_01"<br />
+				ㄴ role="tab" <br />
+				ㄴ aria-selected="true or false" <br />
+				ㄴ aria-controls="panel_temp_01"
+				<br /><br />
+				<!-- 
+				--------------------------------------------------
+				 -->
+				<br /><br />
+				div class="tab-conts"(탭 콘텐츠 그룹) : <br />
+				ㄴ id="panel_temp_01" <br />
+				ㄴ role="tabpanel" <br />
+				ㄴ aria-labelledby="tab_temp_01"<br />
+				ㄴ aria-hidden="true or false"
+
 			</td>
 			<td>
 				<!-- 예제 -->
+				<small><b>case 1. 탭 버튼</b></small><br />
+				&lt;ul role="tablist"&gt;<br />
+					&lt;li class="active" <br />
+					&emsp;	id="tab_temp_01" <br />
+					&emsp;	role="tab" <br />
+					&emsp;	aria-controls="panel_temp_01" <br />
+					&emsp;	aria-selected="true"&gt;<br />
+					&emsp;&emsp;	&lt;button type="button" class="btn-tab"&gt;타이틀 1 <br />
+					&emsp;&emsp;	&lt;i class="sr-only"&gt;선택됨(선택된 경우)&lt;/i&gt;&lt;/button&gt;<br />
+					&lt;/li&gt;<br />
+					&lt;li <br />
+					&emsp;	id="tab_temp_02" <br />
+					&emsp;	role="tab" <br />
+					&emsp;	aria-controls="panel_temp_02" <br />
+					&emsp;	aria-selected="false"&gt;<br />
+					&emsp;&emsp;	&lt;button type="button" class="btn-tab"&gt;타이틀 2&lt;/button&gt;<br />
+					&lt;/li&gt;<br />
+				&lt;/ul&gt;
+				<br /><br />
+				<small><b>case 2. 탭 콘텐츠</b></small><br />
+				&lt;div class="tab-conts active" <br />
+					&emsp;	id="panel_temp_01" <br />
+					&emsp;	role="tabpanel" <br />
+					&emsp;	aria-labelledby="tab_temp_01" <br />
+					&emsp;	aria-hidden="false"&gt;<br />
+					&emsp;&emsp;	&lt;h3 class="sr-only"&gt;탭 콘텐츠 영역 타이틀&lt;/h3&gt;<br />
+					&emsp;&emsp;	탭 콘텐츠 1 영역<br />
+					&lt;/div&gt;<br />
+					&lt;div class="tab-conts" <br />
+					&emsp;	id="panel_temp_02" <br />
+					&emsp;	role="tabpanel" <br />
+					&emsp;	aria-labelledby="tab_temp_02" <br />
+					&emsp;	aria-hidden="true"&gt;<br />
+					&emsp;&emsp;	&lt;h3 class="sr-only"&gt;탭 콘텐츠 영역 타이틀&lt;/h3&gt;<br />
+					&emsp;&emsp;	탭 콘텐츠 2 영역<br />
+				&lt;/div&gt; <br />
+
 			</td>
 			<td>
-				설명
+				<!-- 설명 -->
+				탭은 버튼을 눌러 상호배타적인 여러 개의 콘텐츠 섹션을 전환하여, 작은 공간에 많은 양의 콘텐츠를 효과적으로 표현 가능
+				<br /><br />
+				<small><b>case 1. 탭 버튼 선택 상태</b></small><br />
+				aria-selected="true" (선택됨)<br />
+				aria-selected="false" (선택 안됨)
+				<br /><br />
+				<small><b>case 2. 탭 콘텐츠 선택 상태</b></small><br />
+				aria-hidden="false"(콘텐츠 보임)<br />
+				aria-hidden="true" (콘텐츠 안보임)<br />
 			</td>
 		</tr>
 		<tr>
@@ -322,7 +395,7 @@
 				- modal 이 닫히면, 포커스는 modal을 오픈한 버튼으로 이동 <br />
 				- modal 내부에 닫기 버튼이 없는 경우(loading popup 등), 시간이 지나면 modal이 닫히도록 처리한 후에 focus는 page 최상단으로
 				<br /><br />
-				<b>popup 정리 추가 필요</b><br />
+				<b class="red">popup 정리 추가 필요</b><br />
 				- style 분리<br />
 				- focus 처리<br />
 			</td>
@@ -399,7 +472,8 @@
 				&lt;div class="tooltip-txt" <br />
 				&emsp; id="tooltip-01" <br />
 				&emsp; role="tooltip" <br />
-				&emsp; aria-hidden="true"&gt;툴팁 내용 안보임&lt;/div&gt;
+				&emsp; aria-hidden="true"&gt;툴팁 내용 안보임<br />
+				&lt;/div&gt;
 
 				<br /><br />
 				<small><b>case 2. 열림</b></small> <br />
@@ -409,17 +483,20 @@
 				&lt;div class="tooltip-txt" <br />
 				&emsp; id="tooltip-01" <br />
 				&emsp; role="tooltip" <br />
-				&emsp; aria-hidden="false"&gt;툴팁 내용 보임&lt;/div&gt;
+				&emsp; aria-hidden="false"&gt;툴팁 내용 보임<br />
+				&lt;/div&gt;
 			</td>
 			<td>
 				<!-- 설명 -->
 				hover 또는 focus 시, 추가적인 정보를 제공하는 작은 팝업
+				<br />
+				<span class="red">focus ? hover ? 인지 추가적인 결정이 필요</span>
 				<br /><br />
-				<small><b>case 1.</b></small><br />
-				툴팁 닫힘 상태
+				<small><b>case 1. 툴팁 닫힘 상태</b></small><br />
+				aria-hidden="true"
 				<br /><br />
-				<small><b>case 2.</b></small><br />
-				툴팁 열림 상태
+				<small><b>case 2. 툴팁 열림 상태</b></small><br />
+				aria-hidden="false"
 				<!-- css에서 display:none 처리되면 aria-hidden 속성은 생략 가능 -->
 			</td>
 		</tr>
